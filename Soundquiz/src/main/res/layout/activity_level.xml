@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mosquitolabs.soundquiz.LevelActivity">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/quizListView"
+        android:numColumns="4"
+        android:verticalSpacing="10dp"
+        android:fastScrollAlwaysVisible="false"
+        android:horizontalSpacing="15dp"
+        android:gravity="center_vertical"
+        android:columnWidth="100dp"
+        android:stretchMode="none"
+        android:dividerHeight="0dp"
+        android:divider="@android:color/transparent" />
+</RelativeLayout>

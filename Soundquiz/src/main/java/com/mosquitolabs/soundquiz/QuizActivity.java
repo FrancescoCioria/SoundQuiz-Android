@@ -1,66 +1,84 @@
 package com.mosquitolabs.soundquiz;
 
 import android.app.Activity;
-import android.graphics.Color;
-import android.graphics.Paint;
+import android.content.pm.ActivityInfo;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.mosquitolabs.soundquiz.visualizer.AudioPlayer;
 import com.mosquitolabs.soundquiz.visualizer.VisualizerView;
-import com.mosquitolabs.soundquiz.visualizer.renderer.LineRenderer;
-
 
 public class QuizActivity extends Activity {
 
     private String answer;
     private String category;
-    private int index;
-    private QuizData quizData;
-    private QuizCollection quizCollection = QuizCollection.getInstance();
-    private MediaPlayer mPlayer;
-    private MediaPlayer mSilentPlayer;  /* to avoid tunnel player issue */
-    private com.mosquitolabs.soundquiz.visualizer.VisualizerView mVisualizerView;
+    private int quizIndex;
+    private int levelIndex;
+    private int packageIndex;
+    private int level;
     private boolean hasBeenReset;
     private boolean isFirstTime = true;
 
     private EditText answerEditText;
-    private Button guessButton;
+    private Button checkButton;
     private Button hintButton;
-    //    private Button listenButton;
     private TextView status;
     private TextView hintTextView;
+
+    private QuizData quizData;
+    private PackageCollection packageCollection = PackageCollection.getInstance();
+    private AudioPlayer audioPlayer = AudioPlayer.getIstance;
+    private com.mosquitolabs.soundquiz.visualizer.VisualizerView mVisualizerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         answer = getIntent().getExtras().getString("answer");
         category = getIntent().getExtras().getString("category");
-        index = getIntent().getExtras().getInt("index");
+        quizIndex = getIntent().getExtras().getInt("quizIndex");
+        levelIndex = getIntent().getExtras().getInt("levelIndex");
+        packageIndex = getIntent().getExtras().getInt("packageIndex");
 
         setQuizDataByCategoryAndAnswer(category, answer);
 
-        getActionBar().setTitle(quizData.getCategroy() + ": " + Integer.toString(index + 1));
+        getActionBar().setTitle(Integer.toString(quizIndex + 1) + "/" + Integer.toString(packageCollection.getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().size()));
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
-
 //        binding
-        guessButton = (Button) findViewById(R.id.guessButton);
+        checkButton = (Button) findViewById(R.id.checkButton);
         hintButton = (Button) findViewById(R.id.hintButton);
         answerEditText = (EditText) findViewById(R.id.answerEditText);
         status = (TextView) findViewById(R.id.statusTextView);
         hintTextView = (TextView) findViewById(R.id.hintTextView);
 
-        guessButton.setOnClickListener(new View.OnClickListener() {
+//        answerEditText.setBootstrapEditTextEnabled(true);
+        answerEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
+        answerEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    checkButton.performClick();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String userAnswer = answerEditText.getText().toString();
@@ -68,8 +86,10 @@ public class QuizActivity extends Activity {
                     if (checkAnswer(userAnswer)) {
                         status.setText(userAnswer + " is CORRECT! :)");
                         quizData.setSolvedStatus(true);
+//                        answerEditText.setSuccess();
                     } else {
                         status.setText(userAnswer + " is WRONG.. :(");
+//                        answerEditText.setDanger();
                     }
                 }
             }
@@ -79,14 +99,8 @@ public class QuizActivity extends Activity {
             @Override
             public void onClick(View v) {
                 startAnimationButton(v);
-//                giveHint();
             }
         });
-
-
-//        init
-
-
     }
 
     @Override
@@ -124,25 +138,20 @@ public class QuizActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
-                ;
                 break;
 
         }
         return super.onOptionsItemSelected(item);
     }
 
-
     private boolean setQuizDataByCategoryAndAnswer(String category, String answer) {
-        for (QuizList quizList : quizCollection.getQuizCollection()) {
-
-            if (quizList.getCategory().equals(category)) {
-                for (QuizData quizDataTemp : quizList.getQuizList()) {
+        for (PackageData pack : packageCollection.getPackageCollection()) {
+            if (pack.getCategory().equals(category)) {
+                for (QuizData quizDataTemp : pack.getLevelList().get(level).getQuizList()) {
                     if (quizDataTemp.getAnswer().equals(answer)) {
                         quizData = quizDataTemp;
                         return true;
@@ -150,83 +159,112 @@ public class QuizActivity extends Activity {
                 }
                 return false;
             }
-
         }
         return false;
     }
 
+    private void initSound(final boolean start) {
+        cleanUp();
 
-    private void initSound(boolean start) {
-        if (index == 0) {
-            mPlayer = MediaPlayer.create(this, R.raw.american_beauty);
-        } else {
-            mPlayer = MediaPlayer.create(this, R.raw.rocky);
+        switch (quizIndex) {
+            case 0:
+                audioPlayer.player = MediaPlayer.create(this, R.raw.fox);
+                break;
+            case 1:
+                audioPlayer.player = MediaPlayer.create(this, R.raw.columbia);
+                break;
+            case 2:
+                audioPlayer.player = MediaPlayer.create(this, R.raw.lucas_film);
+                break;
+            case 3:
+                audioPlayer.player = MediaPlayer.create(this, R.raw.warner_bros);
+                break;
+            case 4:
+                audioPlayer.player = MediaPlayer.create(this, R.raw.universal);
+                break;
+            case 5:
+                audioPlayer.player = MediaPlayer.create(this, R.raw.mgm);
+                break;
+            case 6:
+                audioPlayer.player = MediaPlayer.create(this, R.raw.tristar);
+                break;
+            case 7:
+                audioPlayer.player = MediaPlayer.create(this, R.raw.fandango);
+                break;
+            case 8:
+                audioPlayer.player = MediaPlayer.create(this, R.raw.new_line_cinema);
+                break;
+            case 9:
+                audioPlayer.player = MediaPlayer.create(this, R.raw.castle_rock);
+                break;
+            case 10:
+                audioPlayer.player = MediaPlayer.create(this, R.raw.lionsgate);
+                break;
+            case 11:
+                audioPlayer.player = MediaPlayer.create(this, R.raw.walt_disney);
+                break;
+            default:
+                audioPlayer.player = MediaPlayer.create(this, R.raw.fox);
+                break;
         }
-        mPlayer.setLooping(false);
-        mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                hasBeenReset = true;
-            }
-        });
+
+//        if (index == 0) {
+//            mPlayer = MediaPlayer.create(this, R.raw.american_beauty);
+//        } else {
+//            mPlayer = MediaPlayer.create(this, R.raw.rocky);
+//        }
+        audioPlayer.resetEqualizer();
+
+
+        audioPlayer.player.setLooping(false);
+
+
         hasBeenReset = true;
+
         if (start) {
-            listenButtonPressed();
+            togglePlay();
         }
+        initVisualizer();
+
     }
 
     private void initVisualizer() {
+        if (mVisualizerView != null) {
+            mVisualizerView.disableVisualizer();
+            mVisualizerView.release();
+            mVisualizerView.invalidate();
+        }
+
         mVisualizerView = (VisualizerView) findViewById(R.id.visualizerView);
-        mVisualizerView.link(mPlayer);
+        mVisualizerView.link();
         mVisualizerView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listenButtonPressed();
+                togglePlay();
             }
         });
-        addLineRenderer();
+        mVisualizerView.initBarRenderer();
     }
 
-    private void listenButtonPressed() {
-        if (!mPlayer.isPlaying()) {
-            try {
-                mPlayer.start();
-                if (hasBeenReset) {
-                    hasBeenReset = false;
-                    initVisualizer();
-                }
-            } catch (Exception e) {
-            }
+    private void togglePlay() {
+        if (!audioPlayer.player.isPlaying()) {
+            audioPlayer.player.start();
         } else {
-            mPlayer.pause();
-
+            audioPlayer.player.pause();
         }
-    }
-
-    private void addLineRenderer() {
-        Paint linePaint = new Paint();
-        linePaint.setStrokeWidth(1f);
-        linePaint.setAntiAlias(true);
-        linePaint.setColor(Color.argb(88, 0, 128, 255));
-
-        Paint lineFlashPaint = new Paint();
-        lineFlashPaint.setStrokeWidth(5f);
-        lineFlashPaint.setAntiAlias(true);
-        lineFlashPaint.setColor(Color.argb(188, 255, 255, 255));
-        LineRenderer lineRenderer = new LineRenderer(linePaint, lineFlashPaint, true);
-        mVisualizerView.addRenderer(lineRenderer);
     }
 
     private void cleanUp() {
-        if (mPlayer != null) {
+        if (mVisualizerView != null) {
+            mVisualizerView.disableVisualizer();
             mVisualizerView.release();
-            mPlayer.release();
-            mPlayer = null;
+            mVisualizerView.invalidate();
+            mVisualizerView = null;
         }
 
-        if (mSilentPlayer != null) {
-            mSilentPlayer.release();
-            mSilentPlayer = null;
+        if (audioPlayer.player != null) {
+            audioPlayer.player.release();
+            audioPlayer.player = null;
         }
     }
 
@@ -235,13 +273,20 @@ public class QuizActivity extends Activity {
         String answer = this.answer.toLowerCase();
         userAnswer = userAnswer.toLowerCase();
 
-        if (answer.substring(0, 4).equals("the ")) {
+//        remove spaces at the end
+        while (userAnswer.charAt(userAnswer.length() - 1) == ' ') {
+            userAnswer = userAnswer.substring(0, userAnswer.length() - 1);
+        }
+
+//        remove "The"
+        if (answer.length() > 4 && answer.substring(0, 4).equals("the ")) {
             answer = answer.substring(4);
         }
-        if (userAnswer.substring(0, 4).equals("the ")) {
+        if (userAnswer.length() > 4 && userAnswer.substring(0, 4).equals("the ")) {
             userAnswer = userAnswer.substring(4);
         }
 
+//        compare
         if (userAnswer.equals(answer)) {
             return true;
         }
@@ -269,7 +314,6 @@ public class QuizActivity extends Activity {
 
         }
         hintButton.setText(hint);
-        hintButton.setTextColor(Color.WHITE);
     }
 
     private void startAnimationButton(View v) {
@@ -277,7 +321,6 @@ public class QuizActivity extends Activity {
                 animRotate = AnimationUtils.loadAnimation(this, R.anim.anim_rotate);
         final Animation animAlpha = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
 
-//        v.startAnimation(animRotate);
         v.startAnimation(animAlpha);
         giveHint();
     }

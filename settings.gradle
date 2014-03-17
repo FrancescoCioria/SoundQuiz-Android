@@ -1,1 +1,2 @@
-include ':Soundquiz', ':app'
+include ':Soundquiz'
+include ':libraries:Bootstrap'

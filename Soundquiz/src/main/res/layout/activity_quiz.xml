@@ -7,38 +7,44 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.mosquitolabs.soundquiz.QuizActivity"
-    android:background="@android:color/holo_blue_light">
+    android:background="@android:color/background_dark">
+
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/answerEditText"
         android:editable="true"
+        android:gravity="center"
         android:hint="write your answer here.."
-        android:textSize="20sp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="82dp" />
+        android:textSize="17sp"
+        android:layout_below="@+id/visualizerView"
+        android:singleLine="true"
+        android:layout_toLeftOf="@+id/checkButton"
+        android:layout_alignBottom="@+id/checkButton" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:text="Try"
-        android:id="@+id/guessButton"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/checkButton"
+        android:layout_below="@+id/visualizerView"
+        android:layout_alignRight="@+id/visualizerView"
+        android:layout_alignEnd="@+id/visualizerView" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/statusTextView"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/hintButton"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:textSize="30sp" />
 
     <view
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="160dp"
         class="com.mosquitolabs.soundquiz.visualizer.VisualizerView"
         android:id="@+id/visualizerView"
         android:layout_centerHorizontal="true" />
@@ -47,20 +53,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/hintTextView"
-        android:layout_above="@+id/answerEditText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:gravity="center" />
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:text="Get a hint"
         android:id="@+id/hintButton"
-        android:layout_above="@+id/hintTextView"
-        android:layout_centerHorizontal="true"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_below="@+id/checkButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/packageRelativeLayout"
+    tools:context="com.mosquitolabs.soundquiz.PackageListActivity">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/fadingOutBackgroundView">
+
+
+    </View>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/fadingInBackgroundView">
+
+
+    </View>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/packageListView"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+    <com.mosquitolabs.soundquiz.VerticalViewPager
+        android:id="@+id/packagePagerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
