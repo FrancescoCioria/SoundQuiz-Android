@@ -2,9 +2,10 @@ package com.mosquitolabs.soundquiz;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 
 public class BackgroundFadingTransformer implements ViewPager.PageTransformer {
@@ -12,39 +13,47 @@ public class BackgroundFadingTransformer implements ViewPager.PageTransformer {
     private PackageListActivity context;
     private float DISTANCE = 0.0f;
 
-    private View view1 = null;
-    private View view2 = null;
+    private ImageView view1 = null;
+    private ImageView view2 = null;
 
-    private View[] views = {view1, view2};
+    private ImageView[] views = {view1, view2};
 
     public BackgroundFadingTransformer(Context context) {
         this.context = (PackageListActivity) context;
-        views[0] = this.context.getFadingOutBackground();
-        views[1] = this.context.getFadingInBackground();
+        if (views[0] == null) {
+            views[0] = (ImageView) this.context.findViewById(R.id.firstView);
+            views[1] = (ImageView) this.context.findViewById(R.id.secondView);
+        }
     }
 
     public void transformPage(View view, float position) {
-        TextView name = (TextView) ((ViewGroup) ((ViewGroup) view).getChildAt(0)).getChildAt(1);
-        int index = Integer.parseInt(name.getText().toString());
+        int index = (Integer) ((ViewGroup) view).getChildAt(0).getTag();
 
-//        INIT DISTANCE BETWEEN PAGES
+
+//        INIT DISTANCE BETWEEN PAGES AND IMAGES
         if (DISTANCE == 0.0f && index == 1) {
             DISTANCE = position;
+            context.setBackgroundImage(views[0], 0);
+            context.setAlpha(views[0], 1);
+            context.setBackgroundImage(views[1], 1);
+            context.setAlpha(views[1], 0);
+            Log.d("TRANSFORMATION", "distance: " + DISTANCE);
         }
 
         float absPosition = Math.abs(position);
         float offset = (absPosition / DISTANCE);
 
 //        CHECK IF WE ARE IN THE VISIBLE AREA
-        if (absPosition < DISTANCE) {
-            int alpha = (int) ((1 - offset) * 255);
-
+        if (absPosition < (DISTANCE - 0.001f) && DISTANCE > 0) {
+            float alpha = 1 - offset;
             if (position <= 0) {
                 context.setBackgroundImage(views[0], index);
                 context.setAlpha(views[0], alpha);
+                Log.d("SET_BACKGROUND", "index: " + index + " alpha: " + alpha + "   view:  " + views[0]);
             } else {
                 context.setBackgroundImage(views[1], index);
                 context.setAlpha(views[1], alpha);
+                Log.d("SET_BACKGROUND", "index: " + index + " alpha: " + alpha + "   view:  " + views[1]);
             }
         }
 

@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -33,12 +32,15 @@ public class PackageFragment extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
                 R.layout.fragment_package, container, false);
 
+        final int packageIndex = getArguments().getInt("packageIndex", 0);
+
         TextView name = (TextView) rootView.findViewById(R.id.nameTextView);
-        TextView fake = (TextView) rootView.findViewById(R.id.fakeTextView);
         Button play = (Button) rootView.findViewById(R.id.playButton);
         RelativeLayout layout = (RelativeLayout) rootView.findViewById(R.id.fragmentRelativeLayout);
         RelativeLayout header = (RelativeLayout) rootView.findViewById(R.id.header);
         RelativeLayout body = (RelativeLayout) rootView.findViewById(R.id.body);
+
+        rootView.findViewById(R.id.parentRelativeLayout).setTag(packageIndex);
 
         final PackageListActivity activity = (PackageListActivity) getActivity();
 
@@ -56,21 +58,16 @@ public class PackageFragment extends Fragment {
         layout.getLayoutParams().height = height;
         layout.getLayoutParams().width = width;
 
-        final int packageIndex = getArguments().getInt("packageIndex", 0);
-
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (activity.getScrollingState() == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
-                    activity.setStartAndEndPages(activity.getPager().getCurrentItem(), packageIndex);
+                if (activity.getPager().getCurrentItem() != packageIndex) {
                     activity.getPager().setCurrentItem(packageIndex, true);
                 }
             }
         });
 
-
         name.setText(PackageCollection.getInstance().getPackageCollection().get(packageIndex).getCategory());
-
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,7 +75,6 @@ public class PackageFragment extends Fragment {
             }
         });
 
-        fake.setText(Integer.toString(packageIndex));
         return rootView;
     }
 

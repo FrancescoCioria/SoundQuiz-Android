@@ -5,32 +5,32 @@
     android:id="@+id/packageRelativeLayout"
     tools:context="com.mosquitolabs.soundquiz.PackageListActivity">
 
-    <View
+    <ImageView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/fadingOutBackgroundView">
+        android:scaleType="centerCrop"
+        android:id="@+id/firstView" />
 
-
-    </View>
-
-    <View
+    <ImageView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/fadingInBackgroundView">
-
-
-    </View>
-
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/packageListView"
-        android:layout_centerHorizontal="true"
-        android:visibility="gone" />
+        android:scaleType="centerCrop"
+        android:id="@+id/secondView" />
 
     <com.mosquitolabs.soundquiz.VerticalViewPager
         android:id="@+id/packagePagerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/buttonBack"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/back" />
+
+
 
 </RelativeLayout>

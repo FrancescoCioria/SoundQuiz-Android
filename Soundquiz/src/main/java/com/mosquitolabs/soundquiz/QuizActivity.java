@@ -1,10 +1,14 @@
 package com.mosquitolabs.soundquiz;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.pm.ActivityInfo;
+import android.graphics.Point;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -27,6 +31,8 @@ public class QuizActivity extends Activity {
     private int levelIndex;
     private int packageIndex;
     private int level;
+    private int width;
+    private int height;
     private boolean hasBeenReset;
     private boolean isFirstTime = true;
 
@@ -48,6 +54,12 @@ public class QuizActivity extends Activity {
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        width = size.x;
+        height = size.y;
+
         answer = getIntent().getExtras().getString("answer");
         category = getIntent().getExtras().getString("category");
         quizIndex = getIntent().getExtras().getInt("quizIndex");
@@ -65,6 +77,14 @@ public class QuizActivity extends Activity {
         answerEditText = (EditText) findViewById(R.id.answerEditText);
         status = (TextView) findViewById(R.id.statusTextView);
         hintTextView = (TextView) findViewById(R.id.hintTextView);
+        Button backButton = (Button)findViewById(R.id.buttonBack);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
 //        answerEditText.setBootstrapEditTextEnabled(true);
         answerEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
@@ -84,23 +104,56 @@ public class QuizActivity extends Activity {
                 String userAnswer = answerEditText.getText().toString();
                 if (userAnswer.length() > 0) {
                     if (checkAnswer(userAnswer)) {
-                        status.setText(userAnswer + " is CORRECT! :)");
+                        AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
+                        builder.setMessage(userAnswer + " is CORRECT.. :)");
+                        builder.setCancelable(false);
+                        builder.setPositiveButton("Back to menu", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.dismiss();
+                                onBackPressed();
+                            }
+                        });
+                        builder.create().show();
+//                        status.setText(userAnswer + " is CORRECT! :)");
                         quizData.setSolvedStatus(true);
-//                        answerEditText.setSuccess();
                     } else {
-                        status.setText(userAnswer + " is WRONG.. :(");
-//                        answerEditText.setDanger();
+                        AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
+                        builder.setMessage(userAnswer + " is WRONG.. :(");
+                        builder.setCancelable(false);
+                        builder.setPositiveButton("Try Again", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.dismiss();
+                            }
+                        });
+                        builder.create().show();
+//                        status.setText(userAnswer + " is WRONG.. :(");
                     }
                 }
             }
         });
 
+        hintButton.setText("?");
+
         hintButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startAnimationButton(v);
+                AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
+                builder.setMessage(getHint());
+                builder.setCancelable(false);
+                builder.setPositiveButton("Back", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                });
+                builder.create().show();
+//                startAnimationButton(v);
             }
         });
+
+
+
+        getActionBar().hide();
+
     }
 
     @Override
@@ -208,16 +261,9 @@ public class QuizActivity extends Activity {
                 break;
         }
 
-//        if (index == 0) {
-//            mPlayer = MediaPlayer.create(this, R.raw.american_beauty);
-//        } else {
-//            mPlayer = MediaPlayer.create(this, R.raw.rocky);
-//        }
         audioPlayer.resetEqualizer();
 
-
         audioPlayer.player.setLooping(false);
-
 
         hasBeenReset = true;
 
@@ -236,6 +282,7 @@ public class QuizActivity extends Activity {
         }
 
         mVisualizerView = (VisualizerView) findViewById(R.id.visualizerView);
+        mVisualizerView.getLayoutParams().height = height / 3;
         mVisualizerView.link();
         mVisualizerView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -295,7 +342,7 @@ public class QuizActivity extends Activity {
 
     }
 
-    private void giveHint() {
+    private String getHint() {
         String hint = new String();
         String[] separated = answer.toUpperCase().split(" ");
         for (String word : separated) {
@@ -313,7 +360,7 @@ public class QuizActivity extends Activity {
             hint += "  ";
 
         }
-        hintButton.setText(hint);
+        return hint;
     }
 
     private void startAnimationButton(View v) {
@@ -322,7 +369,7 @@ public class QuizActivity extends Activity {
         final Animation animAlpha = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
 
         v.startAnimation(animAlpha);
-        giveHint();
+        hintButton.setText(getHint());
     }
 
 }
