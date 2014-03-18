@@ -77,7 +77,7 @@ public class QuizActivity extends Activity {
         answerEditText = (EditText) findViewById(R.id.answerEditText);
         status = (TextView) findViewById(R.id.statusTextView);
         hintTextView = (TextView) findViewById(R.id.hintTextView);
-        Button backButton = (Button)findViewById(R.id.buttonBack);
+        Button backButton = (Button) findViewById(R.id.buttonBack);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,8 +132,6 @@ public class QuizActivity extends Activity {
             }
         });
 
-        hintButton.setText("?");
-
         hintButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -149,7 +147,6 @@ public class QuizActivity extends Activity {
 //                startAnimationButton(v);
             }
         });
-
 
 
         getActionBar().hide();

@@ -51,7 +51,7 @@ public class LevelActivity extends Activity {
 
         getActionBar().setTitle(PackageCollection.getInstance().getPackageCollection().get(packageIndex).getCategory() + ": Level " + Integer.toString(levelIndex + 1));
         getActionBar().setDisplayHomeAsUpEnabled(true);
-
+        getActionBar().hide();
 
 
     }
@@ -92,8 +92,7 @@ public class LevelActivity extends Activity {
     }
 
 
-
-    public ListView getListView(){
+    public ListView getListView() {
         return quizListView;
     }
 
