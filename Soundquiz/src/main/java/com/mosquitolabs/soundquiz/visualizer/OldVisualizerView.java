@@ -29,8 +29,8 @@ import com.mosquitolabs.soundquiz.visualizer.renderer.BarRenderer;
  * {@link Visualizer.OnDataCaptureListener#onWaveFormDataCapture } and
  * {@link Visualizer.OnDataCaptureListener#onFftDataCapture }
  */
-public class VisualizerView extends View {
-    private static final String TAG = "VisualizerView";
+public class OldVisualizerView extends View {
+    private static final String TAG = "OldVisualizerView";
 
     private byte[] mBytes;
     private byte[] mFFTBytes;
@@ -48,18 +48,18 @@ public class VisualizerView extends View {
     int magnitudePoints[];
 
 
-    public VisualizerView(Context context, AttributeSet attrs, int defStyle) {
+    public OldVisualizerView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs);
         this.context = (Activity) context;
         init();
     }
 
     // called to inflate XML
-    public VisualizerView(Context context, AttributeSet attrs) {
+    public OldVisualizerView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public VisualizerView(Context context) {
+    public OldVisualizerView(Context context) {
         this(context, null, 0);
     }
 
@@ -101,7 +101,7 @@ public class VisualizerView extends View {
         mVisualizer = new Visualizer(audioPlayer.player.getAudioSessionId());
         mVisualizer.setCaptureSize(Visualizer.getCaptureSizeRange()[1]);
 
-        // Pass through Visualizer data to VisualizerView
+        // Pass through Visualizer data to OldVisualizerView
 
 
         mVisualizer.setDataCaptureListener(captureListener,

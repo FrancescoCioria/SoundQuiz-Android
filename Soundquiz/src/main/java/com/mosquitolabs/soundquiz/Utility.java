@@ -6,6 +6,7 @@ import android.content.res.Resources;
 import android.graphics.Point;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.util.TypedValue;
 import android.view.Display;
 import android.widget.Toast;
@@ -40,15 +41,23 @@ public class Utility {
     public static int getWidth(Activity activity) {
         Display display = activity.getWindowManager().getDefaultDisplay();
         Point size = new Point();
-        display.getSize(size);
-        return size.x;
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            display.getSize(size);
+            return size.x;
+        }
+        return display.getWidth();
     }
 
     public static int getHeight(Activity activity) {
         Display display = activity.getWindowManager().getDefaultDisplay();
         Point size = new Point();
-        display.getSize(size);
-        return size.y;
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            display.getSize(size);
+            return size.y;
+        }
+
+        return display.getHeight();
+
     }
 
     public static void shortToast(String msg, Context context) {

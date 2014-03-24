@@ -5,9 +5,11 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,7 +22,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.mosquitolabs.soundquiz.visualizer.AudioPlayer;
-import com.mosquitolabs.soundquiz.visualizer.VisualizerView;
+import com.mosquitolabs.soundquiz.visualizer.StringVisualizerView;
+import com.mosquitolabs.soundquiz.visualizer.OldVisualizerView;
 
 public class QuizActivity extends Activity {
 
@@ -34,6 +37,7 @@ public class QuizActivity extends Activity {
     private int height;
     private boolean hasBeenReset;
     private boolean isFirstTime = true;
+    private boolean stopVisualizer = false;
 
     private EditText answerEditText;
     private Button checkButton;
@@ -41,12 +45,14 @@ public class QuizActivity extends Activity {
     private TextView status;
     private TextView hintTextView;
 
-
-
+    private Runnable handlerTask;
     private QuizData quizData;
     private PackageCollection packageCollection = PackageCollection.getInstance();
     private AudioPlayer audioPlayer = AudioPlayer.getIstance;
-    private com.mosquitolabs.soundquiz.visualizer.VisualizerView mVisualizerView;
+    private StringVisualizerView visualizer;
+    private OldVisualizerView mVisualizerView;
+
+    private final static int FPS = 35;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +82,7 @@ public class QuizActivity extends Activity {
         status = (TextView) findViewById(R.id.statusTextView);
         hintTextView = (TextView) findViewById(R.id.hintTextView);
         TextView backButton = (TextView) findViewById(R.id.back);
+        visualizer = (StringVisualizerView) findViewById(R.id.visualizerView);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,6 +150,15 @@ public class QuizActivity extends Activity {
         });
 
 
+
+        visualizer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                togglePlay();
+            }
+        });
+
+        initVisualizer();
         getActionBar().hide();
 
     }
@@ -253,52 +269,88 @@ public class QuizActivity extends Activity {
         }
 
         audioPlayer.resetEqualizer();
-
         audioPlayer.player.setLooping(false);
-
         hasBeenReset = true;
+
+        AudioPlayer.getIstance.player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                visualizer.stopAnimation();
+            }
+        });
+
 
         if (start) {
             togglePlay();
         }
-        initVisualizer();
+        startVisualizerLoop();
 
     }
+
+    private void startVisualizerLoop() {
+        stopVisualizer = false;
+        final Handler handler = new Handler();
+        handlerTask = new Runnable() {
+            @Override
+            public void run() {
+                visualizer.refresh();
+                if (!stopVisualizer) {
+                    handler.postDelayed(handlerTask, 1000 / FPS);
+                }
+            }
+        };
+        handlerTask.run();
+    }
+
+    private void stopVisualizerLoop() {
+        stopVisualizer = true;
+    }
+
 
     private void initVisualizer() {
-        if (mVisualizerView != null) {
-            mVisualizerView.disableVisualizer();
-            mVisualizerView.release();
-            mVisualizerView.invalidate();
-        }
-
-        mVisualizerView = (VisualizerView) findViewById(R.id.visualizerView);
-        mVisualizerView.getLayoutParams().height = height / 3;
-        mVisualizerView.link();
-        mVisualizerView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                togglePlay();
-            }
-        });
-        mVisualizerView.initBarRenderer();
+        visualizer.getLayoutParams().height = Utility.getWidth(this) / 6;
+        visualizer.setFPS(FPS);
+        visualizer.setColor(Color.WHITE);
     }
+
+//        if (mVisualizerView != null) {
+//            mVisualizerView.disableVisualizer();
+//            mVisualizerView.release();
+//            mVisualizerView.invalidate();
+//        }
+//
+//        mVisualizerView = (OldVisualizerView) findViewById(R.id.visualizerView);
+//        mVisualizerView.getLayoutParams().height = height / 3;
+//        mVisualizerView.link();
+//        mVisualizerView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                togglePlay();
+//            }
+//        });
+//        mVisualizerView.initBarRenderer();
+
+
+//    }
 
     private void togglePlay() {
         if (!audioPlayer.player.isPlaying()) {
             audioPlayer.player.start();
+            visualizer.startAnimation();
         } else {
             audioPlayer.player.pause();
+            visualizer.stopAnimation();
         }
     }
 
     private void cleanUp() {
-        if (mVisualizerView != null) {
-            mVisualizerView.disableVisualizer();
-            mVisualizerView.release();
-            mVisualizerView.invalidate();
-            mVisualizerView = null;
-        }
+//        if (mVisualizerView != null) {
+//            mVisualizerView.disableVisualizer();
+//            mVisualizerView.release();
+//            mVisualizerView.invalidate();
+//            mVisualizerView = null;
+//        }
+        stopVisualizerLoop();
 
         if (audioPlayer.player != null) {
             audioPlayer.player.release();

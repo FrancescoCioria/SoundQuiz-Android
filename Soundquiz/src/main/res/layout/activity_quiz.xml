@@ -30,9 +30,9 @@
         <view
             android:layout_width="match_parent"
             android:layout_height="160dp"
-            class="com.mosquitolabs.soundquiz.visualizer.VisualizerView"
+            class="com.mosquitolabs.soundquiz.visualizer.StringVisualizerView"
             android:id="@+id/visualizerView"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerInParent="true" />
 
         <TextView
             android:layout_width="match_parent"

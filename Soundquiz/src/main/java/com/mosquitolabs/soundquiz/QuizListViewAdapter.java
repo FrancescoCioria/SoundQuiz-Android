@@ -162,7 +162,7 @@ public class QuizListViewAdapter extends BaseAdapter {
         }
 
 
-        if ((paramInt * COLUMNS + (COLUMNS-1)) == packageCollection.getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().size() - 1) {
+        if ((paramInt * COLUMNS + (COLUMNS - 1)) == packageCollection.getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().size() - 1) {
             quizItemViewHolder.divider.setVisibility(View.VISIBLE);
         } else {
             quizItemViewHolder.divider.setVisibility(View.GONE);

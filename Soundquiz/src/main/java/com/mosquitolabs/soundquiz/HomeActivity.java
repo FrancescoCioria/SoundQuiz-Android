@@ -10,12 +10,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.mosquitolabs.soundquiz.visualizer.MyView;
+import com.mosquitolabs.soundquiz.visualizer.StringVisualizerView;
 
 public class HomeActivity extends Activity {
 
     private Button playButton;
-    private MyView bezier;
+    private StringVisualizerView bezier;
     private Runnable handlerTask;
 
     @Override
@@ -25,7 +25,7 @@ public class HomeActivity extends Activity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         playButton = (Button) findViewById(R.id.playButton);
-        bezier = (MyView) findViewById(R.id.bezier);
+        bezier = (StringVisualizerView) findViewById(R.id.bezier);
 
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,7 +138,7 @@ public class HomeActivity extends Activity {
             @Override
             public void run() {
                     bezier.refresh();
-                    handler.postDelayed(handlerTask, 16);
+                    handler.postDelayed(handlerTask, 30);
 
             }
         };

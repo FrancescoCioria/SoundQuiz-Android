@@ -3,7 +3,7 @@
     package="com.mosquitolabs.soundquiz" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="8"
         android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
