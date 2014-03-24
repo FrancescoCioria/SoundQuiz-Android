@@ -2,19 +2,22 @@ package com.mosquitolabs.soundquiz;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 /**
  * Created by francesco on 3/14/14.
  */
-public class LevelListViewAdapter extends BaseAdapter{
+public class LevelListViewAdapter extends BaseAdapter {
 
 
     private Activity context;
@@ -64,6 +67,7 @@ public class LevelListViewAdapter extends BaseAdapter{
             levelItemViewHolder = new LevelItemViewHolder();
 
             levelItemViewHolder.button = (Button) paramView.findViewById(R.id.playButton);
+            levelItemViewHolder.layout = (RelativeLayout) paramView.findViewById(R.id.layout);
 
             levelItemViewHolder.button.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -72,10 +76,16 @@ public class LevelListViewAdapter extends BaseAdapter{
                 }
             });
 
+            Display display = context.getWindowManager().getDefaultDisplay();
+            Point size = new Point();
+            display.getSize(size);
+
+
+            levelItemViewHolder.layout.getLayoutParams().width = size.x * 9 / 10;
+
             paramView.setTag(levelItemViewHolder);
         } else {
             levelItemViewHolder = (LevelItemViewHolder) paramView.getTag();
-
         }
 
 
@@ -86,5 +96,6 @@ public class LevelListViewAdapter extends BaseAdapter{
         TextView body;
         ImageView image;
         Button button;
+        RelativeLayout layout;
     }
 }

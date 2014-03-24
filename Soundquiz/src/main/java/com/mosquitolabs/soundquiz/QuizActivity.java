@@ -3,12 +3,11 @@ package com.mosquitolabs.soundquiz;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.graphics.Point;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.Display;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -42,6 +41,8 @@ public class QuizActivity extends Activity {
     private TextView status;
     private TextView hintTextView;
 
+
+
     private QuizData quizData;
     private PackageCollection packageCollection = PackageCollection.getInstance();
     private AudioPlayer audioPlayer = AudioPlayer.getIstance;
@@ -54,11 +55,8 @@ public class QuizActivity extends Activity {
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        Display display = getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        width = size.x;
-        height = size.y;
+        width = Utility.getWidth(this);
+        height = Utility.getHeight(this);
 
         answer = getIntent().getExtras().getString("answer");
         category = getIntent().getExtras().getString("category");
@@ -77,7 +75,7 @@ public class QuizActivity extends Activity {
         answerEditText = (EditText) findViewById(R.id.answerEditText);
         status = (TextView) findViewById(R.id.statusTextView);
         hintTextView = (TextView) findViewById(R.id.hintTextView);
-        Button backButton = (Button) findViewById(R.id.buttonBack);
+        TextView backButton = (TextView) findViewById(R.id.back);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,18 +102,16 @@ public class QuizActivity extends Activity {
                 String userAnswer = answerEditText.getText().toString();
                 if (userAnswer.length() > 0) {
                     if (checkAnswer(userAnswer)) {
-                        AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
-                        builder.setMessage(userAnswer + " is CORRECT.. :)");
-                        builder.setCancelable(false);
-                        builder.setPositiveButton("Back to menu", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.dismiss();
-                                onBackPressed();
-                            }
-                        });
-                        builder.create().show();
-//                        status.setText(userAnswer + " is CORRECT! :)");
                         quizData.setSolvedStatus(true);
+                        Intent mIntent = new Intent(QuizActivity.this, WinActivity.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putString("answer", answer);
+                        bundle.putString("category", category);
+                        bundle.putInt("quizIndex", quizIndex);
+                        bundle.putInt("levelIndex", levelIndex);
+                        bundle.putInt("packageIndex", packageIndex);
+                        mIntent.putExtras(bundle);
+                        QuizActivity.this.startActivity(mIntent);
                     } else {
                         AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
                         builder.setMessage(userAnswer + " is WRONG.. :(");
@@ -126,7 +122,6 @@ public class QuizActivity extends Activity {
                             }
                         });
                         builder.create().show();
-//                        status.setText(userAnswer + " is WRONG.. :(");
                     }
                 }
             }
@@ -144,7 +139,6 @@ public class QuizActivity extends Activity {
                     }
                 });
                 builder.create().show();
-//                startAnimationButton(v);
             }
         });
 
@@ -236,7 +230,7 @@ public class QuizActivity extends Activity {
                 audioPlayer.player = MediaPlayer.create(this, R.raw.mgm);
                 break;
             case 6:
-                audioPlayer.player = MediaPlayer.create(this, R.raw.tristar);
+                audioPlayer.player = MediaPlayer.create(this, R.raw.walt_disney);
                 break;
             case 7:
                 audioPlayer.player = MediaPlayer.create(this, R.raw.fandango);
@@ -251,7 +245,7 @@ public class QuizActivity extends Activity {
                 audioPlayer.player = MediaPlayer.create(this, R.raw.lionsgate);
                 break;
             case 11:
-                audioPlayer.player = MediaPlayer.create(this, R.raw.walt_disney);
+                audioPlayer.player = MediaPlayer.create(this, R.raw.tristar);
                 break;
             default:
                 audioPlayer.player = MediaPlayer.create(this, R.raw.fox);
@@ -317,6 +311,10 @@ public class QuizActivity extends Activity {
         String answer = this.answer.toLowerCase();
         userAnswer = userAnswer.toLowerCase();
 
+//        remove spaces at the beginning
+        while (userAnswer.charAt(0) == ' ') {
+            userAnswer = userAnswer.substring(1);
+        }
 //        remove spaces at the end
         while (userAnswer.charAt(userAnswer.length() - 1) == ' ') {
             userAnswer = userAnswer.substring(0, userAnswer.length() - 1);
@@ -336,7 +334,6 @@ public class QuizActivity extends Activity {
         }
 
         return false;
-
     }
 
     private String getHint() {

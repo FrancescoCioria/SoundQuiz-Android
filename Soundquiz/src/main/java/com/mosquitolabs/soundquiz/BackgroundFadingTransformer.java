@@ -45,23 +45,8 @@ public class BackgroundFadingTransformer implements ViewPager.PageTransformer {
 
 //        CHECK IF WE ARE IN THE VISIBLE AREA
         if (absPosition < (DISTANCE - 0.001f) && DISTANCE > 0) {
-
-
             float alpha = 1 - offset;
             backgroundHandler.setBackgroundWithAlpha(index, alpha);
-
-
-//            if (absPosition <= 0) {
-//
-//                context.setBackgroundImage(views[0], index);
-//                context.setAlpha(views[0], alpha);
-//                Log.d("SET_BACKGROUND", "index: " + index + " alpha: " + alpha + "   view:  " + views[0]);
-//            } else {
-//                context.setBackgroundImage(views[1], index);
-//                context.setAlpha(views[1], alpha);
-//                Log.d("SET_BACKGROUND", "index: " + index + " alpha: " + alpha + "   view:  " + views[1]);
-//            }
-
         }
 
         if (absPosition <= (DISTANCE + 0.1f) && DISTANCE > 0) {
@@ -86,7 +71,7 @@ public class BackgroundFadingTransformer implements ViewPager.PageTransformer {
             for (int i = 0; i < indexes.length; i++) {
                 if (indexes[i] == index) {
                     context.setAlpha(views[i], alpha);
-                    Log.d("SET_ALPHA", "index: " + index + " alpha: " + alpha + " view: " + views[i]);
+//                    Log.d("SET_ALPHA", "index: " + index + " alpha: " + alpha + " view: " + views[i]);
                     return;
                 }
             }
@@ -96,7 +81,7 @@ public class BackgroundFadingTransformer implements ViewPager.PageTransformer {
                     context.setBackgroundImage(views[i], index);
                     context.setAlpha(views[i], alpha);
                     indexes[i] = index;
-                    Log.d("SET_BACKGROUND", "index: " + index + " alpha: " + alpha + " view: " + views[i]);
+//                    Log.d("SET_BACKGROUND", "index: " + index + " alpha: " + alpha + " view: " + views[i]);
                     return;
                 }
             }

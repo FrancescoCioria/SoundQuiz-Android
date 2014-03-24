@@ -68,6 +68,7 @@ public class PackageFragment extends Fragment {
         });
 
         name.setText(PackageCollection.getInstance().getPackageCollection().get(packageIndex).getCategory());
+        name.setTextSize(Utility.pixelsToSp(activity, headerHeight * 0.7f));
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,4 +86,10 @@ public class PackageFragment extends Fragment {
         mIntent.putExtras(bundle);
         getActivity().startActivity(mIntent);
     }
+
+
+//    private static float pixelsToSp(Context context, Float px) {
+//        float scaledDensity = context.getResources().getDisplayMetrics().scaledDensity;
+//        return px / scaledDensity;
+//    }
 }

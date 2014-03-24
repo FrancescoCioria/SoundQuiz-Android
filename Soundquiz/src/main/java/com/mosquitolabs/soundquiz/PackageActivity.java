@@ -5,13 +5,17 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 
 public class PackageActivity extends Activity {
 
-
+    private TextView back;
     private int packageIndex;
+    private ListView levelListView;
+    private LevelListViewAdapter levelListViewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,13 +24,23 @@ public class PackageActivity extends Activity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         packageIndex = getIntent().getExtras().getInt("packageIndex");
+        levelListView = (ListView) findViewById(R.id.levelListView);
+        back = (TextView) findViewById(R.id.back);
 
-        ListView levelListView = (ListView) findViewById(R.id.levelListView);
-        LevelListViewAdapter levelListViewAdapter = new LevelListViewAdapter(this, packageIndex);
+        levelListViewAdapter = new LevelListViewAdapter(this, packageIndex);
         levelListView.setAdapter(levelListViewAdapter);
+
+        back.setText("< Categories");
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         getActionBar().setTitle(PackageCollection.getInstance().getPackageCollection().get(packageIndex).getCategory() + Integer.toString(packageIndex + 1));
         getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().hide();
     }
 
 

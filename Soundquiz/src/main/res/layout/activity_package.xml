@@ -2,15 +2,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mosquitolabs.soundquiz.PackageActivity">
+    tools:context="com.mosquitolabs.soundquiz.PackageActivity"
+    android:background="#FF181818">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/topBar"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cinema"
+            android:id="@+id/textViewLevel"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/background_light"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 / 10"
+            android:id="@+id/textViewQuizDone"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="#bebebe" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+
+            >
+
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="17dp"
+                android:src="@drawable/arrow_left"
+                android:scaleType="fitXY"
+
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categories"
+                android:id="@+id/back"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/levelListView"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        android:dividerHeight="0dp"
+        android:layout_below="@+id/topBar"
+        android:dividerHeight="15dp"
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never"
         android:divider="@android:color/transparent"
         android:headerDividersEnabled="false" />
 </RelativeLayout>

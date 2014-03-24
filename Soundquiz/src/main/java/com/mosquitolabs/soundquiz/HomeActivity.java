@@ -1,20 +1,22 @@
 package com.mosquitolabs.soundquiz;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.util.TypedValue;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.mosquitolabs.soundquiz.visualizer.MyView;
+
 public class HomeActivity extends Activity {
 
     private Button playButton;
+    private MyView bezier;
+    private Runnable handlerTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,8 @@ public class HomeActivity extends Activity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         playButton = (Button) findViewById(R.id.playButton);
+        bezier = (MyView) findViewById(R.id.bezier);
+
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,7 +73,7 @@ public class HomeActivity extends Activity {
         LevelData level1 = new LevelData();
         level1.setCategory(category);
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 12; i++) {
             QuizData quizData = new QuizData();
             quizData.setCategory(level1.getCategory());
             switch (i) {
@@ -92,7 +96,7 @@ public class HomeActivity extends Activity {
                     quizData.setAnswer("MGM");
                     break;
                 case 6:
-                    quizData.setAnswer("Tristar");
+                    quizData.setAnswer("Walt Disney");
                     break;
                 case 7:
                     quizData.setAnswer("Fandango");
@@ -107,7 +111,7 @@ public class HomeActivity extends Activity {
                     quizData.setAnswer("Lionsgate");
                     break;
                 case 11:
-                    quizData.setAnswer("Walt Disney");
+                    quizData.setAnswer("Tristar");
                     break;
 
                 default:
@@ -128,15 +132,23 @@ public class HomeActivity extends Activity {
         PackageCollection.getInstance().getPackageCollection().add(cinema);
         PackageCollection.getInstance().getPackageCollection().add(cinema);
         PackageCollection.getInstance().getPackageCollection().add(cinema);
+
+        final Handler handler = new Handler();
+        handlerTask = new Runnable() {
+            @Override
+            public void run() {
+                    bezier.refresh();
+                    handler.postDelayed(handlerTask, 16);
+
+            }
+        };
+        handlerTask.run();
+
+
     }
 
 
-    public static int convertDpToPixels(float dp, Context context) {
-        Resources resources = context.getResources();
-        return (int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP,
-                dp,
-                resources.getDisplayMetrics()
-        );
-    }
+
+
+
 }

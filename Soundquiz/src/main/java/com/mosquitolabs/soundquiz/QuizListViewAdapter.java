@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
@@ -20,11 +21,7 @@ public class QuizListViewAdapter extends BaseAdapter {
     private LayoutInflater inflater;
     private PackageCollection packageCollection = PackageCollection.getInstance();
 
-    private int imageMinWidth = 0;
-
-    private final int SUGGESTED_MAX_WIDTH = 250;
-    private int SUGGESTED_MAX_SPACE = 20;
-    private int MIN_SPACE = 5;
+    private final int COLUMNS = 3;
 
     public QuizListViewAdapter(LevelActivity paramContext, int packIndex, int levelIndex) {
         this.inflater = LayoutInflater.from(paramContext);
@@ -33,13 +30,12 @@ public class QuizListViewAdapter extends BaseAdapter {
         this.packageIndex = packIndex;
     }
 
-
     public int getCount() {
         int size = packageCollection.getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().size();
-        if (size % 4 == 0) {
-            return size / 4;
+        if (size % COLUMNS == 0) {
+            return size / COLUMNS;
         }
-        return (size / 4 + 1);
+        return (size / COLUMNS + 1);
     }
 
     public Object getItem(int paramInt) {
@@ -68,97 +64,119 @@ public class QuizListViewAdapter extends BaseAdapter {
 
         QuizItemViewHolder quizItemViewHolder;
 
-        final int paramInt1 = paramInt * 4;
-        final QuizData quizData1 = packageCollection.getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().get(paramInt1);
-        final int paramInt2 = paramInt * 4 + 1;
-        final QuizData quizData2 = packageCollection.getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().get(paramInt2);
-        final int paramInt3 = paramInt * 4 + 2;
-        final QuizData quizData3 = packageCollection.getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().get(paramInt3);
-        final int paramInt4 = paramInt * 4 + 3;
-        final QuizData quizData4 = packageCollection.getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().get(paramInt4);
-
-
         if (paramView == null) {
-            paramView = inflater.inflate(R.layout.quiz_list_item,
+            paramView = inflater.inflate(R.layout.quiz_list_item3,
                     null);
             quizItemViewHolder = new QuizItemViewHolder();
-            quizItemViewHolder.body1 = (TextView) paramView.findViewById(R.id.body1);
-            quizItemViewHolder.body2 = (TextView) paramView.findViewById(R.id.body2);
-            quizItemViewHolder.body3 = (TextView) paramView.findViewById(R.id.body3);
-            quizItemViewHolder.body4 = (TextView) paramView.findViewById(R.id.body4);
-            quizItemViewHolder.image1 = (ImageView) paramView.findViewById(R.id.imageView1);
-            quizItemViewHolder.image2 = (ImageView) paramView.findViewById(R.id.imageView2);
-            quizItemViewHolder.image3 = (ImageView) paramView.findViewById(R.id.imageView3);
-            quizItemViewHolder.image4 = (ImageView) paramView.findViewById(R.id.imageView4);
 
-            quizItemViewHolder.image1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+            quizItemViewHolder.divider = (LinearLayout) paramView.findViewById(R.id.divider);
 
-                    startQuizActivity(quizData1, paramInt1);
-                }
-            });
-            quizItemViewHolder.image2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startQuizActivity(quizData2, paramInt2);
-                }
-            });
-            quizItemViewHolder.image3.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startQuizActivity(quizData3, paramInt3);
-                }
-            });
-            quizItemViewHolder.image4.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startQuizActivity(quizData4, paramInt4);
-                }
-            });
+            for (int i = 0; i < COLUMNS; i++) {
+                final int index = paramInt * COLUMNS + i;
+                final QuizData quizData = packageCollection.getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().get(index);
+                String imageId = "imageView" + (i + 1);
+                String questionMarkId = "questionMark" + (i + 1);
+                String bodyId = "body" + (i + 1);
+                int resImage = context.getResources().getIdentifier(imageId, "id", context.getPackageName());
+                int resQuestionMark = context.getResources().getIdentifier(questionMarkId, "id", context.getPackageName());
+                int resBody = context.getResources().getIdentifier(bodyId, "id", context.getPackageName());
+                quizItemViewHolder.images[i] = (ImageView) paramView.findViewById(resImage);
+                quizItemViewHolder.bodies[i] = (TextView) paramView.findViewById(resBody);
+//                quizItemViewHolder.questionMarks[i] = (ImageView) paramView.findViewById(resQuestionMark);
 
+                quizItemViewHolder.images[i].setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startQuizActivity(quizData, index);
+                    }
+                });
+
+            }
 
             paramView.setTag(quizItemViewHolder);
         } else {
             quizItemViewHolder = (QuizItemViewHolder) paramView.getTag();
         }
 
-        if (quizData1.isSolved()) {
-            quizItemViewHolder.body1.setText(quizData1.getAnswer());
-        } else {
-            quizItemViewHolder.body1.setText(Integer.toString(paramInt1 + 1) + "?");
-        }
-        if (quizData2.isSolved()) {
-            quizItemViewHolder.body2.setText(quizData2.getAnswer());
-        } else {
-            quizItemViewHolder.body2.setText(Integer.toString(paramInt2 + 1) + "?");
-        }
-        if (quizData3.isSolved()) {
-            quizItemViewHolder.body3.setText(quizData3.getAnswer());
-        } else {
-            quizItemViewHolder.body3.setText(Integer.toString(paramInt3 + 1) + "?");
-        }
-        if (quizData4.isSolved()) {
-            quizItemViewHolder.body4.setText(quizData4.getAnswer());
-        } else {
-            quizItemViewHolder.body4.setText(Integer.toString(paramInt4 + 1) + "?");
+        boolean divider = true;
+
+        for (int i = 0; i < COLUMNS; i++) {
+            final int index = paramInt * COLUMNS + i;
+            final QuizData quizData = packageCollection.getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().get(index);
+            String path;
+            switch (index) {
+                case 0:
+                    path = "fox";
+                    break;
+                case 1:
+                    path = "columbia";
+                    break;
+                case 2:
+                    path = "paramount";
+                    break;
+                case 3:
+                    path = "warner_bros";
+                    break;
+                case 4:
+                    path = "universal";
+                    break;
+                case 5:
+                    path = "mgm";
+                    break;
+                case 6:
+                    path = "walt_disney";
+                    break;
+                case 7:
+                    path = "fandango";
+                    break;
+                case 8:
+                    path = "new_line_cinema";
+                    break;
+                case 9:
+                    path = "castle_rock";
+                    break;
+                case 10:
+                    path = "lionsgate";
+                    break;
+                case 11:
+                    path = "image";
+                    break;
+                default:
+                    path = "image";
+                    break;
+            }
+
+
+            if (quizData.isSolved()) {
+                int res = context.getResources().getIdentifier(path, "drawable", context.getPackageName());
+                quizItemViewHolder.images[i].setImageDrawable(context.getResources().getDrawable(res));
+                quizItemViewHolder.bodies[i].setText(quizData.getAnswer());
+                quizItemViewHolder.bodies[i].setVisibility(View.VISIBLE);
+//                quizItemViewHolder.questionMarks[i].setVisibility(View.GONE);
+            } else {
+                int res = context.getResources().getIdentifier(path + "_blur", "drawable", context.getPackageName());
+                quizItemViewHolder.images[i].setImageDrawable(context.getResources().getDrawable(res));
+                quizItemViewHolder.bodies[i].setVisibility(View.GONE);
+//                quizItemViewHolder.questionMarks[i].setVisibility(View.VISIBLE);
+            }
         }
 
+
+        if ((paramInt * COLUMNS + (COLUMNS-1)) == packageCollection.getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().size() - 1) {
+            quizItemViewHolder.divider.setVisibility(View.VISIBLE);
+        } else {
+            quizItemViewHolder.divider.setVisibility(View.GONE);
+        }
 
         return paramView;
     }
 
     static class QuizItemViewHolder {
-        TextView body1;
-        TextView body2;
-        TextView body3;
-        TextView body4;
-        ImageView image1;
-        ImageView image2;
-        ImageView image3;
-        ImageView image4;
+        TextView bodies[] = {null, null, null, null};
+        ImageView images[] = {null, null, null, null};
+        //        ImageView questionMarks[] = {null, null, null, null};
+        LinearLayout divider;
     }
-
 
 
 }

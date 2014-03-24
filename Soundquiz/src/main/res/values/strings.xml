@@ -9,5 +9,6 @@
     <string name="title_activity_package">PackageActivity</string>
     <string name="title_activity_package_list">PackageListActivity</string>
     <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_win">WinActivity</string>
 
 </resources>

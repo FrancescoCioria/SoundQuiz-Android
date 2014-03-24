@@ -2,14 +2,12 @@ package com.mosquitolabs.soundquiz;
 
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
-import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -56,11 +54,11 @@ public class PackageListActivity extends FragmentActivity {
             }
         });
 
-        images.add(getResources().getDrawable(R.drawable.red));
+        images.add(getResources().getDrawable(R.drawable.sunset_blur));
+        images.add(getResources().getDrawable(R.drawable.tour_eiffel));
         images.add(getResources().getDrawable(R.drawable.blue));
         images.add(getResources().getDrawable(R.drawable.green));
         images.add(getResources().getDrawable(R.drawable.gold));
-        images.add(getResources().getDrawable(R.drawable.purple));
         images.add(getResources().getDrawable(R.drawable.brown));
 
         pager = (VerticalViewPager) findViewById(R.id.packagePagerView);
@@ -80,11 +78,8 @@ public class PackageListActivity extends FragmentActivity {
     }
 
     private void setPageMarginAndPackageSize() {
-        Display display = getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        width = size.x;
-        height = size.y;
+        width = Utility.getWidth(this);
+        height = Utility.getHeight(this);
 
         PACKAGE_ITEM_WIDTH_PIXEL = width * 4 / 5;
         PACKAGE_ITEM_HEIGHT_PIXEL = PACKAGE_ITEM_WIDTH_PIXEL * 2 / 3;
