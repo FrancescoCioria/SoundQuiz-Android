@@ -1,6 +1,8 @@
 package com.mosquitolabs.soundquiz;
 
+import android.annotation.TargetApi;
 import android.content.Context;
+import android.os.Build;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
@@ -10,18 +12,7 @@ import android.widget.ImageView;
 
 public class BackgroundFadingTransformer implements ViewPager.PageTransformer {
     private static float SCALE_RATE = 0.25f;
-    //    private PackageListActivity context;
     private float DISTANCE = 0.0f;
-
-    private ImageView view1 = null;
-    private ImageView view2 = null;
-    private ImageView over = null;
-
-    private ImageView[] views = {view1, view2};
-
-    private int elementCalled = -1;
-
-    private int counter = 0;
 
     private BackgroundHandler backgroundHandler = new BackgroundHandler();
 
@@ -29,14 +20,15 @@ public class BackgroundFadingTransformer implements ViewPager.PageTransformer {
         backgroundHandler.initHandler((PackageListActivity) context);
     }
 
+    @TargetApi(11)
     public void transformPage(View view, float position) {
         int index = (Integer) ((ViewGroup) view).getChildAt(0).getTag();
 
 //        INIT DISTANCE BETWEEN PAGES AND IMAGES
         if (DISTANCE == 0.0f && index == 1) {
             DISTANCE = position;
-            backgroundHandler.setBackgroundWithAlpha(0,1);
-            backgroundHandler.setBackgroundWithAlpha(1,0);
+            backgroundHandler.setBackgroundWithAlpha(0, 1);
+            backgroundHandler.setBackgroundWithAlpha(1, 0);
             Log.d("TRANSFORMATION", "distance: " + DISTANCE);
         }
 
@@ -49,7 +41,7 @@ public class BackgroundFadingTransformer implements ViewPager.PageTransformer {
             backgroundHandler.setBackgroundWithAlpha(index, alpha);
         }
 
-        if (absPosition <= (DISTANCE + 0.1f) && DISTANCE > 0) {
+        if (absPosition <= (DISTANCE + 0.1f) && DISTANCE > 0 && android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             // Scale the page down (between (1-SCALE_RATE) and 1)
             float scaleFactor = 1 - (offset * SCALE_RATE);
             view.setScaleX(scaleFactor);

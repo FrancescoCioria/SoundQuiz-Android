@@ -22,6 +22,7 @@ public class PackageActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_package);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        Utility.hideActionbar(this);
 
         packageIndex = getIntent().getExtras().getInt("packageIndex");
         levelListView = (ListView) findViewById(R.id.levelListView);
@@ -38,9 +39,6 @@ public class PackageActivity extends Activity {
             }
         });
 
-        getActionBar().setTitle(PackageCollection.getInstance().getPackageCollection().get(packageIndex).getCategory() + Integer.toString(packageIndex + 1));
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().hide();
     }
 
 

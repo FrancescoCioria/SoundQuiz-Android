@@ -1,5 +1,6 @@
 package com.mosquitolabs.soundquiz;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
@@ -38,26 +39,35 @@ public class Utility {
         return px / scaledDensity;
     }
 
+    @TargetApi(14)
     public static int getWidth(Activity activity) {
         Display display = activity.getWindowManager().getDefaultDisplay();
         Point size = new Point();
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
             display.getSize(size);
             return size.x;
         }
         return display.getWidth();
     }
 
+    @TargetApi(14)
     public static int getHeight(Activity activity) {
         Display display = activity.getWindowManager().getDefaultDisplay();
         Point size = new Point();
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
             display.getSize(size);
             return size.y;
         }
 
         return display.getHeight();
 
+    }
+
+    @TargetApi(14)
+    public static void hideActionbar(Activity activity) {
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+            activity.getActionBar().hide();
+        }
     }
 
     public static void shortToast(String msg, Context context) {

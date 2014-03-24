@@ -22,6 +22,7 @@ public class WinActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_win);
+        Utility.hideActionbar(this);
 
         answer = getIntent().getExtras().getString("answer");
         category = getIntent().getExtras().getString("category");
@@ -43,9 +44,6 @@ public class WinActivity extends Activity {
                 openWikipedia();
             }
         });
-
-        getActionBar().hide();
-
 
     }
 

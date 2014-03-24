@@ -1,5 +1,6 @@
 package com.mosquitolabs.soundquiz;
 
+import android.annotation.TargetApi;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -30,11 +31,7 @@ public class PackageListActivity extends FragmentActivity {
     private VerticalViewPager pager;
     private PackagePagerAdapter pagerAdapter;
 
-    private ImageView firstView;
-    private ImageView secondView;
 
-    private int width;
-    private int height;
     private int PACKAGE_ITEM_WIDTH_PIXEL;
     private int PACKAGE_ITEM_HEIGHT_PIXEL;
 
@@ -45,6 +42,7 @@ public class PackageListActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_package_list);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        Utility.hideActionbar(this);
 
         Button buttonBack = (Button) findViewById(R.id.buttonBack);
         buttonBack.setOnClickListener(new View.OnClickListener() {
@@ -70,16 +68,11 @@ public class PackageListActivity extends FragmentActivity {
         pager.setAdapter(pagerAdapter);
         pager.setPageTransformer(true, new BackgroundFadingTransformer(this));
 
-        getActionBar().setTitle("SoundQuiz");
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().hide();
-
-
     }
 
     private void setPageMarginAndPackageSize() {
-        width = Utility.getWidth(this);
-        height = Utility.getHeight(this);
+        int width = Utility.getWidth(this);
+        int height = Utility.getHeight(this);
 
         PACKAGE_ITEM_WIDTH_PIXEL = width * 4 / 5;
         PACKAGE_ITEM_HEIGHT_PIXEL = PACKAGE_ITEM_WIDTH_PIXEL * 2 / 3;
@@ -107,8 +100,12 @@ public class PackageListActivity extends FragmentActivity {
         view.setBackgroundColor(themes[index]);
     }
 
-
+    @TargetApi(11)
     public void setAlpha(ImageView image, float alpha) {
+        image.setAlpha(alpha);
+    }
+
+    public void setAlpha(ImageView image, int alpha) {
         image.setAlpha(alpha);
     }
 

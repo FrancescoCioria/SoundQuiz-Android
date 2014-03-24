@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/libraries/Bootstrap/Bootstrap.iml" filepath="$PROJECT_DIR$/libraries/Bootstrap/Bootstrap.iml" />
       <module fileurl="file://$PROJECT_DIR$/SoundQuiz.iml" filepath="$PROJECT_DIR$/SoundQuiz.iml" />
       <module fileurl="file://$PROJECT_DIR$/Soundquiz/Soundquiz.iml" filepath="$PROJECT_DIR$/Soundquiz/Soundquiz.iml" />
     </modules>

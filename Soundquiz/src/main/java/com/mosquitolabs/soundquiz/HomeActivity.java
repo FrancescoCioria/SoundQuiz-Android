@@ -23,6 +23,7 @@ public class HomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        Utility.hideActionbar(this);
 
         playButton = (Button) findViewById(R.id.playButton);
         bezier = (StringVisualizerView) findViewById(R.id.bezier);

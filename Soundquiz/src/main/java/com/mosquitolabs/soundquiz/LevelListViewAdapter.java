@@ -2,9 +2,7 @@ package com.mosquitolabs.soundquiz;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Point;
 import android.os.Bundle;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -76,12 +74,8 @@ public class LevelListViewAdapter extends BaseAdapter {
                 }
             });
 
-            Display display = context.getWindowManager().getDefaultDisplay();
-            Point size = new Point();
-            display.getSize(size);
 
-
-            levelItemViewHolder.layout.getLayoutParams().width = size.x * 9 / 10;
+            levelItemViewHolder.layout.getLayoutParams().width = Utility.getWidth(context) * 9 / 10;
 
             paramView.setTag(levelItemViewHolder);
         } else {

@@ -23,7 +23,6 @@ import android.widget.TextView;
 
 import com.mosquitolabs.soundquiz.visualizer.AudioPlayer;
 import com.mosquitolabs.soundquiz.visualizer.StringVisualizerView;
-import com.mosquitolabs.soundquiz.visualizer.OldVisualizerView;
 
 public class QuizActivity extends Activity {
 
@@ -32,10 +31,6 @@ public class QuizActivity extends Activity {
     private int quizIndex;
     private int levelIndex;
     private int packageIndex;
-    private int level;
-    private int width;
-    private int height;
-    private boolean hasBeenReset;
     private boolean isFirstTime = true;
     private boolean stopVisualizer = false;
 
@@ -50,7 +45,6 @@ public class QuizActivity extends Activity {
     private PackageCollection packageCollection = PackageCollection.getInstance();
     private AudioPlayer audioPlayer = AudioPlayer.getIstance;
     private StringVisualizerView visualizer;
-    private OldVisualizerView mVisualizerView;
 
     private final static int FPS = 35;
 
@@ -60,9 +54,7 @@ public class QuizActivity extends Activity {
         setContentView(R.layout.activity_quiz);
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-        width = Utility.getWidth(this);
-        height = Utility.getHeight(this);
+        Utility.hideActionbar(this);
 
         answer = getIntent().getExtras().getString("answer");
         category = getIntent().getExtras().getString("category");
@@ -71,9 +63,6 @@ public class QuizActivity extends Activity {
         packageIndex = getIntent().getExtras().getInt("packageIndex");
 
         setQuizDataByCategoryAndAnswer(category, answer);
-
-        getActionBar().setTitle(Integer.toString(quizIndex + 1) + "/" + Integer.toString(packageCollection.getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().size()));
-        getActionBar().setDisplayHomeAsUpEnabled(true);
 
 //        binding
         checkButton = (Button) findViewById(R.id.checkButton);
@@ -159,7 +148,7 @@ public class QuizActivity extends Activity {
         });
 
         initVisualizer();
-        getActionBar().hide();
+
 
     }
 
@@ -211,7 +200,7 @@ public class QuizActivity extends Activity {
     private boolean setQuizDataByCategoryAndAnswer(String category, String answer) {
         for (PackageData pack : packageCollection.getPackageCollection()) {
             if (pack.getCategory().equals(category)) {
-                for (QuizData quizDataTemp : pack.getLevelList().get(level).getQuizList()) {
+                for (QuizData quizDataTemp : pack.getLevelList().get(levelIndex).getQuizList()) {
                     if (quizDataTemp.getAnswer().equals(answer)) {
                         quizData = quizDataTemp;
                         return true;
@@ -270,7 +259,6 @@ public class QuizActivity extends Activity {
 
         audioPlayer.resetEqualizer();
         audioPlayer.player.setLooping(false);
-        hasBeenReset = true;
 
         AudioPlayer.getIstance.player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override

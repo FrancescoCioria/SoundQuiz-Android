@@ -21,8 +21,6 @@ public class LevelActivity extends Activity {
     private QuizListViewAdapter quizListViewAdapter;
     private int packageIndex;
     private int levelIndex;
-    private int width;
-    private int height;
     private int counter;
     private int time;
     private boolean isAnimating = false;
@@ -33,10 +31,6 @@ public class LevelActivity extends Activity {
     private Handler m_handler;
     private Runnable m_handlerTask;
 
-    private Animation grow;
-
-    private final static int MIN_GAP = 10;
-    private final static int MAX_WIDTH = 300;
     private final static int COLUMNS = 3;
 
 
@@ -45,9 +39,7 @@ public class LevelActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-        width = Utility.getWidth(this);
-        height = Utility.getHeight(this);
+        Utility.hideActionbar(this);
 
         //bundle
         packageIndex = getIntent().getExtras().getInt("packageIndex");
@@ -76,10 +68,6 @@ public class LevelActivity extends Activity {
                 onBackPressed();
             }
         });
-
-        getActionBar().setTitle(PackageCollection.getInstance().getPackageCollection().get(packageIndex).getCategory() + ": Level " + Integer.toString(levelIndex + 1));
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().hide();
 
         getListView().setOnTouchListener(new AbsListView.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
