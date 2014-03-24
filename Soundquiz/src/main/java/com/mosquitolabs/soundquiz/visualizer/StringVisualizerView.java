@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -14,23 +15,27 @@ public class StringVisualizerView extends View {
     private final static float IDLE_AMPLITUDE = 0.03f;
     private final static float ANIMATION_AMPLITUDE = 1.0f;
     private final static float DAMPING_FACTOR = 0.86f;
+    private final static float FREQUENCY = 1.5f;
+    private final static float PHASE_SHIFT = -0.3f;
+    private final static float DENSITY = 5.0f;
 
     private Activity context;
     private Paint paint;
     private Path path = new Path();
 
-    float frequency = 1.5f;
-    float phaseShift = -0.3f;
-    float density = 5.0f;
+
     float phase = 0;
     float amplitude = IDLE_AMPLITUDE;
     float waves = IDLE_WAVES;
 
+    private boolean stopVisualizer = false;
+    private Runnable handlerTask;
+
     private boolean isAnimating = false;
 
-    private int FPS;
+    private final static int FPS = 35;
 
-    public StringVisualizerView(Context context, AttributeSet attrs, int defStyle) {
+    public StringVisualizerView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = (Activity) context;
         paint = new Paint() {{
@@ -39,13 +44,8 @@ public class StringVisualizerView extends View {
         }};
     }
 
-    // called to inflate XML
-    public StringVisualizerView(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
-    }
-
     public StringVisualizerView(Context context) {
-        this(context, null, 0);
+        this(context, null);
     }
 
     @Override
@@ -55,7 +55,7 @@ public class StringVisualizerView extends View {
     }
 
     public void refresh() {
-        phase += phaseShift;
+        phase += PHASE_SHIFT;
         invalidate();
     }
 
@@ -95,12 +95,12 @@ public class StringVisualizerView extends View {
             int alpha = (int) (255 * (progress / 3.0 * 2 + 1.0 / 3.0));
             paint.setAlpha(alpha);
 
-            for (float x = 0; x < width + density; x += density) {
+            for (float x = 0; x < width + DENSITY; x += DENSITY) {
 
                 // We use a parable to scale the sinus wave, that has its peak in the middle of the view.
                 float scaling = (float) (-Math.pow(1 / mid * (x - mid), 2) + 1);
 
-                float y = (float) (scaling * maxAmplitude * normedAmplitude * Math.sin(2 * Math.PI * (x / width) * frequency + phase) + halfHeight);
+                float y = (float) (scaling * maxAmplitude * normedAmplitude * Math.sin(2 * Math.PI * (x / width) * FREQUENCY + phase) + halfHeight);
 
                 if (x == 0) path.moveTo(x, y);
                 else path.lineTo(x, y);
@@ -111,8 +111,24 @@ public class StringVisualizerView extends View {
         }
     }
 
-    public void setFPS(int FPS) {
-        this.FPS = FPS;
+    public void startLoop() {
+        stopVisualizer = false;
+        final Handler handler = new Handler();
+        handlerTask = new Runnable() {
+            @Override
+            public void run() {
+                refresh();
+                if (!stopVisualizer) {
+                    handler.postDelayed(handlerTask, 1000 / FPS);
+                }
+            }
+        };
+        handlerTask.run();
+    }
+
+    public void stopLoop() {
+        stopVisualizer = true;
+        stopAnimation();
     }
 
     public void startAnimation() {
@@ -128,6 +144,5 @@ public class StringVisualizerView extends View {
     public void setColor(int color) {
         paint.setColor(color);
     }
-
 
 }

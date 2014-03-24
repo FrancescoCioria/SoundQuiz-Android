@@ -9,7 +9,6 @@ import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -32,7 +31,6 @@ public class QuizActivity extends Activity {
     private int levelIndex;
     private int packageIndex;
     private boolean isFirstTime = true;
-    private boolean stopVisualizer = false;
 
     private EditText answerEditText;
     private Button checkButton;
@@ -40,13 +38,10 @@ public class QuizActivity extends Activity {
     private TextView status;
     private TextView hintTextView;
 
-    private Runnable handlerTask;
     private QuizData quizData;
     private PackageCollection packageCollection = PackageCollection.getInstance();
     private AudioPlayer audioPlayer = AudioPlayer.getIstance;
     private StringVisualizerView visualizer;
-
-    private final static int FPS = 35;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +94,7 @@ public class QuizActivity extends Activity {
                 if (userAnswer.length() > 0) {
                     if (checkAnswer(userAnswer)) {
                         quizData.setSolvedStatus(true);
+                        quizData.setSolvedWithStar(!quizData.hasUsedHint());
                         Intent mIntent = new Intent(QuizActivity.this, WinActivity.class);
                         Bundle bundle = new Bundle();
                         bundle.putString("answer", answer);
@@ -126,6 +122,7 @@ public class QuizActivity extends Activity {
         hintButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                quizData.setUsedHint();
                 AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
                 builder.setMessage(getHint());
                 builder.setCancelable(false);
@@ -137,7 +134,6 @@ public class QuizActivity extends Activity {
                 builder.create().show();
             }
         });
-
 
 
         visualizer.setOnClickListener(new View.OnClickListener() {
@@ -268,58 +264,17 @@ public class QuizActivity extends Activity {
         });
 
 
+        visualizer.startLoop();
         if (start) {
             togglePlay();
         }
-        startVisualizerLoop();
 
     }
-
-    private void startVisualizerLoop() {
-        stopVisualizer = false;
-        final Handler handler = new Handler();
-        handlerTask = new Runnable() {
-            @Override
-            public void run() {
-                visualizer.refresh();
-                if (!stopVisualizer) {
-                    handler.postDelayed(handlerTask, 1000 / FPS);
-                }
-            }
-        };
-        handlerTask.run();
-    }
-
-    private void stopVisualizerLoop() {
-        stopVisualizer = true;
-    }
-
 
     private void initVisualizer() {
         visualizer.getLayoutParams().height = Utility.getWidth(this) / 6;
-        visualizer.setFPS(FPS);
         visualizer.setColor(Color.WHITE);
     }
-
-//        if (mVisualizerView != null) {
-//            mVisualizerView.disableVisualizer();
-//            mVisualizerView.release();
-//            mVisualizerView.invalidate();
-//        }
-//
-//        mVisualizerView = (OldVisualizerView) findViewById(R.id.visualizerView);
-//        mVisualizerView.getLayoutParams().height = height / 3;
-//        mVisualizerView.link();
-//        mVisualizerView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                togglePlay();
-//            }
-//        });
-//        mVisualizerView.initBarRenderer();
-
-
-//    }
 
     private void togglePlay() {
         if (!audioPlayer.player.isPlaying()) {
@@ -332,13 +287,8 @@ public class QuizActivity extends Activity {
     }
 
     private void cleanUp() {
-//        if (mVisualizerView != null) {
-//            mVisualizerView.disableVisualizer();
-//            mVisualizerView.release();
-//            mVisualizerView.invalidate();
-//            mVisualizerView = null;
-//        }
-        stopVisualizerLoop();
+        visualizer.stopLoop();
+        visualizer.stopAnimation();
 
         if (audioPlayer.player != null) {
             audioPlayer.player.release();

@@ -8,9 +8,9 @@ import java.io.Serializable;
 public class QuizData implements Serializable {
     private String answer;
     private String categroy;
-    private int remainingHints = 3;
-    private int possibleScore = 100;
     private boolean isSolved = false;
+    private boolean isSolvedWithStar = false;
+    private boolean hasUsedHint = false;
 
     public void setAnswer(String string) {
         answer = string;
@@ -28,32 +28,27 @@ public class QuizData implements Serializable {
         return categroy;
     }
 
-    public void decreaseRemainingHintsByOne() {
-        if (remainingHints > 0) {
-            remainingHints--;
-        }
+    public void setUsedHint() {
+        hasUsedHint = true;
     }
 
-    public int getRemainingHints() {
-        return remainingHints;
+    public boolean hasUsedHint() {
+        return hasUsedHint;
     }
 
-    public void resetRemainingHints() {
-        remainingHints = 3;
-    }
-
-    public int getPossibleScore() {
-        return possibleScore;
-    }
-
-    public void setPossibleScore(int newPossibleScore) {
-        possibleScore = newPossibleScore;
-    }
-
-    public boolean isSolved(){
+    public boolean isSolved() {
         return isSolved;
     }
-    public void setSolvedStatus(boolean status){
+
+    public boolean isSolvedWithStar() {
+        return isSolvedWithStar;
+    }
+
+    public void setSolvedStatus(boolean status) {
         isSolved = status;
+    }
+
+    public void setSolvedWithStar(boolean status) {
+        isSolvedWithStar = status;
     }
 }

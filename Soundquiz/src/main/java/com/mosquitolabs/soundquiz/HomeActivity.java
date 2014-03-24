@@ -4,18 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.mosquitolabs.soundquiz.visualizer.StringVisualizerView;
-
 public class HomeActivity extends Activity {
 
     private Button playButton;
-    private StringVisualizerView bezier;
     private Runnable handlerTask;
 
     @Override
@@ -26,7 +22,6 @@ public class HomeActivity extends Activity {
         Utility.hideActionbar(this);
 
         playButton = (Button) findViewById(R.id.playButton);
-        bezier = (StringVisualizerView) findViewById(R.id.bezier);
 
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,18 +128,6 @@ public class HomeActivity extends Activity {
         PackageCollection.getInstance().getPackageCollection().add(cinema);
         PackageCollection.getInstance().getPackageCollection().add(cinema);
         PackageCollection.getInstance().getPackageCollection().add(cinema);
-
-        final Handler handler = new Handler();
-        handlerTask = new Runnable() {
-            @Override
-            public void run() {
-                    bezier.refresh();
-                    handler.postDelayed(handlerTask, 30);
-
-            }
-        };
-        handlerTask.run();
-
 
     }
 

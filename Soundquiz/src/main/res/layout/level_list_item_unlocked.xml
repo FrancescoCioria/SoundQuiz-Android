@@ -6,17 +6,20 @@
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="150dp"
-        android:padding="15dp"
+        android:layout_height="wrap_content"
         android:id="@+id/layout"
         android:layout_centerInParent="true"
-        android:background="@drawable/level_rounded_layout">
+        android:background="@drawable/level_rounded_layout"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Level 1"
-            android:id="@+id/levelTextView"
+            android:id="@+id/titleTextView"
             android:gravity="center"
             android:textSize="25sp"
             android:layout_alignParentLeft="true"
@@ -30,18 +33,19 @@
             android:text="Play"
             android:id="@+id/playButton"
             android:layout_gravity="center_horizontal"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/progressBarLayout"
+            android:layout_marginTop="7dp" />
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_alignLeft="@+id/levelTextView"
-            android:layout_alignStart="@+id/levelTextView"
-            android:layout_alignRight="@+id/levelTextView"
-            android:layout_alignEnd="@+id/levelTextView"
+            android:id="@+id/progressBarLayout"
+            android:layout_alignStart="@+id/titleTextView"
+            android:layout_alignEnd="@+id/titleTextView"
             android:layout_centerVertical="true"
-
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/solvedQuizTextView">
 
             <ProgressBar
                 style="?android:attr/progressBarStyleHorizontal"
@@ -57,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="40%"
-                android:id="@+id/textView3"
+                android:id="@+id/percentageTextView"
                 android:layout_centerInParent="true"
                 android:textSize="10sp"
                 android:textColor="@android:color/secondary_text_dark" />
@@ -67,19 +71,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="solved: 6 / 15"
-            android:id="@+id/textView"
-            android:layout_below="@+id/levelTextView"
-            android:layout_alignLeft="@+id/levelTextView"
-            android:layout_alignStart="@+id/levelTextView" />
+            android:id="@+id/solvedQuizTextView"
+            android:layout_below="@+id/titleTextView"
+            android:layout_alignLeft="@+id/titleTextView"
+            android:layout_alignStart="@+id/titleTextView" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="stars: 3"
-            android:id="@+id/textView2"
-            android:layout_below="@+id/levelTextView"
-            android:layout_alignRight="@+id/levelTextView"
-            android:layout_alignEnd="@+id/levelTextView" />
+            android:id="@+id/starsAchievedTextView"
+            android:layout_below="@+id/titleTextView"
+            android:layout_alignRight="@+id/titleTextView"
+            android:layout_alignEnd="@+id/titleTextView" />
 
     </RelativeLayout>
 </RelativeLayout>

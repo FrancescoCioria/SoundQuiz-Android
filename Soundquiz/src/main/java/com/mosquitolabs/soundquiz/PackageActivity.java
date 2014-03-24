@@ -41,6 +41,11 @@ public class PackageActivity extends Activity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        refreshAdapter();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -59,6 +64,10 @@ public class PackageActivity extends Activity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void refreshAdapter(){
+        levelListViewAdapter.notifyDataSetChanged();
     }
 
 }
