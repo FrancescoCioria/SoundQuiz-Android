@@ -27,6 +27,7 @@ public class LevelActivity extends Activity {
     private boolean hasDoneAnimation = false;
     private boolean hasWaited = false;
     private TextView back;
+    private TextView textViewQuizSolved;
 
     private Handler m_handler;
     private Runnable m_handlerTask;
@@ -48,18 +49,21 @@ public class LevelActivity extends Activity {
         //binding
         quizListView = (ListView) findViewById(R.id.quizListView);
         back = (TextView) findViewById(R.id.back);
+        textViewQuizSolved = (TextView) findViewById(R.id.textViewQuizDone);
+        TextView textViewLevel = (TextView) findViewById(R.id.textViewLevel);
 
         //set adapter
         quizListViewAdapter = new QuizListViewAdapter(this, packageIndex, levelIndex);
         quizListView.setAdapter(quizListViewAdapter);
 
-
-        findViewById(R.id.textViewLevel).setOnClickListener(new View.OnClickListener() {
+        textViewLevel.setText("Level " + (levelIndex + 1));
+        textViewLevel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startAnimationAppear();
             }
         });
+
 
         back.setText("< Levels");
         back.setOnClickListener(new View.OnClickListener() {
@@ -79,6 +83,7 @@ public class LevelActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+        refreshTextViewQuizSolved();
         refreshQuizGridAdapter();
     }
 
@@ -115,6 +120,16 @@ public class LevelActivity extends Activity {
                 }
             });
         }
+    }
+
+    private void refreshTextViewQuizSolved() {
+        int counter = 0;
+        for (QuizData quizData : PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList()) {
+            if (quizData.isSolved()) {
+                counter++;
+            }
+        }
+        textViewQuizSolved.setText(counter + " / 15");
     }
 
 

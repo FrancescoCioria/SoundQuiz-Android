@@ -49,8 +49,8 @@ public class QuizListViewAdapter extends BaseAdapter {
     private void startQuizActivity(QuizData quizData, int paramInt) {
         Intent mIntent = new Intent(context, QuizActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putString("answer", quizData.getAnswer());
-        bundle.putString("category", quizData.getCategroy());
+        bundle.putString("id", quizData.getID());
+        bundle.putString("category", packageCollection.getPackageCollection().get(packageIndex).getCategory());
         bundle.putInt("quizIndex", paramInt);
         bundle.putInt("levelIndex", levelIndex);
         bundle.putInt("packageIndex", packageIndex);
@@ -75,89 +75,49 @@ public class QuizListViewAdapter extends BaseAdapter {
                 final int index = paramInt * COLUMNS + i;
                 final QuizData quizData = packageCollection.getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().get(index);
                 String imageId = "imageView" + (i + 1);
-                String questionMarkId = "questionMark" + (i + 1);
                 String bodyId = "body" + (i + 1);
                 int resImage = context.getResources().getIdentifier(imageId, "id", context.getPackageName());
-                int resQuestionMark = context.getResources().getIdentifier(questionMarkId, "id", context.getPackageName());
                 int resBody = context.getResources().getIdentifier(bodyId, "id", context.getPackageName());
                 quizItemViewHolder.images[i] = (ImageView) paramView.findViewById(resImage);
                 quizItemViewHolder.bodies[i] = (TextView) paramView.findViewById(resBody);
-//                quizItemViewHolder.questionMarks[i] = (ImageView) paramView.findViewById(resQuestionMark);
-
-                quizItemViewHolder.images[i].setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        startQuizActivity(quizData, index);
-                    }
-                });
 
             }
-
             paramView.setTag(quizItemViewHolder);
         } else {
             quizItemViewHolder = (QuizItemViewHolder) paramView.getTag();
         }
 
-        boolean divider = true;
 
         for (int i = 0; i < COLUMNS; i++) {
             final int index = paramInt * COLUMNS + i;
             final QuizData quizData = packageCollection.getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().get(index);
-            String path;
-            switch (index) {
-                case 0:
-                    path = "fox";
-                    break;
-                case 1:
-                    path = "columbia";
-                    break;
-                case 2:
-                    path = "paramount";
-                    break;
-                case 3:
-                    path = "warner_bros";
-                    break;
-                case 4:
-                    path = "universal";
-                    break;
-                case 5:
-                    path = "mgm";
-                    break;
-                case 6:
-                    path = "walt_disney";
-                    break;
-                case 7:
-                    path = "fandango";
-                    break;
-                case 8:
-                    path = "new_line_cinema";
-                    break;
-                case 9:
-                    path = "castle_rock";
-                    break;
-                case 10:
-                    path = "lionsgate";
-                    break;
-                case 11:
-                    path = "image";
-                    break;
-                default:
-                    path = "image";
-                    break;
-            }
-
+            quizItemViewHolder.images[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startQuizActivity(quizData, index);
+                }
+            });
+            String path = quizData.getQuizID();
 
             if (quizData.isSolved()) {
                 int res = context.getResources().getIdentifier(path, "drawable", context.getPackageName());
-                quizItemViewHolder.images[i].setImageDrawable(context.getResources().getDrawable(res));
-                quizItemViewHolder.bodies[i].setText(quizData.getAnswer());
+                try {
+                    quizItemViewHolder.images[i].setImageDrawable(context.getResources().getDrawable(res));
+                }catch (Exception e){
+                    quizItemViewHolder.images[i].setImageDrawable(context.getResources().getDrawable(R.drawable.twenty_century_fox));
+                }
+//                quizItemViewHolder.images[i].setImageBitmap(Utility.readImageFromDisk(context,quizData.getID(),false));
+                quizItemViewHolder.bodies[i].setText(quizData.getAnswers().get(0));
                 quizItemViewHolder.bodies[i].setVisibility(View.VISIBLE);
-//                quizItemViewHolder.questionMarks[i].setVisibility(View.GONE);
             } else {
                 int res = context.getResources().getIdentifier(path + "_blur", "drawable", context.getPackageName());
-                quizItemViewHolder.images[i].setImageDrawable(context.getResources().getDrawable(res));
+                try {
+                    quizItemViewHolder.images[i].setImageDrawable(context.getResources().getDrawable(res));
+                }catch (Exception e){
+                    quizItemViewHolder.images[i].setImageDrawable(context.getResources().getDrawable(R.drawable.twenty_century_fox_blur));
+                }
+//                quizItemViewHolder.images[i].setImageBitmap(Utility.readImageFromDisk(context,quizData.getID(),true));
                 quizItemViewHolder.bodies[i].setVisibility(View.GONE);
-//                quizItemViewHolder.questionMarks[i].setVisibility(View.VISIBLE);
             }
         }
 
@@ -174,7 +134,6 @@ public class QuizListViewAdapter extends BaseAdapter {
     static class QuizItemViewHolder {
         TextView bodies[] = {null, null, null, null};
         ImageView images[] = {null, null, null, null};
-        //        ImageView questionMarks[] = {null, null, null, null};
         LinearLayout divider;
     }
 

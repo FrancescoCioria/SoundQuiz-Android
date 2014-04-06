@@ -73,7 +73,7 @@ public class LevelListViewAdapter extends BaseAdapter {
 
 
 //        check if level is unlocked
-        if (totalSolvedQuizzes >= paramInt * 10) {
+        if (totalSolvedQuizzes >= paramInt * 10 || true) {
             UnlockedLevelItemViewHolder unlockedlevelItemViewHolder;
 
             try {
@@ -90,18 +90,17 @@ public class LevelListViewAdapter extends BaseAdapter {
                 unlockedlevelItemViewHolder.layout = (RelativeLayout) paramView.findViewById(R.id.layout);
                 unlockedlevelItemViewHolder.progressBar = (ProgressBar) paramView.findViewById(R.id.progressBar);
 
-                unlockedlevelItemViewHolder.button.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        startLevelActivity(paramInt);
-                    }
-                });
-
                 unlockedlevelItemViewHolder.layout.getLayoutParams().width = Utility.getWidth(context) * 9 / 10;
 
                 paramView.setTag(unlockedlevelItemViewHolder);
             }
 
+            unlockedlevelItemViewHolder.button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startLevelActivity(paramInt);
+                }
+            });
             unlockedlevelItemViewHolder.titleTextView.setText("Level " + (paramInt + 1));
             unlockedlevelItemViewHolder.solvedQuizTextView.setText("solved: " + solvedQuizzes + " / " + 15);
             unlockedlevelItemViewHolder.starsAchievedTextView.setText("stars: " + starsAchieved);

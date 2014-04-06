@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class LevelData {
 
     private String category;
+    private boolean isFree = true;
 
     private ArrayList<QuizData> quizList = new ArrayList<QuizData>();
 
@@ -24,35 +25,13 @@ public class LevelData {
         return quizList;
     }
 
-//    public void setLevelFromDisk(Context paramActivity, String path) {
-//        try {
-//            setPath(path);
-//            ObjectInputStream localObjectInputStream = new ObjectInputStream(
-//                    paramActivity.openFileInput(path));
-//            ArrayList localArrayList = (ArrayList) localObjectInputStream
-//                    .readObject();
-//            localObjectInputStream.close();
-//            quizList = localArrayList;
-//            return;
-//        } catch (IOException localIOException) {
-//            localIOException.printStackTrace();
-//        } catch (ClassNotFoundException localClassNotFoundException) {
-//            localClassNotFoundException.printStackTrace();
-//        }
-//    }
-//
-//
-//    public void saveLevelToDisk(Context paramActivity) {
-//        try {
-//            ObjectOutputStream localObjectOutputStream = new ObjectOutputStream(
-//                    paramActivity.openFileOutput(path, 0));
-//            localObjectOutputStream.writeObject(quizList);
-//            localObjectOutputStream.close();
-//            return;
-//        } catch (IOException localIOException) {
-//            localIOException.printStackTrace();
-//        }
-//    }
+    public void setFree(boolean isFree){
+        this.isFree = isFree;
+    }
+
+    public boolean isFree(){
+        return isFree;
+    }
 
 
 }

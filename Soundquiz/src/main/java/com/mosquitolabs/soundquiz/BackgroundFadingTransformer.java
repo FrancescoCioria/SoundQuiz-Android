@@ -27,8 +27,8 @@ public class BackgroundFadingTransformer implements ViewPager.PageTransformer {
 //        INIT DISTANCE BETWEEN PAGES AND IMAGES
         if (DISTANCE == 0.0f && index == 1) {
             DISTANCE = position;
-            backgroundHandler.setBackgroundWithAlpha(0, 1);
-            backgroundHandler.setBackgroundWithAlpha(1, 0);
+            backgroundHandler.setBackgroundWithAlpha(0, 1f);
+            backgroundHandler.setBackgroundWithAlpha(1, 0f);
             Log.d("TRANSFORMATION", "distance: " + DISTANCE);
         }
 

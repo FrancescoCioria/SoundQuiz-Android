@@ -10,14 +10,13 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mosquitolabs.soundquiz.visualizer.AudioPlayer;
@@ -25,8 +24,6 @@ import com.mosquitolabs.soundquiz.visualizer.StringVisualizerView;
 
 public class QuizActivity extends Activity {
 
-    private String answer;
-    private String category;
     private int quizIndex;
     private int levelIndex;
     private int packageIndex;
@@ -35,11 +32,9 @@ public class QuizActivity extends Activity {
     private EditText answerEditText;
     private Button checkButton;
     private Button hintButton;
-    private TextView status;
-    private TextView hintTextView;
+    private ImageView TV;
 
     private QuizData quizData;
-    private PackageCollection packageCollection = PackageCollection.getInstance();
     private AudioPlayer audioPlayer = AudioPlayer.getIstance;
     private StringVisualizerView visualizer;
 
@@ -51,31 +46,29 @@ public class QuizActivity extends Activity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         Utility.hideActionbar(this);
 
-        answer = getIntent().getExtras().getString("answer");
-        category = getIntent().getExtras().getString("category");
+
         quizIndex = getIntent().getExtras().getInt("quizIndex");
         levelIndex = getIntent().getExtras().getInt("levelIndex");
         packageIndex = getIntent().getExtras().getInt("packageIndex");
 
-        setQuizDataByCategoryAndAnswer(category, answer);
+        quizData = PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().get(quizIndex);
+
 
 //        binding
         checkButton = (Button) findViewById(R.id.checkButton);
         hintButton = (Button) findViewById(R.id.hintButton);
         answerEditText = (EditText) findViewById(R.id.answerEditText);
-        status = (TextView) findViewById(R.id.statusTextView);
-        hintTextView = (TextView) findViewById(R.id.hintTextView);
-        TextView backButton = (TextView) findViewById(R.id.back);
+        TV = (ImageView) findViewById(R.id.imageViewTV);
         visualizer = (StringVisualizerView) findViewById(R.id.visualizerView);
+        TextView back = (TextView) findViewById(R.id.back);
 
-        backButton.setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
 
-//        answerEditText.setBootstrapEditTextEnabled(true);
         answerEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
         answerEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -93,12 +86,10 @@ public class QuizActivity extends Activity {
                 String userAnswer = answerEditText.getText().toString();
                 if (userAnswer.length() > 0) {
                     if (checkAnswer(userAnswer)) {
-                        quizData.setSolvedStatus(true);
-                        quizData.setSolvedWithStar(!quizData.hasUsedHint());
+                        quizData.setSolved();
+                        PackageCollection.getInstance().modifyQuizInSavedData(quizData);
                         Intent mIntent = new Intent(QuizActivity.this, WinActivity.class);
                         Bundle bundle = new Bundle();
-                        bundle.putString("answer", answer);
-                        bundle.putString("category", category);
                         bundle.putInt("quizIndex", quizIndex);
                         bundle.putInt("levelIndex", levelIndex);
                         bundle.putInt("packageIndex", packageIndex);
@@ -123,6 +114,7 @@ public class QuizActivity extends Activity {
             @Override
             public void onClick(View v) {
                 quizData.setUsedHint();
+                PackageCollection.getInstance().modifyQuizInSavedData(quizData);
                 AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
                 builder.setMessage(getHint());
                 builder.setCancelable(false);
@@ -135,7 +127,6 @@ public class QuizActivity extends Activity {
             }
         });
 
-
         visualizer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -144,7 +135,6 @@ public class QuizActivity extends Activity {
         });
 
         initVisualizer();
-
 
     }
 
@@ -173,85 +163,12 @@ public class QuizActivity extends Activity {
         super.onBackPressed();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.quiz, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                break;
-
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    private boolean setQuizDataByCategoryAndAnswer(String category, String answer) {
-        for (PackageData pack : packageCollection.getPackageCollection()) {
-            if (pack.getCategory().equals(category)) {
-                for (QuizData quizDataTemp : pack.getLevelList().get(levelIndex).getQuizList()) {
-                    if (quizDataTemp.getAnswer().equals(answer)) {
-                        quizData = quizDataTemp;
-                        return true;
-                    }
-                }
-                return false;
-            }
-        }
-        return false;
-    }
 
     private void initSound(final boolean start) {
         cleanUp();
+        int res = getResources().getIdentifier(quizData.getQuizID(), "raw", getPackageName());
 
-        switch (quizIndex) {
-            case 0:
-                audioPlayer.player = MediaPlayer.create(this, R.raw.fox);
-                break;
-            case 1:
-                audioPlayer.player = MediaPlayer.create(this, R.raw.columbia);
-                break;
-            case 2:
-                audioPlayer.player = MediaPlayer.create(this, R.raw.lucas_film);
-                break;
-            case 3:
-                audioPlayer.player = MediaPlayer.create(this, R.raw.warner_bros);
-                break;
-            case 4:
-                audioPlayer.player = MediaPlayer.create(this, R.raw.universal);
-                break;
-            case 5:
-                audioPlayer.player = MediaPlayer.create(this, R.raw.mgm);
-                break;
-            case 6:
-                audioPlayer.player = MediaPlayer.create(this, R.raw.walt_disney);
-                break;
-            case 7:
-                audioPlayer.player = MediaPlayer.create(this, R.raw.fandango);
-                break;
-            case 8:
-                audioPlayer.player = MediaPlayer.create(this, R.raw.new_line_cinema);
-                break;
-            case 9:
-                audioPlayer.player = MediaPlayer.create(this, R.raw.castle_rock);
-                break;
-            case 10:
-                audioPlayer.player = MediaPlayer.create(this, R.raw.lionsgate);
-                break;
-            case 11:
-                audioPlayer.player = MediaPlayer.create(this, R.raw.tristar);
-                break;
-            default:
-                audioPlayer.player = MediaPlayer.create(this, R.raw.fox);
-                break;
-        }
+        audioPlayer.player = MediaPlayer.create(this, res);
 
         audioPlayer.resetEqualizer();
         audioPlayer.player.setLooping(false);
@@ -272,8 +189,17 @@ public class QuizActivity extends Activity {
     }
 
     private void initVisualizer() {
+        int layoutWidth = (int) (Utility.getWidth(this) * 0.8f);
+        findViewById(R.id.body).getLayoutParams().width = layoutWidth;
         visualizer.getLayoutParams().height = Utility.getWidth(this) / 6;
+        visualizer.getLayoutParams().width = layoutWidth * 401 / 545;
+        int leftMargin = (int) (51.5f / 543 * layoutWidth);
+        Utility.setMargins(visualizer, leftMargin, 0, 0, 0);
+
         visualizer.setColor(Color.WHITE);
+        if (Utility.getWidth(this) >= 720) {
+            visualizer.setStroke(4, 2);
+        }
     }
 
     private void togglePlay() {
@@ -297,30 +223,32 @@ public class QuizActivity extends Activity {
     }
 
     private boolean checkAnswer(String userAnswer) {
+        for (String answer : quizData.getAnswers()) {
 //        remove any upper case
-        String answer = this.answer.toLowerCase();
-        userAnswer = userAnswer.toLowerCase();
+            String answerTemp = answer.toLowerCase();
+            userAnswer = userAnswer.toLowerCase();
 
 //        remove spaces at the beginning
-        while (userAnswer.charAt(0) == ' ') {
-            userAnswer = userAnswer.substring(1);
-        }
+            while (userAnswer.charAt(0) == ' ') {
+                userAnswer = userAnswer.substring(1);
+            }
 //        remove spaces at the end
-        while (userAnswer.charAt(userAnswer.length() - 1) == ' ') {
-            userAnswer = userAnswer.substring(0, userAnswer.length() - 1);
-        }
+            while (userAnswer.charAt(userAnswer.length() - 1) == ' ') {
+                userAnswer = userAnswer.substring(0, userAnswer.length() - 1);
+            }
 
 //        remove "The"
-        if (answer.length() > 4 && answer.substring(0, 4).equals("the ")) {
-            answer = answer.substring(4);
-        }
-        if (userAnswer.length() > 4 && userAnswer.substring(0, 4).equals("the ")) {
-            userAnswer = userAnswer.substring(4);
-        }
+            if (answerTemp.length() > 4 && answerTemp.substring(0, 4).equals("the ")) {
+                answerTemp = answerTemp.substring(4);
+            }
+            if (userAnswer.length() > 4 && userAnswer.substring(0, 4).equals("the ")) {
+                userAnswer = userAnswer.substring(4);
+            }
 
 //        compare
-        if (userAnswer.equals(answer)) {
-            return true;
+            if (userAnswer.equals(answerTemp)) {
+                return true;
+            }
         }
 
         return false;
@@ -328,7 +256,7 @@ public class QuizActivity extends Activity {
 
     private String getHint() {
         String hint = new String();
-        String[] separated = answer.toUpperCase().split(" ");
+        String[] separated = quizData.getAnswers().get(0).toUpperCase().split(" ");
         for (String word : separated) {
             for (int i = 0; i < word.length(); i++) {
 //                show first letter and last (if word longer then 4)
@@ -348,12 +276,11 @@ public class QuizActivity extends Activity {
     }
 
     private void startAnimationButton(View v) {
-        final Animation
-                animRotate = AnimationUtils.loadAnimation(this, R.anim.anim_rotate);
         final Animation animAlpha = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
 
         v.startAnimation(animAlpha);
         hintButton.setText(getHint());
     }
+
 
 }

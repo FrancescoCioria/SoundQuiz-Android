@@ -7,14 +7,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
 public class PackageActivity extends Activity {
 
-    private TextView back;
-    private int packageIndex;
-    private ListView levelListView;
+    //    private TextView back;
+//    private int packageIndex;
+//    private ListView levelListView;
+
     private LevelListViewAdapter levelListViewAdapter;
 
     @Override
@@ -24,14 +26,17 @@ public class PackageActivity extends Activity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         Utility.hideActionbar(this);
 
-        packageIndex = getIntent().getExtras().getInt("packageIndex");
-        levelListView = (ListView) findViewById(R.id.levelListView);
-        back = (TextView) findViewById(R.id.back);
+        int packageIndex = getIntent().getExtras().getInt("packageIndex");
+        ListView levelListView = (ListView) findViewById(R.id.levelListView);
+        TextView back = (TextView) findViewById(R.id.back);
+        RelativeLayout topBar = (RelativeLayout) findViewById(R.id.topBar);
 
         levelListViewAdapter = new LevelListViewAdapter(this, packageIndex);
         levelListView.setAdapter(levelListViewAdapter);
 
-        back.setText("< Categories");
+        topBar.getLayoutParams().width = Utility.getWidth(this)*9/10;
+
+        back.setText("Categories");
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,7 +71,7 @@ public class PackageActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void refreshAdapter(){
+    private void refreshAdapter() {
         levelListViewAdapter.notifyDataSetChanged();
     }
 

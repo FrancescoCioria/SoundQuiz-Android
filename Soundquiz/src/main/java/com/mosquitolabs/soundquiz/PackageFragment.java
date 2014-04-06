@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -16,13 +17,12 @@ public class PackageFragment extends Fragment {
 
     public static PackageFragment newInstance(int packageIndex) {
 
-        PackageFragment f = new PackageFragment();
-        Bundle b = new Bundle();
-        b.putInt("packageIndex", packageIndex);
+        PackageFragment fragment = new PackageFragment();
+        Bundle bundle = new Bundle();
+        bundle.putInt("packageIndex", packageIndex);
+        fragment.setArguments(bundle);
 
-        f.setArguments(b);
-
-        return f;
+        return fragment;
     }
 
 
@@ -31,10 +31,12 @@ public class PackageFragment extends Fragment {
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
                 R.layout.fragment_package, container, false);
-
         final int packageIndex = getArguments().getInt("packageIndex", 0);
 
-        TextView name = (TextView) rootView.findViewById(R.id.nameTextView);
+        TextView nameTextView = (TextView) rootView.findViewById(R.id.nameTextView);
+        TextView unlockedTextView = (TextView) rootView.findViewById(R.id.unlockedTextView);
+        TextView solvedTextView = (TextView) rootView.findViewById(R.id.solvedTextView);
+        ProgressBar progressBar = (ProgressBar) rootView.findViewById(R.id.progressBar);
         Button play = (Button) rootView.findViewById(R.id.playButton);
         RelativeLayout layout = (RelativeLayout) rootView.findViewById(R.id.fragmentRelativeLayout);
         RelativeLayout header = (RelativeLayout) rootView.findViewById(R.id.header);
@@ -67,8 +69,19 @@ public class PackageFragment extends Fragment {
             }
         });
 
-        name.setText(PackageCollection.getInstance().getPackageCollection().get(packageIndex).getCategory());
-        name.setTextSize(Utility.pixelsToSp(activity, headerHeight * 0.7f));
+        nameTextView.setText(PackageCollection.getInstance().getPackageCollection().get(packageIndex).getCategory());
+        nameTextView.setTextSize(Utility.pixelsToSp(activity, headerHeight * 0.7f));
+        int solvedQuizzes = 0;
+        for (LevelData levelData : PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList()) {
+            for (QuizData quizData : levelData.getQuizList()) {
+                solvedQuizzes += quizData.isSolved() ? 1 : 0;
+            }
+        }
+        int numberOfLevels = PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList().size();
+        unlockedTextView.setText("unlocked: " + (solvedQuizzes / 10 + 1) + " / " + numberOfLevels);
+        solvedTextView.setText("solved: " + solvedQuizzes + " / " + (numberOfLevels * 15));
+        progressBar.setProgress(solvedQuizzes * 100 / (numberOfLevels * 15));
+
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,9 +100,4 @@ public class PackageFragment extends Fragment {
         getActivity().startActivity(mIntent);
     }
 
-
-//    private static float pixelsToSp(Context context, Float px) {
-//        float scaledDensity = context.getResources().getDisplayMetrics().scaledDensity;
-//        return px / scaledDensity;
-//    }
 }

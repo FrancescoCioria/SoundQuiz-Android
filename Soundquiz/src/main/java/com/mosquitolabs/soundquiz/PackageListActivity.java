@@ -9,8 +9,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -59,6 +57,14 @@ public class PackageListActivity extends FragmentActivity {
         images.add(getResources().getDrawable(R.drawable.gold));
         images.add(getResources().getDrawable(R.drawable.brown));
 
+        if (PackageCollection.getInstance().getPackageCollection().size() == 1) {
+            ImageView image = (ImageView) findViewById(R.id.firstView);
+            ImageView image2 = (ImageView) findViewById(R.id.secondView);
+            setBackgroundImage(image, 0);
+            setAlpha(image, 1f);
+            setAlpha(image2, 0f);
+        }
+
         pager = (VerticalViewPager) findViewById(R.id.packagePagerView);
         pagerAdapter = new PackagePagerAdapter(getSupportFragmentManager());
 
@@ -68,6 +74,17 @@ public class PackageListActivity extends FragmentActivity {
         pager.setAdapter(pagerAdapter);
         pager.setPageTransformer(true, new BackgroundFadingTransformer(this));
 
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        refreshPager();
+    }
+
+    private void refreshPager() {
+        pagerAdapter.notifyDataSetChanged();
     }
 
     private void setPageMarginAndPackageSize() {
@@ -110,27 +127,10 @@ public class PackageListActivity extends FragmentActivity {
     }
 
 
+
     public VerticalViewPager getPager() {
         return pager;
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.package_list, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
 
     private class PackagePagerAdapter extends FragmentStatePagerAdapter {
         public PackagePagerAdapter(FragmentManager fm) {
@@ -146,6 +146,7 @@ public class PackageListActivity extends FragmentActivity {
         public int getCount() {
             return PackageCollection.getInstance().getPackageCollection().size();
         }
+
     }
 
 }

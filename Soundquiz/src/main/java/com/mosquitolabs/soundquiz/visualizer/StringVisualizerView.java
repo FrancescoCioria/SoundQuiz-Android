@@ -23,15 +23,20 @@ public class StringVisualizerView extends View {
     private Paint paint;
     private Path path = new Path();
 
+    private int mainStroke = 2;
+    private int secondaryStroke = 1;
+
 
     float phase = 0;
     float amplitude = IDLE_AMPLITUDE;
     float waves = IDLE_WAVES;
 
     private boolean stopVisualizer = false;
+    private boolean isAnimating = false;
+
     private Runnable handlerTask;
 
-    private boolean isAnimating = false;
+//    private float leftMargin = 0f;
 
     private final static int FPS = 35;
 
@@ -44,9 +49,6 @@ public class StringVisualizerView extends View {
         }};
     }
 
-    public StringVisualizerView(Context context) {
-        this(context, null);
-    }
 
     @Override
     protected void onDraw(Canvas canvas) {
@@ -68,7 +70,7 @@ public class StringVisualizerView extends View {
             path.reset();
 
             // The first wave is drawn with a 2px stroke width, all others a with 1px stroke width.
-            paint.setStrokeWidth((i == 0) ? 2 : 1);
+            paint.setStrokeWidth((i == 0) ? mainStroke : secondaryStroke);
 
             float halfHeight = getHeight() / 2;
             float width = getWidth();
@@ -143,6 +145,11 @@ public class StringVisualizerView extends View {
 
     public void setColor(int color) {
         paint.setColor(color);
+    }
+
+    public void setStroke(int main, int secondary) {
+        mainStroke = main;
+        secondaryStroke = secondary;
     }
 
 }
