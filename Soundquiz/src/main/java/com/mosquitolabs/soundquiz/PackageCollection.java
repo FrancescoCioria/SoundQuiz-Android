@@ -122,8 +122,13 @@ public class PackageCollection {
                             quizData.addAnswer(answers.getString(y));
                         }
                         JSONArray rows = quizJSON.getJSONArray("rows");
-                        for (int y = 0; y < rows.length(); y++) {
-                            quizData.addRow(rows.getString(y));
+                        if (rows.length() == 0) {
+                            Log.d("ciaooo", "hhhhhhhhhhhhgggggggggjjjjjjjj");
+                            quizData.addRow(quizData.getAnswers().get(0));
+                        } else {
+                            for (int y = 0; y < rows.length(); y++) {
+                                quizData.addRow(rows.getString(y));
+                            }
                         }
 
                         String ID = category + Integer.toString(i) + quizJSON.getString("id");

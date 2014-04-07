@@ -30,7 +30,7 @@
         <activity
             android:name="com.mosquitolabs.soundquiz.QuizActivity"
             android:label="@string/title_activity_quiz"
-            android:windowSoftInputMode="stateVisible|adjustResize" />
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name="com.mosquitolabs.soundquiz.PackageActivity"
             android:label="@string/title_activity_package" />

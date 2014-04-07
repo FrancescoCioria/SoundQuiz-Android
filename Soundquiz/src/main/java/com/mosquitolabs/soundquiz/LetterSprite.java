@@ -12,6 +12,8 @@ public class LetterSprite {
 
     private final static float ANIMATION_TIME = 300f; // (millis)
     private int INDEX;
+    private int SIZE;
+    private int SPACE_SIZE;
     private String letter;
 
     private GameView gameView;
@@ -20,39 +22,85 @@ public class LetterSprite {
     private boolean isAnimating = false;
     private Point home = new Point();
     private Point position = new Point();
-    private Point endPosition = new Point();
+    private Point finalPosition = new Point();
+    private Point initialPosition = new Point();
     private Paint paint = new Paint(Color.WHITE);
-    private int size;
+    private int currentSize;
+    private int finalSize;
+    private int initialSize;
 
 
     private Bitmap bmp;
 
-    public LetterSprite(GameView gameView, int x, int y, int size, int index, String letter) {
+    public LetterSprite(GameView gameView, int x, int y, int size, int spaceSize, int index, String letter) {
         home.x = position.x = x;
         home.y = position.y = y;
-        this.size = size;
+        this.SIZE = size;
+        this.SPACE_SIZE = spaceSize;
         this.gameView = gameView;
         INDEX = index;
         this.letter = letter;
+
+        currentSize = SIZE;
 
         bmp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(gameView.getActivityContext().getResources(), R.drawable.frozen_blur), size, size, false);
     }
 
     private void update() {
         if (isAnimating) {
-            boolean isToTheLeft = endPosition.x > home.x;
+            boolean isGoingHome = finalPosition.x == home.x && finalPosition.y == home.y;
+            boolean isGoingLeft = initialPosition.x > finalPosition.x;
+            boolean sameX = initialPosition.x == finalPosition.x;
             float animationCycles = (ANIMATION_TIME / (1000 / Utility.getFPS()));
-            float deltaX = (endPosition.x - home.x) / animationCycles;
-            float deltaY = (endPosition.y - home.y) / animationCycles;
+            int deltaX = (int) (Math.abs(finalPosition.x - initialPosition.x) / animationCycles);
+            int deltaY = (int) (Math.abs(finalPosition.y - initialPosition.y) / animationCycles);
+            float deltaScale = (initialSize - finalSize) / animationCycles;
             Log.d("DELTA", " x: " + deltaX + "   y: " + deltaY);
+            Log.d("DELTAX", "" + Math.abs(finalPosition.x - initialPosition.x));
 
-            if ((isToTheLeft && (position.x + deltaX < endPosition.x && position.y + deltaY < endPosition.y)) || (!isToTheLeft && (position.x + deltaX > endPosition.x && position.y + deltaY > endPosition.y))) {
+            boolean animate = true;
+            if (isGoingHome && isGoingLeft) {
+                position.x -= deltaX;
+                position.y += deltaY;
+                currentSize -= deltaScale;
+
+                if (position.x < finalPosition.x || position.y > finalPosition.y) {
+                    animate = false;
+                }
+
+            } else if (isGoingHome && (!isGoingLeft || sameX)) {
                 position.x += deltaX;
                 position.y += deltaY;
-            } else {
+                currentSize -= deltaScale;
+
+                if (position.x > finalPosition.x || position.y > finalPosition.y) {
+                    animate = false;
+                }
+
+            } else if (!isGoingHome && (isGoingLeft || sameX)) {
+                position.x -= deltaX;
+                position.y -= deltaY;
+                currentSize -= deltaScale;
+
+                if (position.x < finalPosition.x || position.y < finalPosition.y) {
+                    animate = false;
+                }
+
+            } else if (!isGoingHome && !isGoingLeft) {
+                position.x += deltaX;
+                position.y -= deltaY;
+                currentSize -= deltaScale;
+
+                if (position.x > finalPosition.x || position.y < finalPosition.y) {
+                    animate = false;
+                }
+            }
+
+            if (!animate) {
                 isAnimating = false;
-                position.x = endPosition.x;
-                position.y = endPosition.y;
+                position.x = finalPosition.x;
+                position.y = finalPosition.y;
+                currentSize = finalSize;
             }
 
         }
@@ -60,18 +108,29 @@ public class LetterSprite {
 
     public void onDraw(Canvas canvas) {
         update();
+        canvas.drawRect(position.x, position.y, position.x + currentSize, position.y + currentSize, paint);
 
-        canvas.drawRect(position.x, position.y, position.x + size, position.y + size, paint);
+        Paint paint = new Paint();
+        paint.setColor(Color.WHITE);
+        paint.setAntiAlias(true);
+        paint.setTextSize(currentSize / 2);
+        canvas.drawText(letter.toUpperCase(), position.x + currentSize / 4, position.y + currentSize * 3 / 4, paint);
+
     }
 
     private boolean isCollision(float x2, float y2) {
-        return x2 > position.x && x2 < position.x + size && y2 > position.y && y2 < position.y + size;
+        return x2 > position.x && x2 < position.x + currentSize && y2 > position.y && y2 < position.y + currentSize;
     }
 
     public void checkCollision(float x2, float y2) {
         if (isCollision(x2, y2) && !isAnimating) {
             if (isHome) {
-                moveTo(getFirstEmptySpace());
+                try {
+                    moveTo(getFirstEmptySpace());
+                    checkAnswer();
+                } catch (Exception e) {
+                    Utility.shortToast("Remove some letters first", gameView.getActivityContext());
+                }
             } else {
                 goBackHome();
             }
@@ -89,17 +148,24 @@ public class LetterSprite {
     private void moveTo(Point position) {
         isAnimating = true;
         isHome = false;
-        this.endPosition.x = position.x;
-        this.endPosition.y = position.y;
-
+        this.finalPosition.x = position.x;
+        this.finalPosition.y = position.y;
+        initialPosition.x = this.position.x;
+        initialPosition.y = this.position.y;
+        finalSize = SPACE_SIZE;
+        initialSize = currentSize;
     }
 
     private void goBackHome() {
         isAnimating = true;
         isHome = true;
         emptyCurrentSpace();
-        this.endPosition.x = home.x;
-        this.endPosition.y = home.y;
+        this.finalPosition.x = home.x;
+        this.finalPosition.y = home.y;
+        initialPosition.x = position.x;
+        initialPosition.y = position.y;
+        finalSize = SIZE;
+        initialSize = currentSize;
     }
 
 
@@ -120,4 +186,22 @@ public class LetterSprite {
         }
         return null;
     }
+
+    private void checkAnswer() {
+        String userAnswer = "";
+        for (int i = 0; i < gameView.getLetterSpaces().size(); i++) {
+            if (gameView.getLetterSpaces().get(i).letterSpriteContained < 0) {
+                return;
+            } else {
+                userAnswer += gameView.getLetterSprites().get(gameView.getLetterSpaces().get(i).letterSpriteContained).letter;
+            }
+        }
+        QuizActivity quizActivity = ((QuizActivity) gameView.getActivityContext());
+        String answer = quizActivity.getQuizData().getAnswers().get(0).toLowerCase().replace(" ", "");
+        if (answer.equals(userAnswer)) {
+            quizActivity.startWinActivity();
+        }
+    }
+
+
 }

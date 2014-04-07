@@ -6,14 +6,11 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -43,17 +40,14 @@ public class QuizActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-        setVolumeControlStream(AudioManager.STREAM_MUSIC);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         Utility.hideActionbar(this);
-
 
         quizIndex = getIntent().getExtras().getInt("quizIndex");
         levelIndex = getIntent().getExtras().getInt("levelIndex");
         packageIndex = getIntent().getExtras().getInt("packageIndex");
 
         quizData = PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().get(quizIndex);
-
 
 //        binding
         checkButton = (Button) findViewById(R.id.checkButton);
@@ -71,16 +65,16 @@ public class QuizActivity extends Activity {
             }
         });
 
-        answerEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
-        answerEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    checkButton.performClick();
-                    return true;
-                }
-                return false;
-            }
-        });
+//        answerEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
+//        answerEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+//            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+//                if (actionId == EditorInfo.IME_ACTION_DONE) {
+//                    checkButton.performClick();
+//                    return true;
+//                }
+//                return false;
+//            }
+//        });
 
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,6 +122,7 @@ public class QuizActivity extends Activity {
                 builder.create().show();
             }
         });
+
 
         visualizer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -286,11 +281,21 @@ public class QuizActivity extends Activity {
         hintButton.setText(getHint());
     }
 
-    public QuizData getQuizData(){
+    public QuizData getQuizData() {
         return quizData;
     }
 
-
+    public void startWinActivity() {
+        quizData.setSolved();
+        PackageCollection.getInstance().modifyQuizInSavedData(quizData);
+        Intent mIntent = new Intent(QuizActivity.this, WinActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("quizIndex", quizIndex);
+        bundle.putInt("levelIndex", levelIndex);
+        bundle.putInt("packageIndex", packageIndex);
+        mIntent.putExtras(bundle);
+        QuizActivity.this.startActivity(mIntent);
+    }
 
 
 }
