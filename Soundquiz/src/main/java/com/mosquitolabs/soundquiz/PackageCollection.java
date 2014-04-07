@@ -54,7 +54,7 @@ public class PackageCollection {
                 PackageCollection.this.context = context;
                 long startTime = System.currentTimeMillis();
                 String jsonString = Utility.getSharedPreferences().getString("main_json", "");
-                if (jsonString.length() == 0 || true) {
+                if (jsonString.length() == 0) {
                     // first time
                     initJsonFiles();
                 }
@@ -120,6 +120,10 @@ public class PackageCollection {
                         JSONArray answers = quizJSON.getJSONArray("answers");
                         for (int y = 0; y < answers.length(); y++) {
                             quizData.addAnswer(answers.getString(y));
+                        }
+                        JSONArray rows = quizJSON.getJSONArray("rows");
+                        for (int y = 0; y < rows.length(); y++) {
+                            quizData.addRow(rows.getString(y));
                         }
 
                         String ID = category + Integer.toString(i) + quizJSON.getString("id");

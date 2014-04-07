@@ -1,7 +1,5 @@
 package com.mosquitolabs.soundquiz;
 
-import android.content.SharedPreferences;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -10,6 +8,7 @@ import java.util.ArrayList;
  */
 public class QuizData implements Serializable {
     private ArrayList<String> answers = new ArrayList<String>();
+    private ArrayList<String> rows = new ArrayList<String>();
     private String ID;
     private String quizID;
     private String wikiID;
@@ -23,8 +22,16 @@ public class QuizData implements Serializable {
         answers.add(newAnswer);
     }
 
+    public void addRow(String newRow) {
+        rows.add(newRow);
+    }
+
     public ArrayList<String> getAnswers() {
         return answers;
+    }
+
+    public ArrayList<String> getRows() {
+        return rows;
     }
 
     public void setID(String string) {
@@ -70,14 +77,6 @@ public class QuizData implements Serializable {
 
     public void setSolved() {
         isSolved = true;
-    }
-
-    public void updateSharedPreferences(String category, int levelIndex) {
-        String ID = category + Integer.toString(levelIndex) + getID();
-        SharedPreferences.Editor editor = Utility.getSharedPreferences().edit();
-        editor.putBoolean(ID + "_is_solved", isSolved());
-        editor.putBoolean(ID + "_has_used_hint", hasUsedHint());
-        editor.commit();
     }
 
 

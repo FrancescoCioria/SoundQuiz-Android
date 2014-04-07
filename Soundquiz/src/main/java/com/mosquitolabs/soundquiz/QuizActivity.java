@@ -37,6 +37,7 @@ public class QuizActivity extends Activity {
     private QuizData quizData;
     private AudioPlayer audioPlayer = AudioPlayer.getIstance;
     private StringVisualizerView visualizer;
+    private GameView gameView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,7 @@ public class QuizActivity extends Activity {
         answerEditText = (EditText) findViewById(R.id.answerEditText);
         TV = (ImageView) findViewById(R.id.imageViewTV);
         visualizer = (StringVisualizerView) findViewById(R.id.visualizerView);
+        gameView = (GameView) findViewById(R.id.gameView);
         TextView back = (TextView) findViewById(R.id.back);
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -135,6 +137,8 @@ public class QuizActivity extends Activity {
         });
 
         initVisualizer();
+//        gameView.init(quizData);
+        gameView.startLoop();
 
     }
 
@@ -281,6 +285,12 @@ public class QuizActivity extends Activity {
         v.startAnimation(animAlpha);
         hintButton.setText(getHint());
     }
+
+    public QuizData getQuizData(){
+        return quizData;
+    }
+
+
 
 
 }

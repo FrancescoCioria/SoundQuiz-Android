@@ -9,6 +9,8 @@ import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.mosquitolabs.soundquiz.Utility;
+
 public class StringVisualizerView extends View {
     private final static float IDLE_WAVES = 1.0f;
     private final static float ANIMATION_WAVES = 5.0f;
@@ -38,7 +40,6 @@ public class StringVisualizerView extends View {
 
 //    private float leftMargin = 0f;
 
-    private final static int FPS = 35;
 
     public StringVisualizerView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -121,7 +122,7 @@ public class StringVisualizerView extends View {
             public void run() {
                 refresh();
                 if (!stopVisualizer) {
-                    handler.postDelayed(handlerTask, 1000 / FPS);
+                    handler.postDelayed(handlerTask, 1000 / Utility.getFPS());
                 }
             }
         };

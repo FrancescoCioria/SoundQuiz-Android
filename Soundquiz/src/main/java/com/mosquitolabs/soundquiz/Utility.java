@@ -29,6 +29,7 @@ public class Utility {
 
     private final static String accessKey = "AKIAITISRDB2BZLF5UMA";
     private final static String secretKey = "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";
+    private final static int FPS = 35;
     private static SharedPreferences sharedPreferences;
     private final static AWSCredentials credentials = new BasicAWSCredentials(accessKey, secretKey);
     private static ClientConfiguration clientConfig = new ClientConfiguration();
@@ -48,6 +49,10 @@ public class Utility {
             return true;
         }
         return false;
+    }
+
+    public static int getFPS(){
+        return FPS;
     }
 
     public static int convertDpToPixels(Context context, float dp) {
