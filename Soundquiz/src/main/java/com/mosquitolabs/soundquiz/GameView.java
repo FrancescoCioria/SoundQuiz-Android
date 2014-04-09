@@ -8,7 +8,6 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.os.Handler;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -16,21 +15,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-/**
- * Created by francesco on 4/6/14.
- */
 public class GameView extends View {
-    private final static int GAP = 5;
-    private final static int ROW_GAP = 10;
     private int MARGIN_Y = 30;
-    private int SPRITE_SIZE;
     private int SPACE_SIZE;
-    private int MAX_ITEMS = 10;
     private final String[] alphabet = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "y", "x", "z"};
 
     private Paint paint = new Paint();
     private Activity context;
-
 
     private ArrayList<LetterSpace> letterSpaces = new ArrayList<LetterSpace>();
     private ArrayList<LetterSprite> letterSprites = new ArrayList<LetterSprite>();
@@ -40,11 +31,12 @@ public class GameView extends View {
 
     private Runnable handlerTask;
 
+    private String answer;
 
     public GameView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = (Activity) context;
-        paint.setColor(Color.WHITE);
+        paint.setColor(Color.rgb(117, 50, 0));
 
     }
 
@@ -82,31 +74,46 @@ public class GameView extends View {
 
 
     public void init(final QuizData quizData) {
-        initLetterSpaces(quizData);
-        initLetterSprites(quizData);
+        String answer = ((QuizActivity) context).getQuizData().getAnswers().get(0);
+        this.answer = answer.toLowerCase().replace(" ", "").replace(".", "").replace("-", "").replace("'", "").replace(",", "").replace(":", "").replace("!", "").replace("?", "");
 
+        initLetterSpaces(quizData);
+        initLetterSprites();
     }
 
     private void initLetterSpaces(QuizData quizData) {
+        int maxItems = 0;
         for (String row : quizData.getRows()) {
+            row = row.replace(".", "").replace("-", "").replace("'", "").replace(",", "").replace(":", "").replace("!", "").replace("?", "");
             String[] words = row.split(" ");
-            int maxItems = 0;
-
+            int counter = 0;
             for (String word : words) {
-                maxItems += word.length();
+                counter += word.length();
             }
 
-            if (maxItems > MAX_ITEMS) {
-                MAX_ITEMS = maxItems;
+            if (counter > maxItems) {
+                maxItems = counter;
             }
         }
+        float percentage = 0.85f;
 
-        SPACE_SIZE = (int) ((0.8f * Utility.getWidth(this.context)) / (MAX_ITEMS + 2));
+        if (maxItems > 14) {
+            percentage = 0.92f;
+        } else if (maxItems > 10) {
+            percentage = 0.88f;
+        }
+
+        int fullSize = Math.min((int) (percentage * getWidth() / (maxItems + 2)), (getWidth() / 13));
+        SPACE_SIZE = fullSize * 90 / 100;
+        int GAP = fullSize - SPACE_SIZE;
+        int ROW_GAP = SPACE_SIZE / 5;
+
         int currentRow = 0;
         for (String row : quizData.getRows()) {
+            row = row.replace(".", "").replace("-", "").replace("'", "").replace(",", "").replace(":", "").replace("!", "").replace("?", "");
             String[] words = row.split(" ");
             boolean firstWord = true;
-            int marginX = (Utility.getWidth(this.context) - (row.length() * SPACE_SIZE + (row.length() - 1) * GAP)) / 2;
+            int marginX = (getWidth() - (row.replace(" ", "").length() * SPACE_SIZE + (row.length() - row.replace(" ", "").length()) * SPACE_SIZE / 2 + (row.length() - (row.length() - row.replace(" ", "").length()) * 2 - 1) * GAP)) / 2;
             for (String word : words) {
                 for (int z = 0; z < word.length(); z++) {
                     LetterSpace letterSpace = new LetterSpace();
@@ -115,13 +122,13 @@ public class GameView extends View {
                             firstWord = false;
                             letterSpace.position.x = marginX;
                         } else {
-                            letterSpace.position.x = letterSpaces.get(letterSpaces.size() - 1).position.x + (SPACE_SIZE + GAP) * 2;
+                            letterSpace.position.x = letterSpaces.get(letterSpaces.size() - 1).position.x + (SPACE_SIZE * 3 / 2);
                         }
                     } else {
                         letterSpace.position.x = letterSpaces.get(letterSpaces.size() - 1).position.x + (SPACE_SIZE + GAP);
                     }
-
-                    letterSpace.position.y = currentRow * (SPACE_SIZE + ROW_GAP);
+                    int marginY = (int) ((getHeight() / 15) / (1 + quizData.getRows().size() * 0.5f));
+                    letterSpace.position.y = currentRow * (SPACE_SIZE + ROW_GAP) + marginY;
                     letterSpace.size = SPACE_SIZE;
                     letterSpaces.add(letterSpace);
 
@@ -132,47 +139,67 @@ public class GameView extends View {
     }
 
 
-    private void initLetterSprites(QuizData quizData) {
-        String answer = quizData.getAnswers().get(0);
-        answer = answer.toLowerCase().replace(" ", "");
-        answer = answer.replace(".", "").replace("-", "").replace("'", "");
+    private void initLetterSprites() {
         ArrayList<String> letters = new ArrayList<String>();
+        int numberOfRows = 2;
         for (int i = 0; i < answer.length(); i++) {
             String letter = String.valueOf(answer.charAt(i));
             letters.add(letter);
         }
 
-        for (int z = answer.length(); z < 20; z++) {
-            Random rnd = new Random();
-            letters.add(alphabet[rnd.nextInt(26)]);
+        int numberOfSprites = 12;
+
+        if (answer.length() > 18) {
+            numberOfSprites = (answer.length() - answer.length() % 2) + 2;
+        } else if (answer.length() > 14) {
+            numberOfSprites = 20;
+        } else if (answer.length() > 10) {
+            numberOfSprites = 16;
         }
 
+        int fullSize = (int) (0.95f * getWidth() / (numberOfSprites / 2));
+        if (fullSize < getWidth() / 17 || fullSize < Utility.convertDpToPixels(getActivityContext(), 40)) {
+            while (numberOfSprites % 3 != 0) {
+                numberOfSprites++;
+            }
+            fullSize = (int) (0.95f * getWidth() / (numberOfSprites / 3));
+            numberOfRows = 3;
+        }
+
+        int SPRITE_SIZE = fullSize * 90 / 100;
+        int GAP = fullSize - SPRITE_SIZE;
+        int ROW_GAP = SPRITE_SIZE / 5;
+
+        for (int z = answer.length(); z < numberOfSprites; z++) {
+            Random rnd = new Random();
+            letters.add(alphabet[rnd.nextInt(alphabet.length)]);
+        }
         Collections.shuffle(letters);
-        Log.d("SPRITES", "letters: " + letters.size());
 
         int counter = 0;
         int currentRow = 0;
-        SPRITE_SIZE = (int) (0.9f * Utility.getWidth(context) / (letters.size() / 2));
-        int marginX = (Utility.getWidth(context) - (10 * SPRITE_SIZE + 9 * GAP)) / 2;
+        int marginX = (getWidth() - (numberOfSprites * SPRITE_SIZE / numberOfRows + ((numberOfSprites / numberOfRows) - 1) * GAP)) / 2;
 
         for (String letter : letters) {
             int positionX = 0;
+            if (counter != 0 && counter == numberOfSprites / numberOfRows) {
+                counter = 0;
+                currentRow++;
+            }
 
             if (counter == 0) {
-                positionX += marginX;
-            } else if (counter == letters.size() / 2) {
-                currentRow++;
                 positionX += marginX;
             } else {
                 positionX += letterSprites.get(letterSprites.size() - 1).getHome().x + (SPRITE_SIZE + GAP);
             }
-            int positionY = getHeight() - (MARGIN_Y + SPRITE_SIZE * (currentRow + 1) + ROW_GAP * currentRow);
+            int positionY = getHeight() - (marginX + SPRITE_SIZE * (currentRow + 1) + ROW_GAP * currentRow);
 
-            LetterSprite letterSprite = new LetterSprite(this, positionX, positionY, SPRITE_SIZE, SPACE_SIZE, counter, letter);
+            int index = counter + currentRow * (numberOfSprites / numberOfRows);
+
+            LetterSprite letterSprite = new LetterSprite(this, positionX, positionY, SPRITE_SIZE, SPACE_SIZE, index, letter);
             letterSprites.add(letterSprite);
             counter++;
         }
-
     }
 
 
@@ -207,13 +234,14 @@ public class GameView extends View {
         return letterSprites;
     }
 
+    public String getAnswer() {
+        return answer;
+    }
 
     static class LetterSpace {
         int size;
         int letterSpriteContained = -1;
         Point position = new Point();
-
     }
-
 
 }

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/image"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/columbia"
+        android:src="@drawable/columbia_pictures"
         android:scaleType="fitCenter" />
 
     <RelativeLayout
@@ -90,8 +90,8 @@
     </RelativeLayout>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:text="|>"
         android:id="@+id/buttonPlay"
         android:layout_alignParentTop="true"

@@ -188,7 +188,7 @@ public class QuizActivity extends Activity {
     }
 
     private void initVisualizer() {
-        int layoutWidth = (int) (Utility.getWidth(this) * 0.8f);
+        int layoutWidth = (int) (Utility.getWidth(this) * 0.65f);
         findViewById(R.id.body).getLayoutParams().width = layoutWidth;
         visualizer.getLayoutParams().height = Utility.getWidth(this) / 6;
         visualizer.getLayoutParams().width = layoutWidth * 401 / 545;
