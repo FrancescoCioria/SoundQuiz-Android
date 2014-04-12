@@ -2,28 +2,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.mosquitolabs.soundquiz.WinActivity"
-    android:background="#FF181818">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/image"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/columbia_pictures"
-        android:scaleType="fitCenter" />
+    android:background="#FFB55A18">
 
     <RelativeLayout
+
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/image"
-        android:layout_above="@+id/relativeLayout"
-        android:layout_marginTop="10dp"
+        android:layout_above="@+id/buttons"
+        android:id="@+id/body"
         android:layout_marginBottom="10dp"
-        android:gravity="center">
+        android:layout_below="@+id/images"
+        android:gravity="center_horizontal">
 
         <TextView
             android:layout_width="match_parent"
@@ -34,7 +24,11 @@
             android:textColor="@android:color/secondary_text_dark"
             android:textSize="25sp"
             android:gravity="center"
-            android:background="#FF121212" />
+            android:background="#FF121212"
+            android:layout_below="@+id/answerView"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -45,7 +39,15 @@
             android:layout_centerHorizontal="true"
             android:ellipsize="end"
             android:background="@android:color/darker_gray"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
+
+        <view
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            class="com.mosquitolabs.soundquiz.AnswerView"
+            android:id="@+id/answerView" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -55,8 +57,10 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:id="@+id/relativeLayout"
-        android:paddingBottom="10dp">
+        android:id="@+id/buttons"
+        android:paddingBottom="10dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp">
 
         <Button
             android:layout_width="wrap_content"
@@ -89,13 +93,71 @@
 
     </RelativeLayout>
 
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:text="|>"
-        android:id="@+id/buttonPlay"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/images"
+        android:orientation="horizontal"
+        android:layout_below="@+id/congratulations"
+        android:gravity="center_vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/image"
+            android:src="@drawable/columbia_pictures"
+            android:scaleType="centerCrop"
+            android:layout_weight="1"
+            android:layout_margin="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+
+        <RelativeLayout
+            tools:context="com.mosquitolabs.soundquiz.QuizActivity"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header"
+            android:id="@+id/relativeLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageViewTV"
+                android:src="@drawable/tv_simpsons_empty_with_shadow"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:layout_centerInParent="true" />
+
+            <view
+                class="com.mosquitolabs.soundquiz.visualizer.StringVisualizerView"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/visualizerView"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/congratulations">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YOU'RE AMAZING!"
+            android:id="@+id/congratulationTextView"
+            android:textSize="28dp"
+            android:textColor="@android:color/background_dark"
+            android:gravity="center"
+            android:layout_marginTop="16dp" />
+    </RelativeLayout>
 
 </RelativeLayout>

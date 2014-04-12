@@ -2,13 +2,13 @@ package com.mosquitolabs.soundquiz;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
+import android.graphics.Rect;
+import android.graphics.RectF;
 import android.os.Vibrator;
-import android.util.Log;
 
 public class LetterSprite {
 
@@ -22,16 +22,19 @@ public class LetterSprite {
 
     private boolean isHome = true;
     private boolean isAnimating = false;
-    private Point home = new Point();
-    private Point position = new Point();
-    private Point finalPosition = new Point();
-    private Point initialPosition = new Point();
+    private MyPoint home = new MyPoint();
+    private MyPoint position = new MyPoint();
+    private MyPoint finalPosition = new MyPoint();
+    private MyPoint initialPosition = new MyPoint();
     private Paint rectPaint = new Paint();
     private Paint textPaint = new Paint();
+    private RectF roundedRect = new RectF();
     private int currentSize;
     private int finalSize;
     private int initialSize;
-    private  Vibrator vibrator;
+    private int textHeight;
+    private Vibrator vibrator;
+    private Rect bounds = new Rect();
 
 
     private Bitmap bmp;
@@ -42,18 +45,29 @@ public class LetterSprite {
         this.SIZE = size;
         this.SPACE_SIZE = spaceSize;
         this.gameView = gameView;
-        INDEX = index;
+        this.INDEX = index;
         this.letter = letter;
+        this.currentSize = SIZE;
 
-        rectPaint.setColor(Color.rgb(217, 152, 110));
-        textPaint.setColor(Color.BLACK);
+//        textPaint.setColor(Color.rgb(74, 32, 0));
+        textPaint.setColor(Color.rgb(0, 33, 23));
         textPaint.setStrokeWidth(3);
         textPaint.setAntiAlias(true);
+        textPaint.setTextAlign(Paint.Align.LEFT);
+        textPaint.setTextSize(currentSize / 2);
+        textPaint.getTextBounds("T", 0, 1, bounds);
+        textHeight = bounds.height();
+        textPaint.getTextBounds(letter.toUpperCase(), 0, 1, bounds);
 
-        currentSize = SIZE;
+//        rectPaint.setColor(Color.rgb(217, 152, 110));
+        rectPaint.setColor(Color.rgb(96, 160, 142));
+        rectPaint.setAntiAlias(true);
+
+        roundedRect = new RectF(new Rect(position.getX(), position.getY(), position.getX() + currentSize, position.getY() + currentSize));
+
         vibrator = (Vibrator) gameView.getActivityContext().getSystemService(Context.VIBRATOR_SERVICE);
 
-        bmp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(gameView.getActivityContext().getResources(), R.drawable.frozen_blur), size, size, false);
+//        bmp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(gameView.getActivityContext().getResources(), R.drawable.frozen_blur), size, size, false);
     }
 
     private void update() {
@@ -62,11 +76,9 @@ public class LetterSprite {
             boolean isGoingLeft = initialPosition.x > finalPosition.x;
             boolean sameX = initialPosition.x == finalPosition.x;
             float animationCycles = (ANIMATION_TIME / (1000 / Utility.getFPS()));
-            int deltaX = (int) (Math.abs(finalPosition.x - initialPosition.x) / animationCycles);
-            int deltaY = (int) (Math.abs(finalPosition.y - initialPosition.y) / animationCycles);
+            float deltaX = Math.abs(finalPosition.x - initialPosition.x) / animationCycles;
+            float deltaY = Math.abs(finalPosition.y - initialPosition.y) / animationCycles;
             float deltaScale = (initialSize - finalSize) / animationCycles;
-//            Log.d("DELTA", " x: " + deltaX + "   y: " + deltaY);
-//            Log.d("DELTAX", "" + Math.abs(finalPosition.x - initialPosition.x));
 
             boolean animate = true;
             if (isGoingHome && isGoingLeft) {
@@ -89,7 +101,6 @@ public class LetterSprite {
                 } else if (currentSize < finalSize) {
                     currentSize -= deltaScale;
                 }
-
 
             } else if (!isGoingHome && (isGoingLeft || sameX)) {
                 position.x -= deltaX;
@@ -119,18 +130,21 @@ public class LetterSprite {
                 currentSize = finalSize;
             }
 
+            textPaint.setTextSize(currentSize / 2);
+            textPaint.getTextBounds("T", 0, 1, bounds);
+            textHeight = bounds.height();
+            textPaint.getTextBounds(letter.toUpperCase(), 0, 1, bounds);
+
+            roundedRect = new RectF(new Rect(position.getX(), position.getY(), position.getX() + currentSize, position.getY() + currentSize));
         }
     }
 
     public void onDraw(Canvas canvas) {
         update();
 
-        canvas.drawRect(position.x, position.y, position.x + currentSize, position.y + currentSize, rectPaint);
+        canvas.drawRoundRect(roundedRect, currentSize / 15, currentSize / 15, rectPaint);
 
-        textPaint.setTextSize(currentSize / 2);
-        float correctionX = currentSize / 10;
-        canvas.drawText(letter.toUpperCase(), position.x + currentSize / 4 + correctionX, position.y + currentSize * 3 / 4, textPaint);
-
+        canvas.drawText(letter.toUpperCase(), position.x + currentSize / 2f - textPaint.measureText(letter.toUpperCase()) / 2f, position.y + currentSize / 2f + textHeight / 2f, textPaint);
     }
 
     private boolean isCollision(float x2, float y2) {
@@ -151,11 +165,10 @@ public class LetterSprite {
                 goBackHome();
             }
         }
-
     }
 
     public Point getHome() {
-        return home;
+        return new Point(home.getX(), home.getY());
     }
 
     public boolean isHome() {
@@ -172,7 +185,7 @@ public class LetterSprite {
         isAnimating = true;
         isHome = false;
 
-        vibrator.vibrate(100);
+        vibrator.vibrate(30);
     }
 
     private void goBackHome() {
@@ -185,7 +198,7 @@ public class LetterSprite {
         initialSize = currentSize;
         isAnimating = true;
         isHome = true;
-        vibrator.vibrate(100);
+        vibrator.vibrate(30);
     }
 
 
@@ -193,6 +206,7 @@ public class LetterSprite {
         for (int i = 0; i < gameView.getLetterSpaces().size(); i++) {
             if (gameView.getLetterSpaces().get(i).letterSpriteContained == INDEX) {
                 gameView.getLetterSpaces().get(i).letterSpriteContained = -1;
+                return;
             }
         }
     }
@@ -201,7 +215,6 @@ public class LetterSprite {
         for (int i = 0; i < gameView.getLetterSpaces().size(); i++) {
             if (gameView.getLetterSpaces().get(i).letterSpriteContained < 0) {
                 gameView.getLetterSpaces().get(i).letterSpriteContained = INDEX;
-                Log.d("FIRSTEM", "  " + INDEX + "   letter " + gameView.getLetterSprites().get(gameView.getLetterSpaces().get(i).letterSpriteContained).letter);
                 return gameView.getLetterSpaces().get(i).position;
             }
         }
@@ -217,14 +230,62 @@ public class LetterSprite {
                 userAnswer += gameView.getLetterSprites().get(gameView.getLetterSpaces().get(i).letterSpriteContained).letter;
             }
         }
-        QuizActivity quizActivity = ((QuizActivity) gameView.getActivityContext());
 
         if (gameView.getAnswer().equals(userAnswer)) {
-            quizActivity.startWinActivity();
+            gameView.getActivityContext().initWinPage();
         } else {
             Utility.shortToast("Wrong answer!", gameView.getActivityContext());
+            vibrator.vibrate(150);
         }
     }
 
+    public void reset() {
+        emptyCurrentSpace();
+        this.position.x = home.x;
+        this.position.y = home.y;
+        currentSize = SIZE;
+
+        roundedRect = new RectF(new Rect(position.getX(), position.getY(), position.getX() + currentSize, position.getY() + currentSize));
+        textPaint.setTextSize(currentSize / 2);
+        textPaint.getTextBounds("T", 0, 1, bounds);
+        textHeight = bounds.height();
+        textPaint.getTextBounds(letter.toUpperCase(), 0, 1, bounds);
+
+        isAnimating = true;
+        isHome = true;
+    }
+
+    public void setPosition() {
+        Point newPosition = getFirstEmptySpace();
+        position.x = newPosition.x;
+        position.y = newPosition.y;
+        currentSize = SPACE_SIZE;
+
+        roundedRect = new RectF(new Rect(position.getX(), position.getY(), position.getX() + currentSize, position.getY() + currentSize));
+        textPaint.setTextSize(currentSize / 2);
+        textPaint.getTextBounds("T", 0, 1, bounds);
+        textHeight = bounds.height();
+        textPaint.getTextBounds(letter.toUpperCase(), 0, 1, bounds);
+
+        isAnimating = false;
+        isHome = false;
+    }
+
+    public String getLetter() {
+        return letter;
+    }
+
+    static class MyPoint {
+        float x;
+        float y;
+
+        private int getX() {
+            return (int) x;
+        }
+
+        private int getY() {
+            return (int) y;
+        }
+    }
 
 }

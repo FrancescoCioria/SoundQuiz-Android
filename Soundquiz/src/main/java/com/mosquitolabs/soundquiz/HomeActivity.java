@@ -26,7 +26,7 @@ public class HomeActivity extends Activity {
         setContentView(R.layout.activity_home_opening_logo);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         Utility.hideActionbar(this);
-        test();
+        populate();
     }
 
     public void initHomePage() {
@@ -39,12 +39,23 @@ public class HomeActivity extends Activity {
                 startPackageListActivity();
             }
         });
+        debugShortCut();
     }
 
-    private void test() {
+    private void populate() {
         Utility.initUtility(this);
         PackageCollection.getInstance().populateCollection(this);
     }
 
+
+    private void debugShortCut() {
+        Intent mIntent = new Intent(this, QuizActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("quizIndex", 14);
+        bundle.putInt("levelIndex", 1);
+        bundle.putInt("packageIndex", 0);
+        mIntent.putExtras(bundle);
+        this.startActivity(mIntent);
+    }
 
 }

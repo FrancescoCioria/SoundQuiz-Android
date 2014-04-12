@@ -50,12 +50,11 @@ public class PackageListActivity extends FragmentActivity {
             }
         });
 
-        images.add(getResources().getDrawable(R.drawable.sunset_blur));
-        images.add(getResources().getDrawable(R.drawable.tour_eiffel));
-        images.add(getResources().getDrawable(R.drawable.blue));
-        images.add(getResources().getDrawable(R.drawable.green));
-        images.add(getResources().getDrawable(R.drawable.gold));
-        images.add(getResources().getDrawable(R.drawable.brown));
+        for (int i = 0; i < PackageCollection.getInstance().getPackageCollection().size(); i += 2) {
+            images.add(getResources().getDrawable(R.drawable.sunset_blur));
+            images.add(getResources().getDrawable(R.drawable.tour_eiffel));
+        }
+
 
         if (PackageCollection.getInstance().getPackageCollection().size() == 1) {
             ImageView image = (ImageView) findViewById(R.id.firstView);
@@ -125,7 +124,6 @@ public class PackageListActivity extends FragmentActivity {
     public void setAlpha(ImageView image, int alpha) {
         image.setAlpha(alpha);
     }
-
 
 
     public VerticalViewPager getPager() {

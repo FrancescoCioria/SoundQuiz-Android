@@ -2,6 +2,7 @@ package com.mosquitolabs.soundquiz;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,13 +12,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mosquitolabs.soundquiz.visualizer.AudioPlayer;
+import com.mosquitolabs.soundquiz.visualizer.StringVisualizerView;
 
 
 public class WinActivity extends Activity {
 
+
     private int quizIndex;
     private int levelIndex;
     private int packageIndex;
+    private int spaceFullSize;
+    private StringVisualizerView visualizer;
     private QuizData quizData;
     private AudioPlayer audioPlayer = AudioPlayer.getIstance;
 
@@ -30,23 +35,19 @@ public class WinActivity extends Activity {
         quizIndex = getIntent().getExtras().getInt("quizIndex");
         levelIndex = getIntent().getExtras().getInt("levelIndex");
         packageIndex = getIntent().getExtras().getInt("packageIndex");
+        spaceFullSize = getIntent().getExtras().getInt("spaceFullSize");
 
         quizData = PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().get(quizIndex);
 
         Button back = (Button) findViewById(R.id.backButton);
-        Button play = (Button) findViewById(R.id.buttonPlay);
-        ImageView image = (ImageView)findViewById(R.id.image);
-        TextView textViewTitle = (TextView)findViewById(R.id.textViewTitle);
-        TextView textViewWiki= (TextView)findViewById(R.id.textViewWiki);
+        ImageView image = (ImageView) findViewById(R.id.image);
+        TextView textViewTitle = (TextView) findViewById(R.id.textViewTitle);
+        TextView textViewWiki = (TextView) findViewById(R.id.textViewWiki);
+        visualizer = (StringVisualizerView) findViewById(R.id.visualizerView);
+        AnswerView answerView = (AnswerView) findViewById(R.id.answerView);
 
         textViewTitle.setText(quizData.getAnswers().get(0));
 
-        play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                togglePlay();
-            }
-        });
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,19 +61,41 @@ public class WinActivity extends Activity {
             }
         });
 
+        visualizer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                togglePlay();
+            }
+        });
+
         int res = getResources().getIdentifier(quizData.getQuizID(), "drawable", getPackageName());
         try {
             image.setImageDrawable(getResources().getDrawable(res));
-        }catch (Exception e){
+        } catch (Exception e) {
             image.setImageDrawable(getResources().getDrawable(R.drawable.twenty_century_fox));
         }
+
+        initVisualizer();
+
+        int size = spaceFullSize * 90 / 100;
+        int GAP = spaceFullSize - size;
+        int ROW_GAP = size / 5;
+
+        int marginY = 0;
+        for (String row : quizData.getRows()) {
+            marginY = Math.max(marginY, (int) ((row.replace(" ", "").length() * size + (row.length() - row.replace(" ", "").length()) * size / 2 + (row.length() - (row.length() - row.replace(" ", "").length()) * 2 - 1) * GAP) * 0.04f));
+        }
+
+        answerView.getLayoutParams().height = 2 * marginY + quizData.getRows().size() * size + (quizData.getRows().size() - 1) * ROW_GAP;
+
+
+        answerView.init(quizData);
 
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        cleanUp();
         initSound();
     }
 
@@ -113,8 +136,12 @@ public class WinActivity extends Activity {
         AudioPlayer.getIstance.player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
+                visualizer.stopAnimation();
             }
         });
+
+
+        visualizer.startLoop();
 
     }
 
@@ -128,10 +155,40 @@ public class WinActivity extends Activity {
     private void togglePlay() {
         if (!audioPlayer.player.isPlaying()) {
             audioPlayer.player.start();
+            visualizer.startAnimation();
         } else {
             audioPlayer.player.pause();
+            visualizer.stopAnimation();
         }
     }
+
+    private void initVisualizer() {
+        int tvWidth = (int) (Utility.getWidth(this) * 0.65f);
+        ImageView image = (ImageView) findViewById(R.id.image);
+        findViewById(R.id.imageViewTV).getLayoutParams().width = tvWidth;
+        image.getLayoutParams().width = tvWidth * 401 / 543;
+        image.getLayoutParams().height = tvWidth * 310 / 543;
+        visualizer.getLayoutParams().height = (int) (tvWidth * 310f / 543f * 0.45f);
+        visualizer.getLayoutParams().width = tvWidth * 401 / 543;
+        int leftMargin = (int) ((Utility.getWidth(this) - tvWidth) / 2 + 51.5f / 543 * tvWidth);
+        int topMargin = (int) (94f / 545 * tvWidth);
+        Utility.setMargins(visualizer, leftMargin, 0, 0, 0);
+        Utility.setMargins(image, leftMargin, topMargin, 0, 0);
+
+        visualizer.setColor(Color.WHITE);
+        if (Utility.getWidth(this) >= 720) {
+            visualizer.setStroke(4, 2);
+        }
+    }
+
+    public QuizData getQuizData() {
+        return quizData;
+    }
+
+    public int getSpaceFullSize() {
+        return spaceFullSize;
+    }
+
 
     private void openWikipedia() {
         if (Utility.isOnline(this)) {

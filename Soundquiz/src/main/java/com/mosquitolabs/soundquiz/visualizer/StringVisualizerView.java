@@ -33,10 +33,11 @@ public class StringVisualizerView extends View {
     float amplitude = IDLE_AMPLITUDE;
     float waves = IDLE_WAVES;
 
-    private boolean stopVisualizer = false;
+    private boolean stopVisualizer = true;
     private boolean isAnimating = false;
 
     private Runnable handlerTask;
+    private Handler handler;
 
 //    private float leftMargin = 0f;
 
@@ -115,18 +116,20 @@ public class StringVisualizerView extends View {
     }
 
     public void startLoop() {
-        stopVisualizer = false;
-        final Handler handler = new Handler();
-        handlerTask = new Runnable() {
-            @Override
-            public void run() {
-                refresh();
-                if (!stopVisualizer) {
-                    handler.postDelayed(handlerTask, 1000 / Utility.getFPS());
+        if (stopVisualizer) {
+            stopVisualizer = false;
+            handler = new Handler();
+            handlerTask = new Runnable() {
+                @Override
+                public void run() {
+                    refresh();
+                    if (!stopVisualizer) {
+                        handler.postDelayed(handlerTask, 1000 / Utility.getFPS());
+                    }
                 }
-            }
-        };
-        handlerTask.run();
+            };
+            handlerTask.run();
+        }
     }
 
     public void stopLoop() {

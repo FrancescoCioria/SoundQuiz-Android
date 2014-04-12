@@ -1,25 +1,28 @@
 package com.mosquitolabs.soundquiz;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.RelativeLayout;
 
 import com.mosquitolabs.soundquiz.visualizer.AudioPlayer;
 import com.mosquitolabs.soundquiz.visualizer.StringVisualizerView;
 
 public class QuizActivity extends Activity {
+    private final static int ANIMATION_TIME = 300; // (millis)
+
+    // FFB55A18
 
     private int quizIndex;
     private int levelIndex;
@@ -29,12 +32,18 @@ public class QuizActivity extends Activity {
     private EditText answerEditText;
     private Button checkButton;
     private Button hintButton;
-    private ImageView TV;
+
+    private boolean stopAnimation = false;
+    private Runnable handlerAnimationTask;
 
     private QuizData quizData;
     private AudioPlayer audioPlayer = AudioPlayer.getIstance;
     private StringVisualizerView visualizer;
     private GameView gameView;
+    private ImageView following;
+    private ImageView previous;
+    private ImageView play;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,80 +58,101 @@ public class QuizActivity extends Activity {
 
         quizData = PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().get(quizIndex);
 
+        init();
+        initButtons();
+        initGameView();
+        initVisualizer();
+
+    }
+
+    private void init() {
 //        binding
         checkButton = (Button) findViewById(R.id.checkButton);
         hintButton = (Button) findViewById(R.id.hintButton);
         answerEditText = (EditText) findViewById(R.id.answerEditText);
-        TV = (ImageView) findViewById(R.id.imageViewTV);
         visualizer = (StringVisualizerView) findViewById(R.id.visualizerView);
         gameView = (GameView) findViewById(R.id.gameView);
-        TextView back = (TextView) findViewById(R.id.back);
+        following = (ImageView) findViewById(R.id.following);
+        previous = (ImageView) findViewById(R.id.previous);
+        play = (ImageView) findViewById(R.id.buttonPlay);
 
-        back.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
 
-//        answerEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
-//        answerEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-//            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-//                if (actionId == EditorInfo.IME_ACTION_DONE) {
-//                    checkButton.performClick();
-//                    return true;
+//        findViewById(R.id.back).setAlpha(0.5f);
+//        findViewById(R.id.back).setVisibility(View.INVISIBLE);
+
+//        checkButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String userAnswer = answerEditText.getText().toString();
+//                if (userAnswer.length() > 0) {
+//                    if (checkAnswer(userAnswer)) {
+//                        quizData.setSolved();
+//                        PackageCollection.getInstance().modifyQuizInSavedData(quizData);
+//                        Intent mIntent = new Intent(QuizActivity.this, WinActivity.class);
+//                        Bundle bundle = new Bundle();
+//                        bundle.putInt("quizIndex", quizIndex);
+//                        bundle.putInt("levelIndex", levelIndex);
+//                        bundle.putInt("packageIndex", packageIndex);
+//                        mIntent.putExtras(bundle);
+//                        QuizActivity.this.startActivity(mIntent);
+//                    } else {
+//                        AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
+//                        builder.setMessage(userAnswer + " is WRONG.. :(");
+//                        builder.setCancelable(false);
+//                        builder.setPositiveButton("Try Again", new DialogInterface.OnClickListener() {
+//                            public void onClick(DialogInterface dialog, int id) {
+//                                dialog.dismiss();
+//                            }
+//                        });
+//                        builder.create().show();
+//                    }
 //                }
-//                return false;
+//            }
+//        });
+//
+//        hintButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                quizData.setUsedHint();
+//                PackageCollection.getInstance().modifyQuizInSavedData(quizData);
+//                AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
+//                builder.setMessage(getHint());
+//                builder.setCancelable(false);
+//                builder.setPositiveButton("Back", new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int id) {
+//                        dialog.dismiss();
+//                    }
+//                });
+//                builder.create().show();
 //            }
 //        });
 
-        checkButton.setOnClickListener(new View.OnClickListener() {
+        following.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String userAnswer = answerEditText.getText().toString();
-                if (userAnswer.length() > 0) {
-                    if (checkAnswer(userAnswer)) {
-                        quizData.setSolved();
-                        PackageCollection.getInstance().modifyQuizInSavedData(quizData);
-                        Intent mIntent = new Intent(QuizActivity.this, WinActivity.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt("quizIndex", quizIndex);
-                        bundle.putInt("levelIndex", levelIndex);
-                        bundle.putInt("packageIndex", packageIndex);
-                        mIntent.putExtras(bundle);
-                        QuizActivity.this.startActivity(mIntent);
-                    } else {
-                        AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
-                        builder.setMessage(userAnswer + " is WRONG.. :(");
-                        builder.setCancelable(false);
-                        builder.setPositiveButton("Try Again", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.dismiss();
-                            }
-                        });
-                        builder.create().show();
-                    }
-                }
+                goToFollowingQuiz();
             }
         });
 
-        hintButton.setOnClickListener(new View.OnClickListener() {
+        previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                quizData.setUsedHint();
-                PackageCollection.getInstance().modifyQuizInSavedData(quizData);
-                AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
-                builder.setMessage(getHint());
-                builder.setCancelable(false);
-                builder.setPositiveButton("Back", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.dismiss();
-                    }
-                });
-                builder.create().show();
+                goToPreviousQuiz();
             }
         });
 
+        findViewById(R.id.backToMenuButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         visualizer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,16 +161,23 @@ public class QuizActivity extends Activity {
             }
         });
 
-        initVisualizer();
-//        gameView.init(quizData);
-        gameView.startLoop();
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                togglePlay();
+            }
+        });
 
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        initSound(isFirstTime);
+        cleanUp();
+        initSound(isFirstTime && !quizData.isSolved());
+        if (!quizData.isSolved()) {
+            startVisualizer();
+        }
         isFirstTime = false;
     }
 
@@ -164,7 +201,7 @@ public class QuizActivity extends Activity {
 
 
     private void initSound(final boolean start) {
-        cleanUp();
+
         int res = getResources().getIdentifier(quizData.getQuizID(), "raw", getPackageName());
 
         audioPlayer.player = MediaPlayer.create(this, res);
@@ -175,25 +212,47 @@ public class QuizActivity extends Activity {
         AudioPlayer.getIstance.player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
-                visualizer.stopAnimation();
+                stopVisualizerAnimation();
             }
         });
 
-
-        visualizer.startLoop();
         if (start) {
             togglePlay();
         }
 
     }
 
+
     private void initVisualizer() {
+        visualizer.setVisibility(View.VISIBLE);
         int layoutWidth = (int) (Utility.getWidth(this) * 0.65f);
+        int screenWidth = layoutWidth * 401 / 543;
+        int screenHeight = layoutWidth * 310 / 543;
+        int emptySpace = (Utility.getWidth(this) - layoutWidth) / 2;
+        int leftMarginScreen = (int) (51.5f / 543 * layoutWidth);
+        int topMarginScreen = (int) (90f / 545 * layoutWidth);
+
         findViewById(R.id.body).getLayoutParams().width = layoutWidth;
-        visualizer.getLayoutParams().height = Utility.getWidth(this) / 6;
-        visualizer.getLayoutParams().width = layoutWidth * 401 / 545;
-        int leftMargin = (int) (51.5f / 543 * layoutWidth);
-        Utility.setMargins(visualizer, leftMargin, 0, 0, 0);
+
+        RelativeLayout imageLayout = (RelativeLayout) findViewById(R.id.layoutImageQuiz);
+
+        imageLayout.getLayoutParams().width = screenWidth;
+        imageLayout.getLayoutParams().height = screenHeight;
+        visualizer.getLayoutParams().height = (int) (screenHeight * 0.45f);
+        visualizer.getLayoutParams().width = screenWidth;
+        play.getLayoutParams().width = screenWidth / 3;
+        play.getLayoutParams().height = screenWidth / 3;
+        following.getLayoutParams().width = emptySpace / 3;
+        previous.getLayoutParams().width = emptySpace / 3;
+
+        Utility.setMargins(imageLayout, leftMarginScreen, topMarginScreen, 0, 0);
+        Utility.setMargins(visualizer, leftMarginScreen, 0, 0, 0);
+        Utility.setMargins(previous, emptySpace / 3, 0, 0, 0);
+        Utility.setMargins(following, 0, 0, emptySpace / 3, 0);
+        Utility.setMargins(play, leftMarginScreen + screenWidth / 3, topMarginScreen + (screenHeight - (screenWidth / 3)) / 2, 0, 0);
+
+//        following.setAlpha(0.4f);
+//        previous.setAlpha(0.4f);
 
         visualizer.setColor(Color.WHITE);
         if (Utility.getWidth(this) >= 720) {
@@ -201,19 +260,36 @@ public class QuizActivity extends Activity {
         }
     }
 
+    private void startVisualizerAnimation() {
+        visualizer.startAnimation();
+        play.setVisibility(View.GONE);
+    }
+
+    private void stopVisualizerAnimation() {
+        visualizer.stopAnimation();
+        if (!quizData.isSolved()) {
+            play.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private void initGameView() {
+        gameView.init(quizData);
+        gameView.startLoop();
+    }
+
     private void togglePlay() {
         if (!audioPlayer.player.isPlaying()) {
             audioPlayer.player.start();
-            visualizer.startAnimation();
+            startVisualizerAnimation();
         } else {
             audioPlayer.player.pause();
-            visualizer.stopAnimation();
+            stopVisualizerAnimation();
         }
     }
 
     private void cleanUp() {
         visualizer.stopLoop();
-        visualizer.stopAnimation();
+        stopVisualizerAnimation();
 
         if (audioPlayer.player != null) {
             audioPlayer.player.release();
@@ -293,9 +369,127 @@ public class QuizActivity extends Activity {
         bundle.putInt("quizIndex", quizIndex);
         bundle.putInt("levelIndex", levelIndex);
         bundle.putInt("packageIndex", packageIndex);
+        bundle.putInt("spaceFullSize", gameView.getSpaceFullSize());
         mIntent.putExtras(bundle);
         QuizActivity.this.startActivity(mIntent);
     }
 
+
+    public void initWinPage() {
+        getQuizData().setSolved();
+        PackageCollection.getInstance().modifyQuizInSavedData(getQuizData());
+        initWinGraphics();
+        startGrowthAnimation();
+    }
+
+    public void initWinGraphics() {
+        RelativeLayout winLayout = (RelativeLayout) findViewById(R.id.win);
+        Utility.setMargins(winLayout, 0, gameView.getMaxY(), 0, 0);
+        winLayout.setVisibility(View.VISIBLE);
+        findViewById(R.id.layoutImageQuiz).setVisibility(View.VISIBLE);
+        findViewById(R.id.imageQuiz).setVisibility(View.VISIBLE);
+        int res = getResources().getIdentifier(getQuizData().getQuizID(), "drawable", getPackageName());
+        try {
+            ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(res));
+        } catch (Exception e) {
+            ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(R.drawable.twenty_century_fox));
+        }
+        ((ImageView) findViewById(R.id.imageViewTV)).setImageDrawable(getResources().getDrawable(R.drawable.tv_simpsons_empty_with_shadow));
+        invalidateVisualizer();
+        play.setVisibility(View.GONE);
+    }
+
+    @TargetApi(14)
+    private void startGrowthAnimation() {
+        stopAnimation = false;
+        findViewById(R.id.imageQuiz).setScaleX(0);
+        findViewById(R.id.imageQuiz).setScaleY(0);
+        findViewById(R.id.win).setScaleX(0);
+        findViewById(R.id.win).setScaleY(0);
+        final Handler handler = new Handler();
+        final float deltaScale = 1.0f / (ANIMATION_TIME / (1000 / Utility.getFPS()));
+        handlerAnimationTask = new Runnable() {
+            @Override
+            public void run() {
+                float scale = findViewById(R.id.imageQuiz).getScaleX() + deltaScale;
+                if (scale > 1.0f) {
+                    scale = 1.0f;
+                    stopAnimation = true;
+                }
+                findViewById(R.id.imageQuiz).setScaleX(scale);
+                findViewById(R.id.imageQuiz).setScaleY(scale);
+                findViewById(R.id.win).setScaleX(scale);
+                findViewById(R.id.win).setScaleY(scale);
+                if (!stopAnimation) {
+                    handler.postDelayed(handlerAnimationTask, 1000 / Utility.getFPS());
+                }
+            }
+        };
+        handlerAnimationTask.run();
+    }
+
+
+    public void invalidateVisualizer() {
+        visualizer.stopLoop();
+        visualizer.setVisibility(View.GONE);
+    }
+
+    public void startVisualizer() {
+        visualizer.setVisibility(View.VISIBLE);
+        visualizer.startLoop();
+    }
+
+
+    private void resetImages() {
+        findViewById(R.id.layoutImageQuiz).setVisibility(View.GONE);
+        findViewById(R.id.win).setVisibility(View.GONE);
+        ((ImageView) findViewById(R.id.imageViewTV)).setImageDrawable(getResources().getDrawable(R.drawable.tv_simpsons_with_shadow));
+    }
+
+
+    private void reset() {
+        audioPlayer.player.release();
+        visualizer.stopAnimation();
+        quizData = PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().get(quizIndex);
+        gameView.stopLoop();
+        gameView.resetSprites();
+
+        resetImages();
+        initGameView();
+        initButtons();
+        initSound(!quizData.isSolved());
+
+        if (!quizData.isSolved()) {
+            startVisualizer();
+        }
+
+    }
+
+    private void goToFollowingQuiz() {
+        if (quizIndex < 14) {
+            quizIndex++;
+            reset();
+        }
+    }
+
+    private void goToPreviousQuiz() {
+        if (quizIndex > 0) {
+            quizIndex--;
+            reset();
+        }
+    }
+
+
+    private void initButtons() {
+        if (quizIndex == 14) {
+            findViewById(R.id.following).setVisibility(View.GONE);
+        } else if (quizIndex == 0) {
+            findViewById(R.id.previous).setVisibility(View.GONE);
+        } else {
+            findViewById(R.id.previous).setVisibility(View.VISIBLE);
+            findViewById(R.id.following).setVisibility(View.VISIBLE);
+        }
+
+    }
 
 }
