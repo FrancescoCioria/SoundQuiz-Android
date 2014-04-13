@@ -73,6 +73,9 @@ public class LevelActivity extends Activity {
             }
         });
 
+        int layoutWidth = (int) (Utility.getWidth(this) * 0.65f);
+        findViewById(R.id.body).getLayoutParams().width = layoutWidth;
+
         getListView().setOnTouchListener(new AbsListView.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 return isAnimating;
@@ -155,7 +158,7 @@ public class LevelActivity extends Activity {
         hasDoneAnimation = true;
         initViewsToInvisible();
         counter = 0;
-        time = 400;
+        time = 300;
         hasWaited = false;
         m_handler = new Handler();
         m_handlerTask = new Runnable() {

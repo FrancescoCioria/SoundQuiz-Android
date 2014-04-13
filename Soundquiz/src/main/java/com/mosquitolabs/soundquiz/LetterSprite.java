@@ -22,6 +22,8 @@ public class LetterSprite {
 
     private boolean isHome = true;
     private boolean isAnimating = false;
+    private boolean isVisible = true;
+    private boolean isClickable = true;
     private MyPoint home = new MyPoint();
     private MyPoint position = new MyPoint();
     private MyPoint finalPosition = new MyPoint();
@@ -140,6 +142,10 @@ public class LetterSprite {
     }
 
     public void onDraw(Canvas canvas) {
+        if (!isVisible) {
+            return;
+        }
+
         update();
 
         canvas.drawRoundRect(roundedRect, currentSize / 15, currentSize / 15, rectPaint);
@@ -152,7 +158,11 @@ public class LetterSprite {
     }
 
     public void checkCollision(float x2, float y2) {
-        if (isCollision(x2, y2) && !isAnimating) {
+        if (!isClickable || isAnimating) {
+            return;
+        }
+
+        if (isCollision(x2, y2)) {
             if (isHome) {
                 Point destination = getFirstEmptySpace();
                 if (destination != null) {
@@ -240,10 +250,27 @@ public class LetterSprite {
     }
 
     public void reset() {
-        emptyCurrentSpace();
-        this.position.x = home.x;
-        this.position.y = home.y;
-        currentSize = SIZE;
+        if (isClickable && isVisible) {
+            emptyCurrentSpace();
+            this.position.x = home.x;
+            this.position.y = home.y;
+            currentSize = SIZE;
+
+            roundedRect = new RectF(new Rect(position.getX(), position.getY(), position.getX() + currentSize, position.getY() + currentSize));
+            textPaint.setTextSize(currentSize / 2);
+            textPaint.getTextBounds("T", 0, 1, bounds);
+            textHeight = bounds.height();
+            textPaint.getTextBounds(letter.toUpperCase(), 0, 1, bounds);
+
+            isAnimating = false;
+            isHome = true;
+        }
+    }
+
+    public void setPosition(int x, int y) {
+        position.x = x;
+        position.y = y;
+        currentSize = SPACE_SIZE;
 
         roundedRect = new RectF(new Rect(position.getX(), position.getY(), position.getX() + currentSize, position.getY() + currentSize));
         textPaint.setTextSize(currentSize / 2);
@@ -251,11 +278,11 @@ public class LetterSprite {
         textHeight = bounds.height();
         textPaint.getTextBounds(letter.toUpperCase(), 0, 1, bounds);
 
-        isAnimating = true;
-        isHome = true;
+        isAnimating = false;
+        isHome = false;
     }
 
-    public void setPosition() {
+    public void goToFirstEmpty() {
         Point newPosition = getFirstEmptySpace();
         position.x = newPosition.x;
         position.y = newPosition.y;
@@ -271,8 +298,20 @@ public class LetterSprite {
         isHome = false;
     }
 
+    public void setVisible(boolean visible) {
+        isVisible = visible;
+    }
+
+    public void setClickable(boolean clickable) {
+        isClickable = clickable;
+    }
+
     public String getLetter() {
         return letter;
+    }
+
+    public int getIndex() {
+        return INDEX;
     }
 
     static class MyPoint {

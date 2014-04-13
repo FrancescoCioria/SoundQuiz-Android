@@ -2,17 +2,13 @@ package com.mosquitolabs.soundquiz;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
-import android.content.Intent;
+import android.app.Dialog;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -29,9 +25,7 @@ public class QuizActivity extends Activity {
     private int packageIndex;
     private boolean isFirstTime = true;
 
-    private EditText answerEditText;
-    private Button checkButton;
-    private Button hintButton;
+    private ImageView hints;
 
     private boolean stopAnimation = false;
     private Runnable handlerAnimationTask;
@@ -67,9 +61,7 @@ public class QuizActivity extends Activity {
 
     private void init() {
 //        binding
-        checkButton = (Button) findViewById(R.id.checkButton);
-        hintButton = (Button) findViewById(R.id.hintButton);
-        answerEditText = (EditText) findViewById(R.id.answerEditText);
+        hints = (ImageView) findViewById(R.id.hints);
         visualizer = (StringVisualizerView) findViewById(R.id.visualizerView);
         gameView = (GameView) findViewById(R.id.gameView);
         following = (ImageView) findViewById(R.id.following);
@@ -165,6 +157,14 @@ public class QuizActivity extends Activity {
             @Override
             public void onClick(View v) {
                 togglePlay();
+            }
+        });
+
+
+        hints.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHintDialog();
             }
         });
 
@@ -297,83 +297,71 @@ public class QuizActivity extends Activity {
         }
     }
 
-    private boolean checkAnswer(String userAnswer) {
-        for (String answer : quizData.getAnswers()) {
-//        remove any upper case
-            String answerTemp = answer.toLowerCase();
-            userAnswer = userAnswer.toLowerCase();
-
-//        remove spaces at the beginning
-            while (userAnswer.charAt(0) == ' ') {
-                userAnswer = userAnswer.substring(1);
-            }
-//        remove spaces at the end
-            while (userAnswer.charAt(userAnswer.length() - 1) == ' ') {
-                userAnswer = userAnswer.substring(0, userAnswer.length() - 1);
-            }
-
-//        remove "The"
-            if (answerTemp.length() > 4 && answerTemp.substring(0, 4).equals("the ")) {
-                answerTemp = answerTemp.substring(4);
-            }
-            if (userAnswer.length() > 4 && userAnswer.substring(0, 4).equals("the ")) {
-                userAnswer = userAnswer.substring(4);
-            }
-
-//        compare
-            if (userAnswer.equals(answerTemp)) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    private String getHint() {
-        String hint = new String();
-        String[] separated = quizData.getAnswers().get(0).toUpperCase().split(" ");
-        for (String word : separated) {
-            for (int i = 0; i < word.length(); i++) {
-//                show first letter and last (if word longer then 4)
-                if (i == 0) {
-                    hint += word.charAt(i);
-                    hint += " ";
-                } else if (word.length() > 4 && i == word.length() - 1) {
-                    hint += word.charAt(i);
-                } else {
-                    hint += "_ ";
-                }
-            }
-            hint += "  ";
-
-        }
-        return hint;
-    }
-
-    private void startAnimationButton(View v) {
-        final Animation animAlpha = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
-
-        v.startAnimation(animAlpha);
-        hintButton.setText(getHint());
-    }
-
-    public QuizData getQuizData() {
-        return quizData;
-    }
-
-    public void startWinActivity() {
-        quizData.setSolved();
-        PackageCollection.getInstance().modifyQuizInSavedData(quizData);
-        Intent mIntent = new Intent(QuizActivity.this, WinActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putInt("quizIndex", quizIndex);
-        bundle.putInt("levelIndex", levelIndex);
-        bundle.putInt("packageIndex", packageIndex);
-        bundle.putInt("spaceFullSize", gameView.getSpaceFullSize());
-        mIntent.putExtras(bundle);
-        QuizActivity.this.startActivity(mIntent);
-    }
-
+//    private boolean checkAnswer(String userAnswer) {
+//        for (String answer : quizData.getAnswers()) {
+////        remove any upper case
+//            String answerTemp = answer.toLowerCase();
+//            userAnswer = userAnswer.toLowerCase();
+//
+////        remove spaces at the beginning
+//            while (userAnswer.charAt(0) == ' ') {
+//                userAnswer = userAnswer.substring(1);
+//            }
+////        remove spaces at the end
+//            while (userAnswer.charAt(userAnswer.length() - 1) == ' ') {
+//                userAnswer = userAnswer.substring(0, userAnswer.length() - 1);
+//            }
+//
+////        remove "The"
+//            if (answerTemp.length() > 4 && answerTemp.substring(0, 4).equals("the ")) {
+//                answerTemp = answerTemp.substring(4);
+//            }
+//            if (userAnswer.length() > 4 && userAnswer.substring(0, 4).equals("the ")) {
+//                userAnswer = userAnswer.substring(4);
+//            }
+//
+////        compare
+//            if (userAnswer.equals(answerTemp)) {
+//                return true;
+//            }
+//        }
+//
+//        return false;
+//    }
+//
+//    private String getHint() {
+//        String hint = new String();
+//        String[] separated = quizData.getAnswers().get(0).toUpperCase().split(" ");
+//        for (String word : separated) {
+//            for (int i = 0; i < word.length(); i++) {
+////                show first letter and last (if word longer then 4)
+//                if (i == 0) {
+//                    hint += word.charAt(i);
+//                    hint += " ";
+//                } else if (word.length() > 4 && i == word.length() - 1) {
+//                    hint += word.charAt(i);
+//                } else {
+//                    hint += "_ ";
+//                }
+//            }
+//            hint += "  ";
+//
+//        }
+//        return hint;
+//    }
+//
+//    public void startWinActivity() {
+//        quizData.setSolved();
+//        PackageCollection.getInstance().modifyQuizInSavedData(quizData);
+//        Intent mIntent = new Intent(QuizActivity.this, WinActivity.class);
+//        Bundle bundle = new Bundle();
+//        bundle.putInt("quizIndex", quizIndex);
+//        bundle.putInt("levelIndex", levelIndex);
+//        bundle.putInt("packageIndex", packageIndex);
+//        bundle.putInt("spaceFullSize", gameView.getSpaceFullSize());
+//        mIntent.putExtras(bundle);
+//        QuizActivity.this.startActivity(mIntent);
+//    }
 
     public void initWinPage() {
         getQuizData().setSolved();
@@ -397,6 +385,7 @@ public class QuizActivity extends Activity {
         ((ImageView) findViewById(R.id.imageViewTV)).setImageDrawable(getResources().getDrawable(R.drawable.tv_simpsons_empty_with_shadow));
         invalidateVisualizer();
         play.setVisibility(View.GONE);
+        hints.setVisibility(View.GONE);
     }
 
     @TargetApi(14)
@@ -443,6 +432,7 @@ public class QuizActivity extends Activity {
     private void resetImages() {
         findViewById(R.id.layoutImageQuiz).setVisibility(View.GONE);
         findViewById(R.id.win).setVisibility(View.GONE);
+        hints.setVisibility(View.VISIBLE);
         ((ImageView) findViewById(R.id.imageViewTV)).setImageDrawable(getResources().getDrawable(R.drawable.tv_simpsons_with_shadow));
     }
 
@@ -491,5 +481,50 @@ public class QuizActivity extends Activity {
         }
 
     }
+
+
+    private void openHintDialog() {
+        final Dialog dialog = new Dialog(this, R.style.Theme_Dialog);
+        dialog.setContentView(R.layout.dialog_hints);
+        dialog.findViewById(R.id.main).getLayoutParams().width = Utility.getWidth(this) * 65 / 100;
+
+        dialog.findViewById(R.id.buttonCancel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+            }
+        });
+
+        dialog.findViewById(R.id.removeWrongLetters).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+                gameView.removeWrongLetters();
+            }
+        });
+
+        dialog.findViewById(R.id.revealFirstLetters).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+                gameView.revealFirstLetters();
+            }
+        });
+
+        dialog.findViewById(R.id.revealOneLetter).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        dialog.show();
+    }
+
+
+    public QuizData getQuizData() {
+        return quizData;
+    }
+
 
 }

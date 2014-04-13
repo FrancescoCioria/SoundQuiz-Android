@@ -97,6 +97,9 @@ public class PackageFragment extends Fragment {
         Bundle bundle = new Bundle();
         bundle.putInt("packageIndex", paramInt);
         mIntent.putExtras(bundle);
+        mIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+//        startActivityForResult(mIntent, 0);
+//        overridePendingTransition(0,0);
         getActivity().startActivity(mIntent);
     }
 

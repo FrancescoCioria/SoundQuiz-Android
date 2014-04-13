@@ -3,10 +3,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.mosquitolabs.soundquiz.LevelActivity"
-    android:paddingLeft="6dp"
-    android:paddingRight="5dp"
-    android:background="#FF181818"
+    android:background="@drawable/simpsons_background"
     android:longClickable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/body"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewTV"
+            android:src="@drawable/tv_simpsons_with_shadow"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/transparentBlackLayer"
+        android:background="#8c000000" />
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -40,6 +40,9 @@ public class HomeActivity extends Activity {
             }
         });
         debugShortCut();
+
+
+//        startPackageListActivity();
     }
 
     private void populate() {
@@ -50,12 +53,14 @@ public class HomeActivity extends Activity {
 
     private void debugShortCut() {
         Intent mIntent = new Intent(this, QuizActivity.class);
+
         Bundle bundle = new Bundle();
         bundle.putInt("quizIndex", 14);
-        bundle.putInt("levelIndex", 1);
+        bundle.putInt("levelIndex", 5);
         bundle.putInt("packageIndex", 0);
         mIntent.putExtras(bundle);
-        this.startActivity(mIntent);
+
+        startActivity(mIntent);
     }
 
 }

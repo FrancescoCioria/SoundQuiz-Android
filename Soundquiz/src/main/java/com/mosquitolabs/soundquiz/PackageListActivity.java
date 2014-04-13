@@ -9,22 +9,20 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
 
 public class PackageListActivity extends FragmentActivity {
 
-    private final static int RED = Color.rgb(190, 0, 0);
-    private final static int GREEN = Color.rgb(0, 160, 0);
-    private final static int BLUE = Color.rgb(11, 97, 164);
-    private final static int ORANGE = Color.rgb(255, 146, 0);
-    private final static int PURPLE = Color.rgb(159, 62, 213);
-    private final static int YELLOW = Color.rgb(255, 200, 0);
-
-    private final int[] themes = {RED, GREEN, BLUE, YELLOW, Color.MAGENTA, Color.CYAN};
+//    private final static int RED = Color.rgb(190, 0, 0);
+//    private final static int GREEN = Color.rgb(0, 160, 0);
+//    private final static int BLUE = Color.rgb(11, 97, 164);
+//    private final static int ORANGE = Color.rgb(255, 146, 0);
+//    private final static int PURPLE = Color.rgb(159, 62, 213);
+//    private final static int YELLOW = Color.rgb(255, 200, 0);
+//
+//    private final int[] themes = {RED, GREEN, BLUE, YELLOW, Color.MAGENTA, Color.CYAN};
 
     private VerticalViewPager pager;
     private PackagePagerAdapter pagerAdapter;
@@ -38,31 +36,31 @@ public class PackageListActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_package_list);
+        setContentView(R.layout.activity_package_list_new);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         Utility.hideActionbar(this);
 
-        Button buttonBack = (Button) findViewById(R.id.buttonBack);
-        buttonBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
-
-        for (int i = 0; i < PackageCollection.getInstance().getPackageCollection().size(); i += 2) {
-            images.add(getResources().getDrawable(R.drawable.sunset_blur));
-            images.add(getResources().getDrawable(R.drawable.tour_eiffel));
-        }
-
-
-        if (PackageCollection.getInstance().getPackageCollection().size() == 1) {
-            ImageView image = (ImageView) findViewById(R.id.firstView);
-            ImageView image2 = (ImageView) findViewById(R.id.secondView);
-            setBackgroundImage(image, 0);
-            setAlpha(image, 1f);
-            setAlpha(image2, 0f);
-        }
+//        Button buttonBack = (Button) findViewById(R.id.buttonBack);
+//        buttonBack.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                onBackPressed();
+//            }
+//        });
+//
+//        for (int i = 0; i < PackageCollection.getInstance().getPackageCollection().size(); i += 2) {
+//            images.add(getResources().getDrawable(R.drawable.simpsons_background));
+//            images.add(getResources().getDrawable(R.drawable.tour_eiffel));
+//        }
+//
+//
+//        if (PackageCollection.getInstance().getPackageCollection().size() == 1) {
+//            ImageView image = (ImageView) findViewById(R.id.firstView);
+//            ImageView image2 = (ImageView) findViewById(R.id.secondView);
+//            setBackgroundImage(image, 0);
+//            setAlpha(image, 1f);
+//            setAlpha(image2, 0f);
+//        }
 
         pager = (VerticalViewPager) findViewById(R.id.packagePagerView);
         pagerAdapter = new PackagePagerAdapter(getSupportFragmentManager());
@@ -72,6 +70,9 @@ public class PackageListActivity extends FragmentActivity {
         setPageMarginAndPackageSize();
         pager.setAdapter(pagerAdapter);
         pager.setPageTransformer(true, new BackgroundFadingTransformer(this));
+
+        int layoutWidth = (int) (Utility.getWidth(this) * 0.65f);
+        findViewById(R.id.bodyOne).getLayoutParams().width = layoutWidth;
 
 
     }
@@ -112,9 +113,9 @@ public class PackageListActivity extends FragmentActivity {
         image.setImageDrawable(images.get(index));
     }
 
-    public void setBackgroundColor(ImageView view, int index) {
-        view.setBackgroundColor(themes[index]);
-    }
+//    public void setBackgroundColor(ImageView view, int index) {
+//        view.setBackgroundColor(themes[index]);
+//    }
 
     @TargetApi(11)
     public void setAlpha(ImageView image, float alpha) {

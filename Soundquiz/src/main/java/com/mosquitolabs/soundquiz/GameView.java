@@ -68,6 +68,9 @@ public class GameView extends View {
             }
         }
 
+        drawCorrectLines(canvas);
+
+
     }
 
     @Override
@@ -150,7 +153,7 @@ public class GameView extends View {
 
         spaceFullSize = Math.min((int) ((percentage * getWidth() / (maxItems + numberOfEmptySpaces * 0.5f))), maxSpaceSize);
         spaceFullSize = Math.min(spaceFullSize, Utility.convertDpToPixels(getActivityContext(), 50));
-        spaceFullSize = Math.min(spaceFullSize, Utility.getWidth(getActivityContext())/9);
+        spaceFullSize = Math.min(spaceFullSize, Utility.getWidth(getActivityContext()) / 9);
 
     }
 
@@ -253,6 +256,42 @@ public class GameView extends View {
     }
 
 
+    private void drawCorrectLines(Canvas canvas) {
+        if (context.getQuizData().isSolved()) {
+            return;
+        }
+
+        int counter = 0;
+        for (String row : context.getQuizData().getRows()) {
+            row = row.replace(".", "").replace("-", "").replace("'", "").replace(",", "").replace(":", "").replace("!", "").replace("?", "");
+            String[] words = row.toLowerCase().split(" ");
+
+            ArrayList<Integer> indexes = new ArrayList<Integer>();
+            for (String word : words) {
+                indexes.clear();
+                boolean isCorrect = true;
+                for (int i = 0; i < word.length(); i++) {
+                    String letter = String.valueOf(word.charAt(i));
+                    if (letterSpaces.get(counter).letterSpriteContained == -1 || !letterSprites.get(letterSpaces.get(counter).letterSpriteContained).getLetter().equals(letter)) {
+                        isCorrect = false;
+                    }
+                    indexes.add(counter);
+                    counter++;
+                }
+
+                if (isCorrect) {
+                    LetterSpace firstLetterSpace = letterSpaces.get(indexes.get(0));
+                    LetterSpace lastLetterSpace = letterSpaces.get(indexes.get(indexes.size() - 1));
+                    Paint paint = new Paint();
+                    paint.setAntiAlias(true);
+                    paint.setColor(Color.GREEN);
+                    canvas.drawRect(firstLetterSpace.position.x, firstLetterSpace.position.y + firstLetterSpace.size + 5, lastLetterSpace.position.x + lastLetterSpace.size, lastLetterSpace.position.y + lastLetterSpace.size + 8, paint);
+                }
+            }
+        }
+    }
+
+
     public void startLoop() {
         if (stopGameView) {
             stopGameView = false;
@@ -304,9 +343,78 @@ public class GameView extends View {
             String letter = String.valueOf(answer.charAt(i));
             for (LetterSprite letterSprite : letterSprites) {
                 if (letterSprite.isHome() && letterSprite.getLetter().equals(letter)) {
-                    letterSprite.setPosition();
+                    letterSprite.goToFirstEmpty();
                     break;
                 }
+            }
+        }
+
+        for (LetterSprite letterSprite : letterSprites) {
+            if (letterSprite.isHome()) {
+                letterSprite.setVisible(false);
+                letterSprite.setClickable(false);
+            }
+        }
+
+    }
+
+    public void revealFirstLetters() {
+
+        for (LetterSprite letterSprite : letterSprites) {
+            letterSprite.reset();
+        }
+
+        int counter = 0;
+        for (String row : context.getQuizData().getRows()) {
+            row = row.replace(".", "").replace("-", "").replace("'", "").replace(",", "").replace(":", "").replace("!", "").replace("?", "");
+            String[] words = row.toLowerCase().split(" ");
+
+            for (String word : words) {
+                for (LetterSprite letterSprite : letterSprites) {
+                    if (letterSprite.isHome() && letterSprite.getLetter().equals(String.valueOf(word.charAt(0)))) {
+                        letterSprite.setPosition(letterSpaces.get(counter).position.x, letterSpaces.get(counter).position.y);
+                        letterSpaces.get(counter).letterSpriteContained = letterSprite.getIndex();
+                        letterSprite.setClickable(false);
+                        break;
+                    }
+                }
+                counter += word.length();
+            }
+        }
+    }
+
+    public void removeWrongLetters() {
+
+        for (LetterSprite letterSprite : letterSprites) {
+            letterSprite.reset();
+        }
+
+
+        ArrayList<Integer> indexes = new ArrayList<Integer>();
+
+        for (String row : context.getQuizData().getRows()) {
+            row = row.replace(".", "").replace("-", "").replace("'", "").replace(",", "").replace(":", "").replace("!", "").replace("?", "");
+            String[] words = row.toLowerCase().split(" ");
+
+            for (String word : words) {
+                for (int i = 0; i < word.length(); i++) {
+                    for (int z = 0; z < letterSprites.size(); z++) {
+                        if (!indexes.contains(z)) {
+                            if (letterSprites.get(z).getLetter().equals(String.valueOf(word.charAt(i)))) {
+                                indexes.add(z);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        int counter = 0;
+        for (int z = 0; z < letterSprites.size(); z++) {
+            if (!indexes.contains(z) && counter < 6) {
+                letterSprites.get(z).setVisible(false);
+                counter++;
             }
         }
     }
