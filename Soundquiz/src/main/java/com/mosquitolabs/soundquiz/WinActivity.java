@@ -24,7 +24,7 @@ public class WinActivity extends Activity {
     private int spaceFullSize;
     private StringVisualizerView visualizer;
     private QuizData quizData;
-    private AudioPlayer audioPlayer = AudioPlayer.getIstance;
+    private AudioPlayer audioPlayer = AudioPlayer.getIstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,7 +133,7 @@ public class WinActivity extends Activity {
         audioPlayer.resetEqualizer();
         audioPlayer.player.setLooping(false);
 
-        AudioPlayer.getIstance.player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+        AudioPlayer.getIstance().player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
                 visualizer.stopAnimation();
@@ -141,7 +141,7 @@ public class WinActivity extends Activity {
         });
 
 
-        visualizer.startLoop();
+//        visualizer.startLoop();
 
     }
 

@@ -5,11 +5,8 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.View;
-
-import com.mosquitolabs.soundquiz.Utility;
 
 public class StringVisualizerView extends View {
     private final static float IDLE_WAVES = 1.0f;
@@ -18,7 +15,7 @@ public class StringVisualizerView extends View {
     private final static float ANIMATION_AMPLITUDE = 1.0f;
     private final static float DAMPING_FACTOR = 0.86f;
     private final static float FREQUENCY = 1.5f;
-    private final static float PHASE_SHIFT = -0.3f;
+    private final static float PHASE_SHIFT = -0.25f;
     private final static float DENSITY = 5.0f;
 
     private Activity context;
@@ -35,12 +32,6 @@ public class StringVisualizerView extends View {
 
     private boolean stopVisualizer = true;
     private boolean isAnimating = false;
-
-    private Runnable handlerTask;
-    private Handler handler;
-
-//    private float leftMargin = 0f;
-
 
     public StringVisualizerView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -115,27 +106,26 @@ public class StringVisualizerView extends View {
         }
     }
 
-    public void startLoop() {
-        if (stopVisualizer) {
-            stopVisualizer = false;
-            handler = new Handler();
-            handlerTask = new Runnable() {
-                @Override
-                public void run() {
-                    refresh();
-                    if (!stopVisualizer) {
-                        handler.postDelayed(handlerTask, 1000 / Utility.getFPS());
-                    }
-                }
-            };
-            handlerTask.run();
-        }
-    }
-
-    public void stopLoop() {
-        stopVisualizer = true;
-        stopAnimation();
-    }
+//    public void startLoop() {
+//        if (stopVisualizer) {
+//            stopVisualizer = false;
+//            final Handler handler = new Handler();
+//            handler.postDelayed(new Runnable() {
+//                @Override
+//                public void run() {
+//                    refresh();
+//                    if (!stopVisualizer) {
+//                        handler.postDelayed(this, 1000 / Utility.getFPS());
+//                    }
+//                }
+//            }, 1000 / Utility.getFPS());
+//        }
+//    }
+//
+//    public void stopLoop() {
+//        stopVisualizer = true;
+//        stopAnimation();
+//    }
 
     public void startAnimation() {
         isAnimating = true;

@@ -9,6 +9,9 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -24,6 +27,9 @@ public class QuizActivity extends Activity {
     private int levelIndex;
     private int packageIndex;
     private boolean isFirstTime = true;
+    private boolean stopShaking = false;
+
+    private long lastExecutedTime;
 
     private ImageView hints;
 
@@ -31,12 +37,20 @@ public class QuizActivity extends Activity {
     private Runnable handlerAnimationTask;
 
     private QuizData quizData;
-    private AudioPlayer audioPlayer = AudioPlayer.getIstance;
+    private AudioPlayer audioPlayer = AudioPlayer.getIstance();
     private StringVisualizerView visualizer;
     private GameView gameView;
     private ImageView following;
     private ImageView previous;
     private ImageView play;
+
+    private RelativeLayout revealOneLetterLayout;
+    private Button cancel;
+
+    private boolean refreshVisualizer = true;
+    private boolean refreshGameView = true;
+    private boolean shakeHints = true;
+    private boolean refreshViews = true;
 
 
     @Override
@@ -57,7 +71,15 @@ public class QuizActivity extends Activity {
         initGameView();
         initVisualizer();
 
+        startLoop();
+
     }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+
+    }
+
 
     private void init() {
 //        binding
@@ -67,6 +89,15 @@ public class QuizActivity extends Activity {
         following = (ImageView) findViewById(R.id.following);
         previous = (ImageView) findViewById(R.id.previous);
         play = (ImageView) findViewById(R.id.buttonPlay);
+        revealOneLetterLayout = (RelativeLayout) findViewById(R.id.revealOneLetter);
+        cancel = (Button) findViewById(R.id.buttonCancel);
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeToGameMode();
+            }
+        });
 
         findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,64 +106,14 @@ public class QuizActivity extends Activity {
             }
         });
 
-//        findViewById(R.id.back).setAlpha(0.5f);
-//        findViewById(R.id.back).setVisibility(View.INVISIBLE);
-
-//        checkButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                String userAnswer = answerEditText.getText().toString();
-//                if (userAnswer.length() > 0) {
-//                    if (checkAnswer(userAnswer)) {
-//                        quizData.setSolved();
-//                        PackageCollection.getInstance().modifyQuizInSavedData(quizData);
-//                        Intent mIntent = new Intent(QuizActivity.this, WinActivity.class);
-//                        Bundle bundle = new Bundle();
-//                        bundle.putInt("quizIndex", quizIndex);
-//                        bundle.putInt("levelIndex", levelIndex);
-//                        bundle.putInt("packageIndex", packageIndex);
-//                        mIntent.putExtras(bundle);
-//                        QuizActivity.this.startActivity(mIntent);
-//                    } else {
-//                        AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
-//                        builder.setMessage(userAnswer + " is WRONG.. :(");
-//                        builder.setCancelable(false);
-//                        builder.setPositiveButton("Try Again", new DialogInterface.OnClickListener() {
-//                            public void onClick(DialogInterface dialog, int id) {
-//                                dialog.dismiss();
-//                            }
-//                        });
-//                        builder.create().show();
-//                    }
-//                }
-//            }
-//        });
-//
-//        hintButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                quizData.setUsedHint();
-//                PackageCollection.getInstance().modifyQuizInSavedData(quizData);
-//                AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
-//                builder.setMessage(getHint());
-//                builder.setCancelable(false);
-//                builder.setPositiveButton("Back", new DialogInterface.OnClickListener() {
-//                    public void onClick(DialogInterface dialog, int id) {
-//                        dialog.dismiss();
-//                    }
-//                });
-//                builder.create().show();
-//            }
-//        });
-
-        following.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.followingLayout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goToFollowingQuiz();
             }
         });
 
-        previous.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.previousLayout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goToPreviousQuiz();
@@ -177,7 +158,9 @@ public class QuizActivity extends Activity {
         initSound(isFirstTime && !quizData.isSolved());
         if (!quizData.isSolved()) {
             startVisualizer();
+            shakeHints = true;
         }
+        refreshGameView = true;
         isFirstTime = false;
     }
 
@@ -199,6 +182,31 @@ public class QuizActivity extends Activity {
         super.onBackPressed();
     }
 
+    private void startLoop() {
+        lastExecutedTime = System.currentTimeMillis();
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (refreshGameView) {
+                    gameView.refresh();
+                }
+
+                if (refreshVisualizer) {
+                    visualizer.refresh();
+                }
+
+//                if (shakeHints && System.currentTimeMillis() - lastExecutedTime >= 5000) {
+//                    startShakeAnimation();
+//                    lastExecutedTime = System.currentTimeMillis();
+//                }
+
+                handler.postDelayed(this, 1000 / Utility.getFPS());
+
+            }
+        }, 1000 / Utility.getFPS());
+    }
+
 
     private void initSound(final boolean start) {
 
@@ -209,7 +217,7 @@ public class QuizActivity extends Activity {
         audioPlayer.resetEqualizer();
         audioPlayer.player.setLooping(false);
 
-        AudioPlayer.getIstance.player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+        AudioPlayer.getIstance().player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
                 stopVisualizerAnimation();
@@ -231,6 +239,10 @@ public class QuizActivity extends Activity {
         int emptySpace = (Utility.getWidth(this) - layoutWidth) / 2;
         int leftMarginScreen = (int) (51.5f / 543 * layoutWidth);
         int topMarginScreen = (int) (90f / 545 * layoutWidth);
+        int hintsSize = Utility.getWidth(this) * 55 / 720;
+        int backWidth = Utility.getWidth(this) * 90 / 720;
+        int backHeight = Utility.getWidth(this) * 40 / 720;
+        int hintsMargin = hintsSize / 3;
 
         findViewById(R.id.body).getLayoutParams().width = layoutWidth;
 
@@ -244,15 +256,25 @@ public class QuizActivity extends Activity {
         play.getLayoutParams().height = screenWidth / 3;
         following.getLayoutParams().width = emptySpace / 3;
         previous.getLayoutParams().width = emptySpace / 3;
+        hints.getLayoutParams().width = hints.getLayoutParams().height = hintsSize;
+        hints.getLayoutParams().width = hints.getLayoutParams().height = hintsSize;
+        findViewById(R.id.back).getLayoutParams().width = backWidth;
+        findViewById(R.id.back).getLayoutParams().height = backHeight;
+        findViewById(R.id.header).getLayoutParams().height = hintsSize + 2 * hintsMargin;
 
         Utility.setMargins(imageLayout, leftMarginScreen, topMarginScreen, 0, 0);
         Utility.setMargins(visualizer, leftMarginScreen, 0, 0, 0);
+
         Utility.setMargins(previous, emptySpace / 3, 0, 0, 0);
         Utility.setMargins(following, 0, 0, emptySpace / 3, 0);
+        Utility.setMargins(findViewById(R.id.previousLayout), 0, 543 * 65 / 300, 0, 543 * 65 / 300);
+        Utility.setMargins(findViewById(R.id.followingLayout), 0, 543 * 65 / 300, 0, 543 * 65 / 300);
+
         Utility.setMargins(play, leftMarginScreen + screenWidth / 3, topMarginScreen + (screenHeight - (screenWidth / 3)) / 2, 0, 0);
 
-//        following.setAlpha(0.4f);
-//        previous.setAlpha(0.4f);
+        Utility.setMargins(hints, 0, 0, hintsMargin, 0);
+        Utility.setMargins(findViewById(R.id.back), hintsMargin, 0, 0, 0);
+
 
         visualizer.setColor(Color.WHITE);
         if (Utility.getWidth(this) >= 720) {
@@ -274,7 +296,8 @@ public class QuizActivity extends Activity {
 
     private void initGameView() {
         gameView.init(quizData);
-        gameView.startLoop();
+        refreshGameView = true;
+//        gameView.startLoop();
     }
 
     private void togglePlay() {
@@ -288,8 +311,13 @@ public class QuizActivity extends Activity {
     }
 
     private void cleanUp() {
-        visualizer.stopLoop();
+//        visualizer.stopLoop();
         stopVisualizerAnimation();
+        refreshVisualizer = false;
+        refreshGameView = false;
+        shakeHints = false;
+//        gameView.stopLoop();
+//        stopShakeLoop();
 
         if (audioPlayer.player != null) {
             audioPlayer.player.release();
@@ -297,71 +325,18 @@ public class QuizActivity extends Activity {
         }
     }
 
-//    private boolean checkAnswer(String userAnswer) {
-//        for (String answer : quizData.getAnswers()) {
-////        remove any upper case
-//            String answerTemp = answer.toLowerCase();
-//            userAnswer = userAnswer.toLowerCase();
-//
-////        remove spaces at the beginning
-//            while (userAnswer.charAt(0) == ' ') {
-//                userAnswer = userAnswer.substring(1);
-//            }
-////        remove spaces at the end
-//            while (userAnswer.charAt(userAnswer.length() - 1) == ' ') {
-//                userAnswer = userAnswer.substring(0, userAnswer.length() - 1);
-//            }
-//
-////        remove "The"
-//            if (answerTemp.length() > 4 && answerTemp.substring(0, 4).equals("the ")) {
-//                answerTemp = answerTemp.substring(4);
-//            }
-//            if (userAnswer.length() > 4 && userAnswer.substring(0, 4).equals("the ")) {
-//                userAnswer = userAnswer.substring(4);
-//            }
-//
-////        compare
-//            if (userAnswer.equals(answerTemp)) {
-//                return true;
-//            }
-//        }
-//
-//        return false;
-//    }
-//
-//    private String getHint() {
-//        String hint = new String();
-//        String[] separated = quizData.getAnswers().get(0).toUpperCase().split(" ");
-//        for (String word : separated) {
-//            for (int i = 0; i < word.length(); i++) {
-////                show first letter and last (if word longer then 4)
-//                if (i == 0) {
-//                    hint += word.charAt(i);
-//                    hint += " ";
-//                } else if (word.length() > 4 && i == word.length() - 1) {
-//                    hint += word.charAt(i);
-//                } else {
-//                    hint += "_ ";
-//                }
-//            }
-//            hint += "  ";
-//
-//        }
-//        return hint;
-//    }
-//
-//    public void startWinActivity() {
-//        quizData.setSolved();
-//        PackageCollection.getInstance().modifyQuizInSavedData(quizData);
-//        Intent mIntent = new Intent(QuizActivity.this, WinActivity.class);
-//        Bundle bundle = new Bundle();
-//        bundle.putInt("quizIndex", quizIndex);
-//        bundle.putInt("levelIndex", levelIndex);
-//        bundle.putInt("packageIndex", packageIndex);
-//        bundle.putInt("spaceFullSize", gameView.getSpaceFullSize());
-//        mIntent.putExtras(bundle);
-//        QuizActivity.this.startActivity(mIntent);
-//    }
+
+    private void changeToRevealOneLetterMode() {
+        gameView.changeToRevealOneLetterMode();
+        Utility.setMargins(revealOneLetterLayout, Utility.convertDpToPixels(this, 16), gameView.getMaxY() + Utility.convertDpToPixels(this, 16), Utility.convertDpToPixels(this, 16), 0);
+        revealOneLetterLayout.setVisibility(View.VISIBLE);
+
+    }
+
+    public void changeToGameMode() {
+        revealOneLetterLayout.setVisibility(View.GONE);
+        gameView.changeToGameMode();
+    }
 
     public void initWinPage() {
         getQuizData().setSolved();
@@ -417,15 +392,22 @@ public class QuizActivity extends Activity {
         handlerAnimationTask.run();
     }
 
+    private void startShakeAnimation() {
+        Animation shake = AnimationUtils.loadAnimation(this, R.anim.anim_shake);
+        hints.startAnimation(shake);
+    }
+
 
     public void invalidateVisualizer() {
-        visualizer.stopLoop();
+//        visualizer.stopLoop();
+        refreshVisualizer = false;
         visualizer.setVisibility(View.GONE);
     }
 
     public void startVisualizer() {
+        refreshVisualizer = true;
         visualizer.setVisibility(View.VISIBLE);
-        visualizer.startLoop();
+//        visualizer.startLoop();
     }
 
 
@@ -441,7 +423,8 @@ public class QuizActivity extends Activity {
         audioPlayer.player.release();
         visualizer.stopAnimation();
         quizData = PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().get(quizIndex);
-        gameView.stopLoop();
+//        gameView.stopLoop();
+        refreshGameView = false;
         gameView.resetSprites();
 
         resetImages();
@@ -451,6 +434,9 @@ public class QuizActivity extends Activity {
 
         if (!quizData.isSolved()) {
             startVisualizer();
+            shakeHints = true;
+        } else {
+            shakeHints = false;
         }
 
     }
@@ -486,7 +472,7 @@ public class QuizActivity extends Activity {
     private void openHintDialog() {
         final Dialog dialog = new Dialog(this, R.style.Theme_Dialog);
         dialog.setContentView(R.layout.dialog_hints);
-        dialog.findViewById(R.id.main).getLayoutParams().width = Utility.getWidth(this) * 65 / 100;
+        dialog.findViewById(R.id.main).getLayoutParams().width = Utility.getWidth(this) * 80 / 100;
 
         dialog.findViewById(R.id.buttonCancel).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -514,7 +500,8 @@ public class QuizActivity extends Activity {
         dialog.findViewById(R.id.revealOneLetter).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                dialog.cancel();
+                changeToRevealOneLetterMode();
             }
         });
 

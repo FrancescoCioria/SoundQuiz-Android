@@ -10,6 +10,8 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.os.Vibrator;
 
+import com.mosquitolabs.soundquiz.visualizer.AudioPlayer;
+
 public class LetterSprite {
 
     private final static float ANIMATION_TIME = 230f; // (millis)
@@ -52,6 +54,7 @@ public class LetterSprite {
         this.currentSize = SIZE;
 
 //        textPaint.setColor(Color.rgb(74, 32, 0));
+
         textPaint.setColor(Color.rgb(0, 33, 23));
         textPaint.setStrokeWidth(3);
         textPaint.setAntiAlias(true);
@@ -131,7 +134,6 @@ public class LetterSprite {
                 position.y = finalPosition.y;
                 currentSize = finalSize;
             }
-
             textPaint.setTextSize(currentSize / 2);
             textPaint.getTextBounds("T", 0, 1, bounds);
             textHeight = bounds.height();
@@ -195,6 +197,7 @@ public class LetterSprite {
         isAnimating = true;
         isHome = false;
 
+        AudioPlayer.getIstance().playSelect();
         vibrator.vibrate(30);
     }
 
@@ -208,6 +211,8 @@ public class LetterSprite {
         initialSize = currentSize;
         isAnimating = true;
         isHome = true;
+
+        AudioPlayer.getIstance().playRemove();
         vibrator.vibrate(30);
     }
 
@@ -242,9 +247,12 @@ public class LetterSprite {
         }
 
         if (gameView.getAnswer().equals(userAnswer)) {
+            AudioPlayer.getIstance().playWin();
+            gameView.winTheGame();
             gameView.getActivityContext().initWinPage();
         } else {
-            Utility.shortToast("Wrong answer!", gameView.getActivityContext());
+//            Utility.shortToast("Wrong answer!", gameView.getActivityContext());
+            AudioPlayer.getIstance().playWrong();
             vibrator.vibrate(150);
         }
     }
@@ -300,6 +308,9 @@ public class LetterSprite {
 
     public void setVisible(boolean visible) {
         isVisible = visible;
+        if (!isVisible) {
+            isClickable = false;
+        }
     }
 
     public void setClickable(boolean clickable) {
@@ -312,6 +323,20 @@ public class LetterSprite {
 
     public int getIndex() {
         return INDEX;
+    }
+
+    public boolean isFix() {
+        return !isClickable && isVisible;
+    }
+
+    public void setFix() {
+        isVisible = true;
+        isClickable = false;
+        textPaint.setColor(Color.rgb(34, 139, 34));
+    }
+
+    public void resetTextColor() {
+        textPaint.setColor(Color.rgb(0, 33, 23));
     }
 
     static class MyPoint {

@@ -29,18 +29,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Remove wrong letters (max 6)"
+                    android:text="Remove wrong letters\n(up to 6)"
                     android:id="@+id/textView"
                     android:textSize="20sp"
                     android:layout_centerHorizontal="true"
-                    android:textColor="#345aa6" />
+                    android:textColor="#345aa6"
+                    android:gravity="center_horizontal" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/revealFirstLetters"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="16dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -56,7 +57,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/revealOneLetter"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="16dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -72,7 +73,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/askForHelp"
-                android:layout_marginTop="10dp" >
+                android:layout_marginTop="16dp" >
 
                 <TextView
                     android:layout_width="wrap_content"

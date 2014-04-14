@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.mosquitolabs.soundquiz.visualizer.AudioPlayer;
+
 public class HomeActivity extends Activity {
 
     private Button playButton;
@@ -26,6 +28,7 @@ public class HomeActivity extends Activity {
         setContentView(R.layout.activity_home_opening_logo);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         Utility.hideActionbar(this);
+        AudioPlayer.getIstance().initSounds(this);
         populate();
     }
 
@@ -55,8 +58,8 @@ public class HomeActivity extends Activity {
         Intent mIntent = new Intent(this, QuizActivity.class);
 
         Bundle bundle = new Bundle();
-        bundle.putInt("quizIndex", 14);
-        bundle.putInt("levelIndex", 5);
+        bundle.putInt("quizIndex", 0);
+        bundle.putInt("levelIndex", 0);
         bundle.putInt("packageIndex", 0);
         mIntent.putExtras(bundle);
 

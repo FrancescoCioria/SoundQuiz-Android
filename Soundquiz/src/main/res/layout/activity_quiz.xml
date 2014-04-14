@@ -52,14 +52,11 @@
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_alignParentRight="false"
         android:layout_alignParentEnd="true"
         android:id="@+id/header"
-        android:layout_alignParentTop="true"
-        android:paddingTop="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+        android:layout_alignParentTop="true">
 
         <ImageView
             android:layout_width="80dp"
@@ -67,14 +64,16 @@
             android:id="@+id/back"
             android:src="@drawable/button_back"
             android:scaleType="fitStart"
-            android:layout_marginTop="2.5dp" />
+            android:layout_centerVertical="true" />
 
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:id="@+id/hints"
+            android:antialias="true"
             android:layout_alignParentRight="true"
-            android:src="@drawable/button_hint" />
+            android:src="@drawable/button_hint"
+            android:layout_centerVertical="true" />
 
     </RelativeLayout>
 
@@ -138,6 +137,37 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/revealOneLetter"
+        android:gravity="center_horizontal"
+        android:background="@drawable/wiki_rounded_layout"
+        android:padding="10dp"
+        android:layout_alignTop="@+id/gameView"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Touch the empty space you wish to reveal"
+            android:id="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:textColor="#FF60A08E"
+            android:textSize="20sp"
+            android:gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/buttonCancel"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/body"
@@ -145,7 +175,7 @@
         android:gravity="center_vertical"
 
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp">
+        android:layout_below="@+id/header">
 
         <RelativeLayout
             android:layout_width="fill_parent"
@@ -197,7 +227,9 @@
         android:layout_alignTop="@+id/body"
         android:layout_alignParentBottom="false"
         android:layout_alignBottom="@+id/body"
-        android:visibility="visible">
+        android:visibility="visible"
+        android:layout_toLeftOf="@+id/body"
+        android:id="@+id/previousLayout">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -207,6 +239,16 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:adjustViewBounds="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignTop="@+id/body"
+        android:layout_alignBottom="@+id/body"
+        android:layout_toRightOf="@+id/body"
+        android:id="@+id/followingLayout">
 
         <ImageView
             android:layout_width="wrap_content"
