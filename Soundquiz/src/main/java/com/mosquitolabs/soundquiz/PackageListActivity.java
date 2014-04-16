@@ -1,6 +1,5 @@
 package com.mosquitolabs.soundquiz;
 
-import android.annotation.TargetApi;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -9,7 +8,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -36,7 +34,7 @@ public class PackageListActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_package_list_new);
+        setContentView(R.layout.activity_package_list);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         Utility.hideActionbar(this);
 
@@ -71,8 +69,8 @@ public class PackageListActivity extends FragmentActivity {
         pager.setAdapter(pagerAdapter);
         pager.setPageTransformer(true, new BackgroundFadingTransformer(this));
 
-        int layoutWidth = (int) (Utility.getWidth(this) * 0.65f);
-        findViewById(R.id.bodyOne).getLayoutParams().width = layoutWidth;
+//        int layoutWidth = (int) (Utility.getWidth(this) * 0.65f);
+//        findViewById(R.id.bodyOne).getLayoutParams().width = layoutWidth;
 
 
     }
@@ -104,26 +102,8 @@ public class PackageListActivity extends FragmentActivity {
         return PACKAGE_ITEM_WIDTH_PIXEL;
     }
 
-    public int getPackageHeigth() {
+    public int getPackageHeight() {
         return PACKAGE_ITEM_HEIGHT_PIXEL;
-    }
-
-
-    public void setBackgroundImage(ImageView image, int index) {
-        image.setImageDrawable(images.get(index));
-    }
-
-//    public void setBackgroundColor(ImageView view, int index) {
-//        view.setBackgroundColor(themes[index]);
-//    }
-
-    @TargetApi(11)
-    public void setAlpha(ImageView image, float alpha) {
-        image.setAlpha(alpha);
-    }
-
-    public void setAlpha(ImageView image, int alpha) {
-        image.setAlpha(alpha);
     }
 
 

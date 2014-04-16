@@ -47,7 +47,7 @@ public class PackageFragment extends Fragment {
         final PackageListActivity activity = (PackageListActivity) getActivity();
 
         int width = activity.getPackageWidth();
-        int height = activity.getPackageHeigth();
+        int height = activity.getPackageHeight();
 
         int headerHeight = height / 5;
         int bodyHeight = height * 4 / 5;

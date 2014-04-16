@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b4000000"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/body"
+            android:background="@drawable/dialog_layout_music"
+            android:padding="16dp"
+            android:layout_margin="15dp">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/removeWrongLetters">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remove wrong letters\n(up to 6)"
+                    android:id="@+id/textView"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/dark_music"
+                    android:gravity="center_horizontal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/revealFirstLetters"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reveal first letters"
+                    android:id="@+id/textView2"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/dark_music" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/revealOneLetter"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reveal one letter"
+                    android:id="@+id/textView3"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/dark_music" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/askForHelp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ask your friends for help"
+                    android:id="@+id/textView4"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/dark_music" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/buttonCancel"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/button_cancel"
+            android:layout_alignParentTop="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

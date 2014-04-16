@@ -10,5 +10,6 @@
     <string name="title_activity_package_list">PackageListActivity</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_win">WinActivity</string>
+    <string name="title_activity_music_quiz">MusicQuizActivity</string>
 
 </resources>

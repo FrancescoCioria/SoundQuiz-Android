@@ -1,6 +1,5 @@
 package com.mosquitolabs.soundquiz;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.pm.ActivityInfo;
@@ -8,26 +7,39 @@ import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.mosquitolabs.soundquiz.visualizer.AudioPlayer;
+import com.mosquitolabs.soundquiz.visualizer.GuitarStringsVisualizerView;
 import com.mosquitolabs.soundquiz.visualizer.StringVisualizerView;
 
 public class QuizActivity extends Activity {
     private final static int ANIMATION_TIME = 300; // (millis)
+
+    private final static int CINEMA = 0;
+    private final static int MUSIC = 1;
+    private final static int VIP = 2;
 
     // FFB55A18
 
     private int quizIndex;
     private int levelIndex;
     private int packageIndex;
+    private int fireworkCounter = 0;
     private boolean isFirstTime = true;
     private boolean stopShaking = false;
+    private boolean fireworkAnimation = false;
 
     private long lastExecutedTime;
 
@@ -38,11 +50,13 @@ public class QuizActivity extends Activity {
 
     private QuizData quizData;
     private AudioPlayer audioPlayer = AudioPlayer.getIstance();
-    private StringVisualizerView visualizer;
+    private StringVisualizerView visualizerCinema;
+    private GuitarStringsVisualizerView visualizerMusic;
     private GameView gameView;
     private ImageView following;
     private ImageView previous;
     private ImageView play;
+    private TextView type;
 
     private RelativeLayout revealOneLetterLayout;
     private Button cancel;
@@ -52,11 +66,12 @@ public class QuizActivity extends Activity {
     private boolean shakeHints = true;
     private boolean refreshViews = true;
 
+    private View[] fireworkViews = {null, null, null, null};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         Utility.hideActionbar(this);
 
@@ -69,7 +84,7 @@ public class QuizActivity extends Activity {
         init();
         initButtons();
         initGameView();
-        initVisualizer();
+        initViews();
 
         startLoop();
 
@@ -82,9 +97,47 @@ public class QuizActivity extends Activity {
 
 
     private void init() {
-//        binding
+        Log.d("INIT", " inside");
+
+        switch (packageIndex) {
+            case CINEMA:
+                setContentView(R.layout.activity_quiz_cinema);
+                visualizerCinema = (StringVisualizerView) findViewById(R.id.visualizerView);
+                visualizerCinema.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        togglePlay();
+                    }
+                });
+                type = (TextView) findViewById(R.id.type);
+                if (quizData.isSolved()) {
+                    type.setVisibility(View.GONE);
+                }
+                type.setText(quizData.getType());
+                findViewById(R.id.imageQuiz).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startFireworkAnimation();
+                    }
+                });
+                break;
+            case MUSIC:
+                setContentView(R.layout.activity_quiz_music);
+                visualizerMusic = (GuitarStringsVisualizerView) findViewById(R.id.visualizerView);
+                visualizerMusic.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        togglePlay();
+                    }
+                });
+                break;
+            case VIP:
+                setContentView(R.layout.activity_quiz_cinema);
+                break;
+        }
+
+//      general  binding
         hints = (ImageView) findViewById(R.id.hints);
-        visualizer = (StringVisualizerView) findViewById(R.id.visualizerView);
         gameView = (GameView) findViewById(R.id.gameView);
         following = (ImageView) findViewById(R.id.following);
         previous = (ImageView) findViewById(R.id.previous);
@@ -127,12 +180,12 @@ public class QuizActivity extends Activity {
             }
         });
 
-        visualizer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                togglePlay();
-            }
-        });
+
+        fireworkViews[0] = findViewById(R.id.fireworkLeftTop);
+        fireworkViews[1] = findViewById(R.id.fireworkRightTop);
+        fireworkViews[2] = findViewById(R.id.fireworkLeftBottom);
+        fireworkViews[3] = findViewById(R.id.fireworkRightBottom);
+
 
         play.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,7 +193,6 @@ public class QuizActivity extends Activity {
                 togglePlay();
             }
         });
-
 
         hints.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -156,9 +208,16 @@ public class QuizActivity extends Activity {
         super.onResume();
         cleanUp();
         initSound(isFirstTime && !quizData.isSolved());
-        if (!quizData.isSolved()) {
-            startVisualizer();
-            shakeHints = true;
+        switch (packageIndex) {
+            case CINEMA:
+                setVisualizerVisible(!quizData.isSolved());
+                break;
+            case MUSIC:
+                setVisualizerVisible(true);
+                break;
+            case VIP:
+
+                break;
         }
         refreshGameView = true;
         isFirstTime = false;
@@ -182,24 +241,41 @@ public class QuizActivity extends Activity {
         super.onBackPressed();
     }
 
+    private void refreshVisualizer() {
+        if (!refreshVisualizer) {
+            return;
+        }
+
+        switch (packageIndex) {
+            case CINEMA:
+                visualizerCinema.refresh();
+                break;
+            case MUSIC:
+                visualizerMusic.refresh();
+                break;
+            case VIP:
+
+                break;
+        }
+    }
+
     private void startLoop() {
         lastExecutedTime = System.currentTimeMillis();
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+
                 if (refreshGameView) {
                     gameView.refresh();
                 }
 
-                if (refreshVisualizer) {
-                    visualizer.refresh();
-                }
+                refreshVisualizer();
 
-//                if (shakeHints && System.currentTimeMillis() - lastExecutedTime >= 5000) {
-//                    startShakeAnimation();
-//                    lastExecutedTime = System.currentTimeMillis();
-//                }
+                if (fireworkAnimation && fireworkCounter < fireworkViews.length) {
+                    startSingleFireworkAnimation(fireworkViews[fireworkCounter]);
+                    fireworkCounter++;
+                }
 
                 handler.postDelayed(this, 1000 / Utility.getFPS());
 
@@ -230,19 +306,68 @@ public class QuizActivity extends Activity {
 
     }
 
+    private void initViews() {
+        //general
+        int layoutWidth = (int) (Utility.getWidth(this) * 0.65f);
+        int emptySpace = (Utility.getWidth(this) - layoutWidth) / 2;
+        int hintsSize = Utility.getWidth(this) * 58 / 720;
+        int backWidth = Utility.getWidth(this) * 97 / 720;
+        int backHeight = Utility.getWidth(this) * 42 / 720;
+        int hintsMargin = hintsSize / 3;
+        int headerHeight = hintsSize + 2 * hintsMargin;
+        int fireworkSize = layoutWidth / 3;
+        int topMarginFireworksTop = (layoutWidth * 50 / 543 + headerHeight) - fireworkSize / 2;
+        int topMarginFireworksBottom = (layoutWidth * 50 / 543 + headerHeight);
+        int lateralMarginFireworksTop = emptySpace - fireworkSize / 2;
+        int lateralMarginFireworksBottom = emptySpace - fireworkSize * 3 / 4;
 
-    private void initVisualizer() {
-        visualizer.setVisibility(View.VISIBLE);
+        following.getLayoutParams().width = emptySpace / 3;
+        previous.getLayoutParams().width = emptySpace / 3;
+        hints.getLayoutParams().width = hints.getLayoutParams().height = hintsSize;
+        hints.getLayoutParams().width = hints.getLayoutParams().height = hintsSize;
+        findViewById(R.id.back).getLayoutParams().width = backWidth;
+        findViewById(R.id.back).getLayoutParams().height = backHeight;
+        findViewById(R.id.header).getLayoutParams().height = headerHeight;
+        findViewById(R.id.fireworkLeftTop).getLayoutParams().width = findViewById(R.id.fireworkLeftTop).getLayoutParams().height = findViewById(R.id.fireworkRightTop).getLayoutParams().width = findViewById(R.id.fireworkRightTop).getLayoutParams().height = fireworkSize;
+        findViewById(R.id.fireworkLeftBottom).getLayoutParams().width = findViewById(R.id.fireworkLeftBottom).getLayoutParams().height = findViewById(R.id.fireworkRightBottom).getLayoutParams().width = findViewById(R.id.fireworkRightBottom).getLayoutParams().height = fireworkSize;
+
+        Utility.setMargins(previous, emptySpace / 3, 0, 0, 0);
+        Utility.setMargins(following, 0, 0, emptySpace / 3, 0);
+        Utility.setMargins(findViewById(R.id.previousLayout), 0, 543 * 65 / 300, 0, 543 * 65 / 300);
+        Utility.setMargins(findViewById(R.id.followingLayout), 0, 543 * 65 / 300, 0, 543 * 65 / 300);
+
+        Utility.setMargins(hints, 0, 0, hintsMargin, 0);
+        Utility.setMargins(findViewById(R.id.back), hintsMargin, 0, 0, 0);
+
+
+        Utility.setMargins(findViewById(R.id.fireworkLeftTop), lateralMarginFireworksTop, topMarginFireworksTop, 0, 0);
+        Utility.setMargins(findViewById(R.id.fireworkLeftBottom), lateralMarginFireworksBottom, topMarginFireworksBottom, 0, 0);
+        Utility.setMargins(findViewById(R.id.fireworkRightTop), 0, topMarginFireworksTop, lateralMarginFireworksTop, 0);
+        Utility.setMargins(findViewById(R.id.fireworkRightBottom), 0, topMarginFireworksBottom, lateralMarginFireworksBottom, 0);
+
+
+        switch (packageIndex) {
+            case CINEMA:
+                initCinemaViews();
+                break;
+            case MUSIC:
+                initMusicViews();
+                break;
+            case VIP:
+                break;
+        }
+
+
+    }
+
+
+    private void initCinemaViews() {
+        visualizerCinema.setVisibility(View.VISIBLE);
         int layoutWidth = (int) (Utility.getWidth(this) * 0.65f);
         int screenWidth = layoutWidth * 401 / 543;
         int screenHeight = layoutWidth * 310 / 543;
-        int emptySpace = (Utility.getWidth(this) - layoutWidth) / 2;
         int leftMarginScreen = (int) (51.5f / 543 * layoutWidth);
         int topMarginScreen = (int) (90f / 545 * layoutWidth);
-        int hintsSize = Utility.getWidth(this) * 55 / 720;
-        int backWidth = Utility.getWidth(this) * 90 / 720;
-        int backHeight = Utility.getWidth(this) * 40 / 720;
-        int hintsMargin = hintsSize / 3;
 
         findViewById(R.id.body).getLayoutParams().width = layoutWidth;
 
@@ -250,55 +375,253 @@ public class QuizActivity extends Activity {
 
         imageLayout.getLayoutParams().width = screenWidth;
         imageLayout.getLayoutParams().height = screenHeight;
-        visualizer.getLayoutParams().height = (int) (screenHeight * 0.45f);
-        visualizer.getLayoutParams().width = screenWidth;
+        visualizerCinema.getLayoutParams().height = (int) (screenHeight * 0.45f);
+        visualizerCinema.getLayoutParams().width = screenWidth;
         play.getLayoutParams().width = screenWidth / 3;
         play.getLayoutParams().height = screenWidth / 3;
-        following.getLayoutParams().width = emptySpace / 3;
-        previous.getLayoutParams().width = emptySpace / 3;
-        hints.getLayoutParams().width = hints.getLayoutParams().height = hintsSize;
-        hints.getLayoutParams().width = hints.getLayoutParams().height = hintsSize;
-        findViewById(R.id.back).getLayoutParams().width = backWidth;
-        findViewById(R.id.back).getLayoutParams().height = backHeight;
-        findViewById(R.id.header).getLayoutParams().height = hintsSize + 2 * hintsMargin;
+
+        type.getLayoutParams().width = screenWidth;
+        type.getLayoutParams().height = screenHeight / 3;
 
         Utility.setMargins(imageLayout, leftMarginScreen, topMarginScreen, 0, 0);
-        Utility.setMargins(visualizer, leftMarginScreen, 0, 0, 0);
-
-        Utility.setMargins(previous, emptySpace / 3, 0, 0, 0);
-        Utility.setMargins(following, 0, 0, emptySpace / 3, 0);
-        Utility.setMargins(findViewById(R.id.previousLayout), 0, 543 * 65 / 300, 0, 543 * 65 / 300);
-        Utility.setMargins(findViewById(R.id.followingLayout), 0, 543 * 65 / 300, 0, 543 * 65 / 300);
+        Utility.setMargins(visualizerCinema, leftMarginScreen, 0, 0, 0);
+        Utility.setMargins(type, leftMarginScreen, topMarginScreen, 0, 0);
 
         Utility.setMargins(play, leftMarginScreen + screenWidth / 3, topMarginScreen + (screenHeight - (screenWidth / 3)) / 2, 0, 0);
 
-        Utility.setMargins(hints, 0, 0, hintsMargin, 0);
-        Utility.setMargins(findViewById(R.id.back), hintsMargin, 0, 0, 0);
+        type.setTextSize(Utility.pixelsToSp(this, screenHeight / 9));
 
-
-        visualizer.setColor(Color.WHITE);
+        visualizerCinema.setColor(Color.WHITE);
         if (Utility.getWidth(this) >= 720) {
-            visualizer.setStroke(4, 2);
+            visualizerCinema.setStroke(4, 2);
         }
     }
 
-    private void startVisualizerAnimation() {
-        visualizer.startAnimation();
-        play.setVisibility(View.GONE);
-    }
+    private void initMusicViews() {
+        int guitarWidth = Utility.getHeight(this) * 498 / 1356;
+        int guitarHeight = Utility.getHeight(this) / 2;
 
-    private void stopVisualizerAnimation() {
-        visualizer.stopAnimation();
-        if (!quizData.isSolved()) {
-            play.setVisibility(View.VISIBLE);
-        }
+        View guitar = findViewById(R.id.imageViewGuitar);
+        guitar.getLayoutParams().height = guitarHeight;
+        guitar.getLayoutParams().width = guitarWidth;
+
+        int center = (Utility.getWidth(this) - guitarWidth) / 2 + Utility.getHeight(this) * 47 / 1356;
+//        int stringBaseWidth = Utility.getHeight(this) * 191 / 1356;
+        int stringTopWidth = Utility.getHeight(this) * 165 / 1356;
+
+        float compressionFactor = 130f / 160f;
+
+        visualizerMusic.getLayoutParams().width = (int) (stringTopWidth / 0.9f);
+        visualizerMusic.getLayoutParams().height = guitarHeight * 605 / 678;
+        visualizerMusic.setStroke(Utility.getHeight(this) * 6 / 1356);
+        visualizerMusic.setCompressionFactor(compressionFactor);
+        visualizerMusic.setColor(Color.rgb(248, 246, 236));
+
+        play.getLayoutParams().width = guitarWidth * 201 / 498;
+        play.getLayoutParams().height = guitarWidth * 201 / 498;
+
+        findViewById(R.id.imageQuiz).getLayoutParams().width = guitarWidth * 310 / 498;
+        findViewById(R.id.imageQuiz).getLayoutParams().height = guitarWidth * 310 / 498;
+
+        Utility.setMargins(guitar, center, 0, 0, 0);
+        Utility.setMargins(play, guitarHeight * 97 / 678, guitarHeight * 104 / 678, 0, 0);
     }
 
     private void initGameView() {
         gameView.init(quizData);
         refreshGameView = true;
-//        gameView.startLoop();
     }
+
+    private void initButtons() {
+        if (quizIndex == 14) {
+            findViewById(R.id.following).setVisibility(View.GONE);
+        } else if (quizIndex == 0) {
+            findViewById(R.id.previous).setVisibility(View.GONE);
+        } else {
+            findViewById(R.id.previous).setVisibility(View.VISIBLE);
+            findViewById(R.id.following).setVisibility(View.VISIBLE);
+        }
+    }
+
+
+    public void initWinPage() {
+        getQuizData().setSolved();
+        PackageCollection.getInstance().modifyQuizInSavedData(getQuizData());
+
+        initWinGraphics();
+        startWinAnimation();
+    }
+
+    public void initWinGraphics() {
+        Log.d("WIN GRAPHICS", " inside");
+        RelativeLayout winLayout = (RelativeLayout) findViewById(R.id.win);
+        Utility.setMargins(winLayout, 0, gameView.getMaxY(), 0, 0);
+        winLayout.setVisibility(View.VISIBLE);
+
+        play.setVisibility(View.GONE);
+        hints.setVisibility(View.GONE);
+
+        switch (packageIndex) {
+            case CINEMA:
+                initCinemaWinGraphics();
+                break;
+            case MUSIC:
+                initMusicWinGraphics();
+                break;
+            case VIP:
+                break;
+        }
+
+        Log.d("WIN GRAPHICS", " win " + findViewById(R.id.win).getVisibility());
+
+    }
+
+    private void initCinemaWinGraphics() {
+        setVisualizerVisible(false);
+        findViewById(R.id.layoutImageQuiz).setVisibility(View.VISIBLE);
+        findViewById(R.id.imageQuiz).setVisibility(View.VISIBLE);
+        type.setVisibility(View.GONE);
+        int res = getResources().getIdentifier(getQuizData().getQuizID(), "drawable", getPackageName());
+        try {
+            ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(res));
+        } catch (Exception e) {
+            ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(R.drawable.twenty_century_fox));
+        }
+        ((ImageView) findViewById(R.id.imageViewTV)).setImageDrawable(getResources().getDrawable(R.drawable.tv_simpsons_empty_with_shadow));
+    }
+
+    private void initMusicWinGraphics() {
+        setVisualizerVisible(true);
+        stopVisualizerAnimation();
+        findViewById(R.id.layoutImageQuiz).setVisibility(View.VISIBLE);
+        findViewById(R.id.imageQuiz).setVisibility(View.VISIBLE);
+        int res = getResources().getIdentifier(getQuizData().getQuizID(), "drawable", getPackageName());
+        try {
+            ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(res));
+        } catch (Exception e) {
+            ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(R.drawable.twenty_century_fox));
+        }
+    }
+
+    private void startWinAnimation() {
+        Log.d("WIN ANIMATION", " inside");
+
+        TranslateAnimation slideAnimation = new TranslateAnimation(-Utility.getWidth(this) / 2, 0, 0, 0);
+        AlphaAnimation alphaAnimation = new AlphaAnimation(0, 1);
+        ScaleAnimation scaleAnimation = new ScaleAnimation(0, 1, 0, 1, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        scaleAnimation.setDuration(300);
+        slideAnimation.setDuration(300);
+        alphaAnimation.setDuration(300);
+
+        switch (packageIndex) {
+            case CINEMA:
+                findViewById(R.id.imageQuiz).startAnimation(scaleAnimation);
+                findViewById(R.id.win).startAnimation(scaleAnimation);
+                break;
+            case MUSIC:
+                AnimationSet animationSet = new AnimationSet(false);
+                animationSet.addAnimation(alphaAnimation);
+                animationSet.addAnimation(slideAnimation);
+                animationSet.setDuration(300);
+                findViewById(R.id.imageQuiz).startAnimation(animationSet);
+                findViewById(R.id.win).startAnimation(scaleAnimation);
+
+                break;
+            case VIP:
+                break;
+        }
+        startFireworkAnimation();
+    }
+
+    private void startFireworkAnimation() {
+        fireworkCounter = 0;
+        fireworkAnimation = true;
+        AudioPlayer.getIstance().playFireworks();
+    }
+
+    private void startSingleFireworkAnimation(final View view) {
+        view.setAlpha(1);
+        view.setScaleX(1);
+        view.setScaleY(1);
+
+        ScaleAnimation scaleAnimation = new ScaleAnimation(0, 1, 0, 1, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        final AlphaAnimation alphaAnimation = new AlphaAnimation(1, 0);
+
+        scaleAnimation.setDuration(600);
+        alphaAnimation.setDuration(300);
+        scaleAnimation.setFillAfter(true);
+        alphaAnimation.setFillAfter(true);
+
+
+        view.setVisibility(View.VISIBLE);
+        Log.d("ANIMATION FIREWORK", " inside");
+
+        scaleAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                view.startAnimation(alphaAnimation);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        alphaAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                view.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        view.startAnimation(scaleAnimation);
+    }
+
+    private void startVisualizerAnimation() {
+        switch (packageIndex) {
+            case CINEMA:
+                visualizerCinema.startAnimation();
+                break;
+            case MUSIC:
+                visualizerMusic.startAnimation();
+                break;
+            case VIP:
+                break;
+        }
+        play.setVisibility(View.GONE);
+    }
+
+    private void stopVisualizerAnimation() {
+        switch (packageIndex) {
+            case CINEMA:
+                visualizerCinema.stopAnimation();
+                break;
+            case MUSIC:
+                visualizerMusic.stopAnimation();
+                break;
+            case VIP:
+
+                break;
+        }
+        play.setVisibility(quizData.isSolved() ? View.GONE : View.VISIBLE);
+    }
+
 
     private void togglePlay() {
         if (!audioPlayer.player.isPlaying()) {
@@ -311,13 +634,10 @@ public class QuizActivity extends Activity {
     }
 
     private void cleanUp() {
-//        visualizer.stopLoop();
         stopVisualizerAnimation();
         refreshVisualizer = false;
         refreshGameView = false;
         shakeHints = false;
-//        gameView.stopLoop();
-//        stopShakeLoop();
 
         if (audioPlayer.player != null) {
             audioPlayer.player.release();
@@ -330,7 +650,6 @@ public class QuizActivity extends Activity {
         gameView.changeToRevealOneLetterMode();
         Utility.setMargins(revealOneLetterLayout, Utility.convertDpToPixels(this, 16), gameView.getMaxY() + Utility.convertDpToPixels(this, 16), Utility.convertDpToPixels(this, 16), 0);
         revealOneLetterLayout.setVisibility(View.VISIBLE);
-
     }
 
     public void changeToGameMode() {
@@ -338,59 +657,6 @@ public class QuizActivity extends Activity {
         gameView.changeToGameMode();
     }
 
-    public void initWinPage() {
-        getQuizData().setSolved();
-        PackageCollection.getInstance().modifyQuizInSavedData(getQuizData());
-        initWinGraphics();
-        startGrowthAnimation();
-    }
-
-    public void initWinGraphics() {
-        RelativeLayout winLayout = (RelativeLayout) findViewById(R.id.win);
-        Utility.setMargins(winLayout, 0, gameView.getMaxY(), 0, 0);
-        winLayout.setVisibility(View.VISIBLE);
-        findViewById(R.id.layoutImageQuiz).setVisibility(View.VISIBLE);
-        findViewById(R.id.imageQuiz).setVisibility(View.VISIBLE);
-        int res = getResources().getIdentifier(getQuizData().getQuizID(), "drawable", getPackageName());
-        try {
-            ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(res));
-        } catch (Exception e) {
-            ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(R.drawable.twenty_century_fox));
-        }
-        ((ImageView) findViewById(R.id.imageViewTV)).setImageDrawable(getResources().getDrawable(R.drawable.tv_simpsons_empty_with_shadow));
-        invalidateVisualizer();
-        play.setVisibility(View.GONE);
-        hints.setVisibility(View.GONE);
-    }
-
-    @TargetApi(14)
-    private void startGrowthAnimation() {
-        stopAnimation = false;
-        findViewById(R.id.imageQuiz).setScaleX(0);
-        findViewById(R.id.imageQuiz).setScaleY(0);
-        findViewById(R.id.win).setScaleX(0);
-        findViewById(R.id.win).setScaleY(0);
-        final Handler handler = new Handler();
-        final float deltaScale = 1.0f / (ANIMATION_TIME / (1000 / Utility.getFPS()));
-        handlerAnimationTask = new Runnable() {
-            @Override
-            public void run() {
-                float scale = findViewById(R.id.imageQuiz).getScaleX() + deltaScale;
-                if (scale > 1.0f) {
-                    scale = 1.0f;
-                    stopAnimation = true;
-                }
-                findViewById(R.id.imageQuiz).setScaleX(scale);
-                findViewById(R.id.imageQuiz).setScaleY(scale);
-                findViewById(R.id.win).setScaleX(scale);
-                findViewById(R.id.win).setScaleY(scale);
-                if (!stopAnimation) {
-                    handler.postDelayed(handlerAnimationTask, 1000 / Utility.getFPS());
-                }
-            }
-        };
-        handlerAnimationTask.run();
-    }
 
     private void startShakeAnimation() {
         Animation shake = AnimationUtils.loadAnimation(this, R.anim.anim_shake);
@@ -398,47 +664,19 @@ public class QuizActivity extends Activity {
     }
 
 
-    public void invalidateVisualizer() {
-//        visualizer.stopLoop();
-        refreshVisualizer = false;
-        visualizer.setVisibility(View.GONE);
-    }
+    public void setVisualizerVisible(boolean isVisible) {
+        refreshVisualizer = isVisible;
+        switch (packageIndex) {
+            case CINEMA:
+                visualizerCinema.setVisibility(isVisible ? View.VISIBLE : View.GONE);
+                break;
+            case MUSIC:
+                visualizerMusic.setVisibility(isVisible ? View.VISIBLE : View.GONE);
+                break;
+            case VIP:
 
-    public void startVisualizer() {
-        refreshVisualizer = true;
-        visualizer.setVisibility(View.VISIBLE);
-//        visualizer.startLoop();
-    }
-
-
-    private void resetImages() {
-        findViewById(R.id.layoutImageQuiz).setVisibility(View.GONE);
-        findViewById(R.id.win).setVisibility(View.GONE);
-        hints.setVisibility(View.VISIBLE);
-        ((ImageView) findViewById(R.id.imageViewTV)).setImageDrawable(getResources().getDrawable(R.drawable.tv_simpsons_with_shadow));
-    }
-
-
-    private void reset() {
-        audioPlayer.player.release();
-        visualizer.stopAnimation();
-        quizData = PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().get(quizIndex);
-//        gameView.stopLoop();
-        refreshGameView = false;
-        gameView.resetSprites();
-
-        resetImages();
-        initGameView();
-        initButtons();
-        initSound(!quizData.isSolved());
-
-        if (!quizData.isSolved()) {
-            startVisualizer();
-            shakeHints = true;
-        } else {
-            shakeHints = false;
+                break;
         }
-
     }
 
     private void goToFollowingQuiz() {
@@ -455,23 +693,58 @@ public class QuizActivity extends Activity {
         }
     }
 
+    private void reset() {
+        audioPlayer.player.release();
+        stopVisualizerAnimation();
+        quizData = PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().get(quizIndex);
+        refreshGameView = false;
+        gameView.resetSprites();
 
-    private void initButtons() {
-        if (quizIndex == 14) {
-            findViewById(R.id.following).setVisibility(View.GONE);
-        } else if (quizIndex == 0) {
-            findViewById(R.id.previous).setVisibility(View.GONE);
-        } else {
-            findViewById(R.id.previous).setVisibility(View.VISIBLE);
-            findViewById(R.id.following).setVisibility(View.VISIBLE);
-        }
+        resetImages();
+        initGameView();
+        initButtons();
 
+        initSound(!quizData.isSolved());
     }
 
 
+    private void resetImages() {
+        Log.d("RESET IMAGES", " inside");
+        findViewById(R.id.win).setVisibility(View.GONE);
+        hints.setVisibility(View.VISIBLE);
+        findViewById(R.id.layoutImageQuiz).setVisibility(View.GONE);
+
+        switch (packageIndex) {
+            case CINEMA:
+                ((ImageView) findViewById(R.id.imageViewTV)).setImageDrawable(getResources().getDrawable(R.drawable.tv_simpsons_with_shadow));
+                type.setVisibility(quizData.isSolved() ? View.GONE : View.VISIBLE);
+                type.setText(quizData.getType());
+                setVisualizerVisible(!quizData.isSolved());
+                break;
+            case MUSIC:
+                setVisualizerVisible(true);
+                break;
+            case VIP:
+
+                break;
+        }
+        Log.d("RESET IMAGES", " win " + findViewById(R.id.win).getVisibility());
+    }
+
     private void openHintDialog() {
         final Dialog dialog = new Dialog(this, R.style.Theme_Dialog);
-        dialog.setContentView(R.layout.dialog_hints);
+        switch (getPackageIndex()) {
+            case CINEMA:
+                dialog.setContentView(R.layout.dialog_hints_cinema);
+                break;
+            case MUSIC:
+                dialog.setContentView(R.layout.dialog_hints_music);
+                break;
+            case VIP:
+
+                break;
+        }
+
         dialog.findViewById(R.id.main).getLayoutParams().width = Utility.getWidth(this) * 80 / 100;
 
         dialog.findViewById(R.id.buttonCancel).setOnClickListener(new View.OnClickListener() {
@@ -511,6 +784,10 @@ public class QuizActivity extends Activity {
 
     public QuizData getQuizData() {
         return quizData;
+    }
+
+    public int getPackageIndex() {
+        return packageIndex;
     }
 
 

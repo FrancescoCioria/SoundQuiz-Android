@@ -17,12 +17,6 @@
         android:scaleType="centerCrop"
         android:id="@+id/secondView" />
 
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:scaleType="centerCrop"
-        android:id="@+id/overImageView" />
-
     <com.mosquitolabs.soundquiz.VerticalViewPager
         android:id="@+id/packagePagerView"
         android:layout_width="match_parent"

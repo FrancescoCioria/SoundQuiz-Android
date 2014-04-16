@@ -10,7 +10,7 @@
         android:padding="15dp"
         android:id="@+id/layout"
         android:layout_centerInParent="true"
-        android:background="@drawable/level_rounded_layout"
+        android:background="@drawable/level_rounded_layout_cinema"
         android:gravity="center_horizontal">
 
         <TextView

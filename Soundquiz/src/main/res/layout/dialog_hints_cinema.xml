@@ -4,7 +4,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#c8000000"
+    android:background="#b4000000"
     android:gravity="center">
 
     <RelativeLayout
@@ -17,9 +17,10 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/body"
-            android:background="@drawable/level_rounded_layout"
+            android:background="@drawable/dialog_layout_cinema"
             android:padding="16dp"
-            android:layout_margin="15dp">
+            android:layout_margin="15dp"
+            android:baselineAligned="false">
 
             <RelativeLayout
                 android:layout_width="fill_parent"
@@ -33,7 +34,7 @@
                     android:id="@+id/textView"
                     android:textSize="20sp"
                     android:layout_centerHorizontal="true"
-                    android:textColor="#345aa6"
+                    android:textColor="@color/dark_cinema"
                     android:gravity="center_horizontal" />
             </RelativeLayout>
 
@@ -50,7 +51,7 @@
                     android:id="@+id/textView2"
                     android:textSize="20sp"
                     android:layout_centerHorizontal="true"
-                    android:textColor="#345aa6" />
+                    android:textColor="@color/dark_cinema" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -66,7 +67,7 @@
                     android:id="@+id/textView3"
                     android:textSize="20sp"
                     android:layout_centerHorizontal="true"
-                    android:textColor="#345aa6" />
+                    android:textColor="@color/dark_cinema" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -82,7 +83,7 @@
                     android:id="@+id/textView4"
                     android:textSize="20sp"
                     android:layout_centerHorizontal="true"
-                    android:textColor="#345aa6" />
+                    android:textColor="@color/dark_cinema" />
             </RelativeLayout>
 
 

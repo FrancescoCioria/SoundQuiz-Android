@@ -135,6 +135,8 @@ public class PackageCollection {
                         quizData.setID(ID);
                         quizData.setQuizID(quizJSON.getString("id"));
 
+                        quizData.setType(quizJSON.getString("type"));
+
                         if (!addQuizToSavedData(quizData)) {
                             populateQuizWithSavedData(quizData);
                         }

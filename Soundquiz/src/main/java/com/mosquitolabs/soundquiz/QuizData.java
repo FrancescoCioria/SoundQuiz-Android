@@ -11,6 +11,7 @@ public class QuizData implements Serializable {
     private ArrayList<String> rows = new ArrayList<String>();
     private String ID;
     private String quizID;
+    private String type;
     private String wikiID;
     private String wikiDescription;
     private String category;
@@ -77,6 +78,14 @@ public class QuizData implements Serializable {
 
     public void setSolved() {
         isSolved = true;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
     }
 
 

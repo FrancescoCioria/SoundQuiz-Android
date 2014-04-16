@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AbsListView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -46,6 +47,18 @@ public class LevelActivity extends Activity {
         packageIndex = getIntent().getExtras().getInt("packageIndex");
         levelIndex = getIntent().getExtras().getInt("levelIndex");
 
+        switch (packageIndex) {
+            case Utility.CINEMA:
+                ((ImageView) (findViewById(R.id.backgroundImageView))).setImageDrawable(getResources().getDrawable(R.drawable.simpsons_background_complete));
+                break;
+            case Utility.MUSIC:
+                ((ImageView) (findViewById(R.id.backgroundImageView))).setImageDrawable(getResources().getDrawable(R.drawable.guitar_background_complete));
+                break;
+            case Utility.VIP:
+
+                break;
+        }
+
         //binding
         quizListView = (ListView) findViewById(R.id.quizListView);
         back = (TextView) findViewById(R.id.back);
@@ -72,9 +85,6 @@ public class LevelActivity extends Activity {
                 onBackPressed();
             }
         });
-
-        int layoutWidth = (int) (Utility.getWidth(this) * 0.65f);
-        findViewById(R.id.body).getLayoutParams().width = layoutWidth;
 
         getListView().setOnTouchListener(new AbsListView.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {

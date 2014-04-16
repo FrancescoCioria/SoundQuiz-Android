@@ -107,6 +107,18 @@ public class LevelListViewAdapter extends BaseAdapter {
             unlockedlevelItemViewHolder.percentageTextView.setText((solvedQuizzes * 100 / 15) + "%");
             unlockedlevelItemViewHolder.progressBar.setProgress(solvedQuizzes * 100 / 15);
 
+            switch (packageIndex) {
+                case Utility.CINEMA:
+                    Utility.setBackgroundToView(unlockedlevelItemViewHolder.layout, context.getResources().getDrawable(R.drawable.level_rounded_layout_cinema));
+                    break;
+                case Utility.MUSIC:
+                    Utility.setBackgroundToView(unlockedlevelItemViewHolder.layout, context.getResources().getDrawable(R.drawable.level_rounded_layout_music));
+                    break;
+                case Utility.VIP:
+
+                    break;
+            }
+
             return paramView;
 
         }
@@ -130,6 +142,18 @@ public class LevelListViewAdapter extends BaseAdapter {
 
         lockedlevelItemViewHolder.titleTextView.setText("Level " + (paramInt + 1));
         lockedlevelItemViewHolder.toUnlockTextView.setText("Solve " + (paramInt * 10 - totalSolvedQuizzes) + " quizzes to unlock");
+
+        switch (packageIndex) {
+            case Utility.CINEMA:
+                Utility.setBackgroundToView(lockedlevelItemViewHolder.layout, context.getResources().getDrawable(R.drawable.level_rounded_layout_cinema));
+                break;
+            case Utility.MUSIC:
+                Utility.setBackgroundToView(lockedlevelItemViewHolder.layout, context.getResources().getDrawable(R.drawable.level_rounded_layout_music));
+                break;
+            case Utility.VIP:
+
+                break;
+        }
 
         return paramView;
     }

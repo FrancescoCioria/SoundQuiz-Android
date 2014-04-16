@@ -17,6 +17,7 @@ public class AudioPlayer {
     private int WRONG;
     private int SELECT;
     private int REMOVE;
+    private int FIREWORKS;
 
 
     //    private Equalizer equalizer;
@@ -49,8 +50,9 @@ public class AudioPlayer {
         VOLUME = streamVolumeCurrent / streamVolumeMax;
         WIN = sounds.load(context, R.raw.tada, 1);
         SELECT = sounds.load(context, R.raw.select, 1);
-        WRONG = sounds.load(context, R.raw.error, 1);
-        REMOVE = sounds.load(context, R.raw.block, 1);
+        WRONG = sounds.load(context, R.raw.wrong_answer, 1);
+        REMOVE = sounds.load(context, R.raw.remove, 1);
+        FIREWORKS = sounds.load(context, R.raw.fireworks, 1);
     }
 
     public void playWin() {
@@ -67,6 +69,10 @@ public class AudioPlayer {
 
     public void playSelect() {
         sounds.play(SELECT, VOLUME, VOLUME, 1, 0, 1.5f);
+    }
+
+    public void playFireworks() {
+        sounds.play(FIREWORKS, VOLUME, VOLUME, 1, 0, 1.5f);
     }
 
 

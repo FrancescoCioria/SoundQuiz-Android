@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/layout"
         android:layout_centerInParent="true"
-        android:background="@drawable/level_rounded_layout"
+        android:background="@drawable/level_rounded_layout_cinema"
         android:paddingLeft="15dp"
         android:paddingTop="10dp"
         android:paddingRight="15dp"

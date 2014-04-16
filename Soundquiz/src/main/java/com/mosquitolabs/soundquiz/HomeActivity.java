@@ -35,18 +35,17 @@ public class HomeActivity extends Activity {
     public void initHomePage() {
         setContentView(R.layout.activity_home);
         playButton = (Button) findViewById(R.id.playButton);
-
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startPackageListActivity();
             }
         });
-        debugShortCut();
 
-
-//        startPackageListActivity();
+//        debugShortCut();
+        startPackageListActivity();
     }
+
 
     private void populate() {
         Utility.initUtility(this);
@@ -60,10 +59,11 @@ public class HomeActivity extends Activity {
         Bundle bundle = new Bundle();
         bundle.putInt("quizIndex", 0);
         bundle.putInt("levelIndex", 0);
-        bundle.putInt("packageIndex", 0);
+        bundle.putInt("packageIndex", 1);
         mIntent.putExtras(bundle);
 
         startActivity(mIntent);
     }
+
 
 }

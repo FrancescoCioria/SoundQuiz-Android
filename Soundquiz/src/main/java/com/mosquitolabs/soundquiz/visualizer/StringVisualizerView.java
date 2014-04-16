@@ -1,6 +1,5 @@
 package com.mosquitolabs.soundquiz.visualizer;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -18,7 +17,6 @@ public class StringVisualizerView extends View {
     private final static float PHASE_SHIFT = -0.25f;
     private final static float DENSITY = 5.0f;
 
-    private Activity context;
     private Paint paint;
     private Path path = new Path();
 
@@ -30,12 +28,11 @@ public class StringVisualizerView extends View {
     float amplitude = IDLE_AMPLITUDE;
     float waves = IDLE_WAVES;
 
-    private boolean stopVisualizer = true;
     private boolean isAnimating = false;
 
     public StringVisualizerView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        this.context = (Activity) context;
+
         paint = new Paint() {{
             setStyle(Paint.Style.STROKE);
             setAntiAlias(true);
@@ -105,27 +102,6 @@ public class StringVisualizerView extends View {
 
         }
     }
-
-//    public void startLoop() {
-//        if (stopVisualizer) {
-//            stopVisualizer = false;
-//            final Handler handler = new Handler();
-//            handler.postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//                    refresh();
-//                    if (!stopVisualizer) {
-//                        handler.postDelayed(this, 1000 / Utility.getFPS());
-//                    }
-//                }
-//            }, 1000 / Utility.getFPS());
-//        }
-//    }
-//
-//    public void stopLoop() {
-//        stopVisualizer = true;
-//        stopAnimation();
-//    }
 
     public void startAnimation() {
         isAnimating = true;

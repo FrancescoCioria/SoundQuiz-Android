@@ -11,6 +11,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.mosquitolabs.soundquiz.visualizer.AudioPlayer;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
@@ -18,6 +20,9 @@ import java.util.Random;
 public class GameView extends View {
     private final static int ANIMATION_TIME = 300; // (millis)
     private final static int MAX_DEGREE = 5; // (millis)
+    private final static int CINEMA = 0;
+    private final static int MUSIC = 1;
+    private final static int VIP = 2;
 
     private int spaceFullSize;
     private int spriteFullSize;
@@ -33,7 +38,6 @@ public class GameView extends View {
     private ArrayList<LetterSpace> letterSpaces = new ArrayList<LetterSpace>();
     private ArrayList<LetterSprite> letterSprites = new ArrayList<LetterSprite>();
 
-    private boolean stopGameView = true;
     private boolean firstDraw = true;
     private boolean gameMode = true;
     private boolean revealOneLetterMode = false;
@@ -47,9 +51,6 @@ public class GameView extends View {
     public GameView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = (QuizActivity) context;
-//        rectPaint.setColor(Color.rgb(117, 50, 0));
-        rectPaint.setColor(Color.rgb(0, 57, 40));
-        rectPaint.setAntiAlias(true);
     }
 
 
@@ -140,6 +141,9 @@ public class GameView extends View {
         String answer = (context).getQuizData().getAnswers().get(0);
         this.answer = answer.toLowerCase().replace(" ", "").replace(".", "").replace("-", "").replace("'", "").replace(",", "").replace(":", "").replace("!", "").replace("?", "");
 
+        rectPaint.setAntiAlias(true);
+
+        initColors();
         initGrids(quizData);
         initLetterSprites();
         initLetterSpaces(quizData);
@@ -147,6 +151,20 @@ public class GameView extends View {
         if (context.getQuizData().isSolved()) {
             winTheGame();
             context.initWinGraphics();
+        }
+    }
+
+    private void initColors() {
+        switch (context.getPackageIndex()) {
+            case CINEMA:
+                rectPaint.setColor(getResources().getColor(R.color.space_cinema));
+                break;
+            case MUSIC:
+                rectPaint.setColor(getResources().getColor(R.color.space_music));
+                break;
+            case VIP:
+
+                break;
         }
     }
 
@@ -332,7 +350,7 @@ public class GameView extends View {
                     LetterSpace lastLetterSpace = letterSpaces.get(indexes.get(indexes.size() - 1));
                     Paint paint = new Paint();
                     paint.setAntiAlias(true);
-                    paint.setColor(Color.rgb(34,139,34));
+                    paint.setColor(Color.rgb(34, 139, 34));
                     canvas.drawRect(firstLetterSpace.position.x, firstLetterSpace.position.y + firstLetterSpace.size + 5, lastLetterSpace.position.x + lastLetterSpace.size, lastLetterSpace.position.y + lastLetterSpace.size + 8, paint);
                 }
             }
@@ -357,26 +375,6 @@ public class GameView extends View {
     }
 
 
-//    public void startLoop() {
-//        if (stopGameView) {
-//            stopGameView = false;
-//            final Handler handler = new Handler();
-//            handler.postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//                    refresh();
-//                    if (!stopGameView) {
-//                        handler.postDelayed(this, 1000 / Utility.getFPS());
-//                    }
-//                }
-//            }, 1000 / Utility.getFPS());
-//        }
-//    }
-//
-//    public void stopLoop() {
-//        stopGameView = true;
-//    }
-
     public QuizActivity getActivityContext() {
         return context;
     }
@@ -397,6 +395,26 @@ public class GameView extends View {
         return maxY;
     }
 
+    public void checkAnswer() {
+        String userAnswer = "";
+        for (int i = 0; i < getLetterSpaces().size(); i++) {
+            if (getLetterSpaces().get(i).letterSpriteContained < 0) {
+                return;
+            } else {
+                userAnswer += getLetterSprites().get(getLetterSpaces().get(i).letterSpriteContained).getLetter();
+            }
+        }
+
+        if (getAnswer().equals(userAnswer)) {
+            AudioPlayer.getIstance().player.stop();
+            AudioPlayer.getIstance().playWin();
+            resetSpritesColor();
+            getActivityContext().initWinPage();
+        } else {
+            AudioPlayer.getIstance().playWrong();
+        }
+    }
+
     public void winTheGame() {
         for (int i = 0; i < letterSpaces.size(); i++) {
             letterSpaces.get(i).letterSpriteContained = -1;
@@ -412,7 +430,7 @@ public class GameView extends View {
         for (LetterSprite letterSprite : letterSprites) {
             letterSprite.setClickable(false);
             letterSprite.setVisible(!letterSprite.isHome());
-            letterSprite.resetTextColor();
+            letterSprite.resetColors();
         }
     }
 
@@ -481,6 +499,12 @@ public class GameView extends View {
         for (LetterSprite letterSprite : letterSprites)
             letterSprite.reset();
     }
+
+    public void resetSpritesColor() {
+        for (LetterSprite letterSprite : letterSprites)
+            letterSprite.resetColors();
+    }
+
 
     static class LetterSpace {
         int size;

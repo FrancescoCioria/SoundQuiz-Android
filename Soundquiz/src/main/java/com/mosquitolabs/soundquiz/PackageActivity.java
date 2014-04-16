@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AbsListView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -34,11 +35,25 @@ public class PackageActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_package);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         Utility.hideActionbar(this);
+        setContentView(R.layout.activity_package);
 
         packageIndex = getIntent().getExtras().getInt("packageIndex");
+
+        switch (packageIndex) {
+            case Utility.CINEMA:
+                ((ImageView)(findViewById(R.id.backgroundImageView))).setImageDrawable(getResources().getDrawable(R.drawable.simpsons_background_complete));
+                break;
+            case Utility.MUSIC:
+                ((ImageView)(findViewById(R.id.backgroundImageView))).setImageDrawable(getResources().getDrawable(R.drawable.guitar_background_complete));
+                break;
+            case Utility.VIP:
+
+                break;
+        }
+
+
         levelListView = (ListView) findViewById(R.id.levelListView);
         TextView back = (TextView) findViewById(R.id.back);
         RelativeLayout topBar = (RelativeLayout) findViewById(R.id.topBar);
@@ -47,8 +62,7 @@ public class PackageActivity extends Activity {
         levelListView.setAdapter(levelListViewAdapter);
 
         topBar.getLayoutParams().width = Utility.getWidth(this) * 9 / 10;
-        int layoutWidth = (int) (Utility.getWidth(this) * 0.65f);
-        findViewById(R.id.body).getLayoutParams().width = layoutWidth;
+
 
         back.setText("Categories");
         back.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +92,7 @@ public class PackageActivity extends Activity {
             startAnimationAppear();
         }
     }
+
 
     private void initViewsToInvisible() {
         for (int i = 0; i < PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList().size(); i++) {

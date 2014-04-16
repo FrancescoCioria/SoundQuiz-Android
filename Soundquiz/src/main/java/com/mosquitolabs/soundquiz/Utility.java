@@ -8,6 +8,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Point;
+import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
@@ -26,6 +27,10 @@ import com.amazonaws.services.s3.AmazonS3Client;
 
 
 public class Utility {
+
+    public final static int CINEMA = 0;
+    public final static int MUSIC = 1;
+    public final static int VIP = 2;
 
     private final static String accessKey = "AKIAITISRDB2BZLF5UMA";
     private final static String secretKey = "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";
@@ -51,7 +56,7 @@ public class Utility {
         return false;
     }
 
-    public static int getFPS(){
+    public static int getFPS() {
         return FPS;
     }
 
@@ -147,6 +152,16 @@ public class Utility {
 
     public static SharedPreferences getSharedPreferences() {
         return sharedPreferences;
+    }
+
+
+    @TargetApi(16)
+    public static void setBackgroundToView(View view, Drawable background) {
+        if (android.os.Build.VERSION.SDK_INT >= 16) {
+            view.setBackground(background);
+        } else {
+            view.setBackgroundDrawable(background);
+        }
     }
 
 

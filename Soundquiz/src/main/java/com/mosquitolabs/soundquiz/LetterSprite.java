@@ -1,7 +1,6 @@
 package com.mosquitolabs.soundquiz;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -15,6 +14,9 @@ import com.mosquitolabs.soundquiz.visualizer.AudioPlayer;
 public class LetterSprite {
 
     private final static float ANIMATION_TIME = 230f; // (millis)
+    private final static int CINEMA = 0;
+    private final static int MUSIC = 1;
+    private final static int VIP = 2;
     private int INDEX;
     private int SIZE;
     private int SPACE_SIZE;
@@ -40,9 +42,6 @@ public class LetterSprite {
     private Vibrator vibrator;
     private Rect bounds = new Rect();
 
-
-    private Bitmap bmp;
-
     public LetterSprite(GameView gameView, int x, int y, int size, int spaceSize, int index, String letter) {
         home.x = position.x = x;
         home.y = position.y = y;
@@ -53,9 +52,6 @@ public class LetterSprite {
         this.letter = letter;
         this.currentSize = SIZE;
 
-//        textPaint.setColor(Color.rgb(74, 32, 0));
-
-        textPaint.setColor(Color.rgb(0, 33, 23));
         textPaint.setStrokeWidth(3);
         textPaint.setAntiAlias(true);
         textPaint.setTextAlign(Paint.Align.LEFT);
@@ -64,15 +60,13 @@ public class LetterSprite {
         textHeight = bounds.height();
         textPaint.getTextBounds(letter.toUpperCase(), 0, 1, bounds);
 
-//        rectPaint.setColor(Color.rgb(217, 152, 110));
-        rectPaint.setColor(Color.rgb(96, 160, 142));
         rectPaint.setAntiAlias(true);
+
+        resetColors();
 
         roundedRect = new RectF(new Rect(position.getX(), position.getY(), position.getX() + currentSize, position.getY() + currentSize));
 
         vibrator = (Vibrator) gameView.getActivityContext().getSystemService(Context.VIBRATOR_SERVICE);
-
-//        bmp = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(gameView.getActivityContext().getResources(), R.drawable.frozen_blur), size, size, false);
     }
 
     private void update() {
@@ -169,13 +163,29 @@ public class LetterSprite {
                 Point destination = getFirstEmptySpace();
                 if (destination != null) {
                     moveTo(destination);
-                    checkAnswer();
+                    gameView.checkAnswer();
                 } else {
-                    Utility.shortToast("Remove some letters first", gameView.getActivityContext());
+                    AudioPlayer.getIstance().playWrong();
                 }
             } else {
                 goBackHome();
             }
+        }
+    }
+
+    public void resetColors(){
+        switch (gameView.getActivityContext().getPackageIndex()) {
+            case CINEMA:
+                rectPaint.setColor(gameView.getResources().getColor(R.color.tile_cinema));
+                textPaint.setColor(gameView.getResources().getColor(R.color.tile_text_cinema));
+                break;
+            case MUSIC:
+                rectPaint.setColor(gameView.getResources().getColor(R.color.tile_music));
+                textPaint.setColor(gameView.getResources().getColor(R.color.tile_text_music));
+                break;
+            case VIP:
+
+                break;
         }
     }
 
@@ -198,7 +208,7 @@ public class LetterSprite {
         isHome = false;
 
         AudioPlayer.getIstance().playSelect();
-        vibrator.vibrate(30);
+//        vibrator.vibrate(30);
     }
 
     private void goBackHome() {
@@ -213,7 +223,7 @@ public class LetterSprite {
         isHome = true;
 
         AudioPlayer.getIstance().playRemove();
-        vibrator.vibrate(30);
+//        vibrator.vibrate(30);
     }
 
 
@@ -236,26 +246,7 @@ public class LetterSprite {
         return null;
     }
 
-    private void checkAnswer() {
-        String userAnswer = "";
-        for (int i = 0; i < gameView.getLetterSpaces().size(); i++) {
-            if (gameView.getLetterSpaces().get(i).letterSpriteContained < 0) {
-                return;
-            } else {
-                userAnswer += gameView.getLetterSprites().get(gameView.getLetterSpaces().get(i).letterSpriteContained).letter;
-            }
-        }
 
-        if (gameView.getAnswer().equals(userAnswer)) {
-            AudioPlayer.getIstance().playWin();
-            gameView.winTheGame();
-            gameView.getActivityContext().initWinPage();
-        } else {
-//            Utility.shortToast("Wrong answer!", gameView.getActivityContext());
-            AudioPlayer.getIstance().playWrong();
-            vibrator.vibrate(150);
-        }
-    }
 
     public void reset() {
         if (isClickable && isVisible) {
@@ -335,9 +326,7 @@ public class LetterSprite {
         textPaint.setColor(Color.rgb(34, 139, 34));
     }
 
-    public void resetTextColor() {
-        textPaint.setColor(Color.rgb(0, 33, 23));
-    }
+
 
     static class MyPoint {
         float x;
