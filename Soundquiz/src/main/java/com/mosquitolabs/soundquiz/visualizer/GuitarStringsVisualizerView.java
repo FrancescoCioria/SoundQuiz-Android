@@ -16,9 +16,10 @@ public class GuitarStringsVisualizerView extends View {
     private final static float IDLE_AMPLITUDE = 0.1f;
     private final static float ANIMATION_AMPLITUDE = 1.0f;
     private final static float DAMPING_FACTOR = 0.86f;
-    private final static float FREQUENCY = 4f;
+    private final static float FREQUENCY = 1f;
     //    private final static float PHASE_SHIFT = -0.4f;
-    private final static float[] PHASE_SHIFT = {-0.4f, -0.42f, -0.44f, -0.48f, -0.5f, -0.52f};
+    private final static float[] PHASE_SHIFT = {-0.5f, -0.52f, -0.54f, -0.58f, -0.6f, -0.62f};
+    private final static float IDLE_PHASE_SHIFT = 0.3f;
     private final static float DENSITY = 5.0f;
     private final static float SAFETY_PADDING = 0.9f;
     private final static int STRINGS = 6;
@@ -115,14 +116,15 @@ public class GuitarStringsVisualizerView extends View {
                 }
                 guitarString.cyclesLeftOfVibration -= ANIMATION_AMPLITUDE <= guitarString.amplitude ? 1 : 0;
                 normedAmplitude = Math.min(ANIMATION_AMPLITUDE, guitarString.amplitude);
+                guitarString.phase += PHASE_SHIFT[counter];
             } else {
                 if (guitarString.amplitude > IDLE_AMPLITUDE) {
                     guitarString.amplitude *= DAMPING_FACTOR;
                 }
                 normedAmplitude = Math.max(IDLE_AMPLITUDE, guitarString.amplitude);
+                guitarString.phase += IDLE_PHASE_SHIFT;
             }
 
-            guitarString.phase += PHASE_SHIFT[counter];
 
             float leftPadding = getWidth() * (1 - SAFETY_PADDING) / 2;
             float baseTranslationX = baseAvailableWidth / 2 + baseAvailableWidth * counter;

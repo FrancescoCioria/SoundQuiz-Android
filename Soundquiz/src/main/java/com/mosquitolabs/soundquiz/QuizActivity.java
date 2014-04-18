@@ -27,9 +27,6 @@ import com.mosquitolabs.soundquiz.visualizer.StringVisualizerView;
 public class QuizActivity extends Activity {
     private final static int ANIMATION_TIME = 300; // (millis)
 
-    private final static int CINEMA = 0;
-    private final static int MUSIC = 1;
-    private final static int VIP = 2;
 
     // FFB55A18
 
@@ -43,7 +40,8 @@ public class QuizActivity extends Activity {
 
     private long lastExecutedTime;
 
-    private ImageView hints;
+    private View hints;
+    private View back;
 
     private boolean stopAnimation = false;
     private Runnable handlerAnimationTask;
@@ -100,7 +98,7 @@ public class QuizActivity extends Activity {
         Log.d("INIT", " inside");
 
         switch (packageIndex) {
-            case CINEMA:
+            case Utility.CINEMA:
                 setContentView(R.layout.activity_quiz_cinema);
                 visualizerCinema = (StringVisualizerView) findViewById(R.id.visualizerView);
                 visualizerCinema.setOnClickListener(new View.OnClickListener() {
@@ -121,7 +119,7 @@ public class QuizActivity extends Activity {
                     }
                 });
                 break;
-            case MUSIC:
+            case Utility.MUSIC:
                 setContentView(R.layout.activity_quiz_music);
                 visualizerMusic = (GuitarStringsVisualizerView) findViewById(R.id.visualizerView);
                 visualizerMusic.setOnClickListener(new View.OnClickListener() {
@@ -131,13 +129,14 @@ public class QuizActivity extends Activity {
                     }
                 });
                 break;
-            case VIP:
+            case Utility.VIP:
                 setContentView(R.layout.activity_quiz_cinema);
                 break;
         }
 
 //      general  binding
-        hints = (ImageView) findViewById(R.id.hints);
+        hints = findViewById(R.id.hintsPressView);
+        back = findViewById(R.id.backPressView);
         gameView = (GameView) findViewById(R.id.gameView);
         following = (ImageView) findViewById(R.id.following);
         previous = (ImageView) findViewById(R.id.previous);
@@ -152,7 +151,7 @@ public class QuizActivity extends Activity {
             }
         });
 
-        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
@@ -209,13 +208,13 @@ public class QuizActivity extends Activity {
         cleanUp();
         initSound(isFirstTime && !quizData.isSolved());
         switch (packageIndex) {
-            case CINEMA:
+            case Utility.CINEMA:
                 setVisualizerVisible(!quizData.isSolved());
                 break;
-            case MUSIC:
+            case Utility.MUSIC:
                 setVisualizerVisible(true);
                 break;
-            case VIP:
+            case Utility.VIP:
 
                 break;
         }
@@ -247,13 +246,13 @@ public class QuizActivity extends Activity {
         }
 
         switch (packageIndex) {
-            case CINEMA:
+            case Utility.CINEMA:
                 visualizerCinema.refresh();
                 break;
-            case MUSIC:
+            case Utility.MUSIC:
                 visualizerMusic.refresh();
                 break;
-            case VIP:
+            case Utility.VIP:
 
                 break;
         }
@@ -310,9 +309,9 @@ public class QuizActivity extends Activity {
         //general
         int layoutWidth = (int) (Utility.getWidth(this) * 0.65f);
         int emptySpace = (Utility.getWidth(this) - layoutWidth) / 2;
-        int hintsSize = Utility.getWidth(this) * 58 / 720;
-        int backWidth = Utility.getWidth(this) * 97 / 720;
-        int backHeight = Utility.getWidth(this) * 42 / 720;
+        int hintsSize = Math.max(Utility.getWidth(this) * 58 / 720, Utility.convertDpToPixels(this, 32));
+        int backWidth = hintsSize * 106 / 58;
+        int backHeight = hintsSize * 46 / 58;
         int hintsMargin = hintsSize / 3;
         int headerHeight = hintsSize + 2 * hintsMargin;
         int fireworkSize = layoutWidth / 3;
@@ -323,11 +322,15 @@ public class QuizActivity extends Activity {
 
         following.getLayoutParams().width = emptySpace / 3;
         previous.getLayoutParams().width = emptySpace / 3;
-        hints.getLayoutParams().width = hints.getLayoutParams().height = hintsSize;
-        hints.getLayoutParams().width = hints.getLayoutParams().height = hintsSize;
+        findViewById(R.id.hints).getLayoutParams().width = findViewById(R.id.hints).getLayoutParams().height = hintsSize;
         findViewById(R.id.back).getLayoutParams().width = backWidth;
         findViewById(R.id.back).getLayoutParams().height = backHeight;
         findViewById(R.id.header).getLayoutParams().height = headerHeight;
+
+        hints.getLayoutParams().width = hints.getLayoutParams().height = headerHeight;
+        back.getLayoutParams().height = headerHeight;
+        back.getLayoutParams().width = backWidth + 2 * hintsMargin;
+
         findViewById(R.id.fireworkLeftTop).getLayoutParams().width = findViewById(R.id.fireworkLeftTop).getLayoutParams().height = findViewById(R.id.fireworkRightTop).getLayoutParams().width = findViewById(R.id.fireworkRightTop).getLayoutParams().height = fireworkSize;
         findViewById(R.id.fireworkLeftBottom).getLayoutParams().width = findViewById(R.id.fireworkLeftBottom).getLayoutParams().height = findViewById(R.id.fireworkRightBottom).getLayoutParams().width = findViewById(R.id.fireworkRightBottom).getLayoutParams().height = fireworkSize;
 
@@ -336,24 +339,22 @@ public class QuizActivity extends Activity {
         Utility.setMargins(findViewById(R.id.previousLayout), 0, 543 * 65 / 300, 0, 543 * 65 / 300);
         Utility.setMargins(findViewById(R.id.followingLayout), 0, 543 * 65 / 300, 0, 543 * 65 / 300);
 
-        Utility.setMargins(hints, 0, 0, hintsMargin, 0);
+        Utility.setMargins(findViewById(R.id.hints), 0, 0, hintsMargin, 0);
         Utility.setMargins(findViewById(R.id.back), hintsMargin, 0, 0, 0);
-
 
         Utility.setMargins(findViewById(R.id.fireworkLeftTop), lateralMarginFireworksTop, topMarginFireworksTop, 0, 0);
         Utility.setMargins(findViewById(R.id.fireworkLeftBottom), lateralMarginFireworksBottom, topMarginFireworksBottom, 0, 0);
         Utility.setMargins(findViewById(R.id.fireworkRightTop), 0, topMarginFireworksTop, lateralMarginFireworksTop, 0);
         Utility.setMargins(findViewById(R.id.fireworkRightBottom), 0, topMarginFireworksBottom, lateralMarginFireworksBottom, 0);
 
-
         switch (packageIndex) {
-            case CINEMA:
+            case Utility.CINEMA:
                 initCinemaViews();
                 break;
-            case MUSIC:
+            case Utility.MUSIC:
                 initMusicViews();
                 break;
-            case VIP:
+            case Utility.VIP:
                 break;
         }
 
@@ -388,6 +389,8 @@ public class QuizActivity extends Activity {
         Utility.setMargins(type, leftMarginScreen, topMarginScreen, 0, 0);
 
         Utility.setMargins(play, leftMarginScreen + screenWidth / 3, topMarginScreen + (screenHeight - (screenWidth / 3)) / 2, 0, 0);
+
+        Utility.setMargins(findViewById(R.id.body), 0, Utility.getHeight(this) * 100 / 1280, 0, 0);
 
         type.setTextSize(Utility.pixelsToSp(this, screenHeight / 9));
 
@@ -462,13 +465,13 @@ public class QuizActivity extends Activity {
         hints.setVisibility(View.GONE);
 
         switch (packageIndex) {
-            case CINEMA:
+            case Utility.CINEMA:
                 initCinemaWinGraphics();
                 break;
-            case MUSIC:
+            case Utility.MUSIC:
                 initMusicWinGraphics();
                 break;
-            case VIP:
+            case Utility.VIP:
                 break;
         }
 
@@ -514,20 +517,19 @@ public class QuizActivity extends Activity {
         alphaAnimation.setDuration(300);
 
         switch (packageIndex) {
-            case CINEMA:
+            case Utility.CINEMA:
                 findViewById(R.id.imageQuiz).startAnimation(scaleAnimation);
                 findViewById(R.id.win).startAnimation(scaleAnimation);
                 break;
-            case MUSIC:
+            case Utility.MUSIC:
                 AnimationSet animationSet = new AnimationSet(false);
                 animationSet.addAnimation(alphaAnimation);
                 animationSet.addAnimation(slideAnimation);
                 animationSet.setDuration(300);
                 findViewById(R.id.imageQuiz).startAnimation(animationSet);
                 findViewById(R.id.win).startAnimation(scaleAnimation);
-
                 break;
-            case VIP:
+            case Utility.VIP:
                 break;
         }
         startFireworkAnimation();
@@ -595,13 +597,13 @@ public class QuizActivity extends Activity {
 
     private void startVisualizerAnimation() {
         switch (packageIndex) {
-            case CINEMA:
+            case Utility.CINEMA:
                 visualizerCinema.startAnimation();
                 break;
-            case MUSIC:
+            case Utility.MUSIC:
                 visualizerMusic.startAnimation();
                 break;
-            case VIP:
+            case Utility.VIP:
                 break;
         }
         play.setVisibility(View.GONE);
@@ -609,13 +611,13 @@ public class QuizActivity extends Activity {
 
     private void stopVisualizerAnimation() {
         switch (packageIndex) {
-            case CINEMA:
+            case Utility.CINEMA:
                 visualizerCinema.stopAnimation();
                 break;
-            case MUSIC:
+            case Utility.MUSIC:
                 visualizerMusic.stopAnimation();
                 break;
-            case VIP:
+            case Utility.VIP:
 
                 break;
         }
@@ -667,27 +669,27 @@ public class QuizActivity extends Activity {
     public void setVisualizerVisible(boolean isVisible) {
         refreshVisualizer = isVisible;
         switch (packageIndex) {
-            case CINEMA:
+            case Utility.CINEMA:
                 visualizerCinema.setVisibility(isVisible ? View.VISIBLE : View.GONE);
                 break;
-            case MUSIC:
+            case Utility.MUSIC:
                 visualizerMusic.setVisibility(isVisible ? View.VISIBLE : View.GONE);
                 break;
-            case VIP:
+            case Utility.VIP:
 
                 break;
         }
     }
 
     private void goToFollowingQuiz() {
-        if (quizIndex < 14) {
+        if (quizIndex < 14 && !gameView.isInRevalOneLetterMode()) {
             quizIndex++;
             reset();
         }
     }
 
     private void goToPreviousQuiz() {
-        if (quizIndex > 0) {
+        if (quizIndex > 0 && !gameView.isInRevalOneLetterMode()) {
             quizIndex--;
             reset();
         }
@@ -715,16 +717,16 @@ public class QuizActivity extends Activity {
         findViewById(R.id.layoutImageQuiz).setVisibility(View.GONE);
 
         switch (packageIndex) {
-            case CINEMA:
+            case Utility.CINEMA:
                 ((ImageView) findViewById(R.id.imageViewTV)).setImageDrawable(getResources().getDrawable(R.drawable.tv_simpsons_with_shadow));
                 type.setVisibility(quizData.isSolved() ? View.GONE : View.VISIBLE);
                 type.setText(quizData.getType());
                 setVisualizerVisible(!quizData.isSolved());
                 break;
-            case MUSIC:
+            case Utility.MUSIC:
                 setVisualizerVisible(true);
                 break;
-            case VIP:
+            case Utility.VIP:
 
                 break;
         }
@@ -734,13 +736,13 @@ public class QuizActivity extends Activity {
     private void openHintDialog() {
         final Dialog dialog = new Dialog(this, R.style.Theme_Dialog);
         switch (getPackageIndex()) {
-            case CINEMA:
+            case Utility.CINEMA:
                 dialog.setContentView(R.layout.dialog_hints_cinema);
                 break;
-            case MUSIC:
+            case Utility.MUSIC:
                 dialog.setContentView(R.layout.dialog_hints_music);
                 break;
-            case VIP:
+            case Utility.VIP:
 
                 break;
         }

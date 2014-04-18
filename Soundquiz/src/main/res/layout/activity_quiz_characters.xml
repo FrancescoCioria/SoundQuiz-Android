@@ -3,8 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.mosquitolabs.soundquiz.QuizActivity"
-    android:clickable="false"
-    android:background="@drawable/guitar_background_gradient">
+    android:clickable="false">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/south_park_background"
+        android:scaleType="centerCrop" />
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -31,27 +37,7 @@
             android:src="@drawable/button_hint_music"
             android:layout_centerVertical="true" />
 
-        <View
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:id="@+id/hintsPressView"
-            android:layout_alignParentRight="true" />
-
-        <View
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:id="@+id/backPressView"
-            android:layout_alignParentLeft="true" />
-
     </RelativeLayout>
-
-    <view
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        class="com.mosquitolabs.soundquiz.GameView"
-        android:id="@+id/gameView"
-        android:layout_below="@+id/body"
-        android:layout_centerHorizontal="true" />
 
     <RelativeLayout
         android:id="@+id/win"
@@ -59,7 +45,7 @@
         android:layout_height="fill_parent"
         android:padding="16dp"
         android:visibility="gone"
-        android:layout_alignTop="@+id/gameView">
+        android:layout_below="@+id/body">
 
 
         <RelativeLayout
@@ -109,8 +95,8 @@
         android:id="@+id/revealOneLetter"
         android:gravity="center_horizontal"
         android:padding="10dp"
-        android:layout_alignTop="@+id/gameView"
-        android:visibility="gone">
+        android:visibility="gone"
+        android:layout_below="@+id/body">
 
         <TextView
             android:layout_width="match_parent"
@@ -119,7 +105,7 @@
             android:id="@+id/textView"
             android:layout_centerHorizontal="true"
             android:ellipsize="end"
-            android:textColor="@color/space_music"
+            android:textColor="@color/tile_music"
             android:textSize="20sp"
             android:gravity="center_horizontal" />
 
@@ -145,23 +131,25 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageViewGuitar"
-            android:src="@drawable/guitar_overlay_empty" />
+            android:id="@+id/imageViewCharacter"
+            android:src="@drawable/character"
+            android:layout_centerHorizontal="true" />
 
-        <view
-            class="com.mosquitolabs.soundquiz.visualizer.GuitarStringsVisualizerView"
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/visualizerView"
-            android:layout_centerHorizontal="true" />
+            android:id="@+id/imageViewMouth"
+            android:antialias="true"
+            android:src="@drawable/ah"
+            android:layout_alignLeft="@+id/imageViewCharacter" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/buttonPlay"
             android:src="@drawable/button_play_music"
-            android:visibility="visible"
-            android:layout_alignLeft="@+id/imageViewGuitar" />
+            android:visibility="gone"
+            android:layout_alignLeft="@+id/imageViewCharacter" />
 
     </RelativeLayout>
 
@@ -169,7 +157,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="false"
-        android:visibility="visible"
+        android:visibility="gone"
         android:id="@+id/previousLayout"
         android:layout_below="@+id/header"
         android:layout_alignBottom="@+id/body"
@@ -191,7 +179,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/body"
         android:id="@+id/followingLayout"
-        android:visibility="visible"
+        android:visibility="gone"
         android:layout_below="@+id/header"
         android:layout_alignParentRight="true">
 
@@ -211,7 +199,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/layoutImageQuiz"
         android:layout_alignTop="@+id/body"
-        android:layout_alignBottom="@+id/body">
+        android:layout_alignBottom="@+id/body"
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="wrap_content"

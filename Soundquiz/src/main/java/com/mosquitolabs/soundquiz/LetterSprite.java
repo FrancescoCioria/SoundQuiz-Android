@@ -14,9 +14,6 @@ import com.mosquitolabs.soundquiz.visualizer.AudioPlayer;
 public class LetterSprite {
 
     private final static float ANIMATION_TIME = 230f; // (millis)
-    private final static int CINEMA = 0;
-    private final static int MUSIC = 1;
-    private final static int VIP = 2;
     private int INDEX;
     private int SIZE;
     private int SPACE_SIZE;
@@ -175,15 +172,15 @@ public class LetterSprite {
 
     public void resetColors(){
         switch (gameView.getActivityContext().getPackageIndex()) {
-            case CINEMA:
+            case Utility.CINEMA:
                 rectPaint.setColor(gameView.getResources().getColor(R.color.tile_cinema));
                 textPaint.setColor(gameView.getResources().getColor(R.color.tile_text_cinema));
                 break;
-            case MUSIC:
+            case Utility.MUSIC:
                 rectPaint.setColor(gameView.getResources().getColor(R.color.tile_music));
                 textPaint.setColor(gameView.getResources().getColor(R.color.tile_text_music));
                 break;
-            case VIP:
+            case Utility.VIP:
 
                 break;
         }

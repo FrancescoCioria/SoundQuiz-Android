@@ -7,50 +7,6 @@
     android:clickable="false">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:visibility="gone"
-        android:id="@+id/footer"
-        android:background="@android:color/background_light">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/answerEditText"
-            android:editable="true"
-            android:textSize="17sp"
-            android:singleLine="true"
-            android:layout_alignParentBottom="true"
-            android:layout_toLeftOf="@+id/checkButton"
-            android:layout_alignTop="@+id/checkButton"
-            android:layout_toRightOf="@+id/hintButton" />
-
-        <Button
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:id="@+id/checkButton"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:background="@drawable/ic_action_send_now" />
-
-
-        <Button
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:id="@+id/hintButton"
-            android:gravity="center"
-            android:layout_alignParentBottom="true"
-            android:textAlignment="center"
-            android:layout_alignParentLeft="true"
-            android:background="@drawable/ic_action_help" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="60dp"
         android:layout_alignParentRight="false"
@@ -75,6 +31,18 @@
             android:src="@drawable/button_hint"
             android:layout_centerVertical="true" />
 
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/hintsPressView"
+            android:layout_alignParentRight="true" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/backPressView"
+            android:layout_alignParentLeft="true" />
+
     </RelativeLayout>
 
     <view
@@ -83,8 +51,7 @@
         class="com.mosquitolabs.soundquiz.GameView"
         android:id="@+id/gameView"
         android:layout_below="@+id/body"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/footer" />
+        android:layout_centerHorizontal="true" />
 
     <RelativeLayout
         android:id="@+id/win"
@@ -141,7 +108,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/revealOneLetter"
         android:gravity="center_horizontal"
-        android:background="@drawable/gameview_rounded_layout_cinema"
         android:padding="10dp"
         android:layout_alignTop="@+id/gameView"
         android:visibility="gone">
@@ -153,9 +119,10 @@
             android:id="@+id/textView"
             android:layout_centerHorizontal="true"
             android:ellipsize="end"
-            android:textColor="@color/tile_cinema"
+            android:textColor="@color/space_cinema"
             android:textSize="20sp"
-            android:gravity="center_horizontal" />
+            android:gravity="center_horizontal"
+            android:textIsSelectable="true" />
 
         <Button
             android:layout_width="wrap_content"
@@ -174,8 +141,7 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
 
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/header">
+        android:layout_centerHorizontal="true">
 
         <RelativeLayout
             android:layout_width="fill_parent"

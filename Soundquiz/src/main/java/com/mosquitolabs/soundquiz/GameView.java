@@ -20,9 +20,6 @@ import java.util.Random;
 public class GameView extends View {
     private final static int ANIMATION_TIME = 300; // (millis)
     private final static int MAX_DEGREE = 5; // (millis)
-    private final static int CINEMA = 0;
-    private final static int MUSIC = 1;
-    private final static int VIP = 2;
 
     private int spaceFullSize;
     private int spriteFullSize;
@@ -156,13 +153,13 @@ public class GameView extends View {
 
     private void initColors() {
         switch (context.getPackageIndex()) {
-            case CINEMA:
+            case Utility.CINEMA:
                 rectPaint.setColor(getResources().getColor(R.color.space_cinema));
                 break;
-            case MUSIC:
+            case Utility.MUSIC:
                 rectPaint.setColor(getResources().getColor(R.color.space_music));
                 break;
-            case VIP:
+            case Utility.VIP:
 
                 break;
         }
@@ -182,7 +179,7 @@ public class GameView extends View {
         }
 
         spriteFullSize = (int) (0.95f * getWidth() / (spriteNumber / 2));
-        if (spriteFullSize < getWidth() / 17 || spriteFullSize < Utility.convertDpToPixels(getActivityContext(), 40)) {
+        if (spriteFullSize < getWidth() / 17 || spriteFullSize < Utility.convertDpToPixels(getActivityContext(), 35)) {
             while (spriteNumber % 3 != 0) {
                 spriteNumber++;
             }
@@ -503,6 +500,10 @@ public class GameView extends View {
     public void resetSpritesColor() {
         for (LetterSprite letterSprite : letterSprites)
             letterSprite.resetColors();
+    }
+
+    public boolean isInRevalOneLetterMode() {
+        return revealOneLetterMode;
     }
 
 
