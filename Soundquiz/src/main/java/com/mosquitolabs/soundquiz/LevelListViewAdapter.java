@@ -115,7 +115,7 @@ public class LevelListViewAdapter extends BaseAdapter {
                     Utility.setBackgroundToView(unlockedlevelItemViewHolder.layout, context.getResources().getDrawable(R.drawable.level_rounded_layout_music));
                     break;
                 case Utility.VIP:
-
+                    Utility.setBackgroundToView(unlockedlevelItemViewHolder.layout, context.getResources().getDrawable(R.drawable.level_rounded_layout_character));
                     break;
             }
 
@@ -151,7 +151,7 @@ public class LevelListViewAdapter extends BaseAdapter {
                 Utility.setBackgroundToView(lockedlevelItemViewHolder.layout, context.getResources().getDrawable(R.drawable.level_rounded_layout_music));
                 break;
             case Utility.VIP:
-
+                Utility.setBackgroundToView(lockedlevelItemViewHolder.layout, context.getResources().getDrawable(R.drawable.level_rounded_layout_character));
                 break;
         }
 

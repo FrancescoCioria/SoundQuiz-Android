@@ -117,7 +117,7 @@ public class HomeActivity extends Activity {
         Bundle bundle = new Bundle();
         bundle.putInt("quizIndex", 0);
         bundle.putInt("levelIndex", 0);
-        bundle.putInt("packageIndex", 1);
+        bundle.putInt("packageIndex", Utility.VIP);
         mIntent.putExtras(bundle);
 
         startActivity(mIntent);

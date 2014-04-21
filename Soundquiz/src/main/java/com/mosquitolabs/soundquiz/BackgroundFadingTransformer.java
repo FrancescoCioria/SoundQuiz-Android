@@ -60,7 +60,7 @@ public class BackgroundFadingTransformer implements ViewPager.PageTransformer {
     private static class BackgroundHandler {
         private PackageListActivity context;
         private ImageView[] views = {null, null};
-        private Drawable[] images = {null, null};
+        private Drawable[] images = {null, null, null};
         private int[] indexes = {9, 9};
 
 
@@ -71,6 +71,8 @@ public class BackgroundFadingTransformer implements ViewPager.PageTransformer {
 
             images[0] = context.getResources().getDrawable(R.drawable.simpsons_background_complete);
             images[1] = context.getResources().getDrawable(R.drawable.guitar_background_complete);
+//            images[2] = context.getResources().getDrawable(R.drawable.south_park_background_complete);
+            images[2] = context.getResources().getDrawable(R.drawable.guess_who_background_complete);
 
         }
 

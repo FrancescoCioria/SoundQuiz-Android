@@ -265,7 +265,7 @@ public class MusicQuizActivity extends Activity {
 
     private void initSound(final boolean start) {
 
-        int res = getResources().getIdentifier(quizData.getQuizID(), "raw", getPackageName());
+        int res = getResources().getIdentifier(quizData.getID(), "raw", getPackageName());
 
         audioPlayer.player = MediaPlayer.create(this, res);
 
@@ -424,7 +424,7 @@ public class MusicQuizActivity extends Activity {
         winLayout.setVisibility(View.VISIBLE);
         findViewById(R.id.layoutImageQuiz).setVisibility(View.VISIBLE);
         findViewById(R.id.imageQuiz).setVisibility(View.VISIBLE);
-        int res = getResources().getIdentifier(getQuizData().getQuizID(), "drawable", getPackageName());
+        int res = getResources().getIdentifier(getQuizData().getID(), "drawable", getPackageName());
         try {
             ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(res));
         } catch (Exception e) {

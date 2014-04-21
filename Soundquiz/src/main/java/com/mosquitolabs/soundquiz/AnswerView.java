@@ -71,7 +71,7 @@ public class AnswerView extends View {
 
 
     public void init(final QuizData quizData) {
-        String answer = ((WinActivity) context).getQuizData().getAnswers().get(0);
+        String answer = ((WinActivity) context).getQuizData().getAnswer();
         this.answer = answer.toLowerCase().replace(" ", "").replace(".", "").replace("-", "").replace("'", "").replace(",", "").replace(":", "").replace("!", "").replace("?", "");
 
         initLetters(quizData);

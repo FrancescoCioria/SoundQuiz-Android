@@ -33,6 +33,8 @@ public class PackageCollection {
     private final String SOUNDS_BUCKET = "soundquiz/sounds";
 
     private Context context;
+    private JSONArray savedData = null;
+    private JSONObject newQuizData = new JSONObject();
 
     public static PackageCollection getInstance() {
         return instance;
@@ -50,7 +52,7 @@ public class PackageCollection {
             @Override
             public Bitmap doInBackground(Void... params) {
 
-                Log.d("RUNNABLE", "running");
+                Log.d("POPULATE", "populating");
                 PackageCollection.this.context = context;
                 long startTime = System.currentTimeMillis();
                 String jsonString = Utility.getSharedPreferences().getString("main_json", "");
@@ -60,6 +62,8 @@ public class PackageCollection {
                 }
                 // populate
                 populate();
+
+                Log.d("POPULATE", "time: " + (System.currentTimeMillis() - startTime));
 
                 // show opening logo at least 2 seconds
                 while (System.currentTimeMillis() - startTime < 2000) {
@@ -97,6 +101,110 @@ public class PackageCollection {
         }
     }
 
+
+//    private void populate() throws IOException {
+//        Log.d("POPULATE", "populatenew");
+//        JsonReader reader = null;
+//        try {
+//            JSONObject mainJSON = new JSONObject(Utility.getSharedPreferences().getString("main_json", "{}"));
+//            JSONArray categories = mainJSON.getJSONArray("categories");
+//
+////            for each category get its json and populate
+//            for (int x = 0; x < categories.length(); x++) {
+//                String json = Utility.getSharedPreferences().getString(categories.getJSONObject(x).getString("category") + "_json", "{}");
+//                byte[] bytes = json.getBytes();
+//                ByteArrayInputStream bais = new ByteArrayInputStream(bytes);
+//                InputStreamReader isr = new InputStreamReader(bais);
+//                reader = new JsonReader(isr);
+//
+//                String category = "";
+//                reader.beginObject();
+//                while (reader.hasNext()) {
+//                    String name = reader.nextName();
+//                    if (name.equals("category")) {
+//                        category = reader.nextString();
+//                    } else if (name.equals("levels")) {
+//                        PackageCollection.getInstance().getPackageCollection().add(iterateLevels(reader, category));
+//                    } else {
+//                        reader.skipValue();
+//                    }
+//                }
+//                reader.endObject();
+//            }
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//
+//        } finally {
+//            reader.close();
+//        }
+//
+//    }
+//
+//    private PackageData iterateLevels(JsonReader reader, String category) throws IOException {
+//        PackageData packageData = new PackageData();
+//        packageData.setCategory(category);
+//        reader.beginArray();
+//        while (reader.hasNext()) {
+//            reader.beginObject();
+//            while (reader.hasNext()) {
+//                String name = reader.nextName();
+//                if (name.equals("quizzes")) {
+//                    packageData.getLevelList().add(iterateQuizzes(reader));
+//                } else {
+//                    reader.skipValue();
+//                }
+//            }
+//            reader.endObject();
+//        }
+//        reader.endArray();
+//
+//        return packageData;
+//    }
+//
+//    private LevelData iterateQuizzes(JsonReader reader) throws IOException {
+//        LevelData levelData = new LevelData();
+//        reader.beginArray();
+//        while (reader.hasNext()) {
+//            reader.beginObject();
+//            QuizData quizData = new QuizData();
+//            while (reader.hasNext()) {
+//                String name = reader.nextName();
+//                if (name.equals("id")) {
+//                    quizData.setID(reader.nextString());
+//                } else if (name.equals("type")) {
+//                    quizData.setType(reader.nextString());
+//                } else if (name.equals("answer")) {
+//                    quizData.setAnswer(reader.nextString());
+//                } else if (name.equals("rows")) {
+//                    iterateRows(reader, quizData);
+//                } else {
+//                    reader.skipValue();
+//                }
+//            }
+//            if (!addQuizToSavedData(quizData)) {
+//                populateQuizWithSavedData(quizData);
+//            }
+//
+//            levelData.getQuizList().add(quizData);
+//            reader.endObject();
+//        }
+//        reader.endArray();
+//
+//        return levelData;
+//
+//    }
+//
+//    private void iterateRows(JsonReader reader, QuizData quizData) throws IOException {
+//        reader.beginArray();
+//        while (reader.hasNext()) {
+//            String row = reader.nextString();
+//            quizData.addRow(row);
+//        }
+//        reader.endArray();
+//    }
+
+
     private void populate() {
         try {
             JSONObject mainJSON = new JSONObject(Utility.getSharedPreferences().getString("main_json", "{}"));
@@ -118,22 +226,19 @@ public class PackageCollection {
                         QuizData quizData = new QuizData();
                         JSONObject quizJSON = quizzes.getJSONObject(z);
 
-                        JSONArray answers = quizJSON.getJSONArray("answers");
-                        for (int y = 0; y < answers.length(); y++) {
-                            quizData.addAnswer(answers.getString(y));
-                        }
+                        quizData.setAnswer(quizJSON.getString("answer"));
                         JSONArray rows = quizJSON.getJSONArray("rows");
                         if (rows.length() == 0) {
-                            quizData.addRow(quizData.getAnswers().get(0));
+                            quizData.addRow(quizData.getAnswer());
                         } else {
                             for (int y = 0; y < rows.length(); y++) {
                                 quizData.addRow(rows.getString(y));
                             }
                         }
 
-                        String ID = category + Integer.toString(i) + quizJSON.getString("id");
-                        quizData.setID(ID);
-                        quizData.setQuizID(quizJSON.getString("id"));
+//                        String ID = category + Integer.toString(i) + quizJSON.getString("id");
+//                        quizData.setID(ID);
+                        quizData.setID(quizJSON.getString("id"));
 
                         quizData.setType(quizJSON.getString("type"));
 
@@ -151,7 +256,6 @@ public class PackageCollection {
                     packageData.setCategory(category);
                 }
 
-                Log.d("SAVED_DATA", Utility.getSharedPreferences().getString("saved_data", "[]"));
                 PackageCollection.getInstance().getPackageCollection().add(packageData);
             }
 
@@ -163,13 +267,15 @@ public class PackageCollection {
 
     public boolean addQuizToSavedData(QuizData quizData) {
         try {
-            JSONArray savedData = new JSONArray(Utility.getSharedPreferences().getString("saved_data", "[]"));
+            if (savedData == null) {
+                savedData = new JSONArray(Utility.getSharedPreferences().getString("saved_data", "[]"));
+            }
             for (int i = 0; i < savedData.length(); i++) {
                 if (savedData.getJSONObject(i).getString("id").equals(quizData.getID())) {
                     return false;
                 }
             }
-            JSONObject newQuizData = new JSONObject();
+
             newQuizData.put("id", quizData.getID());
             newQuizData.put("has_used_hint", false);
             newQuizData.put("is_solved", false);
@@ -187,10 +293,11 @@ public class PackageCollection {
 
     public void modifyQuizInSavedData(QuizData quizData) {
         try {
-            JSONArray savedData = new JSONArray(Utility.getSharedPreferences().getString("saved_data", "[]"));
+            if (savedData == null) {
+                savedData = new JSONArray(Utility.getSharedPreferences().getString("saved_data", "[]"));
+            }
             for (int i = 0; i < savedData.length(); i++) {
                 if (savedData.getJSONObject(i).getString("id").equals(quizData.getID())) {
-                    JSONObject newQuizData = new JSONObject();
                     newQuizData.put("id", quizData.getID());
                     newQuizData.put("has_used_hint", quizData.hasUsedHint());
                     newQuizData.put("is_solved", quizData.isSolved());
@@ -209,7 +316,9 @@ public class PackageCollection {
 
     public void populateQuizWithSavedData(QuizData quizData) {
         try {
-            JSONArray savedData = new JSONArray(Utility.getSharedPreferences().getString("saved_data", "[]"));
+            if (savedData == null) {
+                savedData = new JSONArray(Utility.getSharedPreferences().getString("saved_data", "[]"));
+            }
             for (int i = 0; i < savedData.length(); i++) {
                 if (savedData.getJSONObject(i).getString("id").equals(quizData.getID())) {
                     if (savedData.getJSONObject(i).getBoolean("has_used_hint")) {

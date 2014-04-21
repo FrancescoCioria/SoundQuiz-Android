@@ -46,7 +46,7 @@ public class WinActivity extends Activity {
         visualizer = (StringVisualizerView) findViewById(R.id.visualizerView);
         AnswerView answerView = (AnswerView) findViewById(R.id.answerView);
 
-        textViewTitle.setText(quizData.getAnswers().get(0));
+        textViewTitle.setText(quizData.getAnswer());
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +68,7 @@ public class WinActivity extends Activity {
             }
         });
 
-        int res = getResources().getIdentifier(quizData.getQuizID(), "drawable", getPackageName());
+        int res = getResources().getIdentifier(quizData.getID(), "drawable", getPackageName());
         try {
             image.setImageDrawable(getResources().getDrawable(res));
         } catch (Exception e) {
@@ -126,7 +126,7 @@ public class WinActivity extends Activity {
 
 
     private void initSound() {
-        int res = getResources().getIdentifier(quizData.getQuizID(), "raw", getPackageName());
+        int res = getResources().getIdentifier(quizData.getID(), "raw", getPackageName());
 
         audioPlayer.player = MediaPlayer.create(this, res);
 

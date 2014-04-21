@@ -2,9 +2,11 @@ package com.mosquitolabs.soundquiz;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -21,6 +23,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.mosquitolabs.soundquiz.visualizer.AudioPlayer;
+import com.mosquitolabs.soundquiz.visualizer.CharacterVisualizerHandler;
 import com.mosquitolabs.soundquiz.visualizer.GuitarStringsVisualizerView;
 import com.mosquitolabs.soundquiz.visualizer.StringVisualizerView;
 
@@ -50,6 +53,7 @@ public class QuizActivity extends Activity {
     private AudioPlayer audioPlayer = AudioPlayer.getIstance();
     private StringVisualizerView visualizerCinema;
     private GuitarStringsVisualizerView visualizerMusic;
+    private CharacterVisualizerHandler visualizerCharacter;
     private GameView gameView;
     private ImageView following;
     private ImageView previous;
@@ -78,6 +82,10 @@ public class QuizActivity extends Activity {
         packageIndex = getIntent().getExtras().getInt("packageIndex");
 
         quizData = PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().get(quizIndex);
+
+        if (quizData == null) {
+            Log.e("QUIZ", "quiz is null");
+        }
 
         init();
         initButtons();
@@ -130,7 +138,8 @@ public class QuizActivity extends Activity {
                 });
                 break;
             case Utility.VIP:
-                setContentView(R.layout.activity_quiz_cinema);
+                setContentView(R.layout.activity_quiz_characters_guess_who);
+                visualizerCharacter = new CharacterVisualizerHandler(this);
                 break;
         }
 
@@ -215,7 +224,7 @@ public class QuizActivity extends Activity {
                 setVisualizerVisible(true);
                 break;
             case Utility.VIP:
-
+                setVisualizerVisible(true);
                 break;
         }
         refreshGameView = true;
@@ -253,7 +262,7 @@ public class QuizActivity extends Activity {
                 visualizerMusic.refresh();
                 break;
             case Utility.VIP:
-
+                visualizerCharacter.refresh();
                 break;
         }
     }
@@ -284,8 +293,7 @@ public class QuizActivity extends Activity {
 
 
     private void initSound(final boolean start) {
-
-        int res = getResources().getIdentifier(quizData.getQuizID(), "raw", getPackageName());
+        int res = getResources().getIdentifier(quizData.getID(), "raw", getPackageName());
 
         audioPlayer.player = MediaPlayer.create(this, res);
 
@@ -355,6 +363,7 @@ public class QuizActivity extends Activity {
                 initMusicViews();
                 break;
             case Utility.VIP:
+                initCharacterViews();
                 break;
         }
 
@@ -428,6 +437,42 @@ public class QuizActivity extends Activity {
 
         Utility.setMargins(guitar, center, 0, 0, 0);
         Utility.setMargins(play, guitarHeight * 97 / 678, guitarHeight * 104 / 678, 0, 0);
+
+        findViewById(R.id.textViewSong).setVisibility(quizData.getType().toLowerCase().equals("song") ? View.VISIBLE : View.GONE);
+        findViewById(R.id.textViewArtist).setVisibility(quizData.getType().toLowerCase().equals("artist") ? View.VISIBLE : View.GONE);
+
+    }
+
+    private void initCharacterViews() {
+        View character = findViewById(R.id.imageViewCharacter);
+        View mouth = findViewById(R.id.imageViewMouth);
+
+//        int characterWidth = Utility.getWidth(this) / 3;
+//        int characterHeight = characterWidth * 622 / 400;
+
+        int characterWidth = Utility.getWidth(this) * 2 / 3;
+        int characterHeight = Utility.getWidth(this) * 2 / 3;
+
+//        int mouthWidth = (int) (characterWidth * 0.275f);
+        int mouthWidth = characterWidth * 90 / 512;
+        int mouthHeight = mouthWidth * 261 / 611;
+
+//        int mouthTopMargin = characterHeight * 365 / 622;
+//        int mouthLeftMargin = characterWidth * 160 / 400;
+        int mouthTopMargin = characterHeight * 395 / 512;
+        int mouthLeftMargin = characterWidth * 220 / 512;
+
+//        int layoutTopMargin = ((Utility.getHeight(this) / 2) - characterHeight) * 2 / 3;
+        int layoutTopMargin = Utility.getHeight(this) * 110 / 1196;
+
+
+        character.getLayoutParams().width = characterWidth;
+        character.getLayoutParams().height = characterHeight;
+        mouth.getLayoutParams().width = mouthWidth;
+        mouth.getLayoutParams().height = mouthHeight;
+
+        Utility.setMargins(mouth, mouthLeftMargin, mouthTopMargin, 0, 0);
+        Utility.setMargins(findViewById(R.id.body), 0, layoutTopMargin, 0, 0);
     }
 
     private void initGameView() {
@@ -472,6 +517,7 @@ public class QuizActivity extends Activity {
                 initMusicWinGraphics();
                 break;
             case Utility.VIP:
+                initCharacterWinGraphics();
                 break;
         }
 
@@ -484,7 +530,7 @@ public class QuizActivity extends Activity {
         findViewById(R.id.layoutImageQuiz).setVisibility(View.VISIBLE);
         findViewById(R.id.imageQuiz).setVisibility(View.VISIBLE);
         type.setVisibility(View.GONE);
-        int res = getResources().getIdentifier(getQuizData().getQuizID(), "drawable", getPackageName());
+        int res = getResources().getIdentifier(getQuizData().getID(), "drawable", getPackageName());
         try {
             ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(res));
         } catch (Exception e) {
@@ -498,7 +544,30 @@ public class QuizActivity extends Activity {
         stopVisualizerAnimation();
         findViewById(R.id.layoutImageQuiz).setVisibility(View.VISIBLE);
         findViewById(R.id.imageQuiz).setVisibility(View.VISIBLE);
-        int res = getResources().getIdentifier(getQuizData().getQuizID(), "drawable", getPackageName());
+        int res = getResources().getIdentifier(getQuizData().getID(), "drawable", getPackageName());
+        try {
+            ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(res));
+        } catch (Exception e) {
+            ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(R.drawable.twenty_century_fox));
+        }
+
+        findViewById(R.id.buttonSpotify).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String uri = "spotify:track:0534jmQ0dYChW5MSzYXNVr";
+                Intent launcher = new Intent( Intent.ACTION_VIEW, Uri.parse(uri) );
+                startActivity(launcher);
+            }
+        });
+
+    }
+
+    private void initCharacterWinGraphics() {
+        setVisualizerVisible(true);
+        stopVisualizerAnimation();
+        findViewById(R.id.layoutImageQuiz).setVisibility(View.VISIBLE);
+        findViewById(R.id.imageQuiz).setVisibility(View.VISIBLE);
+        int res = getResources().getIdentifier(getQuizData().getID(), "drawable", getPackageName());
         try {
             ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(res));
         } catch (Exception e) {
@@ -530,6 +599,8 @@ public class QuizActivity extends Activity {
                 findViewById(R.id.win).startAnimation(scaleAnimation);
                 break;
             case Utility.VIP:
+                findViewById(R.id.imageQuiz).startAnimation(scaleAnimation);
+                findViewById(R.id.win).startAnimation(scaleAnimation);
                 break;
         }
         startFireworkAnimation();
@@ -604,6 +675,7 @@ public class QuizActivity extends Activity {
                 visualizerMusic.startAnimation();
                 break;
             case Utility.VIP:
+                visualizerCharacter.startAnimation();
                 break;
         }
         play.setVisibility(View.GONE);
@@ -618,14 +690,14 @@ public class QuizActivity extends Activity {
                 visualizerMusic.stopAnimation();
                 break;
             case Utility.VIP:
-
+                visualizerCharacter.stopAnimation();
                 break;
         }
         play.setVisibility(quizData.isSolved() ? View.GONE : View.VISIBLE);
     }
 
 
-    private void togglePlay() {
+    public void togglePlay() {
         if (!audioPlayer.player.isPlaying()) {
             audioPlayer.player.start();
             startVisualizerAnimation();
@@ -652,10 +724,14 @@ public class QuizActivity extends Activity {
         gameView.changeToRevealOneLetterMode();
         Utility.setMargins(revealOneLetterLayout, Utility.convertDpToPixels(this, 16), gameView.getMaxY() + Utility.convertDpToPixels(this, 16), Utility.convertDpToPixels(this, 16), 0);
         revealOneLetterLayout.setVisibility(View.VISIBLE);
+        findViewById(R.id.followingLayout).setVisibility(View.GONE);
+        findViewById(R.id.previousLayout).setVisibility(View.GONE);
     }
 
     public void changeToGameMode() {
         revealOneLetterLayout.setVisibility(View.GONE);
+        findViewById(R.id.followingLayout).setVisibility(View.VISIBLE);
+        findViewById(R.id.previousLayout).setVisibility(View.VISIBLE);
         gameView.changeToGameMode();
     }
 
@@ -676,7 +752,7 @@ public class QuizActivity extends Activity {
                 visualizerMusic.setVisibility(isVisible ? View.VISIBLE : View.GONE);
                 break;
             case Utility.VIP:
-
+                visualizerCharacter.setVisible(isVisible);
                 break;
         }
     }
@@ -725,9 +801,11 @@ public class QuizActivity extends Activity {
                 break;
             case Utility.MUSIC:
                 setVisualizerVisible(true);
+                findViewById(R.id.textViewSong).setVisibility(quizData.getType().toLowerCase().equals("song") ? View.VISIBLE : View.GONE);
+                findViewById(R.id.textViewArtist).setVisibility(quizData.getType().toLowerCase().equals("artist") ? View.VISIBLE : View.GONE);
                 break;
             case Utility.VIP:
-
+                setVisualizerVisible(true);
                 break;
         }
         Log.d("RESET IMAGES", " win " + findViewById(R.id.win).getVisibility());
@@ -743,7 +821,7 @@ public class QuizActivity extends Activity {
                 dialog.setContentView(R.layout.dialog_hints_music);
                 break;
             case Utility.VIP:
-
+                dialog.setContentView(R.layout.dialog_hints_character);
                 break;
         }
 

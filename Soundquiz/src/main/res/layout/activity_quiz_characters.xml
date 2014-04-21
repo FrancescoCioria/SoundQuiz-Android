@@ -37,7 +37,27 @@
             android:src="@drawable/button_hint_music"
             android:layout_centerVertical="true" />
 
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/hintsPressView"
+            android:layout_alignParentRight="true" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/backPressView"
+            android:layout_alignParentLeft="true" />
+
     </RelativeLayout>
+
+    <view
+        class="com.mosquitolabs.soundquiz.GameView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gameView"
+        android:layout_below="@+id/body"
+        android:layout_centerHorizontal="true" />
 
     <RelativeLayout
         android:id="@+id/win"
@@ -55,7 +75,7 @@
             android:id="@+id/wiki"
             android:layout_marginBottom="10dp"
             android:gravity="center_horizontal"
-            android:background="@drawable/gameview_rounded_layout_music"
+            android:background="@drawable/gameview_rounded_layout_character"
             android:padding="10dp">
 
             <TextView
@@ -66,7 +86,7 @@
                 android:layout_centerHorizontal="true"
                 android:ellipsize="end"
                 android:padding="5dp"
-                android:textColor="@color/tile_music" />
+                android:textColor="@color/tile_character" />
 
         </RelativeLayout>
 
@@ -105,7 +125,7 @@
             android:id="@+id/textView"
             android:layout_centerHorizontal="true"
             android:ellipsize="end"
-            android:textColor="@color/tile_music"
+            android:textColor="@color/tile_character"
             android:textSize="20sp"
             android:gravity="center_horizontal" />
 
@@ -157,7 +177,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="false"
-        android:visibility="gone"
+        android:visibility="visible"
         android:id="@+id/previousLayout"
         android:layout_below="@+id/header"
         android:layout_alignBottom="@+id/body"
@@ -179,7 +199,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/body"
         android:id="@+id/followingLayout"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_below="@+id/header"
         android:layout_alignParentRight="true">
 
@@ -200,7 +220,7 @@
         android:id="@+id/layoutImageQuiz"
         android:layout_alignTop="@+id/body"
         android:layout_alignBottom="@+id/body"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <ImageView
             android:layout_width="wrap_content"

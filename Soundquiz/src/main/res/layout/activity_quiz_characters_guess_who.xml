@@ -1,0 +1,273 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mosquitolabs.soundquiz.QuizActivity"
+    android:clickable="false">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/guess_who_background"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/header"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:id="@+id/back"
+            android:src="@drawable/button_back_guess_who"
+            android:scaleType="fitStart"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/hints"
+            android:antialias="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/button_hint_guess_who"
+            android:layout_centerVertical="true" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/hintsPressView"
+            android:layout_alignParentRight="true" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/backPressView"
+            android:layout_alignParentLeft="true" />
+
+    </RelativeLayout>
+
+    <view
+        class="com.mosquitolabs.soundquiz.GameView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gameView"
+        android:layout_below="@+id/body"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/win"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="16dp"
+        android:visibility="gone"
+        android:layout_below="@+id/body">
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/buttons"
+            android:id="@+id/wiki"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/gameview_rounded_layout_character"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:text="Columbia Pictures Industries, Inc. (CPII) is an American film production and distribution studio, that is part of the Columbia TriStar Motion Picture Group, owned by Sony Pictures Entertainment, a subsidiary of Sony Entertainment, a subsidiary of the Japanese conglomerate Sony."
+                android:id="@+id/textViewWiki"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:padding="5dp"
+                android:textColor="@color/tile_character" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/buttons">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back to menu"
+                android:id="@+id/backToMenuButton"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/revealOneLetter"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:layout_below="@+id/body">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Touch the empty space you wish to reveal"
+            android:id="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:textColor="@color/tile_character"
+            android:textSize="20sp"
+            android:gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/buttonCancel"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/body"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewCharacter"
+            android:src="@drawable/guess_who_frame"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewMouth"
+            android:antialias="true"
+            android:src="@drawable/ah"
+            android:layout_alignLeft="@+id/imageViewCharacter" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonPlay"
+            android:visibility="gone"
+            android:layout_alignLeft="@+id/imageViewCharacter" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:visibility="visible"
+        android:id="@+id/previousLayout"
+        android:layout_below="@+id/header"
+        android:layout_alignBottom="@+id/body"
+        android:layout_alignParentLeft="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/previous"
+            android:src="@drawable/arrow_guess_who_left"
+            android:layout_alignParentLeft="false"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/body"
+        android:id="@+id/followingLayout"
+        android:visibility="visible"
+        android:layout_below="@+id/header"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/following"
+            android:src="@drawable/arrow_guess_who_right"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="false"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutImageQuiz"
+        android:layout_alignTop="@+id/body"
+        android:layout_alignBottom="@+id/body"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageQuiz"
+            android:src="@drawable/columbia_pictures"
+            android:scaleType="centerCrop"
+            android:layout_weight="1"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:visibility="invisible"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fireworkLeftTop"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        android:src="@drawable/firework_red" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fireworkLeftBottom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:src="@drawable/firework_green" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fireworkRightTop"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:src="@drawable/firework_blue" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fireworkRightBottom"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:src="@drawable/firework_orange" />
+
+</RelativeLayout>

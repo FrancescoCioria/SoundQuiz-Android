@@ -170,7 +170,7 @@ public class LetterSprite {
         }
     }
 
-    public void resetColors(){
+    public void resetColors() {
         switch (gameView.getActivityContext().getPackageIndex()) {
             case Utility.CINEMA:
                 rectPaint.setColor(gameView.getResources().getColor(R.color.tile_cinema));
@@ -181,7 +181,10 @@ public class LetterSprite {
                 textPaint.setColor(gameView.getResources().getColor(R.color.tile_text_music));
                 break;
             case Utility.VIP:
-
+                rectPaint.setColor(gameView.getResources().getColor(R.color.tile_character));
+                textPaint.setColor(gameView.getResources().getColor(R.color.tile_text_character));
+                rectPaint.setColor(Color.rgb(240, 240, 240));
+                textPaint.setColor(Color.rgb(54, 22, 21));
                 break;
         }
     }
@@ -242,7 +245,6 @@ public class LetterSprite {
         }
         return null;
     }
-
 
 
     public void reset() {
@@ -322,7 +324,6 @@ public class LetterSprite {
         isClickable = false;
         textPaint.setColor(Color.rgb(34, 139, 34));
     }
-
 
 
     static class MyPoint {

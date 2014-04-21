@@ -7,10 +7,9 @@ import java.util.ArrayList;
  * Created by francesco on 3/10/14.
  */
 public class QuizData implements Serializable {
-    private ArrayList<String> answers = new ArrayList<String>();
     private ArrayList<String> rows = new ArrayList<String>();
+    private String answer;
     private String ID;
-    private String quizID;
     private String type;
     private String wikiID;
     private String wikiDescription;
@@ -19,16 +18,16 @@ public class QuizData implements Serializable {
     private boolean isSolvedWithStar = false;
     private boolean hasUsedHint = false;
 
-    public void addAnswer(String newAnswer) {
-        answers.add(newAnswer);
+    public void setAnswer(String newAnswer) {
+        answer = newAnswer;
     }
 
     public void addRow(String newRow) {
         rows.add(newRow);
     }
 
-    public ArrayList<String> getAnswers() {
-        return answers;
+    public String getAnswer() {
+        return answer;
     }
 
     public ArrayList<String> getRows() {
@@ -41,23 +40,6 @@ public class QuizData implements Serializable {
 
     public String getID() {
         return ID;
-    }
-
-    public void setQuizID(String string) {
-        quizID
-                = string;
-    }
-
-    public String getQuizID() {
-        return quizID;
-    }
-
-    public void setCategory(String string) {
-        category = string;
-    }
-
-    public String getCategory() {
-        return category;
     }
 
     public void setUsedHint() {

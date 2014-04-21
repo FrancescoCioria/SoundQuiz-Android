@@ -72,15 +72,20 @@
             android:background="@drawable/gameview_rounded_layout_music"
             android:padding="10dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="fill_parent"
-                android:text="Columbia Pictures Industries, Inc. (CPII) is an American film production and distribution studio, that is part of the Columbia TriStar Motion Picture Group, owned by Sony Pictures Entertainment, a subsidiary of Sony Entertainment, a subsidiary of the Japanese conglomerate Sony."
-                android:id="@+id/textViewWiki"
-                android:layout_centerHorizontal="true"
-                android:ellipsize="end"
-                android:padding="5dp"
-                android:textColor="@color/tile_music" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See more about on Wikipedia"
+                android:id="@+id/buttonWiki"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Listen on Spotify"
+                android:id="@+id/buttonSpotify"
+                android:layout_below="@+id/buttonWiki"
+                android:layout_centerHorizontal="true" />
 
         </RelativeLayout>
 
@@ -162,6 +167,27 @@
             android:src="@drawable/button_play_music"
             android:visibility="visible"
             android:layout_alignLeft="@+id/imageViewGuitar" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Song"
+            android:id="@+id/textViewSong"
+            android:textSize="50sp"
+            android:layout_alignBottom="@+id/imageViewGuitar"
+            android:gravity="center"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Artist"
+            android:id="@+id/textViewArtist"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/imageViewGuitar"
+            android:textSize="50sp"
+            android:layout_marginBottom="10dp" />
 
     </RelativeLayout>
 

@@ -55,7 +55,8 @@ public class LevelActivity extends Activity {
                 ((ImageView) (findViewById(R.id.backgroundImageView))).setImageDrawable(getResources().getDrawable(R.drawable.guitar_background_complete));
                 break;
             case Utility.VIP:
-
+//                ((ImageView)(findViewById(R.id.backgroundImageView))).setImageDrawable(getResources().getDrawable(R.drawable.south_park_background_complete));
+                ((ImageView)(findViewById(R.id.backgroundImageView))).setImageDrawable(getResources().getDrawable(R.drawable.guess_who_background_complete));
                 break;
         }
 

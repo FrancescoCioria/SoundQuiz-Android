@@ -135,7 +135,7 @@ public class GameView extends View {
 
 
     public void init(final QuizData quizData) {
-        String answer = (context).getQuizData().getAnswers().get(0);
+        String answer = (context).getQuizData().getAnswer();
         this.answer = answer.toLowerCase().replace(" ", "").replace(".", "").replace("-", "").replace("'", "").replace(",", "").replace(":", "").replace("!", "").replace("?", "");
 
         rectPaint.setAntiAlias(true);
@@ -160,7 +160,9 @@ public class GameView extends View {
                 rectPaint.setColor(getResources().getColor(R.color.space_music));
                 break;
             case Utility.VIP:
-
+                rectPaint.setColor(getResources().getColor(R.color.space_character));
+                rectPaint.setColor(Color.BLACK);
+                rectPaint.setAlpha(140);
                 break;
         }
     }

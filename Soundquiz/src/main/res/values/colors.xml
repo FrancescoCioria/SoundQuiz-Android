@@ -10,13 +10,17 @@
     <color name="dark_music">#ff9b3800</color>
     <color name="tile_text_music">#FF002117</color>
 
+    <color name="tile_character">#ffd8d8d8</color>
+    <color name="space_character">#ff676076</color>
+    <color name="light_character">#ffd8d8d8</color>
+    <color name="dark_character">#ff676076</color>
+    <color name="tile_text_character">#FF45404e</color>
+
     <color name="tile_cinema">#FF60A08E</color>
     <color name="space_cinema">#ff003928</color>
     <color name="light_cinema">#FF8995cf</color>
     <color name="dark_cinema">#ff345aa6</color>
     <color name="tile_text_cinema">#FF002117</color>
-
-
 
 
     <color name="orange">#ffa500</color>

@@ -97,7 +97,7 @@ public class QuizListViewAdapter extends BaseAdapter {
                     startQuizActivity(quizData, index);
                 }
             });
-            String path = quizData.getQuizID();
+            String path = quizData.getID();
 
             if (quizData.isSolved()) {
                 int res = context.getResources().getIdentifier(path, "drawable", context.getPackageName());
@@ -107,7 +107,7 @@ public class QuizListViewAdapter extends BaseAdapter {
                     quizItemViewHolder.images[i].setImageDrawable(context.getResources().getDrawable(R.drawable.twenty_century_fox));
                 }
 //                quizItemViewHolder.images[i].setImageBitmap(Utility.readImageFromDisk(context,quizData.getID(),false));
-                quizItemViewHolder.bodies[i].setText(quizData.getAnswers().get(0));
+                quizItemViewHolder.bodies[i].setText(quizData.getAnswer());
                 quizItemViewHolder.bodies[i].setVisibility(View.VISIBLE);
             } else {
                 int res = context.getResources().getIdentifier(path + "_blur", "drawable", context.getPackageName());
