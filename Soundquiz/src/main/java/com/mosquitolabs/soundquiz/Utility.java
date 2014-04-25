@@ -40,10 +40,16 @@ public class Utility {
     private static ClientConfiguration clientConfig = new ClientConfiguration();
     private static AmazonS3Client s3Client;
 
+    private static Drawable[] images = {null, null, null};
+
+
     public static void initUtility(Context context) {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         clientConfig.setProtocol(Protocol.HTTP);
         s3Client = new AmazonS3Client(credentials, clientConfig);
+        images[0] = context.getResources().getDrawable(R.drawable.simpsons_background_complete);
+        images[1] = context.getResources().getDrawable(R.drawable.guitar_background_complete);
+        images[2] = context.getResources().getDrawable(R.drawable.guess_who_background_complete);
     }
 
     public static boolean isOnline(Context context) {
@@ -144,6 +150,10 @@ public class Utility {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public static Drawable[] getImages() {
+        return images;
     }
 
     public static AmazonS3Client getS3Client() {

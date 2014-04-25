@@ -18,7 +18,7 @@
             android:layout_width="80dp"
             android:layout_height="35dp"
             android:id="@+id/back"
-            android:src="@drawable/button_back"
+            android:src="@drawable/button_back_cinema"
             android:scaleType="fitStart"
             android:layout_centerVertical="true" />
 
@@ -28,7 +28,7 @@
             android:id="@+id/hints"
             android:antialias="true"
             android:layout_alignParentRight="true"
-            android:src="@drawable/button_hint"
+            android:src="@drawable/button_hint_cinema"
             android:layout_centerVertical="true" />
 
         <View

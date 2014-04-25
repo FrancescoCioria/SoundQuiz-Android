@@ -1,0 +1,1260 @@
+{
+  "category": "Cinema & TV",
+  "levels": [
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "the_lion_king_azbeigna",
+          "type": "MOVIE",
+          "answer": "The Lion King",
+          "rows": [
+            "the lion",
+            "king"
+          ]
+        },
+        {
+          "id": "the_oc",
+          "type": "TV SERIES",
+          "answer": "The OC",
+          "rows": [
+          ]
+        },
+        {
+          "id": "star_wars_imperial_march",
+          "type": "MOVIE",
+          "answer": "Star Wars",
+          "rows": [
+          ]
+        },
+        {
+          "id": "psycho",
+          "type": "MOVIE",
+          "answer": "Psycho",
+          "rows": [
+          ]
+        },
+        {
+          "id": "beverly_hills_cop",
+          "type": "MOVIE",
+          "answer": "Beverly Hills Cop",
+          "rows": [
+            "beverly",
+            "hills cop"
+          ]
+        },
+        {
+          "id": "the_blues_brothers",
+          "type": "MOVIE",
+          "answer": "The Blues Brothers",
+          "rows": [
+            "the blues",
+            "brothers"
+          ]
+        },
+        {
+          "id": "breaking_bad",
+          "type": "TV SERIES",
+          "answer": "Breaking Bad",
+          "rows": [
+            "breaking",
+            "bad"
+          ]
+        },
+        {
+          "id": "ghostbusters",
+          "type": "MOVIE",
+          "answer": "Ghostbusters",
+          "rows": [
+          ]
+        },
+        {
+          "id": "jurassic_park",
+          "type": "MOVIE",
+          "answer": "Jurassic Park",
+          "rows": [
+            "jurassic",
+            "park"
+          ]
+        },
+        {
+          "id": "twenty_century_fox",
+          "type": "STUDIO",
+          "answer": "20 century fox",
+          "rows": [
+            "20 century",
+            "fox"
+          ]
+        },
+        {
+          "id": "scrubs",
+          "type": "TV SERIES",
+          "answer": "Scrubs",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_godfather",
+          "type": "MOVIE",
+          "answer": "The Godfather",
+          "rows": [
+          ]
+        },
+        {
+          "id": "looney_tunes",
+          "type": "TV SERIES",
+          "answer": "Looney Tunes",
+          "rows": [
+            "looney",
+            "tunes"
+          ]
+        },
+        {
+          "id": "the_lord_of_the_rings",
+          "type": "MOVIE",
+          "answer": "The Lord Of The Rings",
+          "rows": [
+            "the lord of",
+            "the rings"
+          ]
+        },
+        {
+          "id": "toy_story",
+          "type": "MOVIE",
+          "answer": "Toy Story",
+          "rows": [
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "chariots_of_fire",
+          "type": "MOVIE",
+          "answer": "Chariots of fire",
+          "rows": [
+            "chariots",
+            "of fire"
+          ]
+        },
+        {
+          "id": "gilmore_girls",
+          "type": "TV SERIES",
+          "answer": "Gilmore Girls",
+          "rows": [
+            "gilmore",
+            "girls"
+          ]
+        },
+        {
+          "id": "life_is_beautiful",
+          "type": "MOVIE",
+          "answer": "Life is beautiful",
+          "rows": [
+            "life is",
+            "beautiful"
+          ]
+        },
+        {
+          "id": "despicable_me",
+          "type": "MOVIE",
+          "answer": "Despicable Me",
+          "rows": [
+            "despicable me"
+          ]
+        },
+        {
+          "id": "into_the_wild",
+          "type": "MOVIE",
+          "answer": "Into the Wild",
+          "rows": [
+            "into the",
+            "wild"
+          ]
+        },
+        {
+          "id": "happy_days",
+          "type": "TV SERIES",
+          "answer": "Happy Days",
+          "rows": [
+            "happy",
+            "days"
+          ]
+        },
+        {
+          "id": "avatar",
+          "type": "MOVIE",
+          "answer": "Avatar",
+          "rows": [
+          ]
+        },
+        {
+          "id": "indiana_jones",
+          "type": "MOVIE",
+          "answer": "Indiana Jones",
+          "rows": [
+            "indiana",
+            "jones"
+          ]
+        },
+        {
+          "id": "thx",
+          "type": "STUDIO",
+          "answer": "THX",
+          "rows": [
+          ]
+        },
+        {
+          "id": "requiem_for_a_dream",
+          "type": "MOVIE",
+          "answer": "Requiem for a dream",
+          "rows": [
+            "requiem for",
+            "a dream"
+          ]
+        },
+        {
+          "id": "james_bond",
+          "type": "MOVIE",
+          "answer": "James Bond",
+          "rows": [
+            "james",
+            "bond"
+          ]
+        },
+        {
+          "id": "south_park",
+          "type": "TV SERIES",
+          "answer": "South Park",
+          "rows": [
+            "south",
+            "park"
+          ]
+        },
+        {
+          "id": "the_big_bang_theory",
+          "type": "TV SERIES",
+          "answer": "The big bang theory",
+          "rows": [
+            "the big",
+            "bang theory"
+          ]
+        },
+        {
+          "id": "universal",
+          "type": "STUDIO",
+          "answer": "Universal Studios",
+          "rows": [
+            "universal",
+            "studios"
+          ]
+        },
+        {
+          "id": "saw",
+          "type": "MOVIE",
+          "answer": "Saw",
+          "rows": [
+            "saw"
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "titanic",
+          "type": "MOVIE",
+          "answer": "Titanic",
+          "rows": [
+          ]
+        },
+        {
+          "id": "hatari",
+          "type": "MOVIE",
+          "answer": "Hatari",
+          "rows": [
+          ]
+        },
+        {
+          "id": "bold_and_beautiful",
+          "type": "TV SERIES",
+          "answer": "Bold and beautiful",
+          "rows": [
+            "bold and",
+            "beautiful"
+          ]
+        },
+        {
+          "id": "csi",
+          "type": "TV SERIES",
+          "answer": "CSI",
+          "rows": [
+          ]
+        },
+        {
+          "id": "friends",
+          "type": "TV SERIES",
+          "answer": "Friends",
+          "rows": [
+          ]
+        },
+        {
+          "id": "inception",
+          "type": "MOVIE",
+          "answer": "Inception",
+          "rows": [
+          ]
+        },
+        {
+          "id": "jaws",
+          "type": "MOVIE",
+          "answer": "Jaws",
+          "rows": [
+          ]
+        },
+        {
+          "id": "jersey_shore",
+          "type": "TV SERIES",
+          "answer": "Jersey shore",
+          "rows": [
+            "jersey",
+            "shore"
+          ]
+        },
+        {
+          "id": "popeye",
+          "type": "TV SERIES",
+          "answer": "Popeye",
+          "rows": [
+          ]
+        },
+        {
+          "id": "pulp_fiction",
+          "type": "MOVIE",
+          "answer": "Pulp fiction",
+          "rows": [
+            "pulp",
+            "fiction"
+          ]
+        },
+        {
+          "id": "rocky",
+          "type": "MOVIE",
+          "answer": "Rocky",
+          "rows": [
+            "rocky"
+          ]
+        },
+        {
+          "id": "shrek",
+          "type": "MOVIE",
+          "answer": "Shrek",
+          "rows": [
+            "shrek"
+          ]
+        },
+        {
+          "id": "the_simpsons",
+          "type": "TV SERIES",
+          "answer": "The Simpsons",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_sopranos",
+          "type": "TV SERIES",
+          "answer": "The Sopranos",
+          "rows": [
+          ]
+        },
+        {
+          "id": "top_gear",
+          "type": "TV SERIES",
+          "answer": "Top Gear",
+          "rows": [
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "family_guy",
+          "type": "TV SERIES",
+          "answer": "Family Guy",
+          "rows": [
+          ]
+        },
+        {
+          "id": "fantasia",
+          "type": "MOVIE",
+          "answer": "Fantasia",
+          "rows": [
+          ]
+        },
+        {
+          "id": "forrest_gump",
+          "type": "MOVIE",
+          "answer": "Forrest Gump",
+          "rows": [
+          ]
+        },
+        {
+          "id": "game_of_thrones",
+          "type": "TV SERIES",
+          "answer": "Game of thrones",
+          "rows": [
+            "game of",
+            "thrones"
+          ]
+        },
+        {
+          "id": "halloween",
+          "type": "MOVIE",
+          "answer": "Halloween",
+          "rows": [
+          ]
+        },
+        {
+          "id": "how_i_met_your_mother",
+          "type": "TV SERIES",
+          "answer": "How I met your mother",
+          "rows": [
+            "how i met",
+            "your mother"
+          ]
+        },
+        {
+          "id": "mgm",
+          "type": "STUDIO",
+          "answer": "Metro Goldwyn Mayer",
+          "rows": [
+            "metro goldwyn",
+            "mayer"
+          ]
+        },
+        {
+          "id": "kill_bill",
+          "type": "MOVIE",
+          "answer": "Kill Bill",
+          "rows": [
+          ]
+        },
+        {
+          "id": "pirates_of_the_caribbean",
+          "type": "MOVIE",
+          "answer": "Pirates of the Caribbean",
+          "rows": [
+            "pirates of",
+            "the caribbean"
+          ]
+        },
+        {
+          "id": "skins",
+          "type": "TV SERIES",
+          "answer": "Skins",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_good_the_bad_and_the_ugly",
+          "type": "MOVIE",
+          "answer": "The good, the bad and the ugly",
+          "rows": [
+            "the good the bad",
+            "and the ugly"
+          ]
+        },
+        {
+          "id": "the_mission",
+          "type": "MOVIE",
+          "answer": "The Mission",
+          "rows": [
+          ]
+        },
+        {
+          "id": "top_gun",
+          "type": "MOVIE",
+          "answer": "Top gun",
+          "rows": [
+          ]
+        },
+        {
+          "id": "two_and_a_half_men",
+          "type": "TV SERIES",
+          "answer": "Two and a half men",
+          "rows": [
+            "two and",
+            "a half men"
+          ]
+        },
+        {
+          "id": "walt_disney",
+          "type": "STUDIO",
+          "answer": "Walt Disney",
+          "rows": [
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "a_space_odyssey",
+          "type": "MOVIE",
+          "answer": "2001 A Space Odyssey",
+          "rows": [
+            "2001 a",
+            "space",
+            "odyssey"
+          ]
+        },
+        {
+          "id": "american_beauty",
+          "type": "MOVIE",
+          "answer": "American Beauty",
+          "rows": [
+            "american",
+            "beauty"
+          ]
+        },
+        {
+          "id": "californication",
+          "type": "TV SERIES",
+          "answer": "Californication",
+          "rows": [
+          ]
+        },
+        {
+          "id": "conquest_of_paradise",
+          "type": "MOVIE",
+          "answer": "1492 Conquest of Paradise",
+          "rows": [
+            "1492 conquest",
+            "of paradise"
+          ]
+        },
+        {
+          "id": "dawsons_creek",
+          "type": "TV SERIES",
+          "answer": "Dawson's Creek",
+          "rows": [
+            "dawsons",
+            "creek"
+          ]
+        },
+        {
+          "id": "et",
+          "type": "MOVIE",
+          "answer": "E.T.",
+          "rows": [
+          ]
+        },
+        {
+          "id": "grease",
+          "type": "MOVIE",
+          "answer": "Grease",
+          "rows": [
+          ]
+        },
+        {
+          "id": "greys_anatomy",
+          "type": "TV SERIES",
+          "answer": "Grey's Anatomy",
+          "rows": [
+            "greys",
+            "anatomy"
+          ]
+        },
+        {
+          "id": "harry_potter",
+          "type": "MOVIE",
+          "answer": "Harry Potter",
+          "rows": [
+            "harry",
+            "potter"
+          ]
+        },
+        {
+          "id": "spongebob",
+          "type": "TV SERIES",
+          "answer": "SpongeBob",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_matrix",
+          "type": "MOVIE",
+          "answer": "The Matrix",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_nightmare_before_christmas",
+          "type": "MOVIE",
+          "answer": "The Nightmare Before Christmas",
+          "rows": [
+            "the nightmare",
+            "before",
+            "christmas"
+          ]
+        },
+        {
+          "id": "the_walking_dead",
+          "type": "TV SERIES",
+          "answer": "The Walking Dead",
+          "rows": [
+            "the walking",
+            "dead"
+          ]
+        },
+        {
+          "id": "the_x_files",
+          "type": "TV SERIES",
+          "answer": "The X Files",
+          "rows": [
+          ]
+        },
+        {
+          "id": "gladiator",
+          "type": "MOVIE",
+          "answer": "Gladiator",
+          "rows": [
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "futurama",
+          "type": "TV SERIES",
+          "answer": "Futurama",
+          "rows": [
+          ]
+        },
+        {
+          "id": "x_factor",
+          "type": "TV SERIES",
+          "answer": "X Factor",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_a_team",
+          "type": "TV SERIES",
+          "answer": "The A-Team",
+          "rows": [
+          ]
+        },
+        {
+          "id": "modern_family",
+          "type": "TV SERIES",
+          "answer": "Modern Family",
+          "rows": [
+            "modern",
+            "family"
+          ]
+        },
+        {
+          "id": "fresh_prince_of_bel_air",
+          "type": "TV SERIES",
+          "answer": "Fresh prince of bel air",
+          "rows": [
+            "fresh prince",
+            "of bel air"
+          ]
+        },
+        {
+          "id": "amelie",
+          "type": "MOVIE",
+          "answer": "Amelie",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_bridge_on_the_river_kwai",
+          "type": "MOVIE",
+          "answer": "The Bridge on the River Kwai",
+          "rows": [
+            "the bridge on",
+            "the river kwai"
+          ]
+        },
+        {
+          "id": "monsters_inc",
+          "type": "MOVIE",
+          "answer": "Monsters Inc.",
+          "rows": [
+          ]
+        },
+        {
+          "id": "saturday_night_live",
+          "type": "TV SERIES",
+          "answer": "Saturday Night Live",
+          "rows": [
+            "saturday",
+            "night live"
+          ]
+        },
+        {
+          "id": "schindlers_list",
+          "type": "MOVIE",
+          "answer": "Schindler's list",
+          "rows": [
+            "schindlers",
+            "list"
+          ]
+        },
+        {
+          "id": "teletubbies",
+          "type": "TV SERIES",
+          "answer": "Teletubbies",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_last_of_the_mohicans",
+          "type": "MOVIE",
+          "answer": "The last of the Mohicans",
+          "rows": [
+            "the last of",
+            "the mohicans"
+          ]
+        },
+        {
+          "id": "the_office",
+          "type": "TV SERIES",
+          "answer": "The Office",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_pink_panther",
+          "type": "MOVIE",
+          "answer": "The Pink Panther",
+          "rows": [
+            "the pink",
+            "panther"
+          ]
+        },
+        {
+          "id": "true_blood",
+          "type": "TV SERIES",
+          "answer": "True Blood",
+          "rows": [
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "the_magnificent_seven",
+          "type": "MOVIE",
+          "answer": "The Magnificent Seven",
+          "rows": [
+            "the",
+            "magnificent",
+            "seven"
+          ]
+        },
+        {
+          "id": "desperate_housewives",
+          "type": "TV SERIES",
+          "answer": "Desperate Housewives",
+          "rows": [
+            "desperate",
+            "housewives"
+          ]
+        },
+        {
+          "id": "for_a_few_dollars_more",
+          "type": "MOVIE",
+          "answer": "For a few dollars more",
+          "rows": [
+            "for a few",
+            "dollars more"
+          ]
+        },
+        {
+          "id": "kung_fu_panda",
+          "type": "MOVIE",
+          "answer": "Kung fu panda",
+          "rows": [
+            "kung fu",
+            "panda"
+          ]
+        },
+        {
+          "id": "rain_man",
+          "type": "MOVIE",
+          "answer": "Rain Man",
+          "rows": [
+          ]
+        },
+        {
+          "id": "glee",
+          "type": "TV SERIES",
+          "answer": "Glee",
+          "rows": [
+          ]
+        },
+        {
+          "id": "malcolm_in_the_middle",
+          "type": "TV SERIES",
+          "answer": "Malcolm in the middle",
+          "rows": [
+            "malcolm in",
+            "the middle"
+          ]
+        },
+        {
+          "id": "mission_impossible",
+          "type": "MOVIE",
+          "answer": "Mission Impossible",
+          "rows": [
+            "mission",
+            "impossible"
+          ]
+        },
+        {
+          "id": "reservoir_dogs",
+          "type": "MOVIE",
+          "answer": "Reservoir Dogs",
+          "rows": [
+            "reservoir",
+            "dogs"
+          ]
+        },
+        {
+          "id": "sex_and_the_city",
+          "type": "TV SERIES",
+          "answer": "Sex and the City",
+          "rows": [
+            "sex and",
+            "the city"
+          ]
+        },
+        {
+          "id": "star_trek",
+          "type": "TV SERIES",
+          "answer": "Star Trek",
+          "rows": [
+          ]
+        },
+        {
+          "id": "back_to_the_future",
+          "type": "MOVIE",
+          "answer": "Back to the future",
+          "rows": [
+            "back to",
+            "the future"
+          ]
+        },
+        {
+          "id": "dragonball",
+          "type": "TV SERIES",
+          "answer": "Dragonball",
+          "rows": [
+          ]
+        },
+        {
+          "id": "doctor_who",
+          "type": "TV SERIES",
+          "answer": "Doctor Who",
+          "rows": [
+          ]
+        },
+        {
+          "id": "love_story",
+          "type": "MOVIE",
+          "answer": "Love Story",
+          "rows": [
+            "love",
+            "story"
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "smallville",
+          "type": "TV SERIES",
+          "answer": "Smallville",
+          "rows": [
+          ]
+        },
+        {
+          "id": "hugo",
+          "type": "MOVIE",
+          "answer": "Hugo",
+          "rows": [
+          ]
+        },
+        {
+          "id": "beverly_hills",
+          "type": "TV SERIES",
+          "answer": "Beverly Hills",
+          "rows": [
+            "beverly",
+            "hills"
+          ]
+        },
+        {
+          "id": "adventure_time",
+          "type": "TV SERIES",
+          "answer": "Adventure Time",
+          "rows": [
+            "adventure",
+            "time"
+          ]
+        },
+        {
+          "id": "frozen",
+          "type": "MOVIE",
+          "answer": "Frozen",
+          "rows": [
+          ]
+        },
+        {
+          "id": "breakfast_at_tiffany",
+          "type": "MOVIE",
+          "answer": "Breakfast at Tiffany",
+          "rows": [
+            "breakfast",
+            "at tiffany"
+          ]
+        },
+        {
+          "id": "star_wars_main",
+          "type": "MOVIE",
+          "answer": "Star Wars",
+          "rows": [
+          ]
+        },
+        {
+          "id": "madagascar",
+          "type": "MOVIE",
+          "answer": "Madagascar",
+          "rows": [
+          ]
+        },
+        {
+          "id": "mr_bean",
+          "type": "TV SERIES",
+          "answer": "Mr. Bean",
+          "rows": [
+          ]
+        },
+        {
+          "id": "thirty_rock",
+          "type": "TV SERIES",
+          "answer": "30 Rock",
+          "rows": [
+          ]
+        },
+        {
+          "id": "prison_break",
+          "type": "TV SERIES",
+          "answer": "Prison Break",
+          "rows": [
+            "prison",
+            "break"
+          ]
+        },
+        {
+          "id": "up",
+          "type": "MOVIE",
+          "answer": "Up",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_chronicles_of_narnia",
+          "type": "MOVIE",
+          "answer": "The Chronicles of Narnia",
+          "rows": [
+            "the chronicles",
+            "of narnia"
+          ]
+        },
+        {
+          "id": "braveheart",
+          "type": "MOVIE",
+          "answer": "Braveheart",
+          "rows": [
+          ]
+        },
+        {
+          "id": "boardwalk_empire",
+          "type": "TV SERIES",
+          "answer": "Boardwalk Empire",
+          "rows": [
+            "boardwalk",
+            "empire"
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "nine_and_a_half_weeks",
+          "type": "MOVIE",
+          "answer": "nine and a half weeks",
+          "rows": [
+            "nine and a",
+            "half weeks"
+          ]
+        },
+        {
+          "id": "doctor_house",
+          "type": "TV SERIES",
+          "answer": "House",
+          "rows": [
+          ]
+        },
+        {
+          "id": "ratatouille",
+          "type": "MOVIE",
+          "answer": "Ratatouille",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_da_vinci_code",
+          "type": "MOVIE",
+          "answer": "The Da Vinci Code",
+          "rows": [
+            "the da",
+            "vinci code"
+          ]
+        },
+        {
+          "id": "batman",
+          "type": "MOVIE",
+          "answer": "Batman",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_lion_king_this_land",
+          "type": "MOVIE",
+          "answer": "The Lion King",
+          "rows": [
+            "the lion",
+            "king"
+          ]
+        },
+        {
+          "id": "seinfield",
+          "type": "TV SERIES",
+          "answer": "Seinfield",
+          "rows": [
+          ]
+        },
+        {
+          "id": "forbidden_games",
+          "type": "MOVIE",
+          "answer": "Forbidden Games",
+          "rows": [
+            "forbidden",
+            "games"
+          ]
+        },
+        {
+          "id": "er",
+          "type": "TV SERIES",
+          "answer": "ER",
+          "rows": [
+          ]
+        },
+        {
+          "id": "veronica_mars",
+          "type": "TV SERIES",
+          "answer": "Veronica Mars",
+          "rows": [
+            "veronica",
+            "mars"
+          ]
+        },
+        {
+          "id": "ghost",
+          "type": "MOVIE",
+          "answer": "Ghost",
+          "rows": [
+          ]
+        },
+        {
+          "id": "buffy_the_vampire_slayer",
+          "type": "TV SERIES",
+          "answer": "Buffy the Vampire Slayer",
+          "rows": [
+            "buffy the",
+            "vampire slayer"
+          ]
+        },
+        {
+          "id": "spirited_away",
+          "type": "MOVIE",
+          "answer": "Spirited Away",
+          "rows": [
+            "spirited",
+            "away"
+          ]
+        },
+        {
+          "id": "the_lord_of_the_rings_the_two_towers",
+          "type": "MOVIE",
+          "answer": "The Lord of the Rings",
+          "rows": [
+            "the lord of",
+            "the rings"
+          ]
+        },
+        {
+          "id": "flashdance",
+          "type": "MOVIE",
+          "answer": "Flashdance",
+          "rows": [
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "american_dad",
+          "type": "TV SERIES",
+          "answer": "American Dad",
+          "rows": [
+          ]
+        },
+        {
+          "id": "dharma_and_greg",
+          "type": "TV SERIES",
+          "answer": "Dharma and Greg",
+          "rows": [
+            "dharma",
+            "and greg"
+          ]
+        },
+        {
+          "id": "midnight_in_paris",
+          "type": "MOVIE",
+          "answer": "Midnight in Paris",
+          "rows": [
+            "midnight",
+            "in paris"
+          ]
+        },
+        {
+          "id": "ice_age",
+          "type": "MOVIE",
+          "answer": "Ice Age",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_sting",
+          "type": "MOVIE",
+          "answer": "The Sting",
+          "rows": [
+          ]
+        },
+        {
+          "id": "shawshank_redemption",
+          "type": "MOVIE",
+          "answer": "Shawshank Redemption",
+          "rows": [
+            "shawshank",
+            "redemption"
+          ]
+        },
+        {
+          "id": "twenty_four",
+          "type": "TV SERIES",
+          "answer": "24",
+          "rows": [
+          ]
+        },
+        {
+          "id": "superman",
+          "type": "MOVIE",
+          "answer": "Superman",
+          "rows": [
+          ]
+        },
+        {
+          "id": "fringe",
+          "type": "TV SERIES",
+          "answer": "Fringe",
+          "rows": [
+          ]
+        },
+        {
+          "id": "new_girl",
+          "type": "TV SERIES",
+          "answer": "New Girl",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_voice",
+          "type": "TV SERIES",
+          "answer": "The Voice",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_millionaire",
+          "type": "MOVIE",
+          "answer": "The Millionaire",
+          "rows": [
+            "the",
+            "millionaire"
+          ]
+        },
+        {
+          "id": "how_to_train_your_dragon",
+          "type": "MOVIE",
+          "answer": "How to train your Dragon",
+          "rows": [
+            "how to train",
+            "your dragon"
+          ]
+        },
+        {
+          "id": "will_and_grace",
+          "type": "TV SERIES",
+          "answer": "Will and Grace",
+          "rows": [
+            "will and",
+            "grace"
+          ]
+        },
+        {
+          "id": "columbia_pictures",
+          "type": "STUDIO",
+          "answer": "Columbia Pictures",
+          "rows": [
+            "columbia",
+            "pictures"
+          ]
+        }
+      ]
+    }
+  ]
+}

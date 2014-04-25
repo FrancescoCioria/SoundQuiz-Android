@@ -56,13 +56,13 @@ public class LevelActivity extends Activity {
                 break;
             case Utility.VIP:
 //                ((ImageView)(findViewById(R.id.backgroundImageView))).setImageDrawable(getResources().getDrawable(R.drawable.south_park_background_complete));
-                ((ImageView)(findViewById(R.id.backgroundImageView))).setImageDrawable(getResources().getDrawable(R.drawable.guess_who_background_complete));
+                ((ImageView) (findViewById(R.id.backgroundImageView))).setImageDrawable(getResources().getDrawable(R.drawable.guess_who_background_complete));
                 break;
         }
 
         //binding
         quizListView = (ListView) findViewById(R.id.quizListView);
-        back = (TextView) findViewById(R.id.back);
+//        back = (TextView) findViewById(R.id.back);
         textViewQuizSolved = (TextView) findViewById(R.id.textViewQuizDone);
         TextView textViewLevel = (TextView) findViewById(R.id.textViewLevel);
 
@@ -79,13 +79,19 @@ public class LevelActivity extends Activity {
         });
 
 
-        back.setText("< Levels");
-        back.setOnClickListener(new View.OnClickListener() {
+//        back.setText("< Levels");
+        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
+        findViewById(R.id.back).setAlpha(0.5f);
+        findViewById(R.id.back).getLayoutParams().height = Utility.convertDpToPixels(this, 50) * 2 / 3;
+        findViewById(R.id.back).getLayoutParams().width = (int) (Utility.convertDpToPixels(this, 50) * 0.666f * 2.25f);
+
+//        findViewById(R.id.topBar).getLayoutParams().width = Utility.getWidth(this) * 9 / 10;
+//        getListView().getLayoutParams().width = Utility.getWidth(this) * 9 / 10;
 
         getListView().setOnTouchListener(new AbsListView.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {

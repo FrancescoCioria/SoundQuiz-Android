@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.view.View;
 
 import java.util.ArrayList;
 
@@ -37,6 +38,16 @@ public class PackageListActivity extends FragmentActivity {
         setContentView(R.layout.activity_package_list);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         Utility.hideActionbar(this);
+
+        findViewById(R.id.back).setAlpha(0.5f);
+        findViewById(R.id.back).getLayoutParams().height = Utility.convertDpToPixels(this, 50) * 2 / 3;
+        findViewById(R.id.back).getLayoutParams().width = (int) (Utility.convertDpToPixels(this, 50) * 0.666f * 2.25f);
+        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
 //        Button buttonBack = (Button) findViewById(R.id.buttonBack);
 //        buttonBack.setOnClickListener(new View.OnClickListener() {

@@ -90,7 +90,7 @@ public class LevelListViewAdapter extends BaseAdapter {
                 unlockedlevelItemViewHolder.layout = (RelativeLayout) paramView.findViewById(R.id.layout);
                 unlockedlevelItemViewHolder.progressBar = (ProgressBar) paramView.findViewById(R.id.progressBar);
 
-                unlockedlevelItemViewHolder.layout.getLayoutParams().width = Utility.getWidth(context) * 9 / 10;
+                unlockedlevelItemViewHolder.layout.getLayoutParams().width = Utility.getWidth(context) * 93 / 100;
 
                 paramView.setTag(unlockedlevelItemViewHolder);
             }
@@ -133,7 +133,7 @@ public class LevelListViewAdapter extends BaseAdapter {
             lockedlevelItemViewHolder.titleTextView = (TextView) paramView.findViewById(R.id.titleTextView);
             lockedlevelItemViewHolder.toUnlockTextView = (TextView) paramView.findViewById(R.id.toUnlockTextView);
 
-            lockedlevelItemViewHolder.layout.getLayoutParams().width = Utility.getWidth(context) * 9 / 10;
+            lockedlevelItemViewHolder.layout.getLayoutParams().width = Utility.getWidth(context) * 93 / 100;
 
             paramView.setTag(lockedlevelItemViewHolder);
         } else {

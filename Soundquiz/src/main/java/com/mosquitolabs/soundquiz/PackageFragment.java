@@ -71,6 +71,12 @@ public class PackageFragment extends Fragment {
 
         nameTextView.setText(PackageCollection.getInstance().getPackageCollection().get(packageIndex).getCategory());
         nameTextView.setTextSize(Utility.pixelsToSp(activity, headerHeight * 0.7f));
+
+        unlockedTextView.setTextSize(Utility.pixelsToSp(activity, bodyHeight * 0.07f));
+        solvedTextView.setTextSize(Utility.pixelsToSp(activity, bodyHeight * 0.07f));
+
+//        progressBar.getLayoutParams().height = (int) (bodyHeight * 0.1f);
+
         int solvedQuizzes = 0;
         for (LevelData levelData : PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList()) {
             for (QuizData quizData : levelData.getQuizList()) {

@@ -12,7 +12,6 @@ import android.widget.AbsListView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 
 public class PackageActivity extends Activity {
@@ -55,22 +54,32 @@ public class PackageActivity extends Activity {
 
 
         levelListView = (ListView) findViewById(R.id.levelListView);
-        TextView back = (TextView) findViewById(R.id.back);
+//        TextView back = (TextView) findViewById(R.id.back);
         RelativeLayout topBar = (RelativeLayout) findViewById(R.id.topBar);
 
         levelListViewAdapter = new LevelListViewAdapter(this, packageIndex);
         levelListView.setAdapter(levelListViewAdapter);
 
-        topBar.getLayoutParams().width = Utility.getWidth(this) * 9 / 10;
+//        topBar.getLayoutParams().width = Utility.getWidth(this) * 9 / 10;
 
-
-        back.setText("Categories");
-        back.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
+        findViewById(R.id.back).setAlpha(0.5f);
+        findViewById(R.id.back).getLayoutParams().height = Utility.convertDpToPixels(this, 50) * 2 / 3;
+        findViewById(R.id.back).getLayoutParams().width = (int) (Utility.convertDpToPixels(this, 50) * 0.666f * 2.25f);
+
+
+//        back.setText("Categories");
+//        back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                onBackPressed();
+//            }
+//        });
 
         levelListView.setOnTouchListener(new AbsListView.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {

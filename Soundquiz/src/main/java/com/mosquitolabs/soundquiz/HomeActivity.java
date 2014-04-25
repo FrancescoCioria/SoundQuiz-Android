@@ -106,7 +106,7 @@ public class HomeActivity extends Activity {
 
 
     private void populate() {
-        Utility.initUtility(this);
+
         PackageCollection.getInstance().populateCollection(this);
     }
 

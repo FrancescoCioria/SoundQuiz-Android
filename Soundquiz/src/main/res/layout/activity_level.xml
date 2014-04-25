@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/topBar"
-        android:paddingLeft="5dp"
+        android:paddingLeft="10dp"
         android:paddingRight="5dp"
         android:layout_centerHorizontal="true">
 
@@ -48,16 +48,26 @@
             android:textColor="#bebebe"
             android:clickable="false" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Levels"
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="24dp"
             android:id="@+id/back"
+            android:src="@drawable/button_back"
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:textColor="@android:color/secondary_text_dark"
-            android:textSize="15sp" />
+            android:scaleType="fitXY" />
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Levels"-->
+        <!--android:id="@+id/back"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:textColor="@android:color/secondary_text_dark"-->
+        <!--android:textSize="15sp" />-->
 
     </RelativeLayout>
 
@@ -71,6 +81,7 @@
         android:dividerHeight="10dp"
         android:listSelector="@android:color/transparent"
         android:overScrollMode="never"
-        android:divider="@android:color/transparent" />
+        android:divider="@android:color/transparent"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

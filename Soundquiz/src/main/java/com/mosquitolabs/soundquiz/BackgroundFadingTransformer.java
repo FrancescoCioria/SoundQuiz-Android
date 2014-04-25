@@ -1,7 +1,6 @@
 package com.mosquitolabs.soundquiz;
 
 import android.annotation.TargetApi;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -60,7 +59,7 @@ public class BackgroundFadingTransformer implements ViewPager.PageTransformer {
     private static class BackgroundHandler {
         private PackageListActivity context;
         private ImageView[] views = {null, null};
-        private Drawable[] images = {null, null, null};
+        //        private Drawable[] images = {null, null, null};
         private int[] indexes = {9, 9};
 
 
@@ -69,10 +68,10 @@ public class BackgroundFadingTransformer implements ViewPager.PageTransformer {
             views[0] = (ImageView) this.context.findViewById(R.id.firstView);
             views[1] = (ImageView) this.context.findViewById(R.id.secondView);
 
-            images[0] = context.getResources().getDrawable(R.drawable.simpsons_background_complete);
-            images[1] = context.getResources().getDrawable(R.drawable.guitar_background_complete);
-//            images[2] = context.getResources().getDrawable(R.drawable.south_park_background_complete);
-            images[2] = context.getResources().getDrawable(R.drawable.guess_who_background_complete);
+//            images[0] = context.getResources().getDrawable(R.drawable.simpsons_background_complete);
+//            images[1] = context.getResources().getDrawable(R.drawable.guitar_background_complete);
+////            images[2] = context.getResources().getDrawable(R.drawable.south_park_background_complete);
+//            images[2] = context.getResources().getDrawable(R.drawable.guess_who_background_complete);
 
         }
 
@@ -96,7 +95,7 @@ public class BackgroundFadingTransformer implements ViewPager.PageTransformer {
         }
 
         private void setBackgroundImage(ImageView image, int index) {
-            image.setImageDrawable(images[index]);
+            image.setImageDrawable(Utility.getImages()[index]);
         }
 
         private void setAlpha(View view, float alpha) {

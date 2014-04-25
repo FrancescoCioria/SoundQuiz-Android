@@ -34,7 +34,6 @@ public class PackageCollection {
 
     private Context context;
     private JSONArray savedData = null;
-    private JSONObject newQuizData = new JSONObject();
 
     public static PackageCollection getInstance() {
         return instance;
@@ -51,15 +50,11 @@ public class PackageCollection {
 
             @Override
             public Bitmap doInBackground(Void... params) {
-
+                Utility.initUtility(context);
                 Log.d("POPULATE", "populating");
                 PackageCollection.this.context = context;
                 long startTime = System.currentTimeMillis();
-                String jsonString = Utility.getSharedPreferences().getString("main_json", "");
-                if (jsonString.length() == 0) {
-                    // first time
-                    initJsonFiles();
-                }
+
                 // populate
                 populate();
 
@@ -82,17 +77,18 @@ public class PackageCollection {
     private void initJsonFiles() {
         try {
             SharedPreferences.Editor editor = Utility.getSharedPreferences().edit();
-            String mainJsonString = getJsonFromS3(MAIN_BUCKET, "main.json");
+//            String mainJsonString = getJsonFromS3(MAIN_BUCKET, "main.json");
+            String mainJsonString = getJsonFromRaw("main");
             editor.putString("main_json", mainJsonString);
 
 //            read main.json and create every category.json
             JSONObject mainJSON = new JSONObject(mainJsonString);
             for (int i = 0; i < mainJSON.getJSONArray("categories").length(); i++) {
                 String category = mainJSON.getJSONArray("categories").getJSONObject(i).getString("category").toLowerCase();
-                String categoryJson = getJsonFromS3(MAIN_BUCKET, category + ".json");
+//                String categoryJson = getJsonFromS3(MAIN_BUCKET, category + ".json");
+                String categoryJson = getJsonFromRaw(category);
                 editor.putString(category + "_json", categoryJson);
             }
-
             editor.commit();
 
         } catch (Exception e) {
@@ -100,7 +96,6 @@ public class PackageCollection {
 
         }
     }
-
 
 //    private void populate() throws IOException {
 //        Log.d("POPULATE", "populatenew");
@@ -204,17 +199,19 @@ public class PackageCollection {
 //        reader.endArray();
 //    }
 
-
     private void populate() {
         try {
-            JSONObject mainJSON = new JSONObject(Utility.getSharedPreferences().getString("main_json", "{}"));
+//            read main.json and create every category.json
+            String mainJsonString = getJsonFromRaw("main");
+            JSONObject mainJSON = new JSONObject(mainJsonString);
             JSONArray categories = mainJSON.getJSONArray("categories");
-
 //            for each category get its json and populate
             for (int x = 0; x < categories.length(); x++) {
-                JSONObject categoryJSON = new JSONObject(Utility.getSharedPreferences().getString(categories.getJSONObject(x).getString("category") + "_json", "{}"));
+                String category = categories.getJSONObject(x).getString("category").toLowerCase();
+//                String categoryJson = getJsonFromS3(MAIN_BUCKET, category + ".json");
+                String categoryJson = getJsonFromRaw(category);
+                JSONObject categoryJSON = new JSONObject(categoryJson);
                 PackageData packageData = new PackageData();
-                String category = categoryJSON.getString("category");
                 JSONArray levels = categoryJSON.getJSONArray("levels");
                 for (int i = 0; i < levels.length(); i++) {
                     LevelData levelData = new LevelData();
@@ -236,8 +233,6 @@ public class PackageCollection {
                             }
                         }
 
-//                        String ID = category + Integer.toString(i) + quizJSON.getString("id");
-//                        quizData.setID(ID);
                         quizData.setID(quizJSON.getString("id"));
 
                         quizData.setType(quizJSON.getString("type"));
@@ -245,15 +240,17 @@ public class PackageCollection {
                         if (!addQuizToSavedData(quizData)) {
                             populateQuizWithSavedData(quizData);
                         }
-//                        if (Utility.readImageFromDisk(context, ID, true) == null) {
-//                            Utility.saveImageToDisk(context, ID, getImageFromS3(quizData.getQuizID(),false));
-//                            Utility.saveImageToDisk(context, ID, getImageFromS3(quizData.getQuizID(),true));
-//                        }
 
                         levelData.getQuizList().add(quizData);
                     }
                     packageData.getLevelList().add(levelData);
-                    packageData.setCategory(category);
+                    if(category.equals("cinema_tv")){
+                        packageData.setCategory("Cinema & Tv");
+                    }else if(category.equals("music")){
+                        packageData.setCategory("Music");
+                    }else{
+                        packageData.setCategory("VIP & Characters");
+                    }
                 }
 
                 PackageCollection.getInstance().getPackageCollection().add(packageData);
@@ -276,10 +273,9 @@ public class PackageCollection {
                 }
             }
 
-            newQuizData.put("id", quizData.getID());
-            newQuizData.put("has_used_hint", false);
-            newQuizData.put("is_solved", false);
-            savedData.put(newQuizData);
+            Log.d("PACKAGE_COLLECTION", "adding quiz to savedData");
+
+            savedData.put(new JSONObject().put("id", quizData.getID()).put("has_used_hint", false).put("is_solved", false));
             SharedPreferences.Editor editor = Utility.getSharedPreferences().edit();
             editor.putString("saved_data", savedData.toString());
             editor.commit();
@@ -298,10 +294,7 @@ public class PackageCollection {
             }
             for (int i = 0; i < savedData.length(); i++) {
                 if (savedData.getJSONObject(i).getString("id").equals(quizData.getID())) {
-                    newQuizData.put("id", quizData.getID());
-                    newQuizData.put("has_used_hint", quizData.hasUsedHint());
-                    newQuizData.put("is_solved", quizData.isSolved());
-                    savedData.put(i, newQuizData);
+                    savedData.put(i, new JSONObject().put("id", quizData.getID()).put("has_used_hint", quizData.hasUsedHint()).put("is_solved", quizData.isSolved()));
                     SharedPreferences.Editor editor = Utility.getSharedPreferences().edit();
                     editor.putString("saved_data", savedData.toString());
                     editor.commit();
@@ -335,6 +328,35 @@ public class PackageCollection {
             e.printStackTrace();
         }
     }
+
+    private String getJsonFromRaw(String jsonPath) {
+        String JSONString;
+        try {
+            //open the inputStream to the file
+            int res = context.getResources().getIdentifier(jsonPath, "raw", context.getPackageName());
+            InputStream inputStream = context.getResources().openRawResource(res);
+
+            int sizeOfJSONFile = inputStream.available();
+
+            //array that will store all the data
+            byte[] bytes = new byte[sizeOfJSONFile];
+
+            //reading data into the array from the file
+            inputStream.read(bytes);
+
+            //close the input stream
+            inputStream.close();
+
+            JSONString = new String(bytes, "UTF-8");
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return JSONString;
+
+    }
+
 
     private String getJsonFromS3(String bucket, String name) {
         try {

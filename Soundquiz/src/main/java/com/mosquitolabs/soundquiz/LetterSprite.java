@@ -183,8 +183,8 @@ public class LetterSprite {
             case Utility.VIP:
                 rectPaint.setColor(gameView.getResources().getColor(R.color.tile_character));
                 textPaint.setColor(gameView.getResources().getColor(R.color.tile_text_character));
-                rectPaint.setColor(Color.rgb(240, 240, 240));
-                textPaint.setColor(Color.rgb(54, 22, 21));
+//                rectPaint.setColor(Color.rgb(240, 240, 240));
+//                textPaint.setColor(Color.rgb(54, 22, 21));
                 break;
         }
     }

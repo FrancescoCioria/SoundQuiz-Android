@@ -161,8 +161,6 @@ public class GameView extends View {
                 break;
             case Utility.VIP:
                 rectPaint.setColor(getResources().getColor(R.color.space_character));
-                rectPaint.setColor(Color.BLACK);
-                rectPaint.setAlpha(140);
                 break;
         }
     }

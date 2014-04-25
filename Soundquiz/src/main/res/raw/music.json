@@ -1,0 +1,1309 @@
+{
+  "category": "Music",
+  "levels": [
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "the_beatles_hey_jude",
+          "type": "artist",
+          "answer": "The Beatles",
+          "rows": [
+            "the",
+            "beatles"
+          ]
+        },
+        {
+          "id": "miley_cyrus_wrecking_ball",
+          "type": "song",
+          "answer": "Wrecking ball",
+          "rows": [
+            "wrecking",
+            "ball"
+          ]
+        },
+        {
+          "id": "lorde_royals",
+          "type": "song",
+          "answer": "Royals",
+          "rows": [
+          ]
+        },
+        {
+          "id": "daft_punk_get_lucky",
+          "type": "song",
+          "answer": "Get Lucky",
+          "rows": [
+            "get",
+            "lucky"
+          ]
+        },
+        {
+          "id": "bastille_pompeii",
+          "type": "song",
+          "answer": "Pompeii",
+          "rows": [
+          ]
+        },
+        {
+          "id": "justin_timberlake_mirrors",
+          "type": "artist",
+          "answer": "Justin Timberlake",
+          "rows": [
+            "justin",
+            "timberlake"
+          ]
+        },
+        {
+          "id": "madonna_hung_up",
+          "type": "artist",
+          "answer": "Madonna",
+          "rows": [
+          ]
+        },
+        {
+          "id": "rihanna_diamonds",
+          "type": "song",
+          "answer": "Diamonds",
+          "rows": [
+          ]
+        },
+        {
+          "id": "adele_someone_like_you",
+          "type": "song",
+          "answer": "Someone like you",
+          "rows": [
+            "someone",
+            "like you"
+          ]
+        },
+        {
+          "id": "robin_thick_blurred_lines",
+          "type": "song",
+          "answer": "Blurred Lines",
+          "rows": [
+            "blurred",
+            "lines"
+          ]
+        },
+        {
+          "id": "beyonce_single_ladies",
+          "type": "song",
+          "answer": "Single Ladies",
+          "rows": [
+            "single",
+            "ladies"
+          ]
+        },
+        {
+          "id": "eminem_not_afraid",
+          "type": "artist",
+          "answer": "Eminem",
+          "rows": [
+          ]
+        },
+        {
+          "id": "katy_perry_firework",
+          "type": "song",
+          "answer": "Firework",
+          "rows": [
+          ]
+        },
+        {
+          "id": "macklemore_cant_hold_us",
+          "type": "song",
+          "answer": "Cant Hold Us",
+          "rows": [
+            "cant",
+            "hold us"
+          ]
+        },
+        {
+          "id": "imagine_dragons_radioactive",
+          "type": "artist",
+          "answer": "Imagine Dragons",
+          "rows": [
+            "imagine",
+            "dragons"
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "avicii_wake_me_up",
+          "type": "song",
+          "answer": "Wake me up",
+          "rows": [
+            "wake",
+            "me up"
+          ]
+        },
+        {
+          "id": "frank_sinatra_come_fly_with_me",
+          "type": "artist",
+          "answer": "Frank Sinatra",
+          "rows": [
+            "frank",
+            "sinatra"
+          ]
+        },
+        {
+          "id": "bruno_mars_the_lazy_song",
+          "type": "song",
+          "answer": "The Lazy Song",
+          "rows": [
+            "the",
+            "lazy song"
+          ]
+        },
+        {
+          "id": "nsync_bye_bye_bye",
+          "type": "song",
+          "answer": "Bye Bye Bye",
+          "rows": [
+            "bye",
+            "bye bye"
+          ]
+        },
+        {
+          "id": "linkin_park_numb",
+          "type": "artist",
+          "answer": "Linkin Park",
+          "rows": [
+            "linkin",
+            "park"
+          ]
+        },
+        {
+          "id": "demi_lovato_heart_attack",
+          "type": "song",
+          "answer": "Heart Attack",
+          "rows": [
+            "heart",
+            "attack"
+          ]
+        },
+        {
+          "id": "duck_sauce_barbra_streisand",
+          "type": "artist",
+          "answer": "Duck Sauce",
+          "rows": [
+            "duck",
+            "sauce"
+          ]
+        },
+        {
+          "id": "queen_bohemian_rhapsody",
+          "type": "song",
+          "answer": "Bohemian Rhapsody",
+          "rows": [
+            "bohemian",
+            "rhapsody"
+          ]
+        },
+        {
+          "id": "passenger_let_her_go",
+          "type": "song",
+          "answer": "Let Her Go",
+          "rows": [
+            "let",
+            "her go"
+          ]
+        },
+        {
+          "id": "lmfao_sexy_and_i_know_it",
+          "type": "artist",
+          "answer": "LMFAO",
+          "rows": [
+          ]
+        },
+        {
+          "id": "maroon_five_payphone",
+          "type": "song",
+          "answer": "Payphone",
+          "rows": [
+          ]
+        },
+        {
+          "id": "coldplay_paradise",
+          "type": "song",
+          "answer": "Paradise",
+          "rows": [
+          ]
+        },
+        {
+          "id": "kesha_die_young",
+          "type": "song",
+          "answer": "Die Young",
+          "rows": [
+            "die",
+            "young"
+          ]
+        },
+        {
+          "id": "nelly_furtado_say_it_right",
+          "type": "artist",
+          "answer": "Nelly Furtado",
+          "rows": [
+            "nelly",
+            "furtado"
+          ]
+        },
+        {
+          "id": "the_black_keys_lonely_boy",
+          "type": "song",
+          "answer": "Lonely Boy",
+          "rows": [
+            "lonely",
+            "boy"
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "fifty_cent_in_da_club",
+          "type": "song",
+          "answer": "In Da Club",
+          "rows": [
+            "in da",
+            "club"
+          ]
+        },
+        {
+          "id": "onerepublic_counting_stars",
+          "type": "song",
+          "answer": "Counting stars",
+          "rows": [
+            "counting",
+            "stars"
+          ]
+        },
+        {
+          "id": "blur_song_two",
+          "type": "song",
+          "answer": "Song 2",
+          "rows": [
+          ]
+        },
+        {
+          "id": "keane_somewhere_only_we_know",
+          "type": "artist",
+          "answer": "Keane",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_black_eyed_peas_i_gotta_feeling",
+          "type": "song",
+          "answer": "I gotta feeling",
+          "rows": [
+            "i gotta",
+            "feeling"
+          ]
+        },
+        {
+          "id": "capital_cities_safe_and_sound",
+          "type": "song",
+          "answer": "Safe and sound",
+          "rows": [
+            "safe",
+            "and sound"
+          ]
+        },
+        {
+          "id": "skrillex_bangarang",
+          "type": "artist",
+          "answer": "Skrillex",
+          "rows": [
+          ]
+        },
+        {
+          "id": "psy_gangnam_style",
+          "type": "song",
+          "answer": "Gangnam Style",
+          "rows": [
+            "gangnam",
+            "style"
+          ]
+        },
+        {
+          "id": "muse_time_is_running_out",
+          "type": "song",
+          "answer": "Time is running out",
+          "rows": [
+            "time is",
+            "running out"
+          ]
+        },
+        {
+          "id": "the_beatles_yesterday",
+          "type": "song",
+          "answer": "Yesterday",
+          "rows": [
+          ]
+        },
+        {
+          "id": "alicia_keys_girl_on_fire",
+          "type": "artist",
+          "answer": "Alicia keys",
+          "rows": [
+            "alicia",
+            "keys"
+          ]
+        },
+        {
+          "id": "abba_dancing_queen",
+          "type": "song",
+          "answer": "Dancing queen",
+          "rows": [
+            "dancing",
+            "queen"
+          ]
+        },
+        {
+          "id": "the_black_keys_lonely_boy",
+          "type": "song",
+          "answer": "Lonely Boy",
+          "rows": [
+            "lonely",
+            "boy"
+          ]
+        },
+        {
+          "id": "acdc_back_in_black",
+          "type": "artist",
+          "answer": "ACDC",
+          "rows": [
+          ]
+        },
+        {
+          "id": "shakira_waka_waka",
+          "type": "song",
+          "answer": "Waka Waka",
+          "rows": [
+            "waka",
+            "waka"
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "avril_lavigne_girlfriend",
+          "type": "song",
+          "answer": "Girlfriend",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_ramones_blitzkrieg_bop",
+          "type": "song",
+          "answer": "Blitzkrieg Bop",
+          "rows": [
+            "blitzkrieg",
+            "bop"
+          ]
+        },
+        {
+          "id": "own_city_fireflies",
+          "type": "artist",
+          "answer": "Owl City",
+          "rows": [
+            "owl",
+            "city"
+          ]
+        },
+        {
+          "id": "keane_somewhere_only_we_know",
+          "type": "artist",
+          "answer": "Keane",
+          "rows": [
+          ]
+        },
+        {
+          "id": "missy_elliot_work_it",
+          "type": "song",
+          "answer": "Work It",
+          "rows": [
+          ]
+        },
+        {
+          "id": "gotye_somebody_that_i_used_to_know",
+          "type": "song",
+          "answer": "Somebody that I used to know",
+          "rows": [
+            "somebody that",
+            "I used",
+            "to know"
+          ]
+        },
+        {
+          "id": "nicki_minaj_starships",
+          "type": "artist",
+          "answer": "Nicki Minaj",
+          "rows": [
+            "nicki",
+            "minaj"
+          ]
+        },
+        {
+          "id": "tracy_chapman_fast_car",
+          "type": "song",
+          "answer": "Fast Car",
+          "rows": [
+            "fast",
+            "car"
+          ]
+        },
+        {
+          "id": "michael_jackson_bad",
+          "type": "song",
+          "answer": "Bad",
+          "rows": [
+          ]
+        },
+        {
+          "id": "martin_garrix_animals",
+          "type": "song",
+          "answer": "Animals",
+          "rows": [
+          ]
+        },
+        {
+          "id": "rem_losing_my_religion",
+          "type": "artist",
+          "answer": "REM",
+          "rows": [
+            "R",
+            "E M"
+          ]
+        },
+        {
+          "id": "mgmt_electric_feel",
+          "type": "song",
+          "answer": "Electric Feel",
+          "rows": [
+            "electric",
+            "feel"
+          ]
+        },
+        {
+          "id": "nirvana_smells_like_teen_spirits",
+          "type": "song",
+          "answer": "Smells like teen spirits",
+          "rows": [
+            "smells like",
+            "teen spirits"
+          ]
+        },
+        {
+          "id": "deep_purple_smoke_on_the_water",
+          "type": "artist",
+          "answer": "Deep Purple",
+          "rows": [
+            "deep",
+            "purple"
+          ]
+        },
+        {
+          "id": "bon_jovi_livin_on_a_prayer",
+          "type": "song",
+          "answer": "Livin on a prayer",
+          "rows": [
+            "livin on",
+            "a prayer"
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "spice_girls_wannabe",
+          "type": "song",
+          "answer": "Wannabe",
+          "rows": [
+          ]
+        },
+        {
+          "id": "pink_just_give_me_a_reason",
+          "type": "artist",
+          "answer": "Pink",
+          "rows": [
+          ]
+        },
+        {
+          "id": "red_hot_chili_peppers_californication",
+          "type": "song",
+          "answer": "Californication",
+          "rows": [
+          ]
+        },
+        {
+          "id": "naughty_boy_la_la_la",
+          "type": "song",
+          "answer": "La La La",
+          "rows": [
+            "la",
+            "la la"
+          ]
+        },
+        {
+          "id": "lana_del_rey_summertime_sadness",
+          "type": "song",
+          "answer": "Summertime Sadness",
+          "rows": [
+            "summertime",
+            "sadness"
+          ]
+        },
+        {
+          "id": "tokio_hotel_monsoon",
+          "type": "artist",
+          "answer": "Tokio Hotel",
+          "rows": [
+            "tokio",
+            "hotel"
+          ]
+        },
+        {
+          "id": "eminem_without_me",
+          "type": "song",
+          "answer": "Without Me",
+          "rows": [
+            "without",
+            "me"
+          ]
+        },
+        {
+          "id": "empire_of_the_sun_walking_on_a_dream",
+          "type": "song",
+          "answer": "Walking on a dream",
+          "rows": [
+            "walking on",
+            "a dream"
+          ]
+        },
+        {
+          "id": "outkast_hey_ya",
+          "type": "artist",
+          "answer": "Outkast",
+          "rows": [
+          ]
+        },
+        {
+          "id": "kanye_west_heartless",
+          "type": "song",
+          "answer": "Heartless",
+          "rows": [
+          ]
+        },
+        {
+          "id": "pitbull_timber",
+          "type": "song",
+          "answer": "Timber",
+          "rows": [
+          ]
+        },
+        {
+          "id": "maroon_five_she_will_be_loved",
+          "type": "artist",
+          "answer": "Maroon 5",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_strokes_you_only_live_once",
+          "type": "song",
+          "answer": "You only live once",
+          "rows": [
+          ]
+        },
+        {
+          "id": "mia_paper_planes",
+          "type": "song",
+          "answer": "Paper Planes",
+          "rows": [
+            "paper",
+            "planes"
+          ]
+        },
+        {
+          "id": "cypress_hill_insane_in_the_brain",
+          "type": "artist",
+          "answer": "Cypress Hill",
+          "rows": [
+            "cypress",
+            "hill"
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "bob_marley_one_love",
+          "type": "song",
+          "answer": "One Love",
+          "rows": [
+            "one",
+            "love"
+          ]
+        },
+        {
+          "id": "the_calling_wherever_you_will_go",
+          "type": "song",
+          "answer": "Wherever you will go",
+          "rows": [
+            "weherever you",
+            "will go"
+          ]
+        },
+        {
+          "id": "ylvis_the_fox",
+          "type": "artist",
+          "answer": "Ylvis",
+          "rows": [
+          ]
+        },
+        {
+          "id": "jessie_j_price_tag",
+          "type": "song",
+          "answer": "Price Tag",
+          "rows": [
+            "price",
+            "tag"
+          ]
+        },
+        {
+          "id": "limp_bizkit_rollin",
+          "type": "song",
+          "answer": "Rollin",
+          "rows": [
+          ]
+        },
+        {
+          "id": "azealia_banks_two_one_two",
+          "type": "artist",
+          "answer": "Azealia Banks",
+          "rows": [
+            "azealia",
+            "banks"
+          ]
+        },
+        {
+          "id": "blink_one_eight_two_all_the_small_things",
+          "type": "song",
+          "answer": "All the small things",
+          "rows": [
+            "all the",
+            "small things"
+          ]
+        },
+        {
+          "id": "fatboy_slim_the_rockafeller_skank",
+          "type": "song",
+          "answer": "The rockafeller skank",
+          "rows": [
+            "the rockafeller",
+            "skank"
+          ]
+        },
+        {
+          "id": "miley_cyrus_we_cant_stop",
+          "type": "artist",
+          "answer": "Miley Cyrus",
+          "rows": [
+            "miley",
+            "cyrus"
+          ]
+        },
+        {
+          "id": "u_two_one",
+          "type": "song",
+          "answer": "One",
+          "rows": [
+          ]
+        },
+        {
+          "id": "macklemore_thrift_shop",
+          "type": "song",
+          "answer": "Thrift shop",
+          "rows": [
+            "thrift",
+            "shop"
+          ]
+        },
+        {
+          "id": "the_killers_mr_brightside",
+          "type": "song",
+          "answer": "Mr Brightside",
+          "rows": [
+          ]
+        },
+        {
+          "id": "snoop_dogg_drop_it_like_its_hot",
+          "type": "artist",
+          "answer": "Snoop Dogg",
+          "rows": [
+            "snoop",
+            "dogg"
+          ]
+        },
+        {
+          "id": "eminem_love_the_way_you_lie",
+          "type": "song",
+          "answer": "Love the way you lie",
+          "rows": [
+            "love the",
+            "way you lie"
+          ]
+        },
+        {
+          "id": "guns_n_roses_paradise_city",
+          "type": "song",
+          "answer": "Paradise City",
+          "rows": [
+            "paradise",
+            "city"
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "four_non_blondes_whats_up",
+          "type": "song",
+          "answer": "What's Up",
+          "rows": [
+            "whats",
+            "up"
+          ]
+        },
+        {
+          "id": "the_lonely_island_i_just_had_sex",
+          "type": "artist",
+          "answer": "The Lonely Island",
+          "rows": [
+            "the lonely",
+            "island"
+          ]
+        },
+        {
+          "id": "pharrell_williams_happy",
+          "type": "song",
+          "answer": "Happy",
+          "rows": [
+          ]
+        },
+        {
+          "id": "lynyrd_skynyrd_sweet_home_alabama",
+          "type": "song",
+          "answer": "Sweet Home Alabama",
+          "rows": [
+            "sweet home",
+            "alabama"
+          ]
+        },
+        {
+          "id": "dire_straits_sultans_of_swing",
+          "type": "song",
+          "answer": "Sultans of Swing",
+          "rows": [
+            "sultans",
+            "of swing"
+          ]
+        },
+        {
+          "id": "jennifer_lopez_on_the_floor",
+          "type": "artist",
+          "answer": "Jennifer Lopez",
+          "rows": [
+            "jennifer",
+            "lopez"
+          ]
+        },
+        {
+          "id": "coldplay_fix_you",
+          "type": "song",
+          "answer": "Fix You",
+          "rows": [
+          ]
+        },
+        {
+          "id": "adele_rolling_in_the_deep",
+          "type": "song",
+          "answer": "Rolling in the Deep",
+          "rows": [
+            "rolling in",
+            "the deep"
+          ]
+        },
+        {
+          "id": "muse_supermassive_black_hole",
+          "type": "song",
+          "answer": "Supermassive Black Hole",
+          "rows": [
+            "supermassive",
+            "black hole"
+          ]
+        },
+        {
+          "id": "led_zeppelin_stairway_to_heaven",
+          "type": "artist",
+          "answer": "Led Zeppelin",
+          "rows": [
+            "led",
+            "zeppelin"
+          ]
+        },
+        {
+          "id": "nicki_minaj_super_bass",
+          "type": "song",
+          "answer": "Super Bass",
+          "rows": [
+            "super",
+            "bass"
+          ]
+        },
+        {
+          "id": "the_killers_mr_brightside",
+          "type": "song",
+          "answer": "Mr Brightside",
+          "rows": [
+          ]
+        },
+        {
+          "id": "bob_dylan_like_a_rolling_stone",
+          "type": "song",
+          "answer": "Like a rolling stone",
+          "rows": [
+            "like a",
+            "rolling stone"
+          ]
+        },
+        {
+          "id": "justin_timberlake_senorita",
+          "type": "song",
+          "answer": "Senorita",
+          "rows": [
+          ]
+        },
+        {
+          "id": "imagine_dragons_demons",
+          "type": "song",
+          "answer": "Demons",
+          "rows": [
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "the_chemical_brothers_galvanize",
+          "type": "song",
+          "answer": "Galvanize",
+          "rows": [
+          ]
+        },
+        {
+          "id": "gwen_stefani_hollaback_girl",
+          "type": "artist",
+          "answer": "Hollaback girl",
+          "rows": [
+            "hollaback",
+            "girl"
+          ]
+        },
+        {
+          "id": "michel_telo_ai_se_eu_te_pego",
+          "type": "song",
+          "answer": "Ai Se Eu Te Pego",
+          "rows": [
+            "ai se eu",
+            "te pego"
+          ]
+        },
+        {
+          "id": "eiffel_sixty_five_blue",
+          "type": "artist",
+          "answer": "Eiffel 65",
+          "rows": [
+          ]
+        },
+        {
+          "id": "fifty_cent_ayo_technology",
+          "type": "song",
+          "answer": "Ayo Technology",
+          "rows": [
+            "ayo",
+            "technology"
+          ]
+        },
+        {
+          "id": "green_day_basket_case",
+          "type": "song",
+          "answer": "Basket Case",
+          "rows": [
+            "basket",
+            "case"
+          ]
+        },
+        {
+          "id": "nelly_furtado_im_like_a_bird",
+          "type": "song",
+          "answer": "I'm like a bird",
+          "rows": [
+            "im like",
+            "a bird"
+          ]
+        },
+        {
+          "id": "pixies_where_is_my_mind",
+          "type": "song",
+          "answer": "Where is my mind",
+          "rows": [
+            "where is",
+            "my mind"
+          ]
+        },
+        {
+          "id": "daft_punk_around_the_world",
+          "type": "artist",
+          "answer": "Daft Punk",
+          "rows": [
+            "daft",
+            "punk"
+          ]
+        },
+        {
+          "id": "the_temper_trap_sweet_disposition",
+          "type": "song",
+          "answer": "Sweet Disposition",
+          "rows": [
+            "sweet",
+            "disposition"
+          ]
+        },
+        {
+          "id": "elvis_presley_jailbreak",
+          "type": "artist",
+          "answer": "Elvis Presley",
+          "rows": [
+            "elvis",
+            "presley"
+          ]
+        },
+        {
+          "id": "lmfao_party_rock_anthem",
+          "type": "song",
+          "answer": "Party Rock Anthem",
+          "rows": [
+            "party rock",
+            "anthem"
+          ]
+        },
+        {
+          "id": "one_direction_what_makes_you_beautiful",
+          "type": "song",
+          "answer": "What makes you beautiful",
+          "rows": [
+            "what makes",
+            "you beautiful"
+          ]
+        },
+        {
+          "id": "oasis_wonderwall",
+          "type": "song",
+          "answer": "Wonderwall",
+          "rows": [
+          ]
+        },
+        {
+          "id": "katy_perry_i_kissed_a_girl",
+          "type": "artist",
+          "answer": "Katy Perry",
+          "rows": [
+            "katy",
+            "perry"
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "biz_markie_just_a_friend",
+          "type": "song",
+          "answer": "Just a friend",
+          "rows": [
+            "just a",
+            "friend"
+          ]
+        },
+        {
+          "id": "christina_aguilera_candyman",
+          "type": "song",
+          "answer": "Candyman",
+          "rows": [
+          ]
+        },
+        {
+          "id": "pink_floyd_another_brick_in_the_wall",
+          "type": "song",
+          "answer": "Another brick in the wall",
+          "rows": [
+            "another brick",
+            "in the wall"
+          ]
+        },
+        {
+          "id": "metallica_nothing_else_matters",
+          "type": "artist",
+          "answer": "Metallica",
+          "rows": [
+          ]
+        },
+        {
+          "id": "fifty_cent_ayo_technology",
+          "type": "song",
+          "answer": "Ayo Technology",
+          "rows": [
+            "ayo",
+            "technology"
+          ]
+        },
+        {
+          "id": "the_cranberries_zombie",
+          "type": "song",
+          "answer": "Zombie",
+          "rows": [
+          ]
+        },
+        {
+          "id": "clean_bandit_rather_be",
+          "type": "song",
+          "answer": "Rather be",
+          "rows": [
+          ]
+        },
+        {
+          "id": "don_omar_danza_kuduro",
+          "type": "song",
+          "answer": "Danza Kuduro",
+          "rows": [
+            "danza",
+            "kuduro"
+          ]
+        },
+        {
+          "id": "robbie_williams_feel",
+          "type": "artist",
+          "answer": "Robbie Williams",
+          "rows": [
+            "robbie",
+            "williams"
+          ]
+        },
+        {
+          "id": "radiohead_creep",
+          "type": "song",
+          "answer": "Creep",
+          "rows": [
+          ]
+        },
+        {
+          "id": "lil_wayne_mirror",
+          "type": "song",
+          "answer": "Mirror",
+          "rows": [
+          ]
+        },
+        {
+          "id": "the_rolling_stones_satisfaction",
+          "type": "artist",
+          "answer": "The Rolling Stones",
+          "rows": [
+            "the rolling",
+            "stones"
+          ]
+        },
+        {
+          "id": "the_rasmus_in_the_shadows",
+          "type": "song",
+          "answer": "In the shadows",
+          "rows": [
+            "in the",
+            "shadows"
+          ]
+        },
+        {
+          "id": "the_doors_light_my_fire",
+          "type": "song",
+          "answer": "Light my fire",
+          "rows": [
+            "light",
+            "my fire"
+          ]
+        },
+        {
+          "id": "usher_dj_got_us_fallin_in_love",
+          "type": "artist",
+          "answer": "Usher",
+          "rows": [
+          ]
+        }
+      ]
+    },
+    {
+      "is_free": true,
+      "quizzes": [
+        {
+          "id": "madonna_like_a_virgin",
+          "type": "song",
+          "answer": "Like a virgin",
+          "rows": [
+            "like a",
+            "virgin"
+          ]
+        },
+        {
+          "id": "eagle_eye_cherry_save_tonight",
+          "type": "song",
+          "answer": "Save Tonight",
+          "rows": [
+            "save",
+            "tonight"
+          ]
+        },
+        {
+          "id": "arctic_monkeys_fluorescent_adolescent",
+          "type": "song",
+          "answer": "Fluorescent Adolescent",
+          "rows": [
+            "fluorescent",
+            "adolescent"
+          ]
+        },
+        {
+          "id": "calvin_harris_under_control",
+          "type": "artist",
+          "answer": "Calvin Harris",
+          "rows": [
+            "calvin",
+            "harris"
+          ]
+        },
+        {
+          "id": "queen_another_one_bites_the_dust",
+          "type": "song",
+          "answer": "Another one bites the dust",
+          "rows": [
+            "another one",
+            "bites the dust"
+          ]
+        },
+        {
+          "id": "sean_paul_get_busy",
+          "type": "song",
+          "answer": "Get Busy",
+          "rows": [
+            "get",
+            "busy"
+          ]
+        },
+        {
+          "id": "james_blunt_youre_beautiful",
+          "type": "artist",
+          "answer": "James Blunt",
+          "rows": [
+            "james",
+            "blunt"
+          ]
+        },
+        {
+          "id": "incubus_drive",
+          "type": "song",
+          "answer": "Drive",
+          "rows": [
+          ]
+        },
+        {
+          "id": "fun_we_are_young",
+          "type": "song",
+          "answer": "We are young",
+          "rows": [
+            "we are",
+            "young"
+          ]
+        },
+        {
+          "id": "mc_hammer_u_cant_touch_this",
+          "type": "artist",
+          "answer": "MC Hammer",
+          "rows": [
+            "mc hammer"
+          ]
+        },
+        {
+          "id": "the_kooks_naive",
+          "type": "song",
+          "answer": "Naive",
+          "rows": [
+          ]
+        },
+        {
+          "id": "bruno_mars_locked_out_of_heaven",
+          "type": "song",
+          "answer": "Locked out of Heaven",
+          "rows": [
+            "locked out",
+            "of heaven"
+          ]
+        },
+        {
+          "id": "the_offspring_the_kids_arent_alright",
+          "type": "song",
+          "answer": "The kids aren't alright",
+          "rows": [
+            "the kids arent",
+            "alright"
+          ]
+        },
+        {
+          "id": "vampire_weekend_a_punk",
+          "type": "artist",
+          "answer": "Vampire Weekend",
+          "rows": [
+            "vampire",
+            "weekend"
+          ]
+        },
+        {
+          "id": "the_police_every_breath_you_take",
+          "type": "song",
+          "answer": "Every breath you take",
+          "rows": [
+            "every breath",
+            "you take"
+          ]
+        }
+      ]
+    }
+  ]
+}

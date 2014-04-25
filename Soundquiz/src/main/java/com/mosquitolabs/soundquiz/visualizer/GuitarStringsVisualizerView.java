@@ -24,6 +24,8 @@ public class GuitarStringsVisualizerView extends View {
     private final static float SAFETY_PADDING = 0.9f;
     private final static int STRINGS = 6;
 
+    private boolean firstVibration = true;
+
 
     private Paint paint;
     private Path path = new Path();
@@ -73,16 +75,24 @@ public class GuitarStringsVisualizerView extends View {
         }
 
         if (vibratingStrings < 3) {
+            firstVibration = vibratingStrings == 0;
+
             int next;
             do {
                 next = random.nextInt(STRINGS);
             }
             while (next == lastPlayedString || guitarStrings[next].isVibrating());
 
-            int minVibrationTime = 300;
-            int maxVibrationTime = 600;
+            int vibrationTime;
+            if (!firstVibration) {
+                int minVibrationTime = 300;
+                int maxVibrationTime = 600;
+                vibrationTime = minVibrationTime + random.nextInt(maxVibrationTime - minVibrationTime);
+            } else {
+                vibrationTime = 300 + vibratingStrings * 150;
+                firstVibration = vibratingStrings != 2;
+            }
 
-            int vibrationTime = minVibrationTime + random.nextInt(maxVibrationTime - minVibrationTime);
             float cycleTime = 1000f / 35;
             int cycles = (int) (vibrationTime / cycleTime);
 
