@@ -1,12 +1,12 @@
 package com.mosquitolabs.soundquiz;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -78,7 +78,7 @@ public class QuizListViewAdapter extends BaseAdapter {
                 String bodyId = "body" + (i + 1);
                 int resImage = context.getResources().getIdentifier(imageId, "id", context.getPackageName());
                 int resBody = context.getResources().getIdentifier(bodyId, "id", context.getPackageName());
-                quizItemViewHolder.images[i] = (ImageView) paramView.findViewById(resImage);
+                quizItemViewHolder.images[i] = (CircularImageView) paramView.findViewById(resImage);
                 quizItemViewHolder.bodies[i] = (TextView) paramView.findViewById(resBody);
 
             }
@@ -98,27 +98,45 @@ public class QuizListViewAdapter extends BaseAdapter {
                 }
             });
             String path = quizData.getID();
+            int imageWidth = (Utility.getWidth(context) - Utility.convertDpToPixels(context, 30)) / 3;
+            int imageHeight = packageIndex == Utility.CINEMA ? imageWidth * 3 / 2 : imageWidth;
 
+
+            quizItemViewHolder.images[i].getLayoutParams().height = imageHeight;
+            quizItemViewHolder.images[i].setBorderWidth(1);
+
+            if (packageIndex == Utility.VIP) {
+                quizItemViewHolder.images[i].setCircularShape();
+            } else {
+                quizItemViewHolder.images[i].setRectangularShape();
+            }
+
+            int res;
             if (quizData.isSolved()) {
-                int res = context.getResources().getIdentifier(path, "drawable", context.getPackageName());
+                res = context.getResources().getIdentifier(path, "drawable", context.getPackageName());
                 try {
                     quizItemViewHolder.images[i].setImageDrawable(context.getResources().getDrawable(res));
-                }catch (Exception e){
+                } catch (Exception e) {
                     quizItemViewHolder.images[i].setImageDrawable(context.getResources().getDrawable(R.drawable.twenty_century_fox));
                 }
 //                quizItemViewHolder.images[i].setImageBitmap(Utility.readImageFromDisk(context,quizData.getID(),false));
                 quizItemViewHolder.bodies[i].setText(quizData.getAnswer());
                 quizItemViewHolder.bodies[i].setVisibility(View.VISIBLE);
             } else {
-                int res = context.getResources().getIdentifier(path + "_blur", "drawable", context.getPackageName());
+                res = context.getResources().getIdentifier(path + "_blur", "drawable", context.getPackageName());
                 try {
                     quizItemViewHolder.images[i].setImageDrawable(context.getResources().getDrawable(res));
-                }catch (Exception e){
+                } catch (Exception e) {
                     quizItemViewHolder.images[i].setImageDrawable(context.getResources().getDrawable(R.drawable.twenty_century_fox_blur));
                 }
 //                quizItemViewHolder.images[i].setImageBitmap(Utility.readImageFromDisk(context,quizData.getID(),true));
                 quizItemViewHolder.bodies[i].setVisibility(View.GONE);
             }
+
+            quizItemViewHolder.bodies[i].setVisibility(View.GONE);
+            quizItemViewHolder.images[i].setBorderColor(Color.parseColor("#b5b5b5"));
+            quizItemViewHolder.images[i].setBorderColor(Color.parseColor("#80ffffff"));
+
         }
 
 
@@ -132,8 +150,8 @@ public class QuizListViewAdapter extends BaseAdapter {
     }
 
     static class QuizItemViewHolder {
-        TextView bodies[] = {null, null, null, null};
-        ImageView images[] = {null, null, null, null};
+        TextView bodies[] = {null, null, null};
+        CircularImageView images[] = {null, null, null};
         LinearLayout divider;
     }
 

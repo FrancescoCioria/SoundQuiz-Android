@@ -1,6 +1,7 @@
 package com.mosquitolabs.soundquiz;
 
 import android.annotation.TargetApi;
+import android.graphics.Bitmap;
 import android.os.Build;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -8,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
+import android.support.v8.renderscript.*;
+
 
 
 public class BackgroundFadingTransformer implements ViewPager.PageTransformer {
@@ -61,12 +64,16 @@ public class BackgroundFadingTransformer implements ViewPager.PageTransformer {
         private ImageView[] views = {null, null};
         //        private Drawable[] images = {null, null, null};
         private int[] indexes = {9, 9};
+        private RenderScript rs;
+
 
 
         private void initHandler(PackageListActivity context) {
             this.context = context;
             views[0] = (ImageView) this.context.findViewById(R.id.firstView);
             views[1] = (ImageView) this.context.findViewById(R.id.secondView);
+            rs = RenderScript.create(context);
+
 
 //            images[0] = context.getResources().getDrawable(R.drawable.simpsons_background_complete);
 //            images[1] = context.getResources().getDrawable(R.drawable.guitar_background_complete);
@@ -147,7 +154,20 @@ public class BackgroundFadingTransformer implements ViewPager.PageTransformer {
             }
         }
 
+
+        private void blurBitmap(Bitmap bitmapOriginal) {
+            //this will blur the bitmapOriginal with a radius of 8 and save it in bitmapOriginal
+            final Allocation input = Allocation.createFromBitmap(rs, bitmapOriginal, Allocation.MipmapControl.MIPMAP_NONE, Allocation.USAGE_SCRIPT);
+            final Allocation output = Allocation.createTyped(rs, input.getType());
+            final ScriptIntrinsicBlur script = ScriptIntrinsicBlur.create(rs, Element.U8_4(rs));
+            script.setRadius(8f);
+            script.setInput(input);
+            script.forEach(output);
+            output.copyTo(bitmapOriginal);
+        }
+
     }
+
 
 }
 

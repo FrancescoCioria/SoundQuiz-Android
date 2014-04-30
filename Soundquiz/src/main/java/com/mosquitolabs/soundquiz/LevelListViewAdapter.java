@@ -110,12 +110,15 @@ public class LevelListViewAdapter extends BaseAdapter {
             switch (packageIndex) {
                 case Utility.CINEMA:
                     Utility.setBackgroundToView(unlockedlevelItemViewHolder.layout, context.getResources().getDrawable(R.drawable.level_rounded_layout_cinema));
+                    unlockedlevelItemViewHolder.progressBar.setProgressDrawable(context.getResources().getDrawable(R.drawable.progress_bar_cinema));
                     break;
                 case Utility.MUSIC:
                     Utility.setBackgroundToView(unlockedlevelItemViewHolder.layout, context.getResources().getDrawable(R.drawable.level_rounded_layout_music));
+                    unlockedlevelItemViewHolder.progressBar.setProgressDrawable(context.getResources().getDrawable(R.drawable.progress_bar_music));
                     break;
                 case Utility.VIP:
                     Utility.setBackgroundToView(unlockedlevelItemViewHolder.layout, context.getResources().getDrawable(R.drawable.level_rounded_layout_character));
+                    unlockedlevelItemViewHolder.progressBar.setProgressDrawable(context.getResources().getDrawable(R.drawable.progress_bar_character));
                     break;
             }
 

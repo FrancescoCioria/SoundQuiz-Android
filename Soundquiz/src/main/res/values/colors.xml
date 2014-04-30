@@ -3,14 +3,14 @@
     <color name="white">#ffffffff</color>
     <color name="black">#ff000000</color>
 
-    <color name="text_fragment">#ff323232</color>
+    <color name="text_fragment">#ff141414</color>
 
 
     <color name="tile_music">#fff8c273</color>
     <color name="space_music">#ff9b3800</color>
     <color name="light_music">#fff8c273</color>
     <color name="dark_music">#ff9b3800</color>
-    <color name="tile_text_music">#FF002117</color>
+    <color name="tile_text_music">#ff632400</color>
 
     <color name="tile_character">#fff0f0f0</color>
     <color name="space_character">#8c000000</color>

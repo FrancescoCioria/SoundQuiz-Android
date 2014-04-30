@@ -20,14 +20,14 @@
             android:id="@+id/relativeLayout1">
 
 
-            <ImageView
-                android:layout_width="wrap_content"
+            <view
+                class="com.mosquitolabs.soundquiz.CircularImageView"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageView1"
                 android:adjustViewBounds="true"
                 android:src="@drawable/image"
-                android:background="@android:color/background_dark"
-                android:padding="0.5dp" />
+                android:baselineAlignBottom="false" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -59,15 +59,14 @@
             android:id="@+id/relativeLayout2">
 
 
-            <ImageView
+            <view
+                class="com.mosquitolabs.soundquiz.CircularImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageView2"
                 android:adjustViewBounds="true"
                 android:src="@drawable/image"
-                android:padding="0.5dp"
-                android:background="@android:color/background_dark" />
-
+/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -99,15 +98,14 @@
             android:id="@+id/relativeLayout3">
 
 
-            <ImageView
+            <view
+                class="com.mosquitolabs.soundquiz.CircularImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageView3"
                 android:adjustViewBounds="true"
                 android:src="@drawable/image"
-                android:padding="0.5dp"
-                android:background="@android:color/background_dark" />
-
+/>
 
             <TextView
                 android:layout_width="wrap_content"

@@ -101,7 +101,7 @@ public class PackageListActivity extends FragmentActivity {
         int height = Utility.getHeight(this);
 
         PACKAGE_ITEM_WIDTH_PIXEL = width * 4 / 5;
-        PACKAGE_ITEM_HEIGHT_PIXEL = PACKAGE_ITEM_WIDTH_PIXEL * 2 / 3;
+        PACKAGE_ITEM_HEIGHT_PIXEL = PACKAGE_ITEM_WIDTH_PIXEL /2;
 
         int marginX = (height - PACKAGE_ITEM_HEIGHT_PIXEL) / 2;
         int pageMargin = -(marginX + PACKAGE_ITEM_HEIGHT_PIXEL / 4);

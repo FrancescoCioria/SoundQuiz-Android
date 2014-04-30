@@ -367,19 +367,19 @@
           ]
         },
         {
-          "id": "the_black_keys_lonely_boy",
-          "type": "song",
-          "answer": "Lonely Boy",
+          "id": "aretha_franklin_respect",
+          "type": "artist",
+          "answer": "Aretha Franklin",
           "rows": [
-            "lonely",
-            "boy"
+            "aretha",
+            "franklin"
           ]
         },
         {
           "id": "acdc_back_in_black",
-          "type": "artist",
-          "answer": "ACDC",
-          "rows": [
+          "type": "song",
+          "answer": "Back in Black",
+          "rows": ["back in","black"
           ]
         },
         {
@@ -422,10 +422,10 @@
           ]
         },
         {
-          "id": "keane_somewhere_only_we_know",
-          "type": "artist",
-          "answer": "Keane",
-          "rows": [
+          "id": "the_beach_boys_surfin_usa",
+          "type": "song",
+          "answer": "Surfin' USA",
+          "rows": ["surfin","usa"
           ]
         },
         {
@@ -879,10 +879,10 @@
           ]
         },
         {
-          "id": "the_killers_mr_brightside",
+          "id": "kasabian_club_foot",
           "type": "song",
-          "answer": "Mr Brightside",
-          "rows": [
+          "answer": "Club Foot",
+          "rows": ["club","foot"
           ]
         },
         {
@@ -1080,12 +1080,12 @@
           ]
         },
         {
-          "id": "fifty_cent_ayo_technology",
+          "id": "kings_of_convenience_id_rather_dance_with_you",
           "type": "song",
-          "answer": "Ayo Technology",
+          "answer": "I'd rather dance with you",
           "rows": [
-            "ayo",
-            "technology"
+            "id rather",
+            "dance with you"
           ]
         },
         {

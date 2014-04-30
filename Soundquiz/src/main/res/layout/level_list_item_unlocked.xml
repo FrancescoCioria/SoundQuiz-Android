@@ -55,7 +55,7 @@
                 android:layout_centerVertical="true"
                 android:progress="40"
                 android:indeterminate="false"
-                android:progressDrawable="@drawable/progress_bar" />
+                android:progressDrawable="@drawable/progress_bar_cinema" />
 
             <TextView
                 android:layout_width="wrap_content"

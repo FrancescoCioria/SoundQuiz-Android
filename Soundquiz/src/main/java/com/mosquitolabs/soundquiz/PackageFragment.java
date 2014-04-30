@@ -1,6 +1,7 @@
 package com.mosquitolabs.soundquiz;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -30,19 +31,33 @@ public class PackageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.fragment_package, container, false);
+                R.layout.fragment_package_complete, container, false);
         final int packageIndex = getArguments().getInt("packageIndex", 0);
+
 
         TextView nameTextView = (TextView) rootView.findViewById(R.id.nameTextView);
         TextView unlockedTextView = (TextView) rootView.findViewById(R.id.unlockedTextView);
         TextView solvedTextView = (TextView) rootView.findViewById(R.id.solvedTextView);
         ProgressBar progressBar = (ProgressBar) rootView.findViewById(R.id.progressBar);
         Button play = (Button) rootView.findViewById(R.id.playButton);
-        RelativeLayout layout = (RelativeLayout) rootView.findViewById(R.id.fragmentRelativeLayout);
+        View layout = rootView.findViewById(R.id.fragmentRelativeLayout);
         RelativeLayout header = (RelativeLayout) rootView.findViewById(R.id.header);
         RelativeLayout body = (RelativeLayout) rootView.findViewById(R.id.body);
 
         rootView.findViewById(R.id.parentRelativeLayout).setTag(packageIndex);
+
+//        switch (packageIndex) {
+//            case Utility.CINEMA:
+//                header.setBackgroundResource(R.drawable.fragment_round_header_cinema);
+//                body.setBackgroundResource(R.drawable.fragment_round_body_cinema);
+//                break;
+//            case Utility.MUSIC:
+//                header.setBackgroundResource(R.drawable.fragment_round_header_music);
+//                body.setBackgroundResource(R.drawable.fragment_round_body_music);
+//                break;
+//            case Utility.VIP:
+//                break;
+//        }
 
         final PackageListActivity activity = (PackageListActivity) getActivity();
 
@@ -88,6 +103,9 @@ public class PackageFragment extends Fragment {
         solvedTextView.setText("solved: " + solvedQuizzes + " / " + (numberOfLevels * 15));
         progressBar.setProgress(solvedQuizzes * 100 / (numberOfLevels * 15));
 
+        Typeface tf = Typeface.createFromAsset(getActivity().getAssets(), "fonts/gothic.ttf");
+        unlockedTextView.setTypeface(tf);
+
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -104,8 +122,6 @@ public class PackageFragment extends Fragment {
         bundle.putInt("packageIndex", paramInt);
         mIntent.putExtras(bundle);
         mIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-//        startActivityForResult(mIntent, 0);
-//        overridePendingTransition(0,0);
         getActivity().startActivity(mIntent);
     }
 

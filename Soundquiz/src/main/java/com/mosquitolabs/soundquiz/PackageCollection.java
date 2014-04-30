@@ -245,11 +245,11 @@ public class PackageCollection {
                     }
                     packageData.getLevelList().add(levelData);
                     if(category.equals("cinema_tv")){
-                        packageData.setCategory("Cinema & Tv");
+                        packageData.setCategory("THEMES");
                     }else if(category.equals("music")){
-                        packageData.setCategory("Music");
+                        packageData.setCategory("MUSIC");
                     }else{
-                        packageData.setCategory("VIP & Characters");
+                        packageData.setCategory("VOICES");
                     }
                 }
 

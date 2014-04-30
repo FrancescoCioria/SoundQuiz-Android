@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.mosquitolabs.soundquiz.QuizActivity"
@@ -168,6 +169,7 @@
             android:visibility="visible"
             android:layout_alignLeft="@+id/imageViewGuitar" />
 
+
         <TextView
             android:layout_width="150dp"
             android:layout_height="wrap_content"
@@ -239,17 +241,27 @@
         android:layout_alignTop="@+id/body"
         android:layout_alignBottom="@+id/body">
 
-        <ImageView
+        <view
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageQuiz"
             android:src="@drawable/columbia_pictures"
             android:scaleType="centerCrop"
-            android:layout_weight="1"
             android:layout_alignParentLeft="false"
             android:layout_alignParentTop="false"
+            app:circular="false"
             android:visibility="invisible"
+            android:layout_centerInParent="true"
+            class="com.mosquitolabs.soundquiz.CircularImageView" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonPlayWon"
+            android:src="@drawable/button_play_won"
+            android:visibility="visible"
             android:layout_centerInParent="true" />
+
     </RelativeLayout>
 
     <ImageView

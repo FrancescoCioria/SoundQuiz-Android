@@ -5,22 +5,26 @@
     <item android:id="@android:id/background">
         <shape>
             <gradient
-                android:startColor="#7d000001"
-                android:centerColor="#7d0b131e"
+                android:startColor="#1e1e1e"
+                android:centerColor="#333333"
                 android:centerY="1.0"
-                android:endColor="#7d000001"
+                android:endColor="#1e1e1e"
                 android:angle="270" />
 
             <corners android:radius="6dp" />
         </shape>
     </item>
 
+    <!--android:startColor="#c8000000"-->
+    <!--c80b131e-->
+
     <!-- Define the progress properties like start color, end color etc -->
     <item android:id="@android:id/progress">
         <clip>
             <shape>
 
-                <solid android:color="#6eFFFFFF" />
+                <!--<solid android:color="#6eFFFFFF" />-->
+                <solid android:color="#c2c2c2" />
 
                 <corners android:radius="6dp" />
             </shape>

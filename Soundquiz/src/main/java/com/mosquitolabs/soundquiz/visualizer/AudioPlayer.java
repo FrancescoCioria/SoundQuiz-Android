@@ -4,6 +4,7 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
+import android.util.Log;
 
 import com.mosquitolabs.soundquiz.R;
 
@@ -19,25 +20,18 @@ public class AudioPlayer {
     private int REMOVE;
     private int FIREWORKS;
 
+    private int res;
+    private MediaPlayer.OnCompletionListener listener;
+
 
     //    private Equalizer equalizer;
     private static AudioPlayer audioPlayer = new AudioPlayer();
     public SoundPool sounds = new SoundPool(20, AudioManager.STREAM_MUSIC, 0);
     public MediaPlayer player;
-    private byte[] bytes;
+//    private byte[] bytes;
 
     public static AudioPlayer getIstance() {
         return audioPlayer;
-    }
-
-    public void resetEqualizer() {
-//        equalizer = new Equalizer(9999999, player.getAudioSessionId());
-//
-//        int val = equalizer.setEnabled(true);
-//        if (val != Equalizer.SUCCESS)
-//            Log.v("A", "EQUALIZER NON ATTIVO" + val);
-//        else
-//            Log.v("A", "SUCCESS" + val);
     }
 
     public void initSounds(Context context) {
@@ -53,6 +47,62 @@ public class AudioPlayer {
         WRONG = sounds.load(context, R.raw.wrong_answer, 1);
         REMOVE = sounds.load(context, R.raw.remove, 1);
         FIREWORKS = sounds.load(context, R.raw.fireworks, 1);
+    }
+
+    public void createPlayer(Context context, int res) {
+        if (player != null) {
+//            stopPlayer();
+            releasePlayer();
+        }
+
+        this.res = res;
+        player = MediaPlayer.create(context, res);
+    }
+
+    public void linkOnCompletionListenerToPlayer(MediaPlayer.OnCompletionListener listener) {
+        player.setOnCompletionListener(listener);
+        this.listener = listener;
+    }
+
+    public void resetPlayer(Context context) {
+        if (player != null) {
+            stopPlayer();
+            releasePlayer();
+        }
+        player = MediaPlayer.create(context, res);
+        player.setOnCompletionListener(listener);
+    }
+
+    public void releasePlayer() {
+        player.release();
+        Log.d("AUDIO_PLAYER", "released");
+    }
+
+    public void startPlayer() {
+        player.start();
+        Log.d("AUDIO_PLAYER", "started");
+    }
+
+    public void pausePlayer() {
+        player.pause();
+        Log.d("AUDIO_PLAYER", "paused");
+    }
+
+    public void stopPlayer() {
+        player.stop();
+        Log.d("AUDIO_PLAYER", "stopped");
+    }
+
+    public boolean isPlayerPlaying() {
+        return player.isPlaying();
+    }
+
+    public void invalidatePlayer() {
+        if (player != null) {
+            releasePlayer();
+            player = null;
+            Log.d("AUDIO_PLAYER", "invalidated");
+        }
     }
 
     public void playWin() {
@@ -76,12 +126,12 @@ public class AudioPlayer {
     }
 
 
-    public void setData(byte[] bytes) {
-        this.bytes = bytes;
-    }
-
-    public byte[] getData() {
-        return bytes;
-    }
+//    public void setData(byte[] bytes) {
+//        this.bytes = bytes;
+//    }
+//
+//    public byte[] getData() {
+//        return bytes;
+//    }
 
 }

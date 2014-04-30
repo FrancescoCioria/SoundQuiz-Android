@@ -74,6 +74,7 @@
     <orderEntry type="library" exported="" name="support-v4-19.1.0" level="project" />
     <orderEntry type="library" exported="" name="aws-android-sdk-1.7.1.1-core" level="project" />
     <orderEntry type="library" exported="" name="aws-android-sdk-1.7.1.1-s3" level="project" />
+    <orderEntry type="library" exported="" name="renderscript-v8" level="project" />
   </component>
 </module>
 

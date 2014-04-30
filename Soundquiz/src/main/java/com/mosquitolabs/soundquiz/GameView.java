@@ -403,7 +403,7 @@ public class GameView extends View {
         }
 
         if (getAnswer().equals(userAnswer)) {
-            AudioPlayer.getIstance().player.stop();
+            AudioPlayer.getIstance().resetPlayer(getActivityContext());
             AudioPlayer.getIstance().playWin();
             resetSpritesColor();
             getActivityContext().initWinPage();
