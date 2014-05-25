@@ -79,6 +79,7 @@
                 android:id="@+id/textViewWiki"
                 android:layout_centerHorizontal="true"
                 android:ellipsize="end"
+                android:textSize="15sp"
                 android:padding="5dp"
                 android:textColor="@color/tile_cinema" />
 

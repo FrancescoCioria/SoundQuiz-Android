@@ -8,6 +8,8 @@
           "id": "mario",
           "type": "character",
           "answer": "Mario",
+          "wiki_link": "http://en.wikipedia.org/wiki/Mario",
+          "wiki_quote": "Mario (Japanese: マリオ Hepburn: Mario?) is a fictional character in the Mario video game franchise by Nintendo, created by Japanese video game designer Shigeru Miyamoto. Serving as Nintendo's mascot and the eponymous protagonist of the series, Mario has appeared in over 200 video games since his creation. ",
           "rows": [
           ]
         },
@@ -15,6 +17,8 @@
           "id": "gandalf",
           "type": "character",
           "answer": "Gandalf",
+          "wiki_link": "http://en.wikipedia.org/wiki/Gandalf",
+          "wiki_quote": "Gandalf /ˈɡændɑːlf/ is a fictional character in J. R. R. Tolkien's novels The Hobbit and The Lord of the Rings. He is a wizard, member of the Istari order, as well as leader of the Fellowship of the Ring and the army of the West. In The Lord of the Rings, he is initially known as Gandalf the Grey, but returns from death as Gandalf the White.",
           "rows": [
           ]
         },
@@ -22,6 +26,8 @@
           "id": "obama",
           "type": "real",
           "answer": "Obama",
+          "wiki_link": "http://en.wikipedia.org/wiki/Obama",
+          "wiki_quote": "Barack Hussein Obama II (Listeni/bəˈrɑːk huːˈseɪn oʊˈbɑːmə/; born August 4, 1961) is the 44th and current President of the United States, and the first African American to hold the office. Born in Honolulu, Hawaii, Obama is a graduate of Columbia University and Harvard Law School, where he served as president of the Harvard Law Review. He was a community organizer in Chicago before earning his law degree.",
           "rows": [
           ]
         },
@@ -29,6 +35,8 @@
           "id": "barney_gumble",
           "type": "character",
           "answer": "Barney Gumble",
+          "wiki_link": "http://en.wikipedia.org/wiki/Barney_Gumble",
+          "wiki_quote": "Barnard \"Barney\" Gumble is a character on the American animated sitcom The Simpsons. The character is voiced by Dan Castellaneta and first appeared in the series premiere episode \"Simpsons Roasting on an Open Fire\". He is the town drunk of Springfield, a huge fan of Lord Palmerston, and Homer Simpson's best friend. His desperation for alcohol is a frequent butt of jokes on the show.",
           "rows": [
             "barney",
             "gumble"
@@ -38,6 +46,8 @@
           "id": "snape",
           "type": "character",
           "answer": "Snape",
+          "wiki_link": "http://en.wikipedia.org/wiki/Severus_Snape",
+          "wiki_quote": "Severus Snape is a fictional character in J. K. Rowling's Harry Potter series. He is characterized as a person of considerable complexity, whose coldly sarcastic and controlled exterior conceals deep emotions and anguish. In the first novel of the series, Snape is a teacher who is hostile from the start toward Harry and is built up to be the primary antagonist until the final chapters. As the series progresses, Snape's character becomes more layered and complex.",
           "rows": [
           ]
         },
@@ -45,6 +55,8 @@
           "id": "jack_sparrow",
           "type": "character",
           "answer": "Jack Sparrow",
+          "wiki_link": "http://en.wikipedia.org/wiki/Jack_Sparrow",
+          "wiki_quote": "Captain Jack Sparrow is a fictional character in the Pirates of the Caribbean film series. The character was created by screenwriters Ted Elliott and Terry Rossio, and is portrayed by Johnny Depp. He is first introduced in the film Pirates of the Caribbean: The Curse of the Black Pearl (2003). He later appears in the sequels Dead Man's Chest (2006), At World's End (2007), and On Stranger Tides (2011). He was brought to life by Depp, who based his characterization on The Rolling Stones guitarist Keith Richards and cartoon character Pepé Le Pew.",
           "rows": [
             "jack",
             "sparrow"
@@ -54,6 +66,8 @@
           "id": "bender",
           "type": "character",
           "answer": "Bender",
+          "wiki_link": "http://en.wikipedia.org/wiki/Bender_(Futurama)",
+          "wiki_quote": "Bender, whose full name is Bender Bending Rodríguez, is a main character in the animated television series Futurama. Designated in-universe as Bending Unit 22, unit number 1,729 (the smallest number that can be represented as the sum of two cubes in two ways, 1³ + 12³ = 9³ + 10³), serial number 2716057 (952³ - 951³), he was created by series creators Matt Groening and David X. Cohen, and is voiced by John DiMaggio.",
           "rows": [
           ]
         },
@@ -61,6 +75,8 @@
           "id": "neil_armstrong",
           "type": "real",
           "answer": "Neil Armstrong",
+          "wiki_link": "http://en.wikipedia.org/wiki/Neil_Armstrong",
+          "wiki_quote": "Neil Alden Armstrong (August 5, 1930 – August 25, 2012) was an American astronaut and the first person to walk on the Moon. He was also an aerospace engineer, naval aviator, test pilot, and university professor. Before becoming an astronaut, Armstrong was an officer in the U.S. Navy and served in the Korean War. After the war, he earned his bachelor's degree at Purdue University and served as a test pilot at the National Advisory Committee for Aeronautics High-Speed Flight Station, now known as the Dryden Flight Research Center, where he logged over 900 flights.",
           "rows": [
             "neil",
             "armstrong"
@@ -70,6 +86,8 @@
           "id": "bugs_bunny",
           "type": "character",
           "answer": "Bugs Bunny",
+          "wiki_link": "http://en.wikipedia.org/wiki/Bugs_Bunny",
+          "wiki_quote": "Bugs Bunny is a funny animal cartoon character, created by the staff of Leon Schlesinger Productions (later Warner Bros. Cartoons) and voiced originally by the \"Man of a Thousand Voices,\" Mel Blanc. Bugs is best known for his starring roles in the Looney Tunes and Merrie Melodies series of animated short films, produced by Warner Bros. during the golden age of American animation.",
           "rows": [
             "bugs",
             "bunny"
@@ -79,6 +97,8 @@
           "id": "marge_simpson",
           "type": "character",
           "answer": "Marge Simpson",
+          "wiki_link": "http://en.wikipedia.org/wiki/Marge_Simpson",
+          "wiki_quote": "Marjorie \"Marge\" Simpson (née Bouvier) is a cartoon character in the American animated sitcom The Simpsons and part of the eponymous family. She is voiced by Julie Kavner and first appeared on television in The Tracey Ullman Show short \"Good Night\" on April 19, 1987. Marge was created and designed by cartoonist Matt Groening while he was waiting in the lobby of James L. Brooks' office. Groening had been called to pitch a series of shorts based on Life in Hell but instead decided to create a new set of characters. He named the character after his mother Margaret Groening.",
           "rows": [
             "marge",
             "simpson"
@@ -88,6 +108,8 @@
           "id": "darth_vader",
           "type": "character",
           "answer": "Darth Vader",
+          "wiki_link": "http://en.wikipedia.org/wiki/Darth_Vader",
+          "wiki_quote": "Darth Vader, born Anakin Skywalker, is the central fictional character in the Star Wars universe. He appears in the original trilogy, as well as the prequel trilogy. The character was created by George Lucas and has been portrayed by numerous actors. His appearances span all six Star Wars films, and he is an important character in the expanded universe of television series, video games, novels, literature and comic books.",
           "rows": [
             "darth",
             "vader"
@@ -97,6 +119,8 @@
           "id": "john_kennedy",
           "type": "real",
           "answer": "John Kennedy",
+          "wiki_link": "http://en.wikipedia.org/wiki/John_Kennedy",
+          "wiki_quote": "John Fitzgerald \"Jack\" Kennedy (May 29, 1917 – November 22, 1963), commonly known by his initials JFK, was an American politician who served as the 35th President of the United States from January 1961 until he was assassinated in November 1963. After military service as commander of Motor Torpedo Boats PT-109 and PT-59 during World War II in the South Pacific, Kennedy represented Massachusetts's 11th congressional district in the U.S. House of Representatives from 1947 to 1953 as a Democrat. Thereafter, he served in the U.S. Senate from 1953 until 1960. ",
           "rows": [
             "john",
             "kennedy"
@@ -106,6 +130,8 @@
           "id": "buzz_lightyear",
           "type": "character",
           "answer": "Buzz Lightyear",
+          "wiki_link": "http://en.wikipedia.org/wiki/Buzz_Lightyear",
+          "wiki_quote": "Buzz Lightyear is a fictional character in the Toy Story franchise. Buzz is a toy space ranger hero according to the movies and action figure in the Toy Story franchise. Along with Woody, he is one of the two lead characters in all three Toy Story movies. He also appeared in the movie Buzz Lightyear of Star Command: The Adventure Begins and the television series spin-off Buzz Lightyear of Star Command, as well as the two film sequels.",
           "rows": [
             "buzz",
             "lightyear"
@@ -115,6 +141,8 @@
           "id": "peter_griffin",
           "type": "character",
           "answer": "Peter Griffin",
+          "wiki_link": "http://en.wikipedia.org/wiki/Peter_Griffin",
+          "wiki_quote": "Peter Löwenbräu Griffin is a main character of the American animated sitcom Family Guy. He is voiced by cartoonist Seth MacFarlane and first appeared on television, along with the rest of the family, in the 15-minute short on December 20, 1998. Peter was created and designed by MacFarlane himself. MacFarlane was asked to pitch a pilot to the Fox Broadcasting Company based on Larry & Steve, a short made by MacFarlane which featured a middle-aged character named Larry and an intellectual dog, Steve.",
           "rows": [
             "peter",
             "griffin"
@@ -124,6 +152,8 @@
           "id": "miley_cyrus",
           "type": "character",
           "answer": "Miley Cyrus",
+          "wiki_link": "http://en.wikipedia.org/wiki/Miley_Cyrus",
+          "wiki_quote": "Miley Ray Cyrus (born Destiny Hope Cyrus, November 23, 1992) is an American actress and singer. Her father is the country singer Billy Ray Cyrus. She held minor roles in the television series Doc and the film Big Fish in her childhood. In 2006, Cyrus rose to prominence as a teen idol after being cast in the Disney Channel television series Hannah Montana, in which she portrayed the starring character Miley Stewart.",
           "rows": [
             "miley",
             "cyrus"
@@ -138,14 +168,18 @@
           "id": "mary_poppins_character",
           "type": "character",
           "answer": "Mary Poppins",
+          "wiki_link": "http://en.wikipedia.org/wiki/Mary_Poppins",
+          "wiki_quote": "Mary Poppins is the lead character in a series of eight children's books written by Australian P. L. Travers. Throughout the Mary Poppins series, which was published over the period 1934 to 1988, Mary Shepard was the illustrator.[1] The books centre on a magical English nanny, Mary Poppins. She is blown by the East wind to Number Seventeen Cherry Tree Lane, London, and into the Banks' household to care for their children.",
           "rows": [
-            "mary poppins"
+            "mary","poppins"
           ]
         },
         {
           "id": "quagmire",
           "type": "character",
           "answer": "Glenn Quagmire",
+          "wiki_link": "http://en.wikipedia.org/wiki/Glenn_Quagmire",
+          "wiki_quote": "Glenn Quagmire, often referred to as just Quagmire, is a character from the animated television series Family Guy. Quagmire is a neighbor and friend of the Griffin family and is best known for his hypersexuality. Creator and voice actor Seth MacFarlane describes Quagmire as \"an appalling human being who is still caught in the rat-pack era\" based on anachronistic 1950s party-animal clichés.",
           "rows": [
             "glenn",
             "quagmire"
@@ -155,6 +189,8 @@
           "id": "donald_duck",
           "type": "character",
           "answer": "Donald Duck",
+          "wiki_link": "http://en.wikipedia.org/wiki/Donald_Duck",
+          "wiki_quote": "Donald Fauntleroy Duck or Donald Duck is a funny animal cartoon character created in 1934 at Walt Disney Productions. Donald is an anthropomorphic white duck with a yellow-orange bill, legs, and feet. He typically wears a sailor suit with a cap and a black or red bow tie. Donald is most famous for his semi-intelligible speech and his mischievous and irritable personality.",
           "rows": [
             "donald",
             "duck"
@@ -164,6 +200,8 @@
           "id": "morgan_freeman",
           "type": "real",
           "answer": "Morgan Freeman",
+          "wiki_link": "http://en.wikipedia.org/wiki/Morgan_Freeman",
+          "wiki_quote": "Morgan Freeman (born June 1, 1937) is an American actor, film director, and narrator. Freeman has received Academy Award nominations for his performances in Street Smart, Driving Miss Daisy, The Shawshank Redemption and Invictus, and won the Best Supporting Actor Oscar in 2005 for Million Dollar Baby. He has also won a Golden Globe Award and a Screen Actors Guild Award.",
           "rows": [
             "morgan",
             "freeman"
@@ -173,15 +211,19 @@
           "id": "george_w_bush",
           "type": "real",
           "answer": "George W Bush",
+          "wiki_link": "http://en.wikipedia.org/wiki/George_W._Bush",
+          "wiki_quote": "George Walker Bush (born July 6, 1946) is an American politician and businessman who served as the 43rd President of the United States from 2001 to 2009, and the 46th Governor of Texas from 1995 to 2000. The eldest son of Barbara and George H. W. Bush, he was born in New Haven, Connecticut. After graduating from Yale University in 1968 and Harvard Business School in 1975, Bush worked in oil businesses.",
           "rows": [
             "george w",
             "bush"
           ]
         },
         {
-          "id": "bart_simpsons",
+          "id": "bart_simpson",
           "type": "character",
           "answer": "Bart Simpson",
+          "wiki_link": "http://en.wikipedia.org/wiki/Bart_Simpson",
+          "wiki_quote": "Bartholomew JoJo \"Bart\" Simpson is a cartoon character in the animated television series The Simpsons and part of the Simpson family. He is voiced by actress Nancy Cartwright and first appeared on television in The Tracey Ullman Show short \"Good Night\" on April 19, 1987. Bart was created and designed by cartoonist Matt Groening while he was waiting in the lobby of James L. Brooks' office.",
           "rows": [
             "bart",
             "simpson"
@@ -191,6 +233,8 @@
           "id": "spongebob_character",
           "type": "character",
           "answer": "SpongeBob",
+          "wiki_link": "http://en.wikipedia.org/wiki/SpongeBob_SquarePants_(character)",
+          "wiki_quote": "SpongeBob SquarePants is the titular character and protagonist of the American animated television series of the same name. He is voiced by actor and comedian Tom Kenny, and first appeared on television in the series' pilot episode \"Help Wanted\" on May 1, 1999.",
           "rows": [
           ]
         },
@@ -198,6 +242,8 @@
           "id": "cartman",
           "type": "character",
           "answer": "Cartman",
+          "wiki_link": "http://en.wikipedia.org/wiki/Cartman",
+          "wiki_quote": "Eric Theodore Cartman is a fictional character in the animated television series South Park, created by Matt Stone and Trey Parker, and voiced by Trey Parker. Cartman, generally referred to by his surname, is one of four central characters in South Park, in addition to Stan Marsh, Kyle Broflovski, and Kenny McCormick. ",
           "rows": [
           ]
         },
@@ -205,6 +251,8 @@
           "id": "yoda",
           "type": "character",
           "answer": "Yoda",
+          "wiki_link": "http://en.wikipedia.org/wiki/Yoda",
+          "wiki_quote": "Yoda is a fictional character in the Star Wars space opera franchise created by George Lucas, first appearing in the 1980 film The Empire Strikes Back. In the original films, he trains Luke Skywalker to fight against the evil Galactic Empire. In the prequel films, he serves as the Grand Master of the Jedi Order and as a High-ranking General of Clone Troopers in the Clone Wars.",
           "rows": [
           ]
         },
@@ -212,6 +260,8 @@
           "id": "martin_luther_king",
           "type": "real",
           "answer": "Martin Luther King",
+          "wiki_link": "http://en.wikipedia.org/wiki/Martin_Luther_King,_Jr.",
+          "wiki_quote": "Martin Luther King, Jr. (January 15, 1929 – April 4, 1968) was an American pastor, activist, humanitarian, and leader in the African-American Civil Rights Movement. He is best known for his role in the advancement of civil rights using nonviolent civil disobedience based on his Christian beliefs. He was born Michael King, but his father changed his name in honor of the German reformer Martin Luther.",
           "rows": [
             "martin",
             "luther king"
@@ -221,6 +271,8 @@
           "id": "apu",
           "type": "character",
           "answer": "Apu",
+          "wiki_link": "http://en.wikipedia.org/wiki/Apu_Nahasapeemapetilon",
+          "wiki_quote": "Apu Nahasapeemapetilon /əˌpuː nəˌhɑːsəpiːməˈpɛtəlɒn/ is a cartoon character in the animated television series The Simpsons. He is voiced by Hank Azaria and first appeared in the episode \"The Telltale Head\". Apu is the proprietor of the Kwik-E-Mart, a popular convenience store in Springfield, and a friend of Homer Simpson. He is also an Indian immigrant. Apu is well known for his repeated and characteristic delivery of the catchphrase, \"Thank you, come again.\" It has been argued that the portrayal of this character is a racist caricature.",
           "rows": [
           ]
         },
@@ -228,6 +280,8 @@
           "id": "dobby",
           "type": "character",
           "answer": "Dobby",
+          "wiki_link": "http://en.wikipedia.org/wiki/Dobby_(Harry_Potter)#Dobby",
+          "wiki_quote": "Dobby is a house elf owned by the Malfoy family, who first appears in Harry Potter and the Chamber of Secrets to discourage Harry from returning to Hogwarts. Dobby later tries to keep Harry away from Hogwarts by magically sealing off the hidden entrance to Platform 9¾, only to be foiled when the protagonists pilot Arthur Weasley's flying car to school.",
           "rows": [
           ]
         },
@@ -235,6 +289,8 @@
           "id": "tweety",
           "type": "character",
           "answer": "Tweety",
+          "wiki_link": "http://en.wikipedia.org/wiki/Tweety_Bird",
+          "wiki_quote": "Tweety (Tweety Bird) is a American fictional yellow canary in the Warner Bros. Looney Tunes and Merrie Melodies series of animated cartoons. The name \"Tweety\" is a play on words, as it originally meant \"sweetie\", along with \"tweet\" being a typical English onomatopoeia for the sounds of birds. His characteristics are based on Red Skelton's famous \"Mean Widdle Kid.\" Tweety appeared in 49 cartoons in the golden age.",
           "rows": [
           ]
         },
@@ -242,6 +298,8 @@
           "id": "lois",
           "type": "character",
           "answer": "Lois Griffin",
+          "wiki_link": "http://en.wikipedia.org/wiki/Lois_Griffin",
+          "wiki_quote": "Lois Patrice (Pewterschmidt) Griffin is a main character from the animated television series Family Guy. She is voiced by writer Alex Borstein and first appeared on television, along with the rest of the family in the 15-minute short on December 20, 1998. Lois was created and designed by series creator Seth MacFarlane.",
           "rows": [
             "lois",
             "griffin"
@@ -251,6 +309,8 @@
           "id": "forrest_gump_character",
           "type": "character",
           "answer": "Forrest Gump",
+          "wiki_link": "http://en.wikipedia.org/wiki/Forrest_Gump",
+          "wiki_quote": "Forrest Gump is a 1994 American epic romantic dramedy film based on the 1986 novel of the same name by Winston Groom. The film was directed by Robert Zemeckis and starred Tom Hanks, Robin Wright, Gary Sinise and Sally Field. The story depicts several decades in the life of Forrest Gump, a naïve and slow-witted yet athletically prodigious native of Alabama who witnesses, and in some cases influences, some of the defining events of the latter half of the 20th century in the United States; more specifically, the period between Forrest's birth in 1944 and 1982.",
           "rows": [
             "forrest",
             "gump"
@@ -265,6 +325,8 @@
           "id": "katniss",
           "type": "character",
           "answer": "Katniss",
+          "wiki_link": "http://en.wikipedia.org/wiki/Katniss_Everdeen",
+          "wiki_quote": "Katniss Everdeen is a fictional character and the protagonist of Suzanne Collins' The Hunger Games trilogy. Her name comes from an edible plant called katniss. Academy Award-winning actress Jennifer Lawrence portrayed Katniss in the films The Hunger Games, and The Hunger Games: Catching Fire. She will reprise her role in the sequels The Hunger Games: Mockingjay – Part 1, and The Hunger Games: Mockingjay – Part 2.",
           "rows": [
           ]
         },
@@ -272,6 +334,8 @@
           "id": "morpheus",
           "type": "character",
           "answer": "Morpheus",
+          "wiki_link": "http://en.wikipedia.org/wiki/Morpheus_(The_Matrix)",
+          "wiki_quote": "Morpheus /ˈmɔrfiəs/ is a fictional character in The Matrix franchise. He is portrayed by Laurence Fishburne in the films, and in The Matrix: Path of Neo where he was the only actor to reprise his character's voice.",
           "rows": [
           ]
         },
@@ -279,6 +343,8 @@
           "id": "kenny",
           "type": "character",
           "answer": "Kenny",
+          "wiki_link": "http://en.wikipedia.org/wiki/Kenny_(South_Park)",
+          "wiki_quote": "Kenneth \"Kenny\" McCormick (sometimes spelled as McKormick) is a main character in the animated television series South Park. He is one of the main characters along with his friends Stan Marsh, Kyle Broflovski, and Eric Cartman. His oft-muffled and indiscernible speech—the result of his parka hood covering his mouth—is provided by co-creator Matt Stone.",
           "rows": [
           ]
         },
@@ -286,6 +352,8 @@
           "id": "jack_nicholson",
           "type": "real",
           "answer": "Jack Nicholson",
+          "wiki_link": "http://en.wikipedia.org/wiki/Jack_Nicholson",
+          "wiki_quote": "John Joseph \"Jack\" Nicholson (born April 22, 1937) is an American actor, film director, producer, and writer. Throughout his career, Jack Nicholson has portrayed unique and challenging roles, many of which include dark portrayals of neurotic and psychopathic characters. Nicholson's 12 Oscar nominations make him the most nominated male actor in the history of the Academy Awards.",
           "rows": [
             "jack",
             "nicholson"
@@ -295,6 +363,8 @@
           "id": "cleveland",
           "type": "character",
           "answer": "Cleveland",
+          "wiki_link": "http://en.wikipedia.org/wiki/Cleveland_Brown",
+          "wiki_quote": "Cleveland Brown is a character from the animated television series Family Guy, and its spin-off series The Cleveland Show. He is voiced by Mike Henry. In the first seven seasons of Family Guy, Cleveland is a frequently recurring character. As one of Peter Griffin's neighbors and friends, Cleveland is also one of the few recurring African American characters on the show.",
           "rows": [
           ]
         },
@@ -302,6 +372,8 @@
           "id": "lady_gaga",
           "type": "real",
           "answer": "Lady Gaga",
+          "wiki_link": "http://en.wikipedia.org/wiki/Lady_Gaga",
+          "wiki_quote": "Stefani Joanne Angelina Germanotta (/ˈstɛfəniː dʒɜrməˈnɒtə/ ste-fə-nee jur-mə-not-ə; born March 28, 1986), better known by her stage name Lady Gaga, is an American singer-songwriter, LGBT activist, record producer, businesswoman, fashion designer, philanthropist, and actress. She was born, raised, and lives in New York City. Gaga studied at the Convent of the Sacred Heart before briefly attending Collaborative Arts Project 21 (CAP21).",
           "rows": [
             "lady gaga"
           ]
@@ -310,6 +382,8 @@
           "id": "dumbledore",
           "type": "character",
           "answer": "Dumbledore",
+          "wiki_link": "http://en.wikipedia.org/wiki/Dumbledore",
+          "wiki_quote": "Professor Albus Percival Wulfric Brian Dumbledore is a fictional character in J. K. Rowling's Harry Potter series. For most of the series, he is the headmaster of the wizarding school Hogwarts. As part of his backstory, it is revealed that he is the founder and leader of the Order of the Phoenix, an organisation dedicated to fighting Lord Voldemort.",
           "rows": [
           ]
         },
@@ -317,6 +391,8 @@
           "id": "chief_wiggum",
           "type": "character",
           "answer": "Chief Wiggum",
+          "wiki_link": "http://en.wikipedia.org/wiki/Chief_Wiggum",
+          "wiki_quote": "Chief Clancy Wiggum is a fictional character from the animated television series The Simpsons, voiced by Hank Azaria. He is the chief of police in the show's setting of Springfield. He is the father of Ralph Wiggum and the husband of Sarah Wiggum. The character's comedic value relies heavily on his incompetence and irresponsibility as a police officer, and his laziness and gluttony.",
           "rows": [
             "chief",
             "wiggum"
@@ -326,6 +402,8 @@
           "id": "marilyn_monroe",
           "type": "real",
           "answer": "Marilyn Monroe",
+          "wiki_link": "http://en.wikipedia.org/wiki/Marilyn_Monroe",
+          "wiki_quote": "Marilyn Monroe (born Norma Jeane Mortenson; June 1, 1926 – August 5, 1962) was an American actress, model, and singer, who became a major sex symbol, starring in a number of commercially successful motion pictures during the 1950s and early 1960s. After spending much of her childhood in foster homes, Monroe began a career as a model, which led to a film contract in 1946 with Twentieth Century-Fox.",
           "rows": [
             "marilyn",
             "monroe"
@@ -335,6 +413,8 @@
           "id": "et_character",
           "type": "character",
           "answer": "ET",
+          "wiki_link": "",
+          "wiki_quote": "",
           "rows": [
           ]
         },
@@ -342,6 +422,8 @@
           "id": "mufasa",
           "type": "character",
           "answer": "Mufasa",
+          "wiki_link": "http://en.wikipedia.org/wiki/Mufasa#Mufasa",
+          "wiki_quote": "Mufasa was Simba's father, Sarabi's husband, Scar's older brother and the former King of the Pride Lands. He is characterized as a righteous, wise and kindhearted leader, but admirably powerful and courageous as well. Idolized by his son, with whom he shared a strong bond, Mufasa was envied immensely during his lifetime by Scar, who furiously conspired against his older brother in an attempt to end his reign and seize the throne.",
           "rows": [
           ]
         },
@@ -349,6 +431,8 @@
           "id": "pope_francesco",
           "type": "real",
           "answer": "Pope Francesco",
+          "wiki_link": "http://en.wikipedia.org/wiki/Pope_Francis",
+          "wiki_quote": "Pope Francis (Latin: Franciscus; Italian: Francesco; born Jorge Mario Bergoglio, 17 December 1936) is the current head of the Catholic Church, in which capacity he is Bishop of Rome and absolute Sovereign of the Vatican City State. Born in Buenos Aires, Argentina, Bergoglio worked briefly as a chemical technician and nightclub bouncer before entering the seminary.",
           "rows": [
             "pope",
             "francesco"
@@ -358,6 +442,8 @@
           "id": "voldemort",
           "type": "character",
           "answer": "Voldemort",
+          "wiki_link": "http://en.wikipedia.org/wiki/Voldemort",
+          "wiki_quote": "Lord Voldemort (/ˈvoʊldəmɔr/) (born Tom Marvolo Riddle) is a fictional character in J. K. Rowling's Harry Potter series. Voldemort first appeared in Harry Potter and the Philosopher's Stone, which was released in 1997. Voldemort appeared either in person or in flashbacks in each book and film adaptation in the series, except the third, Harry Potter and the Prisoner of Azkaban, where he is mentioned.",
           "rows": [
           ]
         },
@@ -365,6 +451,8 @@
           "id": "homer_simpson",
           "type": "character",
           "answer": "Homer Simpson",
+          "wiki_link": "http://en.wikipedia.org/wiki/Homer_Simpson",
+          "wiki_quote": "Homer Jay Simpson is a cartoon character in the animated television series The Simpsons as the patriarch of the eponymous family. He is voiced by Dan Castellaneta and first appeared on television, along with the rest of his family, in The Tracey Ullman Show short \"Good Night\" on April 19, 1987. Homer was created and designed by cartoonist Matt Groening while he was waiting in the lobby of James L. Brooks' office.",
           "rows": [
             "homer",
             "simpson"
@@ -374,6 +462,8 @@
           "id": "the_joker",
           "type": "character",
           "answer": "The Joker",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Joker",
+          "wiki_quote": "The Joker is a fictional character, a comic book supervillain appearing in DC Comics publications. The character was created by Jerry Robinson, Bill Finger and Bob Kane, and first appeared in Batman #1 (Spring 1940). Credit for the character's creation is disputed; Kane and Robinson claimed responsibility for the Joker's design, but acknowledged Finger's writing contribution.",
           "rows": [
           ]
         }
@@ -386,6 +476,8 @@
           "id": "barney_stinson",
           "type": "character",
           "answer": "Barney Stinson",
+          "wiki_link": "http://en.wikipedia.org/wiki/Barney_Stinson",
+          "wiki_quote": "Barnabus \"Barney\" Stinson is a fictional character created by Carter Bays and Craig Thomas for the CBS television series How I Met Your Mother, portrayed by Neil Patrick Harris. One of the main characters of the show, Barney is known to enjoy being single, wearing suits, and playing laser tag. He often uses different techniques and ideas to have sex with women, which is one of the show's central themes.",
           "rows": [
             "barney",
             "stinson"
@@ -395,15 +487,19 @@
           "id": "krusty",
           "type": "character",
           "answer": "Krusty",
+          "wiki_link": "http://en.wikipedia.org/wiki/Krusty_the_Clown",
+          "wiki_quote": "Herschel Shmoikel Pinchas Yerucham Krustofski, better known as Krusty the Clown, is a cartoon character in the animated television series The Simpsons. He is voiced by Dan Castellaneta. He is the long-time clown host of Bart and Lisa's favorite TV show, a combination of kiddie variety television hijinks and cartoons including The Itchy & Scratchy Show.",
           "rows": [
           ]
         },
         {
           "id": "duffy_duck",
           "type": "character",
-          "answer": "Duffy Duck",
+          "answer": "Daffy Duck",
+          "wiki_link": "http://en.wikipedia.org/wiki/Daffy_Duck",
+          "wiki_quote": "Waffle 'Daffy' Duck is an animated cartoon character produced by Warner Bros. He has appeared in cartoon series such as Looney Tunes and Merrie Melodies, where he usually has been depicted as the best friend and occasional arch-rival of Bugs Bunny. Daffy was one of the first of the new \"screwball\" characters that emerged in the late 1930s to replace traditional everyman characters who were more popular earlier in the decade, such as Mickey Mouse and Popeye.",
           "rows": [
-            "duffy",
+            "daffy",
             "duck"
           ]
         },
@@ -411,6 +507,8 @@
           "id": "chris_griffin",
           "type": "character",
           "answer": "Chris griffin",
+          "wiki_link": "http://en.wikipedia.org/wiki/Chris_Griffin",
+          "wiki_quote": "Christopher Cross \"Chris\" Griffin is a character from the animated television series Family Guy. He is the elder son and middle child of Peter and Lois Griffin, brother of Stewie and Meg Griffin. Chris is voiced by Seth Green. Originally designed as a rebellious teenager, Chris' personality on the show has evolved to unhygienic and mentally immature. Running gags involving Chris in the series include the existence of an 'Evil Monkey' in his closet (though it is later revealed that the monkey is not evil), and his pedophile admirer Herbert.",
           "rows": [
             "chris",
             "griffin"
@@ -420,6 +518,8 @@
           "id": "leonidas",
           "type": "character",
           "answer": "Leonidas",
+          "wiki_link": "http://en.wikipedia.org/wiki/Leonidas_I",
+          "wiki_quote": "Leonidas I was a warrior king of the Greek city-state of Sparta. He led the Spartan forces during the Second Persian War and is remembered for his heroic death at the Battle of Thermopylae. Leonidas was the third son of Anaxandridas II of Sparta, and thus belonged to the Agiad dynasty, who claimed descent from the demigod Heracles.",
           "rows": [
           ]
         },
@@ -427,6 +527,8 @@
           "id": "rocky_balboa",
           "type": "character",
           "answer": "Rocky Balboa",
+          "wiki_link": "http://en.wikipedia.org/wiki/Rocky_Balboa",
+          "wiki_quote": "Robert \"Rocky\" Balboa, Sr. is the title character of the Rocky series from 1976 to 2006. The character was created and portrayed by Sylvester Stallone. Throughout the films, he is depicted as an everyman who started out by going the distance and overcoming obstacles that had occurred in his life and career as a professional boxer. This character is among one of Stallone's best known characters and is often considered the role that started his film career.",
           "rows": [
             "rocky",
             "balboa"
@@ -436,6 +538,8 @@
           "id": "chewbacca",
           "type": "character",
           "answer": "Chewbacca",
+          "wiki_link": "http://en.wikipedia.org/wiki/Chewbacca",
+          "wiki_quote": "Chewbacca is a fictional character in the Star Wars franchise, portrayed by Peter Mayhew. Chewbacca's creation as a \"gentle, hairy, non-English-speaking co-pilot\" was inspired by George Lucas seeing his own dog sitting up on the passenger seat of his car. The dog, named Indiana, also inspired the name of the lead character in another one of Lucas' film franchises - Indiana Jones. It is said that Chewbacca's name is derived from собака (sobaka), the Russian word for dog.",
           "rows": [
           ]
         },
@@ -443,6 +547,8 @@
           "id": "ralph_wiggum",
           "type": "character",
           "answer": "Ralph",
+          "wiki_link": "http://en.wikipedia.org/wiki/Ralph_Wiggum",
+          "wiki_quote": "Ralph Wiggum is a recurring character on the animated series The Simpsons, voiced by Nancy Cartwright. The son of Police Chief Wiggum and a classmate of Lisa Simpson, Ralph is best known as the show's resident oddball, and is noted for his non sequiturs and erratic behavior. His lines range from nonsensical, or bizarre interpretations of a current event, to surprisingly profound statements that go over people's heads",
           "rows": [
           ]
         },
@@ -450,6 +556,8 @@
           "id": "gollum",
           "type": "character",
           "answer": "Gollum",
+          "wiki_link": "http://en.wikipedia.org/wiki/Gollum",
+          "wiki_quote": "Gollum is a fictional character from J. R. R. Tolkien's legendarium. He was introduced in the 1937 children's fantasy novel The Hobbit, and became an important supporting character in its sequel, The Lord of the Rings. Gollum was a Stoor Hobbit of the River-folk, who lived near the Gladden Fields. Originally known as Sméagol, he was corrupted by the One Ring and later named Gollum after his habit of making \"a horrible swallowing noise in his throat\".",
           "rows": [
           ]
         },
@@ -457,6 +565,8 @@
           "id": "james_bond_character",
           "type": "character",
           "answer": "James Bond",
+          "wiki_link": "http://en.wikipedia.org/wiki/James_Bond",
+          "wiki_quote": "The James Bond series focuses on a fictional character created in 1953 by writer Ian Fleming, who featured him in twelve novels and two short-story collections. Since Fleming's death in 1964 seven other authors have written authorised Bond novels or novelizations: Kingsley Amis, Christopher Wood, John Gardner, Raymond Benson, Sebastian Faulks, Jeffery Deaver and William Boyd.",
           "rows": [
             "james",
             "bond"
@@ -466,6 +576,8 @@
           "id": "brian_griffin",
           "type": "character",
           "answer": "Brian",
+          "wiki_link": "http://en.wikipedia.org/wiki/Brian_Griffin",
+          "wiki_quote": "Brian Griffin is a fictional character from the animated television series Family Guy. An anthropomorphic dog, voiced by Seth MacFarlane, he is one of the show's main characters and a member of the Griffin family. He primarily works in the series as a struggling writer, attempting essays, novels, screenplays and newspaper articles.",
           "rows": [
           ]
         },
@@ -473,6 +585,8 @@
           "id": "vito_corleone",
           "type": "character",
           "answer": "Vito Corleone",
+          "wiki_link": "http://en.wikipedia.org/wiki/Vito_Corleone",
+          "wiki_quote": "Vito Andolini Corleone (December 7, 1891 - July 29, 1955) (born Vito Andolini in Corleone, Province of Palermo, Sicily, Italy) is a fictional character in Mario Puzo's novel The Godfather and in Francis Ford Coppola's first two films, where he was portrayed by Marlon Brando in The Godfather and, as a younger man, by Robert De Niro in The Godfather Part II.",
           "rows": [
             "vito",
             "corleone"
@@ -482,6 +596,8 @@
           "id": "hermione",
           "type": "character",
           "answer": "Hermione",
+          "wiki_link": "http://en.wikipedia.org/wiki/Hermione_Granger",
+          "wiki_quote": "Hermione Jean Granger (/hərˈmaɪ.əni ˈdʒiːn ˈɡreɪndʒər/) is a fictional character in J.K. Rowling's Harry Potter series. She initially appears in the first novel, Harry Potter and the Philosopher's Stone, as a new student on her way to Hogwarts. After Harry and Ron save her from a mountain troll in the girls' toilets, she becomes close friends with them and often uses her quick wit, deft recall, and encyclopaedic knowledge to help them.",
           "rows": [
           ]
         },
@@ -489,6 +605,8 @@
           "id": "mickey_mouse",
           "type": "character",
           "answer": "Mickey Mouse",
+          "wiki_link": "http://en.wikipedia.org/wiki/Mickey_Mouse",
+          "wiki_quote": "Mickey Mouse is a funny animal cartoon character and the official mascot of The Walt Disney Company. He was created by Walt Disney and Ub Iwerks at the Walt Disney Studios in 1928. An anthropomorphic mouse who typically wears red shorts, large yellow shoes, and white gloves, Mickey has become one of the most recognizable cartoon characters in the world.",
           "rows": [
             "mickey",
             "mouse"
@@ -498,6 +616,8 @@
           "id": "batman_character",
           "type": "character",
           "answer": "Batman",
+          "wiki_link": "http://en.wikipedia.org/wiki/Batman",
+          "wiki_quote": "Batman is a fictional character, a comic book superhero appearing in comic books published by DC Comics. Batman was created by artist Bob Kane and writer Bill Finger, and first appeared in Detective Comics #27 (May 1939). Originally referred to as \"the Bat-Man\" and still referred to at times as \"the Batman\", the character is additionally known as \"the Caped Crusader\", \"the Dark Knight\", and \"the World's Greatest Detective\", among other titles.",
           "rows": [
           ]
         }
@@ -510,6 +630,8 @@
           "id": "eddie_murphy",
           "type": "real",
           "answer": "Eddie Murhpy",
+          "wiki_link": "http://en.wikipedia.org/wiki/Eddie_Murphy",
+          "wiki_quote": "Edward Regan \"Eddie\" Murphy (born April 3, 1961) is an American comedian, actor, writer, singer, director, and musician. Box-office takes from Murphy's films make him the fourth-highest grossing actor in the United States. He was a regular cast member on Saturday Night Live from 1980 to 1984 and has worked as a stand-up comedian. He was ranked no. 10 on Comedy Central's list of the 100 Greatest Stand-ups of All Time.",
           "rows": [
             "eddie",
             "murphy"
@@ -519,6 +641,8 @@
           "id": "wall_e_character",
           "type": "character",
           "answer": "Wall-e",
+          "wiki_link": "http://en.wikipedia.org/wiki/WALL-E",
+          "wiki_quote": "WALL-E (stylized with an interpunct as WALL·E) is a 2008 American computer animated science fiction romantic comedy film produced by Pixar Animation Studios and directed by Andrew Stanton. The story follows a robot named WALL-E, who is designed to clean up an abandoned, waste-covered Earth far in the future. He falls in love with another robot named EVE, who also has a programmed task, and follows her into outer space on an adventure that changes the destiny of both his kind and humanity.",
           "rows": [
             "wall e"
           ]
@@ -527,6 +651,8 @@
           "id": "consuela",
           "type": "character",
           "answer": "Consuela",
+          "wiki_link": "http://en.wikipedia.org/wiki/Consuela_(Family_Guy)#Other_recurring_characters",
+          "wiki_quote": "Consuela (voiced by Mike Henry) – Consuela is a maid who is the head of the Maids' Union. She is Hispanic and speaks very broken English. She often says \"No, no, no...\". Consuela first appears in \"Believe It or Not, Joe's Walking on Air\" demanding Lemon Pledge in a court case, and is then seen answering the door as Superman's maid at the Fortress of Solitude in \"Stewie Kills Lois\".",
           "rows": [
           ]
         },
@@ -534,6 +660,8 @@
           "id": "walter_lebowski",
           "type": "character",
           "answer": "Walter",
+          "wiki_link": "http://en.wikipedia.org/wiki/Walter_Sobchak#Walter_Sobchak",
+          "wiki_quote": "John Goodman as Walter Sobchak, a Vietnam veteran, the Dude's best friend, and bowling teammate. Walter places the rules of bowling second in reverence only to the rules of his adopted religion, Judaism, as evidenced by his strict stance against \"rolling\" on Shabbos. He has a violent temper, and is given to pulling out a handgun (or crowbar) in order to settle disputes.",
           "rows": [
           ]
         },
@@ -541,6 +669,8 @@
           "id": "rihanna",
           "type": "real",
           "answer": "Rihanna",
+          "wiki_link": "http://en.wikipedia.org/wiki/Rihanna",
+          "wiki_quote": "Robyn Rihanna Fenty (born February 20, 1988), known by her stage name Rihanna (/riˈɑːnə/ ree-ah-nə or /riˈænə/ ree-an-ə), is a Barbadian recording artist, actress, and fashion designer. She was born in Saint Michael, Barbados, and her career began when she met record producer Evan Rogers through mutual friends in late 2003 and recorded demo tapes under Rogers's guidance.",
           "rows": [
           ]
         },
@@ -548,6 +678,8 @@
           "id": "kent_brockman",
           "type": "character",
           "answer": "Kent Brockman",
+          "wiki_link": "http://en.wikipedia.org/wiki/Kent_Brockman",
+          "wiki_quote": "Kent Brockman is a fictional character in the animated television series The Simpsons. He is voiced by Harry Shearer and first appeared in the episode \"Krusty Gets Busted\". He is a grumpy, self-centered local Springfield news anchor.",
           "rows": [
             "kent",
             "brockman"
@@ -557,6 +689,8 @@
           "id": "fred_flintstone",
           "type": "character",
           "answer": "Fred Flinstone",
+          "wiki_link": "http://en.wikipedia.org/wiki/Fred_Flintstone",
+          "wiki_quote": "Frederick \"Fred\" Flintstone, also known as Fred W. Flintstone or Frederick J. Flintstone, is the protagonist of the animated sitcom The Flintstones, which aired during prime-time on ABC during the original series' run from 1960 to 1966. Fred is the husband of Wilma Flintstone and father of Pebbles Flintstone.",
           "rows": [
             "fred",
             "flinstone"
@@ -566,6 +700,8 @@
           "id": "kyle",
           "type": "character",
           "answer": "Kyle",
+          "wiki_link": "http://en.wikipedia.org/wiki/Kyle_(South_Park)",
+          "wiki_quote": "Kyle Broflovski (sometimes spelled Broslovski, Broslofski, Brovlofski or Broflofski) is a main character in the Comedy Central series South Park. He is voiced by and loosely based on co-creator Matt Stone. Kyle is one of the show's four central characters, along with his friends Stan Marsh, Kenny McCormick, and Eric Cartman.",
           "rows": [
           ]
         },
@@ -573,6 +709,8 @@
           "id": "ace_ventura",
           "type": "character",
           "answer": "Ace Ventura",
+          "wiki_link": "http://en.wikipedia.org/wiki/Ace_Ventura",
+          "wiki_quote": "Ace Ventura is a fictional character, created by screenwriter Jack Bernstein. Ace was played by Jim Carrey in the films Ace Ventura: Pet Detective, released in 1994, and Ace Ventura: When Nature Calls, released in 1995, and was voiced by Michael Daingerfield (credited as Michael Hall) in the animated television series.",
           "rows": [
             "ace",
             "ventura"
@@ -582,6 +720,8 @@
           "id": "harry_potter_character",
           "type": "character",
           "answer": "Harry Potter",
+          "wiki_link": "http://en.wikipedia.org/wiki/Harry_Potter_(character)",
+          "wiki_quote": "Harry James Potter is the title character of J. K. Rowling's Harry Potter series. The majority of the books' plot covers seven years in the life of the orphan Potter, who, on his eleventh birthday, learns he is a wizard. Thus, he attends Hogwarts School of Witchcraft and Wizardry to practice magic under the guidance of the kindly headmaster Albus Dumbledore and other school professors.",
           "rows": [
             "harry",
             "potter"
@@ -591,6 +731,8 @@
           "id": "milhouse",
           "type": "character",
           "answer": "Milhouse",
+          "wiki_link": "http://en.wikipedia.org/wiki/Milhouse_Van_Houten",
+          "wiki_quote": "Milhouse Mussolini Van Houten is a cartoon character featured in the animated television series The Simpsons, voiced by Pamela Hayden. He is Bart Simpson's best friend in Mrs. Krabappel's fourth grade class at Springfield Elementary School. He is smart and loyal, but insecure and very gullible, as well as less popular than Bart.",
           "rows": [
           ]
         },
@@ -598,6 +740,8 @@
           "id": "goofy",
           "type": "character",
           "answer": "Goofy",
+          "wiki_link": "http://en.wikipedia.org/wiki/Goofy",
+          "wiki_quote": "Goofy is a funny animal cartoon character created in 1932 at Walt Disney Productions. Goofy is a tall, anthropomorphic dog, and typically wears a turtle neck and vest, with pants, shoes, white gloves, and a tall hat originally designed as a rumpled fedora. Goofy is a close friend of Mickey Mouse and Donald Duck and is one of Disney's most popular characters.",
           "rows": [
           ]
         },
@@ -605,6 +749,8 @@
           "id": "steve_jobs",
           "type": "real",
           "answer": "Steve Jobs",
+          "wiki_link": "http://en.wikipedia.org/wiki/Steve_Jobs",
+          "wiki_quote": "Steven Paul “Steve” Jobs (/ˈdʒɒbz/; February 24, 1955 – October 5, 2011) was an American entrepreneur, marketer, and inventor, who was the co-founder, chairman, and CEO of Apple Inc. Through Apple, he is widely recognized as a charismatic pioneer of the personal computer revolution and for his influential career in the computer and consumer electronics fields, transforming “one industry after another, from computers and smartphones to music and movies.”",
           "rows": [
             "steve",
             "jobs"
@@ -614,6 +760,8 @@
           "id": "herbert",
           "type": "character",
           "answer": "Herbert",
+          "wiki_link": "http://en.wikipedia.org/wiki/Herbert_(Family_Guy)",
+          "wiki_quote": "John Herbert is a fictional character in the animated television series Family Guy. His first name, John, was finally revealed in the episode entitled \"Valentine's Day in Quahog.\" He is voiced by Mike Henry, who created and designed the character. Herbert is an elderly neighbor of the Griffin family who first appeared in the season 3 episode \"To Love and Die in Dixie\". Henry defines Herbert as a pedophile.",
           "rows": [
           ]
         },
@@ -621,6 +769,8 @@
           "id": "ray_william_johnson",
           "type": "character",
           "answer": "Ray William Johnson",
+          "wiki_link": "http://en.wikipedia.org/wiki/Ray_William_Johnson",
+          "wiki_quote": "Ray William Johnson (born August 14, 1981) is an American video blogger, producer, and actor best known for his YouTube series Equals Three, in which he provides commentary on viral videos. Many of the videos featured on Equals Three are noted to have received an additional boost of popularity.",
           "rows": [
             "ray william",
             "johnson"
@@ -635,6 +785,8 @@
           "id": "maximus_decimus_meridius",
           "type": "character",
           "answer": "Maximus Decimus Meridius",
+          "wiki_link": "http://en.wikipedia.org/wiki/Maximus_Decimus_Meridius#Cast",
+          "wiki_quote": "Russell Crowe as Maximus Decimus Meridius: a Hispano-Roman legatus forced into becoming a slave who seeks revenge against Commodus. He had been under the favor of Marcus Aurelius, and the love and admiration of Lucilla prior to the events of the film. His home is near Trujillo in today's Province of Cáceres, Spain. After the murder of his family he vows vengeance. Maximus is a fictional character partly inspired by Marcus Nonius Macrinus, Narcissus, Spartacus, Cincinnatus, and Maximus of Hispania.",
           "rows": [
             "maximus decimus",
             "meridius"
@@ -644,6 +796,8 @@
           "id": "ned_flanders",
           "type": "character",
           "answer": "Ned Flanders",
+          "wiki_link": "http://en.wikipedia.org/wiki/Ned_Flanders",
+          "wiki_quote": "Nedward \"Ned\" Flanders, Jr. is a recurring fictional character in the animated television series The Simpsons. He is voiced by Harry Shearer, and first appeared in the series premiere episode \"Simpsons Roasting on an Open Fire\". He is the next door neighbor to the Simpson family and is generally loathed by Homer Simpson. A devout Christian with an annoyingly perfect family, he is among the friendliest and most compassionate of Springfield's citizens and is generally considered a pillar of the Springfield community.",
           "rows": [
             "ned",
             "flanders"
@@ -653,6 +807,8 @@
           "id": "mr_hanky",
           "type": "character",
           "answer": "Mr hanky",
+          "wiki_link": "http://en.wikipedia.org/wiki/Mr._Hankey#Mr._Hankey",
+          "wiki_quote": "Mr. Hankey the \"Christmas Poo\", voiced by Trey Parker, is a talking piece of feces. He first appeared in the first season episode \"Mr. Hankey, the Christmas Poo\". He emerges from the toilet bowl on Christmas Eve and brings presents to good boys and girls whose diets have been high in fiber. He is especially close to Kyle, consoling him during his Christmas-Hanukkah depression and generally appears to help the boys out with something or gives them advice.",
           "rows": [
             "mr hanky"
           ]
@@ -661,6 +817,8 @@
           "id": "malfoy",
           "type": "character",
           "answer": "Draco Malfoy",
+          "wiki_link": "http://en.wikipedia.org/wiki/Draco_Malfoy",
+          "wiki_quote": "Draco Lucius Malfoy is a character and antagonist in J. K. Rowling's Harry Potter series. He is a Slytherin student in Harry Potter's year. He is frequently accompanied by his two accomplices, Vincent Crabbe and Gregory Goyle, who act as henchmen. Draco is characterised as a cowardly bully who manipulates and hurts people to get what he wants; nevertheless, he is a cunning user of magic.",
           "rows": [
             "draco",
             "malfoy"
@@ -670,6 +828,8 @@
           "id": "dr_hannibal_lecter",
           "type": "character",
           "answer": "Hannibal Lecter",
+          "wiki_link": "http://en.wikipedia.org/wiki/Dr._Hannibal_Lecter",
+          "wiki_quote": "Hannibal Lecter is a fictional character in a series of suspense novels by Thomas Harris. Lecter was introduced in the 1981 thriller novel Red Dragon as a brilliant psychiatrist and cannibalistic serial killer. The novel and its sequel, The Silence of the Lambs, feature Lecter as one of the primary antagonists after the two serial killers in both novels.",
           "rows": [
             "hannibal",
             "lecter"
@@ -679,6 +839,8 @@
           "id": "fairy_godmother",
           "type": "character",
           "answer": "Fairy Godmother",
+          "wiki_link": "http://en.wikipedia.org/wiki/Fairy_godmother",
+          "wiki_quote": "In fairy tales, a fairy godmother (French: fée marraine) is a fairy with magical powers who acts as a mentor or parent to someone, in the role that an actual godparent was expected to play in many societies. In Perrault's Cinderella, he concludes the tale with the cynical moral that no personal advantages will suffice without proper connections. The fairy godmother is a special case of the donor.",
           "rows": [
             "fairy",
             "godmother"
@@ -688,6 +850,8 @@
           "id": "tom_hanks",
           "type": "real",
           "answer": "Tom Hanks",
+          "wiki_link": "http://en.wikipedia.org/wiki/Tom_Hanks",
+          "wiki_quote": "Thomas Jeffrey \"Tom\" Hanks (born July 9, 1956) is an American actor, producer, writer, and director. Hanks is best known for his roles in Big, A League of Their Own, Sleepless in Seattle, Forrest Gump, Apollo 13, Saving Private Ryan, You've Got Mail, The Green Mile, Cast Away, The Da Vinci Code, Captain Phillips, and Saving Mr. Banks, as well as the animated films The Polar Express and the Toy Story series.",
           "rows": [
             "tom",
             "hanks"
@@ -697,6 +861,8 @@
           "id": "abe_simpson",
           "type": "character",
           "answer": "Abe Simpson",
+          "wiki_link": "http://en.wikipedia.org/wiki/Abe_Simpson",
+          "wiki_quote": "Abraham Jay-Jedediah \"Abe\" Simpson, often known simply as Grampa, is a fictional character in the animated television series The Simpsons. Voiced by Dan Castellaneta, he is the father of Homer Simpson, and the grandfather of Bart, Lisa, and Maggie Simpson. In the 1000th issue of Entertainment Weekly, Grampa was selected as the Grandpa for \"The Perfect TV Family\".",
           "rows": [
             "abe",
             "simpson"
@@ -706,6 +872,8 @@
           "id": "pewdiepie",
           "type": "real",
           "answer": "PewDiePie",
+          "wiki_link": "http://en.wikipedia.org/wiki/PewDiePie",
+          "wiki_quote": "Felix Arvid Ulf Kjellberg (Swedish: [ˈfeːlɪks ˈaɾvɪd ˈɵlf ˈɕɛlˌbæɾj]; /ˈtʃɛlbərɡ/ chel-bərg or /ˈdʒɛlbərɡ/ jel-bərg; born 24 October 1989), better known by his online alias PewDiePie (/ˈpjuːdipaɪ/ pew-dee-py), is a Swedish video game commentator on YouTube. PewDiePie specializes in Let's Play videos of the horror and action video game genres. His channel is one of the fastest growing YouTube channels, having grown from 3.5 million subscribers to 18 million in 2013. ",
           "rows": [
           ]
         },
@@ -713,6 +881,8 @@
           "id": "robert_de_niro",
           "type": "real",
           "answer": "Robert De Niro",
+          "wiki_link": "http://en.wikipedia.org/wiki/Robert_De_Niro",
+          "wiki_quote": "Robert De Niro (/dəˈnɪroʊ/; born August 17, 1943) is an American actor, voice actor, director, and producer. His first major film roles were in Bang the Drum Slowly (1973) and Mean Streets (1973). In 1974, after being turned down for the role of Michael Corleone in The Godfather, he was cast as the young Vito Corleone in The Godfather Part II, a role for which he won the Academy Award for Best Supporting Actor.",
           "rows": [
             "robert",
             "de niro"
@@ -722,6 +892,8 @@
           "id": "tyler_durden",
           "type": "character",
           "answer": "Tyler Durden",
+          "wiki_link": "http://en.wikipedia.org/wiki/Fight_Club_(novel)#Tyler_Durden",
+          "wiki_quote": "\"Because of his nature\", Tyler works night jobs where he sabotages companies and harms clients. He also steals left-over drained human fat from liposuction clinics to supplement his income through soap making and create the ingredients for bomb manufacturing, which will be put to work later with his fight club. He is the co-founder of Fight Club, as it was his idea to instigate the fight that led to it.",
           "rows": [
             "tyler",
             "durden"
@@ -731,6 +903,8 @@
           "id": "butters",
           "type": "character",
           "answer": "Butters",
+          "wiki_link": "http://en.wikipedia.org/wiki/Butters_(South_Park)",
+          "wiki_quote": "Leopold \"Butters\" Stotch is a fictional character in the animated television series South Park. He is voiced by series co-creator Matt Stone and loosely based on co-producer Eric Stough. He is a third- then fourth-grade student at the fictional South Park Elementary School. Butters is cheerful, naive, optimistic, gullible and more passive relative to the show's other child characters, and can become increasingly anxious, especially when faced with the likelihood of his parents' punishments, which is usually being grounded. ",
           "rows": [
           ]
         },
@@ -738,6 +912,8 @@
           "id": "george_clooney",
           "type": "real",
           "answer": "George Clooney",
+          "wiki_link": "http://en.wikipedia.org/wiki/George_Clooney",
+          "wiki_quote": "George Timothy Clooney (born May 6, 1961) is an American actor, film director, producer, and screenwriter. He has received three Golden Globe Awards for his work as an actor and two Academy Awards, one for acting and the other for producing. Clooney is also noted for his political activism and has served as one of the United Nations Messengers of Peace since January 31, 2008.",
           "rows": [
             "george",
             "clooney"
@@ -747,6 +923,8 @@
           "id": "moe",
           "type": "character",
           "answer": "Moe",
+          "wiki_link": "http://en.wikipedia.org/wiki/Moe_Szyslak",
+          "wiki_quote": "Moe Szyslak /ˈsɪzlæk/ is a fictional character in the American animated television series, The Simpsons. He is voiced by Hank Azaria and first appeared in the series premiere episode \"Simpsons Roasting on an Open Fire\". Moe is the proprietor and bartender of Moe's Tavern, a Springfield bar frequented by Homer Simpson, Barney Gumble, Carl Carlson, Lenny Leonard, Sam, Larry, and others.",
           "rows": [
           ]
         },
@@ -754,6 +932,8 @@
           "id": "samuel_l_jackson",
           "type": "real",
           "answer": "Samuel L Jackson",
+          "wiki_link": "http://en.wikipedia.org/wiki/Samuel_L._Jackson",
+          "wiki_quote": "Samuel Leroy Jackson (born December 21, 1948) is an American film and television actor and film producer. After becoming involved with the Civil Rights Movement, he moved on to acting in theater at Morehouse College, and then films. He had several small roles such as in the film Goodfellas before meeting his mentor, Morgan Freeman, and the director Spike Lee.",
           "rows": [
             "samuel l",
             "jackson"
@@ -768,6 +948,8 @@
           "id": "peter_pan",
           "type": "character",
           "answer": "Peter Pan",
+          "wiki_link": "http://en.wikipedia.org/wiki/Peter_Pan",
+          "wiki_quote": "Peter Pan is a character created by Scottish novelist and playwright J. M. Barrie. A mischievous boy who can fly and never grows up, Peter Pan spends his never-ending childhood adventuring on the small island of Neverland as the leader of his gang, the Lost Boys, interacting with mermaids, Native Americans, fairies, pirates, and occasionally ordinary children from the world outside of Neverland.",
           "rows": [
             "peter",
             "pan"
@@ -777,6 +959,8 @@
           "id": "sherlock_holmes",
           "type": "character",
           "answer": "Sherlock Holmes",
+          "wiki_link": "http://en.wikipedia.org/wiki/Sherlock_Holmes",
+          "wiki_quote": "Sherlock Holmes (/ˈʃɜrlɒk ˈhoʊmz/) FRSC is a fictional detective created by Scottish author and physician Sir Arthur Conan Doyle. A London-based \"consulting detective\" whose abilities border on the fantastic, Holmes is famous for his astute logical reasoning, his ability to adopt almost any disguise, and his use of forensic science skills to solve difficult cases.",
           "rows": [
             "sherlock",
             "holmes"
@@ -786,6 +970,8 @@
           "id": "nelson",
           "type": "character",
           "answer": "Nelson",
+          "wiki_link": "http://en.wikipedia.org/wiki/Nelson_Muntz",
+          "wiki_quote": "Nelson Muntz is a fictional character and the lead school bully from the animated TV series The Simpsons. He is voiced by Nancy Cartwright. Nelson was introduced in Season 1's \"Bart the General\" as an antagonist but later turned into one of Bart Simpson's best friends. He is well known for his signature laugh \"Haw Haw!\"",
           "rows": [
           ]
         },
@@ -793,15 +979,17 @@
           "id": "ron_weasley",
           "type": "character",
           "answer": "Ron Weasley",
-          "rows": [
-            "ron",
-            "weasley"
+          "wiki_link": "http://en.wikipedia.org/wiki/Ron_Weasley",
+          "wiki_quote": "Ronald Bilius \"Ron\" Weasley is a fictional character in J. K. Rowling's Harry Potter series. His first appearance was in the first book of the series, Harry Potter and the Philosopher's Stone as the best friend of Harry Potter and Hermione Granger. He is a member of the Weasley family, a pure blood family, who reside in \"The Burrow\" outside Ottery St. Catchpole. Along with Harry and Hermione, he is a member of the Gryffindor house. Ron is present in most of the action throughout the series.",
+          "rows": ["ron","weasley"
           ]
         },
         {
           "id": "joe",
           "type": "character",
-          "answer": "Jow ",
+          "answer": "Joe",
+          "wiki_link": "http://en.wikipedia.org/wiki/Joe_Swanson#Joe_Swanson",
+          "wiki_quote": "Joe Swanson (voiced by Patrick Warburton) – Joe Swanson is the Griffins' neighbor and Peter's friend. He is a paraplegic who also suffers from impotence and incontinence. Despite his disability, Joe still proves to be an extremely skilled police officer, as he is constantly seen pursuing criminals or rescuing victims with the aid of his wheelchair and even goes so far as to abandon his wheelchair to complete his work.",
           "rows": [
           ]
         },
@@ -809,6 +997,8 @@
           "id": "sergeant_hartman",
           "type": "character",
           "answer": "Sergeant hartman",
+          "wiki_link": "http://en.wikipedia.org/wiki/Sergeant_hartman",
+          "wiki_quote": "Full Metal Jacket is a 1987 war film directed and produced by Stanley Kubrick. The screenplay by Kubrick, Michael Herr and Gustav Hasford was based on Hasford's 1979 novel The Short-Timers. The film stars Matthew Modine, Adam Baldwin, Vincent D'Onofrio, R. Lee Ermey, Dorian Harewood, Arliss Howard, Kevyn Major Howard and Ed O'Ross.",
           "rows": [
             "sergeant",
             "Hartman"
@@ -818,6 +1008,8 @@
           "id": "mr_mackey",
           "type": "character",
           "answer": "Mr Mackey",
+          "wiki_link": "http://en.wikipedia.org/wiki/Mr._Mackey#Mr._Mackey",
+          "wiki_quote": "Mr. Mackey, voiced by Trey Parker, is the school counsellor. He has a disproportionately large head and mumbles \"M'kay\" into most sentences. He speaks with a Southern accent, and he is believed to be from Louisiana. It is assumed he is at least 40 years old (he once said he had sex at 19 and that it has been about 21 years since). He is based on Trey Parker's junior high school counselor, Stan Lackey. He has occasionally taught classes at the school, and taught sex education with Ms. Choksondik.",
           "rows": [
             "mr mackey"
           ]
@@ -826,6 +1018,8 @@
           "id": "professor_frink",
           "type": "character",
           "answer": "Professor Frink",
+          "wiki_link": "http://en.wikipedia.org/wiki/Professor_Frink",
+          "wiki_quote": "Professor John Nerdelbaum Frink, Jr., or simply Professor Frink, is a recurring character in the animated television series The Simpsons. He is voiced by Hank Azaria, and first appeared in the 1991 episode \"Old Money\". Frink is Springfield's nerdy scientist and professor and is extremely intelligent, though somewhat mad and socially inept.",
           "rows": [
             "professor",
             "frink"
@@ -835,6 +1029,8 @@
           "id": "will_smith",
           "type": "real",
           "answer": "Will Smith",
+          "wiki_link": "http://en.wikipedia.org/wiki/Will_Smith",
+          "wiki_quote": "Willard Carroll \"Will\" Smith, Jr. (born September 25, 1968) is an American actor, producer, and rapper. He has enjoyed success in television, film, and music. In April 2007, Newsweek called him the most powerful actor in Hollywood.[4] Smith has been nominated for 4 Golden Globe Awards, 2 Academy Awards, and has won 4 Grammy Awards.",
           "rows": [
             "will",
             "smith"
@@ -844,6 +1040,8 @@
           "id": "evil_queen",
           "type": "character",
           "answer": "Evil Queen",
+          "wiki_link": "http://en.wikipedia.org/wiki/Evil_Queen_(Disney)",
+          "wiki_quote": "The Evil Queen, also known as the Wicked Queen or just the Queen, and sometimes instead identified by name as Queen Grimhilde, is the primary antagonist in Disney's 1937 animated film Snow White and the Seven Dwarfs. She is based on the Queen character from the European fairy tale \"Snow White\".",
           "rows": [
             "evil",
             "queen"
@@ -853,6 +1051,8 @@
           "id": "dr_zoidberg",
           "type": "character",
           "answer": "Dr Zoidberg",
+          "wiki_link": "http://en.wikipedia.org/wiki/Dr._Zoidberg",
+          "wiki_quote": "Doctor John A. Zoidberg, also known simply as Zoidberg, is a fictional character in the television series Futurama. He is a lobster-esque alien who works as the staff doctor for Planet Express, despite his woeful understanding of human physiology and allusions to his questionable credentials.",
           "rows": [
             "dr",
             "zoidberg"
@@ -862,6 +1062,8 @@
           "id": "mayor_quimby",
           "type": "character",
           "answer": "Mayor Quimby",
+          "wiki_link": "http://en.wikipedia.org/wiki/Mayor_Quimby",
+          "wiki_quote": "Mayor Joseph \"Joe\" Quimby, nicknamed \"Diamond Joe,\" is a recurring character from the animated television series The Simpsons. He is voiced by Dan Castellaneta, and first appeared in the episode \"Bart Gets an F\". A member of the Democratic Party, Quimby is the mayor of Springfield, and is a composite parody of U.S. Senator Ted Kennedy and certain other members of the Kennedy family who have entered politics.",
           "rows": [
             "mayor",
             "quimby"
@@ -871,6 +1073,8 @@
           "id": "stewie",
           "type": "character",
           "answer": "Stewie Griffin",
+          "wiki_link": "http://en.wikipedia.org/wiki/Stewie_Griffin",
+          "wiki_quote": "Stewart Gilligan \"Stewie\" Griffin is a main character from the animated television series Family Guy. Once obsessed with violence and matricide, Stewie (voiced by Seth MacFarlane) is the youngest child of Peter and Lois Griffin, and the brother of Chris and Meg. Over the duration of the series, he has also come to have a very close friendship with the family's anthropomorphic dog, Brian.",
           "rows": [
             "stewie",
             "griffin"
@@ -880,15 +1084,19 @@
           "id": "jd",
           "type": "character",
           "answer": "JD",
+          "wiki_link": "http://en.wikipedia.org/wiki/J.D._(Scrubs)",
+          "wiki_quote": "John Michael \"J.D.\" Dorian, M.D. is a fictional character in the American comedy-drama Scrubs, played by Zach Braff. He is the narrator and main character of the series (seasons 1-8). He provides voice-over to the series which fills the roles of his internal thoughts and an overall narration in the show, often linking the story arcs in each episode thematically. He was born in Trotwood, Ohio.",
           "rows": [
           ]
         },
         {
-          "id": "ermit_the_frog",
+          "id": "kermit_the_frog",
           "type": "character",
-          "answer": "Ermit the Frog",
+          "answer": "Kermit the Frog",
+          "wiki_link": "http://en.wikipedia.org/wiki/Kermit_the_frog",
+          "wiki_quote": "Kermit the Frog is Jim Henson's most famous Muppet creation, first introduced in 1955. He is the protagonist of many Muppet projects, most notably on The Muppet Show, and Sesame Street, as well as in movies, specials, and public service announcements throughout the years. Henson originally performed Kermit until his death on May 16, 1990;",
           "rows": [
-            "ermit",
+            "kermit",
             "the frog"
           ]
         }
@@ -901,6 +1109,8 @@
           "id": "dory",
           "type": "character",
           "answer": "Dory",
+          "wiki_link": "http://en.wikipedia.org/wiki/Dory_(Finding_Nemo)",
+          "wiki_quote": "Finding Nemo is a 2003 American computer-animated comedy-drama adventure film written and directed by Andrew Stanton, released by Walt Disney Pictures, and the fifth film produced by Pixar Animation Studios. It tells the story of the overprotective clownfish named Marlin (Albert Brooks) who, along with a regal tang named Dory (Ellen DeGeneres), searches for his abducted son Nemo (Alexander Gould) all the way to Sydney Harbour.",
           "rows": [
           ]
         },
@@ -908,6 +1118,8 @@
           "id": "queen_of_hearts",
           "type": "character",
           "answer": "Queen of Hearts",
+          "wiki_link": "http://en.wikipedia.org/wiki/Queen_of_Hearts_(Alice%27s_Adventures_in_Wonderland)",
+          "wiki_quote": "The Queen of Hearts is a character from the book Alice's Adventures in Wonderland by the writer and mathematician Lewis Carroll. She is a foul-tempered monarch, that Carroll himself pictured as \"a blind fury\", and who is quick to decree death sentences at the slightest offense. Her most famous line, one which she repeats often, is \"Off with their heads!\"",
           "rows": [
             "queen of",
             "hearts"
@@ -917,6 +1129,8 @@
           "id": "hagrid",
           "type": "character",
           "answer": "Hagrid",
+          "wiki_link": "http://en.wikipedia.org/wiki/Hagrid",
+          "wiki_quote": "Rubeus Hagrid is a fictional character in the Harry Potter book series written by J. K. Rowling. Hagrid is introduced in Harry Potter and the Philosopher's Stone as a half-giant and half-human who is the gamekeeper and Keeper of Keys and Grounds of Hogwarts, the primary setting for the first six novels. In the third novel Harry Potter and the Prisoner of Azkaban, Hagrid is promoted to Care of Magical Creatures teacher, and later becomes a member of the Order of the Phoenix.",
           "rows": [
           ]
         },
@@ -924,6 +1138,8 @@
           "id": "willie",
           "type": "character",
           "answer": "Willie",
+          "wiki_link": "http://en.wikipedia.org/wiki/Groundskeeper_Willie",
+          "wiki_quote": "Groundskeeper Willie is a recurring character on The Simpsons, voiced by Dan Castellaneta. He is head groundskeeper at Springfield Elementary School. Willie is almost feral in nature and is immensely proud of his native Scotland. He is easily identifiable by his flaming red hair and beard, as well as his aggressive temperament and strong Scottish accent.",
           "rows": [
           ]
         },
@@ -931,6 +1147,8 @@
           "id": "fonzie",
           "type": "character",
           "answer": "Fonzie",
+          "wiki_link": "http://en.wikipedia.org/wiki/Fonzie",
+          "wiki_quote": "Arthur Herbert Fonzarelli (also known as \"Fonzie\", \"Fonz\", or \"The Fonz\") is a fictional character played by Henry Winkler in the American sitcom Happy Days (1974–1984). He was originally a secondary character, but was soon positioned as a lead character when he came to dwarf the other characters in popularity.",
           "rows": [
           ]
         },
@@ -938,6 +1156,8 @@
           "id": "dr_house_character",
           "type": "character",
           "answer": "Dr House",
+          "wiki_link": "http://en.wikipedia.org/wiki/Gregory_House",
+          "wiki_quote": "Dr. Gregory House, M.D. — typically referred to simply as House — is the title character of the American medical drama House. Portrayed by English actor Hugh Laurie, he leads a team of diagnosticians as the Head of Diagnostic Medicine at the fictional Princeton-Plainsboro Teaching Hospital in New Jersey based on Yale-New Haven Hospital.",
           "rows": [
             "dr house"
           ]
@@ -946,6 +1166,8 @@
           "id": "woody_allen",
           "type": "real",
           "answer": "Woody Allen",
+          "wiki_link": "http://en.wikipedia.org/wiki/Woody_Allen",
+          "wiki_quote": "Woody Allen (born Allan Stewart Konigsberg, December 1, 1935) is an actor, director, screenwriter, comedian, musician and playwright whose career spans more than 50 years. He worked as a comedy writer in the 1950s, writing jokes and scripts for television and publishing several books of short humor pieces. In the early 1960s, Allen began performing as a stand-up comic, emphasizing monologues rather than traditional jokes.",
           "rows": [
           ]
         },
@@ -953,6 +1175,8 @@
           "id": "stitch",
           "type": "character",
           "answer": "Stitch",
+          "wiki_link": "http://en.wikipedia.org/wiki/Stitch_(Lilo_%26_Stitch)",
+          "wiki_quote": "Stitch (also known as Experiment 626) is a fictional character in the Lilo & Stitch film series and television series. Originally created to cause chaos across the galaxy, he is marked by his mischievous behavior, traits that endear him to his friend Lilo (who adopted him as her puppy dog). He is voiced by his creator and the film's co-director, Chris Sanders.",
           "rows": [
           ]
         },
@@ -960,6 +1184,8 @@
           "id": "goku",
           "type": "character",
           "answer": "Goku",
+          "wiki_link": "http://en.wikipedia.org/wiki/Goku",
+          "wiki_quote": "Son Goku (孫 悟空 Son Gokū?), better known as simply Goku, is a fictional character and the protagonist of the Dragon Ball manga series written by Akira Toriyama. He is based on Sun Wukong, a main character in the classical Chinese novel Journey to the West. Goku is introduced in chapter #1 Bulma and Son Goku (ブルマと孫悟空 Buruma to Son Gokū?), originally published in Japan's Weekly Shōnen Jump magazine on December 3, 1984, as an eccentric, monkey-tailed boy who practices martial arts and possesses superhuman strength.",
           "rows": [
           ]
         },
@@ -967,6 +1193,8 @@
           "id": "the_brain",
           "type": "character",
           "answer": "The Brain",
+          "wiki_link": "http://en.wikipedia.org/wiki/Pinky_and_the_Brain",
+          "wiki_quote": "Pinky and the Brain is an American animated television series. It was the first animated television series to be presented in Dolby Surround and the fourth collaboration of Steven Spielberg and Warner Bros. Animation. The characters first appeared in 1993 as a recurring segment on Animaniacs and then from 1995 to 1998, they were spun off into their own show on The WB Television Network, Steven Spielberg Presents Pinky and the Brain, with 65 episodes produced.",
           "rows": [
             "the brain"
           ]
@@ -975,6 +1203,8 @@
           "id": "r_two_d_two",
           "type": "character",
           "answer": "R2D2",
+          "wiki_link": "http://en.wikipedia.org/wiki/R2D2",
+          "wiki_quote": "R2-D2 (called \"R2\" for short and phonetically spelled \"Artoo-Detoo\") is a robot character in the Star Wars universe. An astromech droid (referred to in the novel as a 'thermocapsulary dehousing assister'), R2-D2 is a major character in all Star Wars films. Along with his protocol droid companion C-3PO, he joins or supports Anakin Skywalker, Luke Skywalker, Princess Leia, and Obi-Wan Kenobi in various points in the saga. R2-D2 was played by English actor Kenny Baker.",
           "rows": [
           ]
         },
@@ -982,6 +1212,8 @@
           "id": "tyrion_lannister",
           "type": "character",
           "answer": "Tyrion Lannister",
+          "wiki_link": "http://en.wikipedia.org/wiki/Tyrion_Lannister",
+          "wiki_quote": "Tyrion Lannister (also referred to as \"The Imp\" or \"The Halfman\") is a fictional character created by American author George R. R. Martin, based on an idea about a never used character in the novel Windhaven. He is a prominent point of view character in Martin's award-winning A Song of Ice and Fire series and also a main character in HBO's adaptation of the series, Game of Thrones, where he is portrayed by Peter Dinklage, whose work on the show earned him an Emmy and a Golden Globe award in 2011 and 2012, respectively.",
           "rows": [
             "tyrion",
             "lannister"
@@ -991,6 +1223,8 @@
           "id": "bruce",
           "type": "character",
           "answer": "Bruce",
+          "wiki_link": "http://en.wikipedia.org/wiki/Bruce_(Family_Guy)#Bruce",
+          "wiki_quote": "Bruce (voiced by Mike Henry) – Bruce is a moustached man who speaks effeminately in a calm, drawn-out voice with a slight lisp, as well as occasionally smacking his lips before a sentence. Though he was not given a name until the episode \"No Chris Left Behind\", he has appeared in several episodes without being named on-screen; however, he is referred to in commentary tracks prior to that episode as \"the Performance Artist\". He even comments on it the first time his name is spoken in the series.",
           "rows": [
           ]
         },
@@ -998,6 +1232,8 @@
           "id": "jack_skellington",
           "type": "character",
           "answer": "Jack Skellington",
+          "wiki_link": "http://en.wikipedia.org/wiki/Jack_Skellington",
+          "wiki_quote": "Jack Skellington is the main protagonist of the 1993 film The Nightmare Before Christmas. Jack is the Pumpkin King of Halloween Town and lives in a fantasy world based solely on the Halloween holiday. His usual appearance is a skeleton dressed in a black pin-striped suit and a bow tie resembling a bat, but there are some points in which he dresses as a scarecrow with a pumpkin for a head.",
           "rows": [
             "jack",
             "skellington"
@@ -1007,6 +1243,8 @@
           "id": "mr_burns",
           "type": "character",
           "answer": "Mr Burns",
+          "wiki_link": "http://en.wikipedia.org/wiki/Mr._Burns",
+          "wiki_quote": "Charles Montgomery \"Monty\" Burns, usually referred to as Mr. Burns, is a recurring character in the animated television series The Simpsons, who is voiced by Harry Shearer and previously Christopher Collins. Burns is the evil owner of the Springfield Nuclear Power Plant and is also Homer Simpson's boss. He is attended at almost all times by Waylon Smithers, his loyal and sycophantic aide, advisor, confidant and secret admirer.",
           "rows": [
             "mr burns"
           ]

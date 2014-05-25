@@ -122,6 +122,12 @@ public class LevelListViewAdapter extends BaseAdapter {
                     break;
             }
 
+            if(paramInt==getCount()-1){
+                Utility.setMargins(unlockedlevelItemViewHolder.layout, 0, 0, 0, Utility.convertDpToPixels(context, 10));
+            }else{
+                Utility.setMargins(unlockedlevelItemViewHolder.layout, 0, 0, 0, 0);
+            }
+
             return paramView;
 
         }
@@ -156,6 +162,12 @@ public class LevelListViewAdapter extends BaseAdapter {
             case Utility.VIP:
                 Utility.setBackgroundToView(lockedlevelItemViewHolder.layout, context.getResources().getDrawable(R.drawable.level_rounded_layout_character));
                 break;
+        }
+
+        if(paramInt==getCount()-1){
+            Utility.setMargins(lockedlevelItemViewHolder.layout, 0, 0, 0, Utility.convertDpToPixels(context, 10));
+        }else{
+            Utility.setMargins(lockedlevelItemViewHolder.layout, 0, 0, 0, 0);
         }
 
         return paramView;

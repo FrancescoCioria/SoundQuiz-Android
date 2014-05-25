@@ -61,8 +61,8 @@ public class PackageCollection {
                 Log.d("POPULATE", "time: " + (System.currentTimeMillis() - startTime));
 
                 // show opening logo at least 2 seconds
-                while (System.currentTimeMillis() - startTime < 2000) {
-                }
+//                while (System.currentTimeMillis() - startTime < 2000) {
+//                }
                 return null;
             }
 
@@ -237,6 +237,13 @@ public class PackageCollection {
 
                         quizData.setType(quizJSON.getString("type"));
 
+                        quizData.setWikiURI(quizJSON.getString("wiki_link"));
+                        quizData.setWikiDescription(quizJSON.getString("wiki_quote"));
+
+                        if (category.equals("music")) {
+                            quizData.setSpotifyURI(quizJSON.getString("spotify_uri"));
+                        }
+
                         if (!addQuizToSavedData(quizData)) {
                             populateQuizWithSavedData(quizData);
                         }
@@ -244,11 +251,11 @@ public class PackageCollection {
                         levelData.getQuizList().add(quizData);
                     }
                     packageData.getLevelList().add(levelData);
-                    if(category.equals("cinema_tv")){
+                    if (category.equals("cinema_tv")) {
                         packageData.setCategory("THEMES");
-                    }else if(category.equals("music")){
+                    } else if (category.equals("music")) {
                         packageData.setCategory("MUSIC");
-                    }else{
+                    } else {
                         packageData.setCategory("VOICES");
                     }
                 }

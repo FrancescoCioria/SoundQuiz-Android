@@ -8,6 +8,9 @@
           "id": "the_beatles_hey_jude",
           "type": "artist",
           "answer": "The Beatles",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Beatles",
+          "wiki_quote": "The Beatles were an English rock band that formed in Liverpool, in 1960. With John Lennon, Paul McCartney, George Harrison and Ringo Starr, they became widely regarded as the greatest and most influential act of the rock era.",
+          "spotify_uri": "",
           "rows": [
             "the",
             "beatles"
@@ -17,6 +20,9 @@
           "id": "miley_cyrus_wrecking_ball",
           "type": "song",
           "answer": "Wrecking ball",
+          "wiki_link": "http://en.wikipedia.org/wiki/Wrecking_Ball_(Miley_Cyrus_song)",
+          "wiki_quote": "Wrecking Ball is a song performed by American recording artist Miley Cyrus for her fourth studio album Bangerz (2013)",
+          "spotify_uri": "spotify:track:6oDPg7fXW3Ug3KmbafrXzA",
           "rows": [
             "wrecking",
             "ball"
@@ -26,6 +32,9 @@
           "id": "lorde_royals",
           "type": "song",
           "answer": "Royals",
+          "wiki_link": "http://en.wikipedia.org/wiki/Royals_(song)",
+          "wiki_quote": "Royals is a song recorded by New Zealand singer-songwriter Lorde for her extended play debut, The Love Club EP (released on 22 November 2012, two weeks after Lorde's sixteenth birthday), and also included on her September 2013 debut studio album, Pure Heroine.",
+          "spotify_uri": "spotify:track:3yvZ1VUso9Xi7EvIyLaj4o",
           "rows": [
           ]
         },
@@ -33,6 +42,9 @@
           "id": "daft_punk_get_lucky",
           "type": "song",
           "answer": "Get Lucky",
+          "wiki_link": "http://en.wikipedia.org/wiki/Get_Lucky_(Daft_Punk_song)",
+          "wiki_quote": "Get Lucky is a song by French house music duo Daft Punk, featuring Pharrell Williams and co-written by the duo, Williams and Nile Rodgers.",
+          "spotify_uri": "spotify:track:2Foc5Q5nqNiosCNqttzHof",
           "rows": [
             "get",
             "lucky"
@@ -42,6 +54,9 @@
           "id": "bastille_pompeii",
           "type": "song",
           "answer": "Pompeii",
+          "wiki_link": "http://en.wikipedia.org/wiki/Pompeii_(Bastille_song)",
+          "wiki_quote": "Pompeii is a song by British rock band Bastille. It is the fourth single from their debut studio album Bad Blood and the first to get major airplay and promotion.",
+          "spotify_uri": "spotify:track:0sooJd5WbNnnz5k6yO7FIQ",
           "rows": [
           ]
         },
@@ -49,6 +64,9 @@
           "id": "justin_timberlake_mirrors",
           "type": "artist",
           "answer": "Justin Timberlake",
+          "wiki_link": "http://en.wikipedia.org/wiki/Justin_Timberlake",
+          "wiki_quote": "Justin Randall Timberlake (born January 31, 1981) is an American singer-songwriter, actor, record producer, businessman, and philanthropist. ",
+          "spotify_uri": "spotify:track:4rHZZAmHpZrA3iH5zx8frV",
           "rows": [
             "justin",
             "timberlake"
@@ -58,6 +76,9 @@
           "id": "madonna_hung_up",
           "type": "artist",
           "answer": "Madonna",
+          "wiki_link": "http://en.wikipedia.org/wiki/Madonna_(entertainer)",
+          "wiki_quote": "Madonna Louise Ciccone[2] (/tʃɪˈkoʊneɪ/ chi-koh-nay) (born August 16, 1958) is an American singer-songwriter, actress, and businesswoman.",
+          "spotify_uri": "spotify:track:70VjMtwhm3Q2HBQeJnPfmh",
           "rows": [
           ]
         },
@@ -65,6 +86,9 @@
           "id": "rihanna_diamonds",
           "type": "song",
           "answer": "Diamonds",
+          "wiki_link": "http://en.wikipedia.org/wiki/Diamonds_(Rihanna_song)",
+          "wiki_quote": "Diamonds is a song recorded by Barbadian singer Rihanna for her seventh studio album, Unapologetic (2012). It was written by Sia Furler together with its producers, Benny Blanco and StarGate. ",
+          "spotify_uri": "spotify:track:1mwt9hzaH7idmC5UCoOUkz",
           "rows": [
           ]
         },
@@ -72,6 +96,9 @@
           "id": "adele_someone_like_you",
           "type": "song",
           "answer": "Someone like you",
+          "wiki_link": "http://en.wikipedia.org/wiki/Someone_like_You_(Adele_song)",
+          "wiki_quote": "Someone like You is a song by English singer-songwriter Adele. It was written by Adele and Dan Wilson for her second studio album 21.",
+          "spotify_uri": "spotify:track:6QPKYGnAW9QozVz2dSWqRg",
           "rows": [
             "someone",
             "like you"
@@ -81,6 +108,9 @@
           "id": "robin_thick_blurred_lines",
           "type": "song",
           "answer": "Blurred Lines",
+          "wiki_link": "http://en.wikipedia.org/wiki/Blurred_Lines",
+          "wiki_quote": "Blurred Lines is a song recorded by American recording artist Robin Thicke for his 2013 album of the same name. The song features guest vocals from American rapper T.I. and American singer and producer Pharrell Williams.",
+          "spotify_uri": "spotify:track:0Rz1KXsP4bhGxs0ffySSSn",
           "rows": [
             "blurred",
             "lines"
@@ -90,6 +120,9 @@
           "id": "beyonce_single_ladies",
           "type": "song",
           "answer": "Single Ladies",
+          "wiki_link": "http://en.wikipedia.org/wiki/Single_Ladies_(Put_a_Ring_on_It)",
+          "wiki_quote": "Single Ladies (Put a Ring on It) is a song recorded by American singer Beyoncé for her third studio album, I Am... Sasha Fierce (2008).",
+          "spotify_uri": "spotify:track:5R9a4t5t5O0IsznsrKPVro",
           "rows": [
             "single",
             "ladies"
@@ -99,6 +132,9 @@
           "id": "eminem_not_afraid",
           "type": "artist",
           "answer": "Eminem",
+          "wiki_link": "http://en.wikipedia.org/wiki/Eminem",
+          "wiki_quote": "Marshall Bruce Mathers III (born October 17, 1972),[1] better known by his stage name Eminem and by his alter ego Slim Shady, is an American rapper, record producer, songwriter, and actor.",
+          "spotify_uri": "spotify:track:1UHBcngfWo8hi3m003wZtX",
           "rows": [
           ]
         },
@@ -106,6 +142,9 @@
           "id": "katy_perry_firework",
           "type": "song",
           "answer": "Firework",
+          "wiki_link": "http://en.wikipedia.org/wiki/Firework_(song)",
+          "wiki_quote": "Firework is a song by American recording artist Katy Perry on her third studio album, Teenage Dream (2010).",
+          "spotify_uri": "spotify:track:4lCv7b86sLynZbXhfScfm2",
           "rows": [
           ]
         },
@@ -113,6 +152,9 @@
           "id": "macklemore_cant_hold_us",
           "type": "song",
           "answer": "Cant Hold Us",
+          "wiki_link": "http://en.wikipedia.org/wiki/Can%27t_Hold_Us",
+          "wiki_quote": "Can't Hold Us is a song by American hip hop duo Macklemore & Ryan Lewis from their debut studio album The Heist (2012). Featuring singer Ray Dalton, it was released as the third single from the album on August 16, 2011.",
+          "spotify_uri": "spotify:track:3BE0getU08uXas8ZjULABA",
           "rows": [
             "cant",
             "hold us"
@@ -122,6 +164,9 @@
           "id": "imagine_dragons_radioactive",
           "type": "artist",
           "answer": "Imagine Dragons",
+          "wiki_link": "http://en.wikipedia.org/wiki/Imagine_Dragons",
+          "wiki_quote": "Imagine Dragons is an American alternative rock band from Las Vegas, Nevada. The band gained exposure following the September 2012 release of their debut studio album, Night Visions, which peaked at number 2 on the weekly Billboard 200 chart.",
+          "spotify_uri": "spotify:track:6Ep6BzIOB9tz3P4sWqiiAB",
           "rows": [
             "imagine",
             "dragons"
@@ -136,6 +181,9 @@
           "id": "avicii_wake_me_up",
           "type": "song",
           "answer": "Wake me up",
+          "wiki_link": "http://en.wikipedia.org/wiki/Wake_Me_Up_(Avicii_song)",
+          "wiki_quote": "Wake Me Up is a song by Swedish DJ and music producer Avicii. American soul singer Aloe Blacc provides uncredited vocals for the track[3][4] and Incubus' Mike Einziger provides acoustic guitar.",
+          "spotify_uri": "spotify:track:6g1NlCpW7fgqDnWbCCDrHl",
           "rows": [
             "wake",
             "me up"
@@ -145,6 +193,9 @@
           "id": "frank_sinatra_come_fly_with_me",
           "type": "artist",
           "answer": "Frank Sinatra",
+          "wiki_link": "http://en.wikipedia.org/wiki/Frank_Sinatra",
+          "wiki_quote": "Francis Albert \"Frank\" Sinatra (/sɨˈnɑːtrə/; December 12, 1915 – May 14, 1998)[6] was an American singer and film actor. Beginning his musical career in the swing era as a boy singer with Harry James and Tommy Dorsey, Sinatra found success as a solo artist from the early to mid-1940s after being signed by Columbia Records in 1943.",
+          "spotify_uri": "spotify:track:0m4wN2K3JdA4Aznt4apeSX",
           "rows": [
             "frank",
             "sinatra"
@@ -154,6 +205,9 @@
           "id": "bruno_mars_the_lazy_song",
           "type": "song",
           "answer": "The Lazy Song",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Lazy_Song",
+          "wiki_quote": "The Lazy Song is a song recorded by American singer-songwriter Bruno Mars for his debut studio album Doo-Wops & Hooligans (2010). It was serviced to contemporary hit radios in the United States on February 15, 2011 as the album's third single by Atlantic and Elektra.",
+          "spotify_uri": "spotify:track:386RUes7n1uM1yfzgeUuwp",
           "rows": [
             "the",
             "lazy song"
@@ -163,6 +217,9 @@
           "id": "nsync_bye_bye_bye",
           "type": "song",
           "answer": "Bye Bye Bye",
+          "wiki_link": "http://en.wikipedia.org/wiki/Bye_Bye_Bye",
+          "wiki_quote": "Bye Bye Bye is a song by American boy band 'N Sync from their second studio album No Strings Attached. It was released on January 11, 2000 by Jive Records as the lead single of the album. It is the first song on the album.",
+          "spotify_uri": "spotify:track:2yiZyjMEByt9sJBZWnWaDR",
           "rows": [
             "bye",
             "bye bye"
@@ -172,6 +229,9 @@
           "id": "linkin_park_numb",
           "type": "artist",
           "answer": "Linkin Park",
+          "wiki_link": "http://en.wikipedia.org/wiki/Linkin_Park",
+          "wiki_quote": "Linkin Park is an American rock band from Agoura Hills, California. Formed in 1996, the band rose to international fame with their debut album Hybrid Theory, which was certified Diamond by the RIAA in 2005 and multi-platinum in several other countries.",
+          "spotify_uri": "spotify:track:2nLtzopw4rPReszdYBJU6h",
           "rows": [
             "linkin",
             "park"
@@ -181,6 +241,9 @@
           "id": "demi_lovato_heart_attack",
           "type": "song",
           "answer": "Heart Attack",
+          "wiki_link": "http://en.wikipedia.org/wiki/Heart_Attack_(Demi_Lovato_song)",
+          "wiki_quote": "Heart Attack is a song by American recording artist Demi Lovato. The song was released on February 24, 2013, as the lead single from her self-titled fourth studio album Demi (2013).",
+          "spotify_uri": "spotify:track:7ukQvPuGUBZt88WveKBGAD",
           "rows": [
             "heart",
             "attack"
@@ -190,6 +253,9 @@
           "id": "duck_sauce_barbra_streisand",
           "type": "artist",
           "answer": "Duck Sauce",
+          "wiki_link": "http://en.wikipedia.org/wiki/Duck_Sauce",
+          "wiki_quote": "Duck Sauce is an American/Canadian DJ duo consisting of Armand Van Helden and A-Trak. The duo is signed to Casablanca Records, Republic Records and Ministry of Sound Australia.",
+          "spotify_uri": "spotify:track:0k75A0APP0PypNbcjwu8zu",
           "rows": [
             "duck",
             "sauce"
@@ -199,6 +265,9 @@
           "id": "queen_bohemian_rhapsody",
           "type": "song",
           "answer": "Bohemian Rhapsody",
+          "wiki_link": "http://en.wikipedia.org/wiki/Bohemian_Rhapsody",
+          "wiki_quote": "Bohemian Rhapsody is a song by the British rock band Queen. It was written by Freddie Mercury for the band's 1975 album A Night at the Opera. The song has no chorus, instead consisting of several sections: a ballad segment ending with a guitar solo, an operatic passage, and a hard rock section.",
+          "spotify_uri": "spotify:track:1AhDOtG9vPSOmsWgNW0BEY",
           "rows": [
             "bohemian",
             "rhapsody"
@@ -208,6 +277,9 @@
           "id": "passenger_let_her_go",
           "type": "song",
           "answer": "Let Her Go",
+          "wiki_link": "http://en.wikipedia.org/wiki/Let_Her_Go_(Passenger_song)",
+          "wiki_quote": "Let Her Go is a song written and recorded by British singer-songwriter Passenger. It was recorded at Sydney's Linear Recording and co-produced by Mike Rosenberg and Chris Vallejo.",
+          "spotify_uri": "spotify:track:7DFNE7NO0raLIUbgzY2rzm",
           "rows": [
             "let",
             "her go"
@@ -215,8 +287,11 @@
         },
         {
           "id": "lmfao_sexy_and_i_know_it",
+          "wiki_link": "http://en.wikipedia.org/wiki/LMFAO",
           "type": "artist",
           "answer": "LMFAO",
+          "wiki_quote": "LMFAO is an American EDM rapper duo consisting of uncle and nephew Redfoo and Sky Blu. LMFAO are descendants of Motown Records founder Berry Gordy, Jr. RedFoo and Sky Blu grew up in the affluent Los Angeles neighborhood Pacific Palisades, where they formed the group LMFAO in 2006 and became part of the electro house scene. ",
+          "spotify_uri": "spotify:track:70Vdd1gx5tn84jkAU31ASv",
           "rows": [
           ]
         },
@@ -224,6 +299,9 @@
           "id": "maroon_five_payphone",
           "type": "song",
           "answer": "Payphone",
+          "wiki_link": "http://en.wikipedia.org/wiki/Payphone_(song)",
+          "wiki_quote": "Payphone is a song performed by the American pop rock band Maroon 5 featuring American rapper Wiz Khalifa. The song was released on April 17, 2012, as the lead single from their fourth studio album, Overexposed (2012).",
+          "spotify_uri": "spotify:track:5IWmU2PNimgYuTLddU2DRo",
           "rows": [
           ]
         },
@@ -231,6 +309,9 @@
           "id": "coldplay_paradise",
           "type": "song",
           "answer": "Paradise",
+          "wiki_link": "http://en.wikipedia.org/wiki/Paradise_(Coldplay_song)",
+          "wiki_quote": "Paradise is a song by British alternative rock band Coldplay. The song was released on 12 September 2011 as the second single from their fifth studio album, Mylo Xyloto. In April 2014, Chris Martin stated on the Zane Lowe show through BBC Radio One that Paradise was originally written for the winner of X-Factor, who at the time, was Melanie Amaro.",
+          "spotify_uri": "spotify:track:6nek1Nin9q48AVZcWs9e9D",
           "rows": [
           ]
         },
@@ -238,6 +319,9 @@
           "id": "kesha_die_young",
           "type": "song",
           "answer": "Die Young",
+          "wiki_link": "http://en.wikipedia.org/wiki/Die_Young_(Kesha_song)",
+          "wiki_quote": "Die Young is a song by American recording artist Kesha. It was released on September 25, 2012 as the lead single from her second studio album, Warrior (2012).",
+          "spotify_uri": "spotify:track:6mnjcTmK8TewHfyOp3fC9C",
           "rows": [
             "die",
             "young"
@@ -247,6 +331,9 @@
           "id": "nelly_furtado_say_it_right",
           "type": "artist",
           "answer": "Nelly Furtado",
+          "wiki_link": "http://en.wikipedia.org/wiki/Nelly_Furtado",
+          "wiki_quote": "Nelly Kim Furtado (born December 2, 1978) is a Canadian singer, songwriter and actress. She has sold 20 million albums worldwide and more than 20 million singles, bringing her total sales to over 40 million records around the world.",
+          "spotify_uri": "spotify:track:5LwPqhWijLpG9VWKtNqaJI",
           "rows": [
             "nelly",
             "furtado"
@@ -256,6 +343,9 @@
           "id": "the_black_keys_lonely_boy",
           "type": "song",
           "answer": "Lonely Boy",
+          "wiki_link": "http://en.wikipedia.org/wiki/Lonely_Boy_(The_Black_Keys_song)",
+          "wiki_quote": "Lonely Boy is a song by American rock band The Black Keys. It is the opening track from their 2011 studio album El Camino and was released as the record's lead single on October 26, 2011.",
+          "spotify_uri": "spotify:track:3dOAXUx7I1qnzWzxdnsyB8",
           "rows": [
             "lonely",
             "boy"
@@ -270,6 +360,9 @@
           "id": "fifty_cent_in_da_club",
           "type": "song",
           "answer": "In Da Club",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:7iL6o9tox1zgHpKUfh9vuC",
           "rows": [
             "in da",
             "club"
@@ -279,6 +372,9 @@
           "id": "onerepublic_counting_stars",
           "type": "song",
           "answer": "Counting stars",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:5edBgVtRD0fvWk140Sl21T",
           "rows": [
             "counting",
             "stars"
@@ -288,6 +384,9 @@
           "id": "blur_song_two",
           "type": "song",
           "answer": "Song 2",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:3GfOAdcoc3X5GPiiXmpBjK",
           "rows": [
           ]
         },
@@ -295,6 +394,9 @@
           "id": "keane_somewhere_only_we_know",
           "type": "artist",
           "answer": "Keane",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:0VxFKXvKLjYWU7oPPMwzuN",
           "rows": [
           ]
         },
@@ -302,6 +404,9 @@
           "id": "the_black_eyed_peas_i_gotta_feeling",
           "type": "song",
           "answer": "I gotta feeling",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "",
           "rows": [
             "i gotta",
             "feeling"
@@ -311,6 +416,9 @@
           "id": "capital_cities_safe_and_sound",
           "type": "song",
           "answer": "Safe and sound",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:70cTMpcgWMcR18t9MRJFjB",
           "rows": [
             "safe",
             "and sound"
@@ -320,6 +428,9 @@
           "id": "skrillex_bangarang",
           "type": "artist",
           "answer": "Skrillex",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:6VRhkROS2SZHGlp0pxndbJ",
           "rows": [
           ]
         },
@@ -327,6 +438,9 @@
           "id": "psy_gangnam_style",
           "type": "song",
           "answer": "Gangnam Style",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:1R2SZUOGJqqBiLuvwKOT2Y",
           "rows": [
             "gangnam",
             "style"
@@ -336,6 +450,9 @@
           "id": "muse_time_is_running_out",
           "type": "song",
           "answer": "Time is running out",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:2takcwOaAZWiXQijPHIx7B",
           "rows": [
             "time is",
             "running out"
@@ -345,6 +462,9 @@
           "id": "the_beatles_yesterday",
           "type": "song",
           "answer": "Yesterday",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "",
           "rows": [
           ]
         },
@@ -352,6 +472,9 @@
           "id": "alicia_keys_girl_on_fire",
           "type": "artist",
           "answer": "Alicia keys",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:6qOEjO2IUD7PjtpsXawq0d",
           "rows": [
             "alicia",
             "keys"
@@ -361,6 +484,9 @@
           "id": "abba_dancing_queen",
           "type": "song",
           "answer": "Dancing queen",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:2rgqPSIRAfaO2MGo9smdSX",
           "rows": [
             "dancing",
             "queen"
@@ -370,6 +496,9 @@
           "id": "aretha_franklin_respect",
           "type": "artist",
           "answer": "Aretha Franklin",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:7s25THrKz86DM225dOYwnr",
           "rows": [
             "aretha",
             "franklin"
@@ -379,13 +508,21 @@
           "id": "acdc_back_in_black",
           "type": "song",
           "answer": "Back in Black",
-          "rows": ["back in","black"
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:7mocbWQc7a3Y7AOZNUpRJC",
+          "rows": [
+            "back in",
+            "black"
           ]
         },
         {
           "id": "shakira_waka_waka",
           "type": "song",
           "answer": "Waka Waka",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:2Cd9iWfcOpGDHLz6tVA3G4",
           "rows": [
             "waka",
             "waka"
@@ -400,6 +537,9 @@
           "id": "avril_lavigne_girlfriend",
           "type": "song",
           "answer": "Girlfriend",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:5HbCnVLXRyZVxnreOPgJCK",
           "rows": [
           ]
         },
@@ -407,15 +547,21 @@
           "id": "the_ramones_blitzkrieg_bop",
           "type": "song",
           "answer": "Blitzkrieg Bop",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:68YFOeWusWCFxK4TSYZZBU",
           "rows": [
             "blitzkrieg",
             "bop"
           ]
         },
         {
-          "id": "own_city_fireflies",
+          "id": "owl_city_fireflies",
           "type": "artist",
           "answer": "Owl City",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:1mr3616BzLdhXfJmLmRsO8",
           "rows": [
             "owl",
             "city"
@@ -425,13 +571,21 @@
           "id": "the_beach_boys_surfin_usa",
           "type": "song",
           "answer": "Surfin' USA",
-          "rows": ["surfin","usa"
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:6KH5cOzmX7R929vIx88FR9",
+          "rows": [
+            "surfin",
+            "usa"
           ]
         },
         {
           "id": "missy_elliot_work_it",
           "type": "song",
           "answer": "Work It",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:3jagJCUbdqhDSPuxP8cAqF",
           "rows": [
           ]
         },
@@ -439,6 +593,9 @@
           "id": "gotye_somebody_that_i_used_to_know",
           "type": "song",
           "answer": "Somebody that I used to know",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:1qDrWA6lyx8cLECdZE7TV7",
           "rows": [
             "somebody that",
             "I used",
@@ -449,6 +606,9 @@
           "id": "nicki_minaj_starships",
           "type": "artist",
           "answer": "Nicki Minaj",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:2EBCVPNAG46nbgs6jXPGvv",
           "rows": [
             "nicki",
             "minaj"
@@ -458,6 +618,9 @@
           "id": "tracy_chapman_fast_car",
           "type": "song",
           "answer": "Fast Car",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:2M9ro2krNb7nr7HSprkEgo",
           "rows": [
             "fast",
             "car"
@@ -467,6 +630,9 @@
           "id": "michael_jackson_bad",
           "type": "song",
           "answer": "Bad",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:4xJjD28UsZlqbX7tBV3Aj5",
           "rows": [
           ]
         },
@@ -474,6 +640,9 @@
           "id": "martin_garrix_animals",
           "type": "song",
           "answer": "Animals",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:1DXoMuQPYVhtxXQbEv0sOr",
           "rows": [
           ]
         },
@@ -481,6 +650,9 @@
           "id": "rem_losing_my_religion",
           "type": "artist",
           "answer": "REM",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:74EV0g12ihUoOUXMprFpZB",
           "rows": [
             "R",
             "E M"
@@ -490,6 +662,9 @@
           "id": "mgmt_electric_feel",
           "type": "song",
           "answer": "Electric Feel",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:3FtYbEfBqAlGO46NUDQSAt",
           "rows": [
             "electric",
             "feel"
@@ -499,6 +674,9 @@
           "id": "nirvana_smells_like_teen_spirits",
           "type": "song",
           "answer": "Smells like teen spirits",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:4hy4fb5D1KL50b3sng9cjw",
           "rows": [
             "smells like",
             "teen spirits"
@@ -508,6 +686,9 @@
           "id": "deep_purple_smoke_on_the_water",
           "type": "artist",
           "answer": "Deep Purple",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:5MMnwYs0hIxkENRsbkWJ2G",
           "rows": [
             "deep",
             "purple"
@@ -517,6 +698,9 @@
           "id": "bon_jovi_livin_on_a_prayer",
           "type": "song",
           "answer": "Livin on a prayer",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:3X7abqSXC4xrxuC1ykpWcY",
           "rows": [
             "livin on",
             "a prayer"
@@ -531,6 +715,9 @@
           "id": "spice_girls_wannabe",
           "type": "song",
           "answer": "Wannabe",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:1Je1IMUlBXcx1Fz0WE7oPT",
           "rows": [
           ]
         },
@@ -538,6 +725,9 @@
           "id": "pink_just_give_me_a_reason",
           "type": "artist",
           "answer": "Pink",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:1mKXFLRA179hdOWQBwUk9e",
           "rows": [
           ]
         },
@@ -545,6 +735,9 @@
           "id": "red_hot_chili_peppers_californication",
           "type": "song",
           "answer": "Californication",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:34KTEhpPjq6IAgQg2yzJAL",
           "rows": [
           ]
         },
@@ -552,6 +745,9 @@
           "id": "naughty_boy_la_la_la",
           "type": "song",
           "answer": "La La La",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:52gvlDnre9craz9dKGObp8",
           "rows": [
             "la",
             "la la"
@@ -561,6 +757,9 @@
           "id": "lana_del_rey_summertime_sadness",
           "type": "song",
           "answer": "Summertime Sadness",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:33CeM8NI7tfrNgciVOFMoo",
           "rows": [
             "summertime",
             "sadness"
@@ -570,6 +769,9 @@
           "id": "tokio_hotel_monsoon",
           "type": "artist",
           "answer": "Tokio Hotel",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:1Bc9ktRpchBN04kCHFT3Lz",
           "rows": [
             "tokio",
             "hotel"
@@ -579,6 +781,9 @@
           "id": "eminem_without_me",
           "type": "song",
           "answer": "Without Me",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:5pBvNeOAJ54zgd5lEOmM3b",
           "rows": [
             "without",
             "me"
@@ -588,6 +793,9 @@
           "id": "empire_of_the_sun_walking_on_a_dream",
           "type": "song",
           "answer": "Walking on a dream",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:6A6qBFJHid4WutQu6HHEZt",
           "rows": [
             "walking on",
             "a dream"
@@ -597,6 +805,9 @@
           "id": "outkast_hey_ya",
           "type": "artist",
           "answer": "Outkast",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:3AszgPDZd9q0DpDFt4HFBy",
           "rows": [
           ]
         },
@@ -604,6 +815,9 @@
           "id": "kanye_west_heartless",
           "type": "song",
           "answer": "Heartless",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:53gcDgFyqqpvCzXWrnFZpH",
           "rows": [
           ]
         },
@@ -611,6 +825,9 @@
           "id": "pitbull_timber",
           "type": "song",
           "answer": "Timber",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:1zHlj4dQ8ZAtrayhuDDmkY",
           "rows": [
           ]
         },
@@ -618,6 +835,9 @@
           "id": "maroon_five_she_will_be_loved",
           "type": "artist",
           "answer": "Maroon 5",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:5s5t0OFg9lIlBFaCI14K1i",
           "rows": [
           ]
         },
@@ -625,6 +845,9 @@
           "id": "the_strokes_you_only_live_once",
           "type": "song",
           "answer": "You only live once",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:46Y1VsEbWAQ7dIZe1gpnve",
           "rows": [
           ]
         },
@@ -632,6 +855,9 @@
           "id": "mia_paper_planes",
           "type": "song",
           "answer": "Paper Planes",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:3ZlFUr0RBrUYYsmlcFvD0e",
           "rows": [
             "paper",
             "planes"
@@ -641,6 +867,9 @@
           "id": "cypress_hill_insane_in_the_brain",
           "type": "artist",
           "answer": "Cypress Hill",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:4dTMU4O2DdyIlRlss7v9UP",
           "rows": [
             "cypress",
             "hill"
@@ -655,6 +884,9 @@
           "id": "bob_marley_one_love",
           "type": "song",
           "answer": "One Love",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "",
           "rows": [
             "one",
             "love"
@@ -664,6 +896,9 @@
           "id": "the_calling_wherever_you_will_go",
           "type": "song",
           "answer": "Wherever you will go",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:37qI0mchgzUSeUhPiwUWPY",
           "rows": [
             "weherever you",
             "will go"
@@ -673,6 +908,9 @@
           "id": "ylvis_the_fox",
           "type": "artist",
           "answer": "Ylvis",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:5HOpkTTVcmZHnthgyxrIL8",
           "rows": [
           ]
         },
@@ -680,6 +918,9 @@
           "id": "jessie_j_price_tag",
           "type": "song",
           "answer": "Price Tag",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:7nqlRkgNyEpb9nvb03GMp7",
           "rows": [
             "price",
             "tag"
@@ -689,6 +930,9 @@
           "id": "limp_bizkit_rollin",
           "type": "song",
           "answer": "Rollin",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:2NtHnycqrON34GGxETv0C9",
           "rows": [
           ]
         },
@@ -696,6 +940,9 @@
           "id": "azealia_banks_two_one_two",
           "type": "artist",
           "answer": "Azealia Banks",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:61S6wtjY80a6vHxP3JHSgE",
           "rows": [
             "azealia",
             "banks"
@@ -705,6 +952,9 @@
           "id": "blink_one_eight_two_all_the_small_things",
           "type": "song",
           "answer": "All the small things",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:12qZHAeOyTf93YAWvGDTat",
           "rows": [
             "all the",
             "small things"
@@ -714,6 +964,9 @@
           "id": "fatboy_slim_the_rockafeller_skank",
           "type": "song",
           "answer": "The rockafeller skank",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:7eWYXAP87TFfF7fn2LEL1b",
           "rows": [
             "the rockafeller",
             "skank"
@@ -723,6 +976,9 @@
           "id": "miley_cyrus_we_cant_stop",
           "type": "artist",
           "answer": "Miley Cyrus",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:2y4lAQpi5VTNLu2ldeTdUH",
           "rows": [
             "miley",
             "cyrus"
@@ -732,6 +988,9 @@
           "id": "u_two_one",
           "type": "song",
           "answer": "One",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:7fGwROu7fgPGy0Ru8Q5nBJ",
           "rows": [
           ]
         },
@@ -739,6 +998,9 @@
           "id": "macklemore_thrift_shop",
           "type": "song",
           "answer": "Thrift shop",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:1CmUZGtH29Kx36C1Hleqlz",
           "rows": [
             "thrift",
             "shop"
@@ -748,6 +1010,9 @@
           "id": "the_killers_mr_brightside",
           "type": "song",
           "answer": "Mr Brightside",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:0eGsygTp906u18L0Oimnem",
           "rows": [
           ]
         },
@@ -755,6 +1020,9 @@
           "id": "snoop_dogg_drop_it_like_its_hot",
           "type": "artist",
           "answer": "Snoop Dogg",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:6HHytHLXLX8QfWTtGfFSvH",
           "rows": [
             "snoop",
             "dogg"
@@ -764,6 +1032,9 @@
           "id": "eminem_love_the_way_you_lie",
           "type": "song",
           "answer": "Love the way you lie",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:6UaRii9AH6Zss9xNMEQ2M9",
           "rows": [
             "love the",
             "way you lie"
@@ -773,6 +1044,9 @@
           "id": "guns_n_roses_paradise_city",
           "type": "song",
           "answer": "Paradise City",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:3YBZIN3rekqsKxbJc9FZko",
           "rows": [
             "paradise",
             "city"
@@ -787,6 +1061,9 @@
           "id": "four_non_blondes_whats_up",
           "type": "song",
           "answer": "What's Up",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:7f0jXNMu2xjQUtmKMuWhGA",
           "rows": [
             "whats",
             "up"
@@ -796,6 +1073,9 @@
           "id": "the_lonely_island_i_just_had_sex",
           "type": "artist",
           "answer": "The Lonely Island",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:1OmxpKVSvn0LGcM3SQS4OV",
           "rows": [
             "the lonely",
             "island"
@@ -805,6 +1085,9 @@
           "id": "pharrell_williams_happy",
           "type": "song",
           "answer": "Happy",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:6NPVjNh8Jhru9xOmyQigds",
           "rows": [
           ]
         },
@@ -812,6 +1095,9 @@
           "id": "lynyrd_skynyrd_sweet_home_alabama",
           "type": "song",
           "answer": "Sweet Home Alabama",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:6RgGppm2SSX5p246UqfdEi",
           "rows": [
             "sweet home",
             "alabama"
@@ -821,15 +1107,21 @@
           "id": "dire_straits_sultans_of_swing",
           "type": "song",
           "answer": "Sultans of Swing",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:3FtZBq64Ju8ZcYHWMqrVWv",
           "rows": [
             "sultans",
             "of swing"
           ]
         },
         {
-          "id": "jennifer_lopez_on_the_floor",
+          "id": "jennifer_lopez_dont_cost_a_thing",
           "type": "artist",
           "answer": "Jennifer Lopez",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:7an3wvwzGIaYyMh203yITt",
           "rows": [
             "jennifer",
             "lopez"
@@ -839,6 +1131,9 @@
           "id": "coldplay_fix_you",
           "type": "song",
           "answer": "Fix You",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:7LVHVU3tWfcxj5aiPFEW4Q",
           "rows": [
           ]
         },
@@ -846,6 +1141,9 @@
           "id": "adele_rolling_in_the_deep",
           "type": "song",
           "answer": "Rolling in the Deep",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:7h8Ud480Fm4ReUVxgFF9ZX",
           "rows": [
             "rolling in",
             "the deep"
@@ -855,6 +1153,9 @@
           "id": "muse_supermassive_black_hole",
           "type": "song",
           "answer": "Supermassive Black Hole",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:2zrIyIdqafYozfsgiMY0Ae",
           "rows": [
             "supermassive",
             "black hole"
@@ -864,6 +1165,9 @@
           "id": "led_zeppelin_stairway_to_heaven",
           "type": "artist",
           "answer": "Led Zeppelin",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:51pQ7vY7WXzxskwloaeqyj",
           "rows": [
             "led",
             "zeppelin"
@@ -873,6 +1177,9 @@
           "id": "nicki_minaj_super_bass",
           "type": "song",
           "answer": "Super Bass",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:7gKIt3rDGIMJDFVSPBnGmj",
           "rows": [
             "super",
             "bass"
@@ -882,13 +1189,21 @@
           "id": "kasabian_club_foot",
           "type": "song",
           "answer": "Club Foot",
-          "rows": ["club","foot"
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:19OUs1NzU15Fe3oSIeTuyG",
+          "rows": [
+            "club",
+            "foot"
           ]
         },
         {
           "id": "bob_dylan_like_a_rolling_stone",
           "type": "song",
           "answer": "Like a rolling stone",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:3AhXZa8sUQht0UEdBJgpGc",
           "rows": [
             "like a",
             "rolling stone"
@@ -898,6 +1213,9 @@
           "id": "justin_timberlake_senorita",
           "type": "song",
           "answer": "Senorita",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:0aj2QKJvz6CePykmlTApiD",
           "rows": [
           ]
         },
@@ -905,6 +1223,9 @@
           "id": "imagine_dragons_demons",
           "type": "song",
           "answer": "Demons",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:2Oehrcv4Kov0SuIgWyQY9e",
           "rows": [
           ]
         }
@@ -917,6 +1238,9 @@
           "id": "the_chemical_brothers_galvanize",
           "type": "song",
           "answer": "Galvanize",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:4bz7uB4edifWKJXSDxwHcs",
           "rows": [
           ]
         },
@@ -924,6 +1248,9 @@
           "id": "gwen_stefani_hollaback_girl",
           "type": "artist",
           "answer": "Hollaback girl",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:0eqH0ALoDQevq59YcQ53KE",
           "rows": [
             "hollaback",
             "girl"
@@ -933,6 +1260,9 @@
           "id": "michel_telo_ai_se_eu_te_pego",
           "type": "song",
           "answer": "Ai Se Eu Te Pego",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:55ocDwF4tEcgTuJnHWqiue",
           "rows": [
             "ai se eu",
             "te pego"
@@ -942,6 +1272,9 @@
           "id": "eiffel_sixty_five_blue",
           "type": "artist",
           "answer": "Eiffel 65",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:5FgtdSf7I5lClThz2ptWvl",
           "rows": [
           ]
         },
@@ -949,6 +1282,9 @@
           "id": "fifty_cent_ayo_technology",
           "type": "song",
           "answer": "Ayo Technology",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:6A6am7JK6SNzIKOGlU53sw",
           "rows": [
             "ayo",
             "technology"
@@ -958,6 +1294,9 @@
           "id": "green_day_basket_case",
           "type": "song",
           "answer": "Basket Case",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:6L89mwZXSOwYl76YXfX13s",
           "rows": [
             "basket",
             "case"
@@ -967,6 +1306,9 @@
           "id": "nelly_furtado_im_like_a_bird",
           "type": "song",
           "answer": "I'm like a bird",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:11eg9aN1TQjFpaVhHFDnO0",
           "rows": [
             "im like",
             "a bird"
@@ -976,6 +1318,9 @@
           "id": "pixies_where_is_my_mind",
           "type": "song",
           "answer": "Where is my mind",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:5BP0oaQ1VhuaznT77CBXQp",
           "rows": [
             "where is",
             "my mind"
@@ -985,6 +1330,9 @@
           "id": "daft_punk_around_the_world",
           "type": "artist",
           "answer": "Daft Punk",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:1pKYYY0dkg23sQQXi0Q5zN",
           "rows": [
             "daft",
             "punk"
@@ -994,15 +1342,21 @@
           "id": "the_temper_trap_sweet_disposition",
           "type": "song",
           "answer": "Sweet Disposition",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:4MrwJDlbxpRCdbZWznfbyx",
           "rows": [
             "sweet",
             "disposition"
           ]
         },
         {
-          "id": "elvis_presley_jailbreak",
+          "id": "elvis_presley_jailhouse_rock",
           "type": "artist",
           "answer": "Elvis Presley",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:6pyex9B1kBoRIuabBAc4m8",
           "rows": [
             "elvis",
             "presley"
@@ -1012,6 +1366,9 @@
           "id": "lmfao_party_rock_anthem",
           "type": "song",
           "answer": "Party Rock Anthem",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:1CNJyTUh56oj3OCZOZ5way",
           "rows": [
             "party rock",
             "anthem"
@@ -1021,6 +1378,9 @@
           "id": "one_direction_what_makes_you_beautiful",
           "type": "song",
           "answer": "What makes you beautiful",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:4cluDES4hQEUhmXj6TXkSo",
           "rows": [
             "what makes",
             "you beautiful"
@@ -1030,6 +1390,9 @@
           "id": "oasis_wonderwall",
           "type": "song",
           "answer": "Wonderwall",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:3lQHHqVMXtnOGxN2BKWXBs",
           "rows": [
           ]
         },
@@ -1037,6 +1400,9 @@
           "id": "katy_perry_i_kissed_a_girl",
           "type": "artist",
           "answer": "Katy Perry",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:14iN3o8ptQ8cFVZTEmyQRV",
           "rows": [
             "katy",
             "perry"
@@ -1051,6 +1417,9 @@
           "id": "biz_markie_just_a_friend",
           "type": "song",
           "answer": "Just a friend",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:3yNVfRQlUPViUh8O2V9SQn",
           "rows": [
             "just a",
             "friend"
@@ -1060,6 +1429,9 @@
           "id": "christina_aguilera_candyman",
           "type": "song",
           "answer": "Candyman",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:5lUTzPuiloBHm1qEaJcJfF",
           "rows": [
           ]
         },
@@ -1067,6 +1439,9 @@
           "id": "pink_floyd_another_brick_in_the_wall",
           "type": "song",
           "answer": "Another brick in the wall",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:5Yt80fWRB8JG73XlPjrrKP",
           "rows": [
             "another brick",
             "in the wall"
@@ -1076,6 +1451,9 @@
           "id": "metallica_nothing_else_matters",
           "type": "artist",
           "answer": "Metallica",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:3ZFwuJwUpIl0GeXsvF1ELf",
           "rows": [
           ]
         },
@@ -1083,6 +1461,9 @@
           "id": "kings_of_convenience_id_rather_dance_with_you",
           "type": "song",
           "answer": "I'd rather dance with you",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:4hGOhC87bn7JBdYykOJJvJ",
           "rows": [
             "id rather",
             "dance with you"
@@ -1092,6 +1473,9 @@
           "id": "the_cranberries_zombie",
           "type": "song",
           "answer": "Zombie",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:6xy6jNeNTYwjnKTDzMyHw2",
           "rows": [
           ]
         },
@@ -1099,6 +1483,9 @@
           "id": "clean_bandit_rather_be",
           "type": "song",
           "answer": "Rather be",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:3s4U7OHV7gnj42VV72eSZ6",
           "rows": [
           ]
         },
@@ -1106,6 +1493,9 @@
           "id": "don_omar_danza_kuduro",
           "type": "song",
           "answer": "Danza Kuduro",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:2MleiSEPjFSQ9fmKpNSo0n",
           "rows": [
             "danza",
             "kuduro"
@@ -1115,6 +1505,9 @@
           "id": "robbie_williams_feel",
           "type": "artist",
           "answer": "Robbie Williams",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:3fT9nfnv5uLyPsx6ymre7z",
           "rows": [
             "robbie",
             "williams"
@@ -1124,6 +1517,9 @@
           "id": "radiohead_creep",
           "type": "song",
           "answer": "Creep",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:3HfB5hBU0dmBt8T0iCmH42",
           "rows": [
           ]
         },
@@ -1131,6 +1527,9 @@
           "id": "lil_wayne_mirror",
           "type": "song",
           "answer": "Mirror",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "",
           "rows": [
           ]
         },
@@ -1138,6 +1537,9 @@
           "id": "the_rolling_stones_satisfaction",
           "type": "artist",
           "answer": "The Rolling Stones",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:57J2znxukXsXzS3XPuZ1TG",
           "rows": [
             "the rolling",
             "stones"
@@ -1147,6 +1549,9 @@
           "id": "the_rasmus_in_the_shadows",
           "type": "song",
           "answer": "In the shadows",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:7xoGmovpC3kmH6gcdc4pv3",
           "rows": [
             "in the",
             "shadows"
@@ -1156,6 +1561,9 @@
           "id": "the_doors_light_my_fire",
           "type": "song",
           "answer": "Light my fire",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:5uvosCdMlFdTXhoazkTI5R",
           "rows": [
             "light",
             "my fire"
@@ -1165,6 +1573,9 @@
           "id": "usher_dj_got_us_fallin_in_love",
           "type": "artist",
           "answer": "Usher",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:5tXyNhNcsnn7HbcABntOSf",
           "rows": [
           ]
         }
@@ -1177,6 +1588,9 @@
           "id": "madonna_like_a_virgin",
           "type": "song",
           "answer": "Like a virgin",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:1ZPlNanZsJSPK5h9YZZFbZ",
           "rows": [
             "like a",
             "virgin"
@@ -1186,6 +1600,9 @@
           "id": "eagle_eye_cherry_save_tonight",
           "type": "song",
           "answer": "Save Tonight",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:51a0aYE5c9JjbYyJHNA7Vh",
           "rows": [
             "save",
             "tonight"
@@ -1195,6 +1612,9 @@
           "id": "arctic_monkeys_fluorescent_adolescent",
           "type": "song",
           "answer": "Fluorescent Adolescent",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:7wVqvMJsad67kvg4V1nXHm",
           "rows": [
             "fluorescent",
             "adolescent"
@@ -1204,6 +1624,9 @@
           "id": "calvin_harris_under_control",
           "type": "artist",
           "answer": "Calvin Harris",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:352zfYbDFG8sxkmOAhVeuj",
           "rows": [
             "calvin",
             "harris"
@@ -1213,6 +1636,9 @@
           "id": "queen_another_one_bites_the_dust",
           "type": "song",
           "answer": "Another one bites the dust",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:5vdp5UmvTsnMEMESIF2Ym7",
           "rows": [
             "another one",
             "bites the dust"
@@ -1222,6 +1648,9 @@
           "id": "sean_paul_get_busy",
           "type": "song",
           "answer": "Get Busy",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:5qTvkDrSfvwDv6RBjjcfQr",
           "rows": [
             "get",
             "busy"
@@ -1231,6 +1660,9 @@
           "id": "james_blunt_youre_beautiful",
           "type": "artist",
           "answer": "James Blunt",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:0vg4WnUWvze6pBOJDTq99k",
           "rows": [
             "james",
             "blunt"
@@ -1240,6 +1672,9 @@
           "id": "incubus_drive",
           "type": "song",
           "answer": "Drive",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:7nnWIPM5hwE3DaUBkvOIpy",
           "rows": [
           ]
         },
@@ -1247,6 +1682,9 @@
           "id": "fun_we_are_young",
           "type": "song",
           "answer": "We are young",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:3ehrxAhYms24KLPG8FZe0W",
           "rows": [
             "we are",
             "young"
@@ -1256,6 +1694,9 @@
           "id": "mc_hammer_u_cant_touch_this",
           "type": "artist",
           "answer": "MC Hammer",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:1B75hgRqe7A4fwee3g3Wmu",
           "rows": [
             "mc hammer"
           ]
@@ -1264,6 +1705,9 @@
           "id": "the_kooks_naive",
           "type": "song",
           "answer": "Naive",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:7BHPGtpuuWWsvE7cCaMuEU",
           "rows": [
           ]
         },
@@ -1271,6 +1715,9 @@
           "id": "bruno_mars_locked_out_of_heaven",
           "type": "song",
           "answer": "Locked out of Heaven",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:3w3y8KPTfNeOKPiqUTakBh",
           "rows": [
             "locked out",
             "of heaven"
@@ -1280,6 +1727,9 @@
           "id": "the_offspring_the_kids_arent_alright",
           "type": "song",
           "answer": "The kids aren't alright",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:4sQJXbtxwoKHG7PwMRJ0Ig",
           "rows": [
             "the kids arent",
             "alright"
@@ -1289,6 +1739,9 @@
           "id": "vampire_weekend_a_punk",
           "type": "artist",
           "answer": "Vampire Weekend",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:5dKBaysNJtfpyNTRa5lqDb",
           "rows": [
             "vampire",
             "weekend"
@@ -1298,6 +1751,9 @@
           "id": "the_police_every_breath_you_take",
           "type": "song",
           "answer": "Every breath you take",
+          "wiki_link": "",
+          "wiki_quote": "",
+          "spotify_uri": "spotify:track:16fzReMJmcLlBccnZCTZNS",
           "rows": [
             "every breath",
             "you take"

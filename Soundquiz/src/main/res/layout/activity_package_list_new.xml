@@ -8,7 +8,7 @@
         android:id="@+id/pageOne"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/cinema_backgrund"
+        android:background="@drawable/simpsons_background_complete"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="0dp"
         android:layout_alignParentTop="true"
@@ -48,7 +48,7 @@
         android:id="@+id/pageTwo"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/south_park"
+        android:background="@drawable/guess_who_background_complete"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true">
 

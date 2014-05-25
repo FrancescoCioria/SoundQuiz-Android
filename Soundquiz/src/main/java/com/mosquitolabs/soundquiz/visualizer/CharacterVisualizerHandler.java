@@ -57,12 +57,12 @@ public class CharacterVisualizerHandler {
         mouthShapes[6] = context.getResources().getDrawable(R.drawable.mpb);
 
         bodyShapes[0] = context.getResources().getDrawable(R.drawable.guess_who_frame);
-        bodyShapes[1] = context.getResources().getDrawable(R.drawable.guess_who_frame_left);
-        bodyShapes[2] = context.getResources().getDrawable(R.drawable.guess_who_frame_right);
-
+//        bodyShapes[1] = context.getResources().getDrawable(R.drawable.guess_who_frame_left);
+//        bodyShapes[2] = context.getResources().getDrawable(R.drawable.guess_who_frame_right);
+//
         bodyShapesShut[0] = context.getResources().getDrawable(R.drawable.guess_who_frame_shut);
-        bodyShapesShut[1] = context.getResources().getDrawable(R.drawable.guess_who_frame_left_shut);
-        bodyShapesShut[2] = context.getResources().getDrawable(R.drawable.guess_who_frame_right_shut);
+//        bodyShapesShut[1] = context.getResources().getDrawable(R.drawable.guess_who_frame_left_shut);
+//        bodyShapesShut[2] = context.getResources().getDrawable(R.drawable.guess_who_frame_right_shut);
 
         body.setOnClickListener(new View.OnClickListener() {
             @Override

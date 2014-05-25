@@ -5,22 +5,48 @@
     tools:context="com.mosquitolabs.soundquiz.HomeActivity"
     android:background="#FF181818">
 
-    <TextView
-        android:text="SoundQuiz"
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:scaleType="centerCrop"
+        android:src="@drawable/startpage_background" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewKid"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/kid_guitar"
+        android:scaleType="fitEnd"
+        android:layout_marginBottom="10dp" />
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/imageViewTitle"
+        android:src="@drawable/soundquiz_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitStart" />
 
     <Button
         android:layout_width="200dp"
         android:layout_height="70dp"
         android:text="Play"
         android:id="@+id/playButton"
-        android:layout_marginBottom="100dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="false"
+        android:layout_centerInParent="true"
+        android:background="@drawable/level_rounded_layout_character"
+        android:textSize="37sp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:indeterminate="false"
+        android:layout_centerInParent="true" />
 
 </RelativeLayout>

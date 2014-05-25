@@ -8,6 +8,9 @@
           "id": "the_lion_king_azbeigna",
           "type": "MOVIE",
           "answer": "The Lion King",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Lion_King",
+          "wiki_quote": "The Lion King is a 1994 American animated musical adventure film produced by Walt Disney Feature Animation and released by Walt Disney Pictures.",
+          "spotify_uri": "spotify:track:0GrhBz0am9KFJ20MN9o6Lp",
           "rows": [
             "the lion",
             "king"
@@ -17,6 +20,9 @@
           "id": "the_oc",
           "type": "TV SERIES",
           "answer": "The OC",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_oc",
+          "wiki_quote": "The O.C. is an American teen drama television series that originally aired on the Fox network in the United States from August 5, 2003, to February 22, 2007, running a total of four seasons.",
+          "spotify_uri": "spotify:track:5me8l6N4UI1mwK4yiHKPRO",
           "rows": [
           ]
         },
@@ -24,6 +30,9 @@
           "id": "star_wars_imperial_march",
           "type": "MOVIE",
           "answer": "Star Wars",
+          "wiki_link": "http://en.wikipedia.org/wiki/Star_Wars",
+          "wiki_quote": "Star Wars is an American epic space opera franchise centered on a film series created by George Lucas. The film series, consisting of two trilogies, has spawned an extensive media franchise called the Expanded Universe including books, television series, computer and video games, and comic books.",
+          "spotify_uri": "spotify:track:7a3iXf8eqbwciDHZUbfQSQ",
           "rows": [
           ]
         },
@@ -31,6 +40,9 @@
           "id": "psycho",
           "type": "MOVIE",
           "answer": "Psycho",
+          "wiki_link": "http://en.wikipedia.org/wiki/Psycho_(1960_film)",
+          "wiki_quote": "Psycho is a 1960 American horror-thriller film directed by Alfred Hitchcock starring Anthony Perkins, Vera Miles, John Gavin, and Janet Leigh.",
+          "spotify_uri": "spotify:track:1clWVAzedMTpPbMgfl30BI",
           "rows": [
           ]
         },
@@ -38,6 +50,9 @@
           "id": "beverly_hills_cop",
           "type": "MOVIE",
           "answer": "Beverly Hills Cop",
+          "wiki_link": "http://en.wikipedia.org/wiki/Beverly_Hills_Cop",
+          "wiki_quote": "Beverly Hills Cop is a 1984 American action comedy film directed by Martin Brest and starring Eddie Murphy as Axel Foley, a street-smart Detroit cop who heads to Beverly Hills, California, to solve the murder of his best friend.",
+          "spotify_uri": "spotify:track:6tumUQvdWYbgcGBxqI0jK7",
           "rows": [
             "beverly",
             "hills cop"
@@ -47,6 +62,9 @@
           "id": "the_blues_brothers",
           "type": "MOVIE",
           "answer": "The Blues Brothers",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Blues_Brothers_(film)",
+          "wiki_quote": "The Blues Brothers is a 1980 American musical comedy film directed by John Landis and starring John Belushi and Dan Aykroyd as \"Joliet\" Jake and Elwood Blues, characters developed from \"The Blues Brothers\" musical sketch on the NBC variety series Saturday Night Live.",
+          "spotify_uri": "spotify:track:3rces0TAA3yLhp9qijg4Aa",
           "rows": [
             "the blues",
             "brothers"
@@ -56,6 +74,9 @@
           "id": "breaking_bad",
           "type": "TV SERIES",
           "answer": "Breaking Bad",
+          "wiki_link": "http://en.wikipedia.org/wiki/Breaking_Bad",
+          "wiki_quote": "Breaking Bad is an American crime drama television series created and produced by Vince Gilligan. Set and produced in Albuquerque, New Mexico, Breaking Bad is the two-year-long story of Walter White (Bryan Cranston), a struggling high school chemistry teacher who is diagnosed with inoperable lung cancer at the beginning of the series.",
+          "spotify_uri": "spotify:track:2hsLpiKNkWpd4e9QuVdhar",
           "rows": [
             "breaking",
             "bad"
@@ -65,6 +86,9 @@
           "id": "ghostbusters",
           "type": "MOVIE",
           "answer": "Ghostbusters",
+          "wiki_link": "http://en.wikipedia.org/wiki/Ghostbusters",
+          "wiki_quote": "Ghostbusters is a 1984 American supernatural comedy film directed and produced by Ivan Reitman and written by Dan Aykroyd and Harold Ramis. It stars Bill Murray, Aykroyd, and Ramis as three eccentric parapsychologists in New York City who start a ghost-catching business. Sigourney Weaver and Rick Moranis co-star as a potential client and her neighbor.",
+          "spotify_uri": "spotify:track:4mZXJjIeOgaFXHmdqIhP6r",
           "rows": [
           ]
         },
@@ -72,24 +96,31 @@
           "id": "jurassic_park",
           "type": "MOVIE",
           "answer": "Jurassic Park",
+          "wiki_link": "http://en.wikipedia.org/wiki/Jurassic_Park",
+          "wiki_quote": "Jurassic Park is an American media franchise consisting of novels, films, comics, and video games centering on a disastrous attempt to create a theme park of cloned dinosaurs.",
+          "spotify_uri": "spotify:track:72VjtouKhCbaBol2e7tsaQ",
           "rows": [
             "jurassic",
             "park"
           ]
         },
         {
-          "id": "twenty_century_fox",
-          "type": "STUDIO",
-          "answer": "20 century fox",
+          "id": "juno",
+          "type": "MOVIE",
+          "answer": "Juno",
+          "wiki_link": "http://en.wikipedia.org/wiki/Juno_(film)",
+          "wiki_quote": "Juno is a 2007 Canadian-American comedy-drama film directed by Jason Reitman and written by Diablo Cody. Ellen Page stars as the title character, an independent-minded teenager confronting an unplanned pregnancy and the subsequent events that put pressures of adult life onto her. Michael Cera, Jennifer Garner, Jason Bateman, Allison Janney, and J. K. Simmons also star. Filming spanned from early February to March 2007 in Vancouver, British Columbia.",
+          "spotify_uri": "spotify:track:5sIBOrRLBI6ypREdEPj2wQ",
           "rows": [
-            "20 century",
-            "fox"
           ]
         },
         {
           "id": "scrubs",
           "type": "TV SERIES",
           "answer": "Scrubs",
+          "wiki_link": "http://en.wikipedia.org/wiki/Scrubs_(TV_series)",
+          "wiki_quote": "Scrubs is an American medical comedy-drama television series created by Bill Lawrence that aired from October 2, 2001 to March 17, 2010 on NBC and later ABC. The series follows the lives of employees at the fictional Sacred Heart teaching hospital.",
+          "spotify_uri": "spotify:track:4nnhiGPq5HRQzbAszYyYmL",
           "rows": [
           ]
         },
@@ -97,6 +128,9 @@
           "id": "the_godfather",
           "type": "MOVIE",
           "answer": "The Godfather",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Godfather",
+          "wiki_quote": "The Godfather is a 1972 American crime film directed by Francis Ford Coppola and produced by Albert S. Ruddy from a screenplay by Mario Puzo and Coppola. Based on Puzo's 1969 novel of the same name, the film stars Marlon Brando and Al Pacino as the leaders of a fictional New York crime family.",
+          "spotify_uri": "spotify:track:7Es2gcDpA0ma6zEqgP6Wuc",
           "rows": [
           ]
         },
@@ -104,6 +138,9 @@
           "id": "looney_tunes",
           "type": "TV SERIES",
           "answer": "Looney Tunes",
+          "wiki_link": "http://en.wikipedia.org/wiki/Looney_Tunes",
+          "wiki_quote": "Looney Tunes is a series of Warner Bros. animated comedy short films. It was produced from 1930 to 1969 during the golden age of American animation, alongside its sister series, Merrie Melodies.",
+          "spotify_uri": "",
           "rows": [
             "looney",
             "tunes"
@@ -113,6 +150,9 @@
           "id": "the_lord_of_the_rings",
           "type": "MOVIE",
           "answer": "The Lord Of The Rings",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Lord_of_the_Rings_(film_series)",
+          "wiki_quote": "The Lord of the Rings is a film series consisting of three epic fantasy adventure films directed by Peter Jackson. They are based on the novel The Lord of the Rings by J. R. R. Tolkien. The films are subtitled The Fellowship of the Ring (2001), The Two Towers (2002) and The Return of the King (2003).",
+          "spotify_uri": "spotify:track:1ykbtFnlIjmIFnZ8j6wg6i",
           "rows": [
             "the lord of",
             "the rings"
@@ -122,6 +162,9 @@
           "id": "toy_story",
           "type": "MOVIE",
           "answer": "Toy Story",
+          "wiki_link": "http://en.wikipedia.org/wiki/Toy_Story",
+          "wiki_quote": "Toy Story is a 1995 American computer-animated buddy-comedy adventure film produced by Pixar Animation Studios and directed by John Lasseter, released by Walt Disney Pictures, Toy Story was the first feature-length computer-animated film and the first film produced by Pixar.",
+          "spotify_uri": "spotify:track:2O8YJmOg9lOgn5JNHF9Qi9",
           "rows": [
           ]
         }
@@ -134,6 +177,9 @@
           "id": "chariots_of_fire",
           "type": "MOVIE",
           "answer": "Chariots of fire",
+          "wiki_link": "http://en.wikipedia.org/wiki/Chariots_of_Fire",
+          "wiki_quote": "Chariots of Fire is a 1981 British historical drama film. It tells the fact-based story of two athletes in the 1924 Olympics: Eric Liddell, a devout Scottish Christian who runs for the glory of God, and Harold Abrahams, an English Jew who runs to overcome prejudice.",
+          "spotify_uri": "spotify:track:0JKaYO3e4sKgkshtuFqzqB",
           "rows": [
             "chariots",
             "of fire"
@@ -143,6 +189,9 @@
           "id": "gilmore_girls",
           "type": "TV SERIES",
           "answer": "Gilmore Girls",
+          "wiki_link": "http://en.wikipedia.org/wiki/Gilmore_Girls",
+          "wiki_quote": "Gilmore Girls is an American comedy-drama series created by Amy Sherman-Palladino, starring Lauren Graham and Alexis Bledel. On October 5, 2000, the series debuted on the WB to widespread critical acclaim and remained a tent-pole to the WB until it was cancelled in its seventh season, ending on May 15, 2007 on the CW.",
+          "spotify_uri": "spotify:track:0BHbw2pHE8HOfhm2B2x4Oj",
           "rows": [
             "gilmore",
             "girls"
@@ -152,6 +201,9 @@
           "id": "life_is_beautiful",
           "type": "MOVIE",
           "answer": "Life is beautiful",
+          "wiki_link": "http://en.wikipedia.org/wiki/Life_Is_Beautiful",
+          "wiki_quote": "Life Is Beautiful (Italian: La vita è bella) is a 1997 Italian comedy-drama film directed by and starring Roberto Benigni. Benigni plays Guido Orefice, a Jewish Italian book shop owner, who must employ his fertile imagination to shield his son from the horrors of internment in a Nazi concentration camp.",
+          "spotify_uri": "spotify:track:4GSDu8XFp3qikUcqpilsKa",
           "rows": [
             "life is",
             "beautiful"
@@ -161,6 +213,9 @@
           "id": "despicable_me",
           "type": "MOVIE",
           "answer": "Despicable Me",
+          "wiki_link": "http://en.wikipedia.org/wiki/Despicable_Me",
+          "wiki_quote": "Despicable Me is a 2010 American computer-animated 3D comedy film from Universal Pictures and Illumination Entertainment that was released on July 9, 2010 in the United States. It is Illumination Entertainment's first film.",
+          "spotify_uri": "spotify:track:42lHGtAZd6xVLC789afLWt",
           "rows": [
             "despicable me"
           ]
@@ -169,6 +224,9 @@
           "id": "into_the_wild",
           "type": "MOVIE",
           "answer": "Into the Wild",
+          "wiki_link": "http://en.wikipedia.org/wiki/Into_the_Wild_(film)",
+          "wiki_quote": "Into the Wild is a 2007 American biographical drama survival film written and directed by Sean Penn. It is an adaptation of the 1996 non-fiction book of the same name by Jon Krakauer based on the travels of Christopher McCandless across North America and his life spent in the Alaskan wilderness in the early 1990s.",
+          "spotify_uri": "spotify:track:5sM2GI0vMNZL7tvfPQfByV",
           "rows": [
             "into the",
             "wild"
@@ -178,6 +236,9 @@
           "id": "happy_days",
           "type": "TV SERIES",
           "answer": "Happy Days",
+          "wiki_link": "http://en.wikipedia.org/wiki/Happy_Days",
+          "wiki_quote": "Happy Days is an American television sitcom that aired first-run from January 15, 1974, to September 24, 1984, on ABC. Created by Garry Marshall, the series presents an idealized vision of life in the mid-1950s to mid-1960s United States.",
+          "spotify_uri": "spotify:track:3SpS1BPw4D6eXDVyTDRZ3b",
           "rows": [
             "happy",
             "days"
@@ -187,6 +248,9 @@
           "id": "avatar",
           "type": "MOVIE",
           "answer": "Avatar",
+          "wiki_link": "http://en.wikipedia.org/wiki/Avatar_(2009_film)",
+          "wiki_quote": "Avatar is a 2009 American epic science fiction action film directed, written, co-produced, and co-edited by James Cameron, and starring Sam Worthington, Zoe Saldana, Stephen Lang, Michelle Rodriguez, Joel David Moore, Giovanni Ribisi, and Sigourney Weaver.",
+          "spotify_uri": "spotify:track:2dTcKJ8mb8IWTxzxIkjanO",
           "rows": [
           ]
         },
@@ -194,22 +258,33 @@
           "id": "indiana_jones",
           "type": "MOVIE",
           "answer": "Indiana Jones",
+          "wiki_link": "http://en.wikipedia.org/wiki/Indiana_Jones_(franchise)",
+          "wiki_quote": "The Indiana Jones franchise is an American entertainment franchise, based on the adventures of Dr. Henry \"Indiana\" Jones, a fictional archaeologist. It began in 1981 with the film Raiders of the Lost Ark. A prequel, Indiana Jones and the Temple of Doom, followed in 1984 and the sequel Indiana Jones and the Last Crusade in 1989.",
+          "spotify_uri": "spotify:track:1YYKKW40noxJ8BNBODnriF",
           "rows": [
             "indiana",
             "jones"
           ]
         },
         {
-          "id": "thx",
-          "type": "STUDIO",
-          "answer": "THX",
+          "id": "the_flinstones",
+          "type": "TV SERIES",
+          "answer": "The Flinstones",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Flinstones",
+          "wiki_quote": "The Flintstones is an animated, prime-time American television sitcom that was broadcast from September 30, 1960, to April 1, 1966, on ABC. The show was produced by Hanna-Barbera. The Flintstones was about a working-class Stone Age man's life with his family and his next-door neighbor and best friend.",
+          "spotify_uri": "spotify:track:7fCt3FQlJde9SaCcucoCro",
           "rows": [
+            "the",
+            "flinstones"
           ]
         },
         {
           "id": "requiem_for_a_dream",
           "type": "MOVIE",
           "answer": "Requiem for a dream",
+          "wiki_link": "http://en.wikipedia.org/wiki/Requiem_for_a_Dream",
+          "wiki_quote": "Requiem for a Dream is a 2000 American psychological drama film directed by Darren Aronofsky and starring Ellen Burstyn, Jared Leto, Jennifer Connelly, and Marlon Wayans. The film is based on the novel of the same name by Hubert Selby, Jr., with whom Aronofsky wrote the screenplay.",
+          "spotify_uri": "spotify:track:1Mtdh7trF8bsI89HOTwfNa",
           "rows": [
             "requiem for",
             "a dream"
@@ -219,6 +294,9 @@
           "id": "james_bond",
           "type": "MOVIE",
           "answer": "James Bond",
+          "wiki_link": "http://en.wikipedia.org/wiki/James_Bond_in_film",
+          "wiki_quote": "The James Bond film series is a British series of spy films based on the fictional character of MI6 agent James Bond, \"007\", who originally appeared in a series of books by Ian Fleming. It is one of the longest continually-running film series in history, having been in on-going production from 1962 to the present (with a six-year hiatus between 1989 and 1995).",
+          "spotify_uri": "spotify:track:2gTRWaatQIg05HmJqAcB7p",
           "rows": [
             "james",
             "bond"
@@ -228,6 +306,9 @@
           "id": "south_park",
           "type": "TV SERIES",
           "answer": "South Park",
+          "wiki_link": "http://en.wikipedia.org/wiki/South_Park",
+          "wiki_quote": "South Park is an American adult animated sitcom created by Trey Parker and Matt Stone for the Comedy Central television network. Intended for mature audiences, the show has become famous for its crude language and dark, surreal humor that satirizes a wide range of topics.",
+          "spotify_uri": "",
           "rows": [
             "south",
             "park"
@@ -237,24 +318,33 @@
           "id": "the_big_bang_theory",
           "type": "TV SERIES",
           "answer": "The big bang theory",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Big_Bang_Theory",
+          "wiki_quote": "The Big Bang Theory is an American sitcom created by Chuck Lorre and Bill Prady, both of whom serve as executive producers on the show along with Steven Molaro. All three also serve as head writers. It premiered on CBS on September 24, 2007.",
+          "spotify_uri": "spotify:track:5FCPN8g30PRH7lLgxDh9LQ",
           "rows": [
             "the big",
             "bang theory"
           ]
         },
         {
-          "id": "universal",
-          "type": "STUDIO",
-          "answer": "Universal Studios",
+          "id": "tom_and_jerry",
+          "type": "TV SERIES",
+          "answer": "Tom and Jerry",
+          "wiki_link": "http://en.wikipedia.org/wiki/Tom_and_Jerry",
+          "wiki_quote": "Tom and Jerry is an American animated series of short films created in 1940 by William Hanna and Joseph Barbera. It centers on a rivalry between its two main characters, Tom Cat and Jerry Mouse, and many recurring characters, based around slapstick comedy. Tom and Jerry has gained a worldwide audience and is one of the most popular and critically acclaimed cartoon series.",
+          "spotify_uri": "spotify:track:121X3TY2VW8hPLOoF5ZXTc",
           "rows": [
-            "universal",
-            "studios"
+            "tom and",
+            "jerry"
           ]
         },
         {
           "id": "saw",
           "type": "MOVIE",
           "answer": "Saw",
+          "wiki_link": "http://en.wikipedia.org/wiki/Saw_(2004_film)",
+          "wiki_quote": "Saw is a 2004 American[note 1] independent horror film directed by James Wan. The screenplay, written by Leigh Whannell, is based on a story by Wan and Whannell.",
+          "spotify_uri": "spotify:track:3dNlbediUEGwCSR1aJd5bE",
           "rows": [
             "saw"
           ]
@@ -268,6 +358,9 @@
           "id": "titanic",
           "type": "MOVIE",
           "answer": "Titanic",
+          "wiki_link": "http://en.wikipedia.org/wiki/Titanic_(1997_film)",
+          "wiki_quote": "Titanic is a 1997 American epic romantic disaster film directed, written, co-produced, co-edited and partly financed by James Cameron. A fictionalized account of the sinking of the RMS Titanic, it stars Leonardo DiCaprio and Kate Winslet as members of different social classes who fall in love aboard the ship during its ill-fated maiden voyage.",
+          "spotify_uri": "spotify:track:0sGNcx6lfc3zrbiIOxY4vb",
           "rows": [
           ]
         },
@@ -275,22 +368,31 @@
           "id": "hatari",
           "type": "MOVIE",
           "answer": "Hatari",
+          "wiki_link": "http://en.wikipedia.org/wiki/Hatari!",
+          "wiki_quote": "Hatari! (pronounced [hɑtɑri], Swahili for Danger!) is a 1962 American film directed by Howard Hawks and starring John Wayne. Portraying a group of professional animal catchers in Africa working for zoos, the film includes dramatic wildlife chases and the magnificent backdrop scenery of Mount Meru, a dormant volcano.",
+          "spotify_uri": "spotify:track:0eaDPjRdYhDoRWQfsoc1em",
           "rows": [
           ]
         },
         {
-          "id": "bold_and_beautiful",
-          "type": "TV SERIES",
-          "answer": "Bold and beautiful",
+          "id": "mary_poppins",
+          "type": "MOVIE",
+          "answer": "Mary Poppins",
+          "wiki_link": "http://en.wikipedia.org/wiki/Mary_Poppins_(film)",
+          "wiki_quote": "Mary Poppins is a 1964 American musical fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the Sherman Brothers. The screenplay is by Bill Walsh and Don DaGradi, loosely based on P. L. Travers' book series of the same name. The film, which combines live-action and animation, stars Julie Andrews in the titular role of a magical nanny who visits a dysfunctional family in London and employs her unique brand of lifestyle to improve the family's dynamic. Dick Van Dyke, David Tomlinson, and Glynis Johns are featured in supporting roles.",
+          "spotify_uri": "spotify:track:4DcCdduAYaAlKOFz0QqD4P",
           "rows": [
-            "bold and",
-            "beautiful"
+            "mary",
+            "poppins"
           ]
         },
         {
           "id": "csi",
           "type": "TV SERIES",
           "answer": "CSI",
+          "wiki_link": "http://en.wikipedia.org/wiki/CSI:_Crime_Scene_Investigation",
+          "wiki_quote": "CSI: Crime Scene Investigation (referred to as CSI, also known as CSI: Las Vegas) is an American crime drama television series, that premiered on CBS on October 6, 2000. The show was created by Anthony E. Zuiker and produced by Jerry Bruckheimer.",
+          "spotify_uri": "spotify:track:4donlo2IDXeyFXqWKObZHE",
           "rows": [
           ]
         },
@@ -298,6 +400,9 @@
           "id": "friends",
           "type": "TV SERIES",
           "answer": "Friends",
+          "wiki_link": "http://en.wikipedia.org/wiki/Freinds",
+          "wiki_quote": "Friends is an American sitcom created by David Crane and Marta Kauffman, which originally aired for ten seasons on NBC from September 22, 1994 to May 6, 2004. It revolves around a circle of friends living in Manhattan, a borough of New York City.",
+          "spotify_uri": "spotify:track:5GHO0VvfNWHv82DZLFmMIU",
           "rows": [
           ]
         },
@@ -305,6 +410,9 @@
           "id": "inception",
           "type": "MOVIE",
           "answer": "Inception",
+          "wiki_link": "http://en.wikipedia.org/wiki/Inception",
+          "wiki_quote": "Inception is a 2010 British-American science fiction heist thriller film written, co-produced, and directed by Christopher Nolan.",
+          "spotify_uri": "spotify:track:6ZFbXIJkuI1dVNWvzJzown",
           "rows": [
           ]
         },
@@ -312,6 +420,9 @@
           "id": "jaws",
           "type": "MOVIE",
           "answer": "Jaws",
+          "wiki_link": "http://en.wikipedia.org/wiki/Jaws_(film)",
+          "wiki_quote": "Jaws is a 1975 American thriller film directed by Steven Spielberg and based on Peter Benchley's novel of the same name. The prototypical summer blockbuster, its release is regarded as a watershed moment in motion picture history.",
+          "spotify_uri": "spotify:track:5CVdnjaqwuDVAyR0Gh3ExM",
           "rows": [
           ]
         },
@@ -319,6 +430,9 @@
           "id": "jersey_shore",
           "type": "TV SERIES",
           "answer": "Jersey shore",
+          "wiki_link": "http://en.wikipedia.org/wiki/Jersey_Shore_(TV_series)",
+          "wiki_quote": "Jersey Shore is an American reality television series which ran on MTV from December 3, 2009 to December 20, 2012 in the United States. The series follows the lives of eight housemates spending their summer at the Jersey Shore in the U.S. state of New Jersey.",
+          "spotify_uri": "spotify:track:5jzdxFSqIN0JcbGzS3wQdy",
           "rows": [
             "jersey",
             "shore"
@@ -328,6 +442,9 @@
           "id": "popeye",
           "type": "TV SERIES",
           "answer": "Popeye",
+          "wiki_link": "http://en.wikipedia.org/wiki/Popeye",
+          "wiki_quote": "Popeye the Sailor Man is a cartoon fictional character created by Elzie Crisler Segar, who has appeared in comic strips and theatrical and television animated cartoons.",
+          "spotify_uri": "spotify:track:0zT0kiUKbOFWBYVxzQkHps",
           "rows": [
           ]
         },
@@ -335,6 +452,9 @@
           "id": "pulp_fiction",
           "type": "MOVIE",
           "answer": "Pulp fiction",
+          "wiki_link": "http://en.wikipedia.org/wiki/Pulp_Fiction",
+          "wiki_quote": "Pulp Fiction is a 1994 American crime film directed by Quentin Tarantino, who also co-wrote the screenplay along with Roger Avary. The film is known for its eclectic dialogue, ironic mix of humor and violence, nonlinear storyline, and a host of cinematic allusions and pop culture references.",
+          "spotify_uri": "spotify:track:39PjzyUSw3e16MD14y3wM7",
           "rows": [
             "pulp",
             "fiction"
@@ -344,6 +464,9 @@
           "id": "rocky",
           "type": "MOVIE",
           "answer": "Rocky",
+          "wiki_link": "http://en.wikipedia.org/wiki/Rocky",
+          "wiki_quote": "Rocky is a 1976 American sports film directed by John G. Avildsen and both written by and starring Sylvester Stallone. It tells the rags to riches American Dream story of Rocky Balboa, an uneducated but kind-hearted debt collector for a loan shark in the city of Philadelphia, Pennsylvania.",
+          "spotify_uri": "spotify:track:04NTgfyFFx8FRm0vZszMF7",
           "rows": [
             "rocky"
           ]
@@ -352,6 +475,9 @@
           "id": "shrek",
           "type": "MOVIE",
           "answer": "Shrek",
+          "wiki_link": "http://en.wikipedia.org/wiki/Shrek",
+          "wiki_quote": "Shrek is a 2001 American computer-animated fantasy-comedy film produced by PDI/DreamWorks, released by DreamWorks Pictures, directed by Andrew Adamson and Vicky Jenson, featuring the voices of Mike Myers, Eddie Murphy, Cameron Diaz, and John Lithgow.",
+          "spotify_uri": "spotify:track:1PMjawSuCVzLI2hl2WMeA0",
           "rows": [
             "shrek"
           ]
@@ -360,6 +486,9 @@
           "id": "the_simpsons",
           "type": "TV SERIES",
           "answer": "The Simpsons",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Simpsons",
+          "wiki_quote": "The Simpsons is an American adult animated sitcom created by Matt Groening for the Fox Broadcasting Company. The series is a satirical depiction of a middle class American lifestyle epitomized by its family of the same name, which consists of Homer, Marge, Bart, Lisa, and Maggie.",
+          "spotify_uri": "spotify:track:7tfHoogy2kSg1R1ZeZZJF1",
           "rows": [
           ]
         },
@@ -367,6 +496,9 @@
           "id": "the_sopranos",
           "type": "TV SERIES",
           "answer": "The Sopranos",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Sopranos",
+          "wiki_quote": "The Sopranos is an American television series created by David Chase. Revolving around the fictional New Jersey-based Italian-American mobster Tony Soprano (James Gandolfini), the show portrays the difficulties he faces as he tries to balance the conflicting requirements of his home life and his criminal organization.",
+          "spotify_uri": "spotify:track:6ofJs2WdtE2qzyYyqNYuj4",
           "rows": [
           ]
         },
@@ -374,6 +506,9 @@
           "id": "top_gear",
           "type": "TV SERIES",
           "answer": "Top Gear",
+          "wiki_link": "http://en.wikipedia.org/wiki/Top_Gear_(2002_TV_series)",
+          "wiki_quote": "Top Gear is a British television series about motor vehicles, primarily cars, and is the world's most widely watched factual television programme.[2] It began in 1977 as a conventional motoring magazine programme.",
+          "spotify_uri": "spotify:track:2NzAPbiraQhKq2RG7Wit7J",
           "rows": [
           ]
         }
@@ -386,6 +521,9 @@
           "id": "family_guy",
           "type": "TV SERIES",
           "answer": "Family Guy",
+          "wiki_link": "http://en.wikipedia.org/wiki/Family_Guy",
+          "wiki_quote": "Family Guy is an American adult animated sitcom created by Seth MacFarlane for the Fox Broadcasting Company. The series centers on the Griffins, a family consisting of parents Peter and Lois; their children Meg, Chris, and Stewie; and their anthropomorphic pet dog Brian.",
+          "spotify_uri": "",
           "rows": [
           ]
         },
@@ -393,6 +531,9 @@
           "id": "fantasia",
           "type": "MOVIE",
           "answer": "Fantasia",
+          "wiki_link": "http://en.wikipedia.org/wiki/Fantasia_(film)",
+          "wiki_quote": "Fantasia is a 1940 American animated film produced by Walt Disney and released by Walt Disney Productions. With story direction by Joe Grant and Dick Huemer, and production supervision by Ben Sharpsteen, it is the third feature in the Disney animated features canon. The film consists of eight animated segments set to pieces of classical music conducted by Leopold Stokowski; seven of which are performed by the Philadelphia Orchestra.",
+          "spotify_uri": "spotify:track:0mTwh4PUZ5j9URVCX8WXSA",
           "rows": [
           ]
         },
@@ -400,6 +541,9 @@
           "id": "forrest_gump",
           "type": "MOVIE",
           "answer": "Forrest Gump",
+          "wiki_link": "http://en.wikipedia.org/wiki/Forrest_Gump",
+          "wiki_quote": "Forrest Gump is a 1994 American epic romantic dramedy film based on the 1986 novel of the same name by Winston Groom. The film was directed by Robert Zemeckis and starred Tom Hanks, Robin Wright, Gary Sinise and Sally Field.",
+          "spotify_uri": "spotify:track:1ijrMIqQvZNsnoqGukPzFD",
           "rows": [
           ]
         },
@@ -407,6 +551,9 @@
           "id": "game_of_thrones",
           "type": "TV SERIES",
           "answer": "Game of thrones",
+          "wiki_link": "http://en.wikipedia.org/wiki/Game_of_thrones",
+          "wiki_quote": "Game of Thrones is an American fantasy drama television series created for HBO by David Benioff and D. B. Weiss. It is an adaptation of A Song of Ice and Fire, George R. R. Martin's series of fantasy novels, the first of which is titled A Game of Thrones.",
+          "spotify_uri": "spotify:track:7JD5OoA5hGBJDCBecoGlCy",
           "rows": [
             "game of",
             "thrones"
@@ -416,6 +563,9 @@
           "id": "halloween",
           "type": "MOVIE",
           "answer": "Halloween",
+          "wiki_link": "http://en.wikipedia.org/wiki/Halloween_(1978_film)",
+          "wiki_quote": "Halloween is a 1978 American independent slasher horror film directed and scored by John Carpenter, co-written with producer Debra Hill, and starring Donald Pleasence and Jamie Lee Curtis in her film debut. The film was the first installment in what became the Halloween franchise.",
+          "spotify_uri": "spotify:track:3aAZGz9wZXiw3ZQvf5qZSe",
           "rows": [
           ]
         },
@@ -423,24 +573,33 @@
           "id": "how_i_met_your_mother",
           "type": "TV SERIES",
           "answer": "How I met your mother",
+          "wiki_link": "http://en.wikipedia.org/wiki/How_I_Met_Your_Mother",
+          "wiki_quote": "How I Met Your Mother (often abbreviated to HIMYM) is an American sitcom that originally ran on CBS from September 19, 2005 to March 31, 2014. The series follows the main character, Ted Mosby, and his group of friends in Manhattan. As a framing device, Ted, in the year 2030, recounts to his son and daughter the events that led him to meeting their mother.",
+          "spotify_uri": "spotify:track:0AwXFZnTFv4A38WqhChSDh",
           "rows": [
             "how i met",
             "your mother"
           ]
         },
         {
-          "id": "mgm",
-          "type": "STUDIO",
-          "answer": "Metro Goldwyn Mayer",
+          "id": "the_addams_family",
+          "type": "TV SERIES",
+          "answer": "The Addams Family",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Addams_Family",
+          "wiki_quote": "The Addams Family is a group of fictional characters created by American cartoonist Charles Addams. As named by Charles Addams, The Addams Family characters include Gomez, Morticia, Uncle Fester, Lurch, Grandmama, Wednesday, Pugsley, Pubert Addams, Cousin IT and Thing. The Addamses are a satirical inversion of the ideal American family; an eccentric, wealthy clan who delight in the macabre and are unaware (or simply don't care) that people find them bizarre or frightening.",
+          "spotify_uri": "spotify:track:2nZqNGNnSeBEDDMOcAX2tz",
           "rows": [
-            "metro goldwyn",
-            "mayer"
+            "the addams",
+            "family"
           ]
         },
         {
           "id": "kill_bill",
           "type": "MOVIE",
           "answer": "Kill Bill",
+          "wiki_link": "http://en.wikipedia.org/wiki/Kill_bill",
+          "wiki_quote": "Kill Bill is an American action/thriller film written and directed by Quentin Tarantino. Kill Bill was originally scheduled for a single theatrical release, but with a running time of over four hours, it was separated into two movies: Kill Bill Volume 1, released in late 2003, and Kill Bill Volume 2, released in early 2004.",
+          "spotify_uri": "spotify:track:6Q32Vkucx2qeuVyBd3NiFZ",
           "rows": [
           ]
         },
@@ -448,6 +607,9 @@
           "id": "pirates_of_the_caribbean",
           "type": "MOVIE",
           "answer": "Pirates of the Caribbean",
+          "wiki_link": "http://en.wikipedia.org/wiki/Pirates_of_the_Caribbean_(film_series)",
+          "wiki_quote": "Pirates of the Caribbean is a series of fantasy adventure films produced by Jerry Bruckheimer and based on Walt Disney's theme park ride of the same name.",
+          "spotify_uri": "spotify:track:4AD2dterIUjNt1LFNI9Bvi",
           "rows": [
             "pirates of",
             "the caribbean"
@@ -457,6 +619,9 @@
           "id": "skins",
           "type": "TV SERIES",
           "answer": "Skins",
+          "wiki_link": "http://en.wikipedia.org/wiki/Skins_(UK_TV_series)",
+          "wiki_quote": "Skins is a British teen drama that follows the lives of a group of teenagers in Bristol, South West England, through the two years of sixth form. Its controversial storylines have explored issues such as dysfunctional families, mental illness (such as eating disorders and bipolar disorder), adolescent sexuality, substance abuse, death and bullying. ",
+          "spotify_uri": "",
           "rows": [
           ]
         },
@@ -464,6 +629,9 @@
           "id": "the_good_the_bad_and_the_ugly",
           "type": "MOVIE",
           "answer": "The good, the bad and the ugly",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Good,_the_Bad_and_the_Ugly#cite_note-3",
+          "wiki_quote": "The Good, the Bad and the Ugly (Italian title: Il buono, il brutto, il cattivo) is a 1966 Italian Spaghetti Western film directed by Sergio Leone, starring Clint Eastwood, Lee Van Cleef, and Eli Wallach in the title roles respectively.",
+          "spotify_uri": "spotify:track:1JSIWsJfxOji0FrxFcxdCK",
           "rows": [
             "the good the bad",
             "and the ugly"
@@ -473,6 +641,9 @@
           "id": "the_mission",
           "type": "MOVIE",
           "answer": "The Mission",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Mission_(1986_film)",
+          "wiki_quote": "The Mission is a 1986 British drama film about the experiences of a Jesuit missionary in 18th century South America. The film was written by Robert Bolt and directed by Roland Joffé. The movie stars Robert De Niro, Jeremy Irons, Ray McAnally, Aidan Quinn, Cherie Lunghi and Liam Neeson.",
+          "spotify_uri": "spotify:track:4tZIHyRe46VpgRYMJWcqPO",
           "rows": [
           ]
         },
@@ -480,6 +651,9 @@
           "id": "top_gun",
           "type": "MOVIE",
           "answer": "Top gun",
+          "wiki_link": "http://en.wikipedia.org/wiki/Top_gun",
+          "wiki_quote": "Top Gun is a 1986 American action drama film directed by Tony Scott, and produced by Don Simpson and Jerry Bruckheimer, in association with Paramount Pictures. The screenplay was written by Jim Cash and Jack Epps, Jr., and was inspired by the article \"Top Guns\" written by Ehud Yonay for California magazine.",
+          "spotify_uri": "spotify:track:6lKtMV1tpaZtMusLUDBHSb",
           "rows": [
           ]
         },
@@ -487,16 +661,24 @@
           "id": "two_and_a_half_men",
           "type": "TV SERIES",
           "answer": "Two and a half men",
+          "wiki_link": "http://en.wikipedia.org/wiki/Two_and_a_Half_Men",
+          "wiki_quote": "Two and a Half Men is an American television sitcom that was first broadcast on CBS on September 22, 2003. Starring Charlie Sheen, Jon Cryer, and Angus T. Jones, the show was originally about a hedonistic jingle writer, Charlie Harper; his uptight brother, Alan; and Alan's growing son, Jake.",
+          "spotify_uri": "spotify:track:3xTWgu1J8cdbuQECcpoj4U",
           "rows": [
             "two and",
             "a half men"
           ]
         },
         {
-          "id": "walt_disney",
-          "type": "STUDIO",
-          "answer": "Walt Disney",
+          "id": "the_kings_speech",
+          "type": "MOVIE",
+          "answer": "The King's Speech",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_King%27s_Speech",
+          "wiki_quote": "The King's Speech is a 2010 British historical drama film directed by Tom Hooper and written by David Seidler. Colin Firth plays King George VI who, to cope with a stammer, sees Lionel Logue, an Australian speech and language therapist played by Geoffrey Rush. The men become friends as they work together, and after his brother abdicates the throne, the new King relies on Logue to help him make his first wartime radio broadcast on Britain's declaration of war on Germany in 1939.",
+          "spotify_uri": "spotify:track:0KOmcJze7qJBybiz1bIBUl",
           "rows": [
+            "the kings",
+            "speech"
           ]
         }
       ]
@@ -508,6 +690,9 @@
           "id": "a_space_odyssey",
           "type": "MOVIE",
           "answer": "2001 A Space Odyssey",
+          "wiki_link": "http://en.wikipedia.org/wiki/A_Space_Odyssey",
+          "wiki_quote": "2001: A Space Odyssey is a science-fiction narrative, produced in 1968 as both a novel, written by Arthur C. Clarke, and a film, directed by Stanley Kubrick. It is a part of Clarke's Space Odyssey series.",
+          "spotify_uri": "spotify:track:3XtJVLn1OrlkdhXw7yZlF9",
           "rows": [
             "2001 a",
             "space",
@@ -518,6 +703,9 @@
           "id": "american_beauty",
           "type": "MOVIE",
           "answer": "American Beauty",
+          "wiki_link": "http://en.wikipedia.org/wiki/American_Beauty_(film)",
+          "wiki_quote": "American Beauty is a 1999 American drama film directed by Sam Mendes and written by Alan Ball. Kevin Spacey stars as office worker Lester Burnham, who has a midlife crisis when he becomes infatuated with his teenage daughter's best friend, Angela (Mena Suvari).",
+          "spotify_uri": "spotify:track:1Hc9rfFRsUE8nyKDnyXg7f",
           "rows": [
             "american",
             "beauty"
@@ -527,6 +715,9 @@
           "id": "californication",
           "type": "TV SERIES",
           "answer": "Californication",
+          "wiki_link": "http://en.wikipedia.org/wiki/Californication_(TV_series)",
+          "wiki_quote": "Californication is an American comedy-drama television series created by Tom Kapinos. The show debuted on Showtime on August 13, 2007 and follows New Yorker Hank Moody (David Duchovny), a troubled novelist who moves to California and suffers from writer's block.",
+          "spotify_uri": "spotify:track:12hjR86EfWjwGQkZJRrKKp",
           "rows": [
           ]
         },
@@ -534,6 +725,9 @@
           "id": "conquest_of_paradise",
           "type": "MOVIE",
           "answer": "1492 Conquest of Paradise",
+          "wiki_link": "http://en.wikipedia.org/wiki/Conquest_of_paradise",
+          "wiki_quote": "1492: Conquest of Paradise (in French, 1492 : Christophe Colomb) is an epic 1992 European adventure/drama film directed by Ridley Scott and written by Roselyne Bosch, which tells the fictionalized story of the discovery of the New World by Italian explorer Christopher Columbus (Gérard Depardieu) and the effect this had on the pueblos originarios.",
+          "spotify_uri": "spotify:track:72spzrvGTuoMfXVP3wxZDQ",
           "rows": [
             "1492 conquest",
             "of paradise"
@@ -543,6 +737,9 @@
           "id": "dawsons_creek",
           "type": "TV SERIES",
           "answer": "Dawson's Creek",
+          "wiki_link": "http://en.wikipedia.org/wiki/Dawson%27s_Creek",
+          "wiki_quote": "Dawson's Creek is an American teen drama television series created by Kevin Williamson which debuted on January 20, 1998, on The WB and was produced by Sony Pictures Television. Filmed in Wilmington, North Carolina, at EUE/Screen Gems studios and on location around Wilmington, Southport, and Wrightsville Beach, North Carolina. ",
+          "spotify_uri": "spotify:track:1qJemJSZsdqH2DEqXAZWNJ",
           "rows": [
             "dawsons",
             "creek"
@@ -552,6 +749,9 @@
           "id": "et",
           "type": "MOVIE",
           "answer": "E.T.",
+          "wiki_link": "http://en.wikipedia.org/wiki/E.T._the_Extra-Terrestrial",
+          "wiki_quote": "E.T. the Extra-Terrestrial (often referred to simply as E.T.) is a 1982 American science fiction film coproduced and directed by Steven Spielberg and written by Melissa Mathison, featuring special effects by Carlo Rambaldi and starring Henry Thomas, Dee Wallace, Robert MacNaughton, Drew Barrymore, and Peter Coyote.",
+          "spotify_uri": "spotify:track:1sAQeaQjUIrJ1hDdzLBP8N",
           "rows": [
           ]
         },
@@ -559,6 +759,9 @@
           "id": "grease",
           "type": "MOVIE",
           "answer": "Grease",
+          "wiki_link": "http://en.wikipedia.org/wiki/Grease_(film)",
+          "wiki_quote": "Grease is a 1978 American musical film directed by Randal Kleiser and produced by Paramount Pictures. It is based on Warren Casey and Jim Jacobs' 1971 musical of the same name about two lovers in a 1950s high school.",
+          "spotify_uri": "spotify:track:3Zuf70897YkrVRAsrBMMSF",
           "rows": [
           ]
         },
@@ -566,6 +769,9 @@
           "id": "greys_anatomy",
           "type": "TV SERIES",
           "answer": "Grey's Anatomy",
+          "wiki_link": "http://en.wikipedia.org/wiki/Grey%27s_Anatomy",
+          "wiki_quote": "Grey's Anatomy is an American medical drama television series that premiered on the American Broadcasting Company (ABC) as a mid-season replacement on March 27, 2005. The series has aired ten seasons, and focuses on the fictional lives of surgical interns and residents as they gradually evolve into seasoned doctors, while trying to maintain personal lives and relationships. ",
+          "spotify_uri": "spotify:track:2qFL8M59gEHGLJ74mP0bF6",
           "rows": [
             "greys",
             "anatomy"
@@ -575,6 +781,9 @@
           "id": "harry_potter",
           "type": "MOVIE",
           "answer": "Harry Potter",
+          "wiki_link": "http://en.wikipedia.org/wiki/Harry_Potter_(film_series)",
+          "wiki_quote": "The Harry Potter film series is a British–American feature film series based on the Harry Potter novels by author J. K. Rowling. The series is distributed by Warner Bros. and consists of eight fantasy films beginning with Harry Potter and the Philosopher's Stone (2001) and culminating with Harry Potter and the Deathly Hallows – Part 2 (2011). It is the highest-grossing film series in inflation unadjusted dollars, with $7.7 billion in worldwide receipts.",
+          "spotify_uri": "spotify:track:1n8NKQRg8LVHy7oUhUgbFF",
           "rows": [
             "harry",
             "potter"
@@ -583,14 +792,22 @@
         {
           "id": "spongebob",
           "type": "TV SERIES",
-          "answer": "SpongeBob",
+          "answer": "SpongeBob SquarePants",
+          "wiki_link": "http://en.wikipedia.org/wiki/SpongeBob_SquarePants",
+          "wiki_quote": "SpongeBob SquarePants is an American animated television series created by marine biologist and animator Stephen Hillenburg for Nickelodeon. The series chronicles the adventures and endeavors of the title character and his various friends in the fictional underwater city of Bikini Bottom.",
+          "spotify_uri": "spotify:track:2qJv6Rs4pMUaFyVM0y6qhF",
           "rows": [
+            "spongebob",
+            "squarepants"
           ]
         },
         {
           "id": "the_matrix",
           "type": "MOVIE",
           "answer": "The Matrix",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Matrix",
+          "wiki_quote": "The Matrix is a 1999 American science fiction action film written and directed by The Wachowski Brothers, starring Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving, and Joe Pantoliano. It depicts a dystopian future in which reality as perceived by most humans is actually a simulated reality called \"the Matrix\", created by sentient machines to subdue the human population, while their bodies' heat and electrical activity are used as an energy source.",
+          "spotify_uri": "spotify:track:1Bjgk8W01w4wx2SMCldsYZ",
           "rows": [
           ]
         },
@@ -598,6 +815,9 @@
           "id": "the_nightmare_before_christmas",
           "type": "MOVIE",
           "answer": "The Nightmare Before Christmas",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Matrix",
+          "wiki_quote": "The Matrix is a 1999 American science fiction action film written and directed by The Wachowski Brothers, starring Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving, and Joe Pantoliano. It depicts a dystopian future in which reality as perceived by most humans is actually a simulated reality called \"the Matrix\"",
+          "spotify_uri": "spotify:track:2Rddbad3XaTds95LY8iidH",
           "rows": [
             "the nightmare",
             "before",
@@ -608,6 +828,9 @@
           "id": "the_walking_dead",
           "type": "TV SERIES",
           "answer": "The Walking Dead",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Walking_Dead_(TV_series)",
+          "wiki_quote": "The Walking Dead is an American post-apocalyptic horror drama television series developed by Frank Darabont. It is based on the comic book series of the same name by Robert Kirkman, Tony Moore, and Charlie Adlard. The series stars Andrew Lincoln as sheriff's deputy Rick Grimes, who awakens from a coma to find a post-apocalyptic world dominated by flesh-eating zombies. ",
+          "spotify_uri": "spotify:track:2mjjLoXsepLJkputgwLctm",
           "rows": [
             "the walking",
             "dead"
@@ -617,6 +840,9 @@
           "id": "the_x_files",
           "type": "TV SERIES",
           "answer": "The X Files",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_X-Files",
+          "wiki_quote": "The X-Files is an American science fiction horror drama television series created by Chris Carter. The program originally aired from September 10, 1993 to May 19, 2002 on Fox, spanning nine seasons and 202 episodes. The series revolves around FBI Special Agents Fox Mulder (David Duchovny) and Dana Scully (Gillian Anderson) investigating X-Files: marginalized, unsolved cases involving paranormal phenomena. ",
+          "spotify_uri": "spotify:track:058rkHi6D5hqP6HqGMQYiS",
           "rows": [
           ]
         },
@@ -624,6 +850,9 @@
           "id": "gladiator",
           "type": "MOVIE",
           "answer": "Gladiator",
+          "wiki_link": "http://en.wikipedia.org/wiki/Gladiator_(2000_film)",
+          "wiki_quote": "Gladiator is a 2000 British–American epic historical drama film directed by Ridley Scott, starring Russell Crowe, Joaquin Phoenix, Connie Nielsen, Ralf Möller, Oliver Reed (in his final film role), Djimon Hounsou, Derek Jacobi, John Shrapnel, and Richard Harris. Crowe portrays the fictional character, loyal Roman general Maximus Decimus Meridius",
+          "spotify_uri": "spotify:track:11IXRdEjiH0KL8nh4G1j7d",
           "rows": [
           ]
         }
@@ -636,6 +865,9 @@
           "id": "futurama",
           "type": "TV SERIES",
           "answer": "Futurama",
+          "wiki_link": "https://en.wikipedia.org/wiki/Futurama",
+          "wiki_quote": "Futurama is an American adult animated science fiction sitcom created by Matt Groening and developed by Groening and David X. Cohen for the Fox Broadcasting Company. The series follows the adventures of a late-20th-century New York City pizza delivery boy, Philip J. Fry, who, after being unwittingly cryogenically frozen for one thousand years, finds employment at Planet Express",
+          "spotify_uri": "spotify:track:1hAMlKKfcvrVIZZPVxZwE2",
           "rows": [
           ]
         },
@@ -643,6 +875,9 @@
           "id": "x_factor",
           "type": "TV SERIES",
           "answer": "X Factor",
+          "wiki_link": "http://en.wikipedia.org/wiki/X_Factor",
+          "wiki_quote": "The X Factor is a television music competition franchise created by Simon Cowell. It originated in the United Kingdom, where it was devised as a replacement for Pop Idol. It is now held in various countries. The programmes are produced by executive producer Simon Cowell and his company SYCOtv. The \"X Factor\" of the title refers to the undefinable \"something\" that makes for star quality.",
+          "spotify_uri": "spotify:track:665lEnRMYah8aUQQ0BOo1E",
           "rows": [
           ]
         },
@@ -650,6 +885,9 @@
           "id": "the_a_team",
           "type": "TV SERIES",
           "answer": "The A-Team",
+          "wiki_link": "http://en.wikipedia.org/wiki/A-Team",
+          "wiki_quote": "The A-Team is an American action-adventure television series, running from 1983 to 1987, about a fictional group of ex-United States Army Special Forces personnel who work as soldiers of fortune, while on the run from the Army after being branded as war criminals for a \"crime they didn't commit\".",
+          "spotify_uri": "spotify:track:0mdtYfR8hE1Eb6hwLMJWRX",
           "rows": [
           ]
         },
@@ -657,6 +895,9 @@
           "id": "modern_family",
           "type": "TV SERIES",
           "answer": "Modern Family",
+          "wiki_link": "http://en.wikipedia.org/wiki/Modern_Family",
+          "wiki_quote": "Modern Family is an American television sitcom that debuted on ABC on September 23, 2009. Presented in mockumentary style, the fictional characters frequently talk directly into the camera. The program is the story of Jay Pritchett, his second wife, his stepson, and their infant son; and his two adult children and their families in suburban Los Angeles.",
+          "spotify_uri": "spotify:track:79S1sZQ1EDo117Sv6vxw9o",
           "rows": [
             "modern",
             "family"
@@ -666,6 +907,9 @@
           "id": "fresh_prince_of_bel_air",
           "type": "TV SERIES",
           "answer": "Fresh prince of bel air",
+          "wiki_link": "http://en.wikipedia.org/wiki/Fresh_Prince_of_Bel-Air",
+          "wiki_quote": "The Fresh Prince of Bel-Air is an American television sitcom that originally aired on NBC from September 10, 1990, to May 20, 1996. The show stars Will Smith as a fictionalized version of himself, a street-smart teenager from West Philadelphia who is sent to move in with his wealthy aunt and uncle in their Bel Air mansion after getting into a fight on a local basketball court, his lifestyle often clashes with that of his relatives in Bel Air.",
+          "spotify_uri": "spotify:track:0UREO3QWbXJW3gOUXpK1am",
           "rows": [
             "fresh prince",
             "of bel air"
@@ -675,6 +919,9 @@
           "id": "amelie",
           "type": "MOVIE",
           "answer": "Amelie",
+          "wiki_link": "http://en.wikipedia.org/wiki/Am%C3%A9lie",
+          "wiki_quote": "Amélie (French: Le Fabuleux Destin d'Amélie Poulain) is a 2001 romantic comedy film directed by Jean-Pierre Jeunet. Written by Jeunet with Guillaume Laurant, the film is a whimsical depiction of contemporary Parisian life, set in Montmartre. It tells the story of a shy waitress, played by Audrey Tautou, who decides to change the lives of those around her for the better, while struggling with her own isolation.",
+          "spotify_uri": "spotify:track:508AvcfQL1jBYNdSrA1GVn",
           "rows": [
           ]
         },
@@ -682,6 +929,9 @@
           "id": "the_bridge_on_the_river_kwai",
           "type": "MOVIE",
           "answer": "The Bridge on the River Kwai",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Bridge_on_the_River_Kwai",
+          "wiki_quote": "The Bridge on the River Kwai is a 1957 British World War II film directed by David Lean, based on the eponymous French novel (1952) by Pierre Boulle. The film is a work of fiction but borrows the construction of the Burma Railway in 1942–43 for its historical setting. It stars William Holden, Jack Hawkins, Alec Guinness and Sessue Hayakawa. The movie was filmed in Ceylon (now known as Sri Lanka).",
+          "spotify_uri": "spotify:track:2VWxEiOwdK3AjrDgsBa2MV",
           "rows": [
             "the bridge on",
             "the river kwai"
@@ -691,6 +941,9 @@
           "id": "monsters_inc",
           "type": "MOVIE",
           "answer": "Monsters Inc.",
+          "wiki_link": "http://en.wikipedia.org/wiki/Monsters,_Inc.",
+          "wiki_quote": "Monsters, Inc. is a 2001 American computer-animated comedy film directed by Pete Docter, produced by Pixar Animation Studios and released by Walt Disney Pictures. It was co-directed by Lee Unkrich and David Silverman and stars the voices of John Goodman, Billy Crystal, Steve Buscemi, James Coburn and Jennifer Tilly.",
+          "spotify_uri": "spotify:track:1Dk6V1l9UNXL47aE9g7DIp",
           "rows": [
           ]
         },
@@ -698,6 +951,9 @@
           "id": "saturday_night_live",
           "type": "TV SERIES",
           "answer": "Saturday Night Live",
+          "wiki_link": "http://en.wikipedia.org/wiki/SNL",
+          "wiki_quote": "Saturday Night Live (abbreviated as SNL) is an American late-night live television sketch comedy and variety show created by Lorne Michaels and developed by Dick Ebersol. The show premiered on NBC on October 11, 1975, under the original title NBC's Saturday Night. ",
+          "spotify_uri": "",
           "rows": [
             "saturday",
             "night live"
@@ -707,6 +963,9 @@
           "id": "schindlers_list",
           "type": "MOVIE",
           "answer": "Schindler's list",
+          "wiki_link": "http://en.wikipedia.org/wiki/Shindler%27s_List",
+          "wiki_quote": "Schindler's List is a 1993 American epic historical drama film directed and co-produced by Steven Spielberg and scripted by Steven Zaillian. It is based on the novel Schindler's Ark by Thomas Keneally, an Australian novelist. The film is based on the life of Oskar Schindler, a German businessman who saved the lives of more than a thousand mostly Polish-Jewish refugees during the Holocaust by employing them in his factories.",
+          "spotify_uri": "spotify:track:3rPnTBCy5wLCX3yV1zzhaT",
           "rows": [
             "schindlers",
             "list"
@@ -716,6 +975,9 @@
           "id": "teletubbies",
           "type": "TV SERIES",
           "answer": "Teletubbies",
+          "wiki_link": "http://en.wikipedia.org/wiki/Teletubbies",
+          "wiki_quote": "eletubbies is a British BBC children's television series targeted at pre-school viewers and produced from 31 March 1997 to 5 January 2001 by Ragdoll Productions. It was created by Ragdoll's creative director Anne Wood CBE and Andrew Davenport, who wrote each of the show's 365 episodes. The programme's original narrator was Tim Whitnall.",
+          "spotify_uri": "spotify:track:0UjGhrN0sq9ElismrIPKMu",
           "rows": [
           ]
         },
@@ -723,6 +985,9 @@
           "id": "the_last_of_the_mohicans",
           "type": "MOVIE",
           "answer": "The last of the Mohicans",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Last_of_the_Mohicans_(1992_film)",
+          "wiki_quote": "The Last of the Mohicans is a 1992 historical epic film set in 1757 during the French and Indian War and produced by Morgan Creek Pictures. It was directed by Michael Mann and based on James Fenimore Cooper's novel of the same name and George B. Seitz's 1936 film adaptation, owing more to the latter than the novel.",
+          "spotify_uri": "spotify:track:59snJfIw3zBlEazgJZ1wy1",
           "rows": [
             "the last of",
             "the mohicans"
@@ -732,6 +997,9 @@
           "id": "the_office",
           "type": "TV SERIES",
           "answer": "The Office",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Office",
+          "wiki_quote": "The Office is a popular mockumentary/cringe comedy sitcom that was first made in the United Kingdom and has now been remade in many other countries, with overall viewership in the hundreds of millions worldwide. The original UK version was created by Ricky Gervais and Stephen Merchant. It starred Gervais as the boss and main character.",
+          "spotify_uri": "spotify:track:6dmoz3Ml53Etq42jauAMg1",
           "rows": [
           ]
         },
@@ -739,6 +1007,9 @@
           "id": "the_pink_panther",
           "type": "MOVIE",
           "answer": "The Pink Panther",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Pink_Panther",
+          "wiki_quote": "he Pink Panther is a series of comedy films featuring an inept French police detective, Inspector Jacques Clouseau. The series began with the release of The Pink Panther (1963). The role was originated by, and is most closely associated with, Peter Sellers. Most of the films were directed and co-written by Blake Edwards, with theme music composed by Henry Mancini.",
+          "spotify_uri": "spotify:track:4qgxSGBrqUAQjcFZD25wX2",
           "rows": [
             "the pink",
             "panther"
@@ -748,6 +1019,9 @@
           "id": "true_blood",
           "type": "TV SERIES",
           "answer": "True Blood",
+          "wiki_link": "http://en.wikipedia.org/wiki/True_Blood",
+          "wiki_quote": "True Blood is an American television drama series produced and created by Alan Ball. It is based on The Southern Vampire Mysteries series of novels by Charlaine Harris, detailing the co-existence of vampires and humans in Bon Temps, a fictional, small town in northwestern Louisiana.",
+          "spotify_uri": "spotify:track:6NxKPSgpWDbeeOPxlzn7pE",
           "rows": [
           ]
         }
@@ -760,6 +1034,9 @@
           "id": "the_magnificent_seven",
           "type": "MOVIE",
           "answer": "The Magnificent Seven",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Magnificent_Seven",
+          "wiki_quote": "The Magnificent Seven is a 1960 American western film directed by John Sturges. It is a western-style remake of Akira Kurosawa's 1954 Japanese film Seven Samurai. The film stars Yul Brynner, Steve McQueen, Charles Bronson, James Coburn, Robert Vaughn, Brad Dexter, and Horst Buchholz who play a group of seven American gunmen hired to protect a small agricultural village in Mexico from a group of marauding native bandits led by Calvera, portrayed by Eli Wallach.",
+          "spotify_uri": "spotify:track:1nu3eiqIYSZfJr5K0x40wr",
           "rows": [
             "the",
             "magnificent",
@@ -770,6 +1047,9 @@
           "id": "desperate_housewives",
           "type": "TV SERIES",
           "answer": "Desperate Housewives",
+          "wiki_link": "http://en.wikipedia.org/wiki/Desperate_Housewives",
+          "wiki_quote": "Desperate Housewives is an American television comedy-drama-mystery series created by Marc Cherry and produced by ABC Studios and Cherry Productions. It aired Sundays at 9 P.M. Eastern/8 P.M. Central, on ABC from October 3, 2004, until May 13, 2012. Executive producer Cherry served as showrunner.",
+          "spotify_uri": "spotify:track:1MpsQTOtsbYMd8gReKacr1",
           "rows": [
             "desperate",
             "housewives"
@@ -779,6 +1059,9 @@
           "id": "for_a_few_dollars_more",
           "type": "MOVIE",
           "answer": "For a few dollars more",
+          "wiki_link": "http://en.wikipedia.org/wiki/For_a_Few_Dollars_More",
+          "wiki_quote": "For a Few Dollars More (Italian: Per qualche dollaro in più) is a 1965 Italian spaghetti western film directed by Sergio Leone and starring Clint Eastwood, Lee Van Cleef, and Gian Maria Volonté.[4] German actor Klaus Kinski also plays a supporting role as a secondary villain. The film was released in the United States in 1967 and is the second part of what is commonly known as the Dollars Trilogy",
+          "spotify_uri": "spotify:track:2JnFCGmwCyvMX4osX2EmN9",
           "rows": [
             "for a few",
             "dollars more"
@@ -788,6 +1071,9 @@
           "id": "kung_fu_panda",
           "type": "MOVIE",
           "answer": "Kung fu panda",
+          "wiki_link": "http://en.wikipedia.org/wiki/Kung_Fu_Panda",
+          "wiki_quote": "Kung Fu Panda is a 2008 American computer-animated martial arts comedy film produced by DreamWorks Animation and distributed by Paramount Pictures. It was directed by John Stevenson and Mark Osborne and produced by Melissa Cobb, and stars the voices of Jack Black, Dustin Hoffman, Angelina Jolie, Jackie Chan, Lucy Liu, Seth Rogen, David Cross, Ian McShane, Randall Duk Kim, James Hong, Dan Fogler, and Michael Clarke Duncan.",
+          "spotify_uri": "spotify:track:5fp6jXGsJZUectyF6pO0EG",
           "rows": [
             "kung fu",
             "panda"
@@ -797,6 +1083,9 @@
           "id": "rain_man",
           "type": "MOVIE",
           "answer": "Rain Man",
+          "wiki_link": "http://en.wikipedia.org/wiki/Rain_Man",
+          "wiki_quote": "Rain Man is a 1988 American comedy-drama film directed by Barry Levinson and written by Barry Morrow and Ronald Bass. It tells the story of an abrasive and selfish yuppie, Charlie Babbitt (Tom Cruise), who discovers that his estranged father has died and bequeathed all of his multimillion-dollar estate to his other son, Raymond (Dustin Hoffman), an autistic savant whose existence Charlie was unaware of.",
+          "spotify_uri": "spotify:track:5kOxj05I5jTqzWNjcJPdsT",
           "rows": [
           ]
         },
@@ -804,6 +1093,9 @@
           "id": "glee",
           "type": "TV SERIES",
           "answer": "Glee",
+          "wiki_link": "http://en.wikipedia.org/wiki/Glee_(TV_series)",
+          "wiki_quote": "Glee is an American musical comedy-drama television series that airs on the Fox network in the United States. It focuses on the fictitious William McKinley High School glee club, New Directions, which competes on the show choir competition circuit while its disparate members deal with relationships, sexuality, social issues, and learning to become an effective team.",
+          "spotify_uri": "spotify:track:2Vh5iNQIUR5LlrcKYfDyGu",
           "rows": [
           ]
         },
@@ -811,6 +1103,9 @@
           "id": "malcolm_in_the_middle",
           "type": "TV SERIES",
           "answer": "Malcolm in the middle",
+          "wiki_link": "http://en.wikipedia.org/wiki/Malcolm_in_the_Middle",
+          "wiki_quote": "Malcolm in the Middle is an American television sitcom created by Linwood Boomer for the Fox Broadcasting Company. The series was first broadcast on January 9, 2000 and ended its six-year run on April 14, 2006, after seven seasons and 151 episodes. The series received critical acclaim, and won a Peabody Award, seven Emmy Awards, one Grammy Award, and seven Golden Globe nominations.",
+          "spotify_uri": "spotify:track:4BED3bvtKkKnAJRsg2f3hJ",
           "rows": [
             "malcolm in",
             "the middle"
@@ -820,6 +1115,9 @@
           "id": "mission_impossible",
           "type": "MOVIE",
           "answer": "Mission Impossible",
+          "wiki_link": "http://en.wikipedia.org/wiki/Mission:_Impossible_(film)",
+          "wiki_quote": "Mission: Impossible is a 1996 American action spy film directed by Brian De Palma, produced by and starring Tom Cruise. Based on the television series of the same name, the plot follows a new agent, Ethan Hunt (Cruise) and his mission to uncover the mole who has framed him for the murders of his entire IMF team. ",
+          "spotify_uri": "spotify:track:7bcQ0YNCfK46urmYS0V8Mf",
           "rows": [
             "mission",
             "impossible"
@@ -829,6 +1127,9 @@
           "id": "reservoir_dogs",
           "type": "MOVIE",
           "answer": "Reservoir Dogs",
+          "wiki_link": "http://en.wikipedia.org/wiki/Reservoir_Dogs",
+          "wiki_quote": "Reservoir Dogs is a 1992 American crime film that depicts the events before and after a botched diamond heist, but not the heist itself. The film was the debut of director and writer Quentin Tarantino, and stars an ensemble cast—Harvey Keitel, Tim Roth, Chris Penn, Steve Buscemi, Lawrence Tierney, and Michael Madsen.",
+          "spotify_uri": "spotify:track:20jhZ58fJ7xTkTudhxrWQg",
           "rows": [
             "reservoir",
             "dogs"
@@ -838,6 +1139,9 @@
           "id": "sex_and_the_city",
           "type": "TV SERIES",
           "answer": "Sex and the City",
+          "wiki_link": "http://en.wikipedia.org/wiki/Sex_and_the_City",
+          "wiki_quote": "Sex and the City is an American television romantic sit-com created by Darren Star and produced by HBO. Broadcast from 1998 until 2004, the original run of the show had a total of 94 episodes. Throughout its six-year run, the show received contributions from various producers, writers and directors, perhaps most significantly from Michael Patrick King.",
+          "spotify_uri": "spotify:track:31ID4r5BqacQuolm1iF0xR",
           "rows": [
             "sex and",
             "the city"
@@ -847,6 +1151,9 @@
           "id": "star_trek",
           "type": "TV SERIES",
           "answer": "Star Trek",
+          "wiki_link": "http://en.wikipedia.org/wiki/Star_Trek",
+          "wiki_quote": "Star Trek is an American science fiction entertainment franchise created by Gene Roddenberry and currently under the ownership of CBS and Paramount.[Note 1] Star Trek: The Original Series and its live action TV spin-off shows, Star Trek: The Next Generation, Star Trek: Deep Space Nine, Star Trek: Voyager and Star Trek: Enterprise as well as the Star Trek film series make up the main canon, while Star Trek: The Animated Series as well as the expansive library of Star Trek novels and comics are part of the franchise, but are generally considered non-canon.",
+          "spotify_uri": "spotify:track:0885P8PukshcT7KRszRkvU",
           "rows": [
           ]
         },
@@ -854,6 +1161,9 @@
           "id": "back_to_the_future",
           "type": "MOVIE",
           "answer": "Back to the future",
+          "wiki_link": "http://en.wikipedia.org/wiki/Back_to_the_future",
+          "wiki_quote": "Back to the Future is a 1985 American science fiction comedy film. It was directed by Robert Zemeckis, written by Zemeckis and Bob Gale, produced by Steven Spielberg, and stars Michael J. Fox, Christopher Lloyd, Lea Thompson, Crispin Glover and Thomas F. Wilson. Fox plays Marty McFly, a teenager who is sent back in time to 1955.",
+          "spotify_uri": "spotify:track:57kUGEUoGGntEQkLqGDzLq",
           "rows": [
             "back to",
             "the future"
@@ -863,6 +1173,9 @@
           "id": "dragonball",
           "type": "TV SERIES",
           "answer": "Dragonball",
+          "wiki_link": "http://en.wikipedia.org/wiki/Dragonball",
+          "wiki_quote": "Dragon Ball (ドラゴンボール Doragon Bōru?) is a Japanese manga series written and illustrated by Akira Toriyama. It was originally serialized in Weekly Shōnen Jump from 1984 to 1995, with the 519 individual chapters published into 42 tankōbon volumes by Shueisha. Dragon Ball was initially inspired by the classical Chinese novel Journey to the West. ",
+          "spotify_uri": "",
           "rows": [
           ]
         },
@@ -870,6 +1183,9 @@
           "id": "doctor_who",
           "type": "TV SERIES",
           "answer": "Doctor Who",
+          "wiki_link": "http://en.wikipedia.org/wiki/Doctor_Who",
+          "wiki_quote": "Doctor Who is a British science-fiction television programme produced by the BBC. The programme depicts the adventures of the Doctor, a Time Lord—a time-travelling humanoid alien. He explores the universe in his TARDIS, a sentient time-travelling space ship. Its exterior appears as a blue British police box, which was a common sight in Britain in 1963 when the series first aired. ",
+          "spotify_uri": "spotify:track:35TnJUkIoQZWcGfrlgzL7s",
           "rows": [
           ]
         },
@@ -877,6 +1193,9 @@
           "id": "love_story",
           "type": "MOVIE",
           "answer": "Love Story",
+          "wiki_link": "http://en.wikipedia.org/wiki/Love_Story_(1970_film)",
+          "wiki_quote": "Love Story is a 1970 romantic drama film written by Erich Segal, who also authored the best-selling novel of the same name. It was directed by Arthur Hiller and starred Ryan O'Neal and Ali MacGraw. A tragedy, the film is considered one of the most romantic of all time by the American Film Institute (#9 on the list). It was followed by a sequel, Oliver's Story (1978), starring O'Neal with Candice Bergen.",
+          "spotify_uri": "spotify:track:2uXwOO7PPe5jSxbwINgPHw",
           "rows": [
             "love",
             "story"
@@ -891,6 +1210,9 @@
           "id": "smallville",
           "type": "TV SERIES",
           "answer": "Smallville",
+          "wiki_link": "http://en.wikipedia.org/wiki/Smallville",
+          "wiki_quote": "Smallville is an American television series developed by writers/producers Alfred Gough and Miles Millar. It is based on the DC Comics character Superman, originally created by Jerry Siegel and Joe Shuster. The television series was initially broadcast by The WB Television Network (The WB), premiering on October 16, 2001.",
+          "spotify_uri": "spotify:track:578vAGxgMI3yGXoHVBdbhU",
           "rows": [
           ]
         },
@@ -898,6 +1220,9 @@
           "id": "hugo",
           "type": "MOVIE",
           "answer": "Hugo",
+          "wiki_link": "http://en.wikipedia.org/wiki/Hugo_(film)",
+          "wiki_quote": "Hugo is a 2011 3D historical adventure drama film based on Brian Selznick's novel The Invention of Hugo Cabret about a boy who lives alone in the Gare Montparnasse railway station in Paris. It is directed and co-produced by Martin Scorsese and adapted for the screen by John Logan.",
+          "spotify_uri": "spotify:track:7JC3Est8tdw3nMzBg2P2EQ",
           "rows": [
           ]
         },
@@ -905,6 +1230,9 @@
           "id": "beverly_hills",
           "type": "TV SERIES",
           "answer": "Beverly Hills",
+          "wiki_link": "http://en.wikipedia.org/wiki/Beverly_Hills,_90210",
+          "wiki_quote": "Beverly Hills, 90210 is an American drama series that originally aired from October 4, 1990 to May 17, 2000 on Fox and was produced by Spelling Television in the United States, and subsequently on numerous networks around the world. It is the first series in the Beverly Hills, 90210 franchise.",
+          "spotify_uri": "spotify:track:1m2iupVGsU00qSnuedBg76",
           "rows": [
             "beverly",
             "hills"
@@ -914,6 +1242,9 @@
           "id": "adventure_time",
           "type": "TV SERIES",
           "answer": "Adventure Time",
+          "wiki_link": "http://en.wikipedia.org/wiki/Adventure_Time",
+          "wiki_quote": "Adventure Time (originally titled Adventure Time with Finn & Jake[2]) is an American animated television series created by Pendleton Ward for Cartoon Network. The series follows the adventures of Finn (voiced by Jeremy Shada), a human boy, and his best friend and adoptive brother Jake (voiced by John DiMaggio), a dog with magical powers to change shape and grow and shrink at will.",
+          "spotify_uri": "",
           "rows": [
             "adventure",
             "time"
@@ -923,6 +1254,9 @@
           "id": "frozen",
           "type": "MOVIE",
           "answer": "Frozen",
+          "wiki_link": "http://en.wikipedia.org/wiki/Frozen_(2013_film)",
+          "wiki_quote": "Frozen is a 2013 American 3D computer-animated musical fantasy-comedy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures.[4] It is the 53rd animated feature in the Walt Disney Animated Classics series.",
+          "spotify_uri": "spotify:track:0O1Oean88yC9KncJnyOdB0",
           "rows": [
           ]
         },
@@ -930,6 +1264,9 @@
           "id": "breakfast_at_tiffany",
           "type": "MOVIE",
           "answer": "Breakfast at Tiffany",
+          "wiki_link": "http://en.wikipedia.org/wiki/Breakfast_at_Tiffany%27s_(film)",
+          "wiki_quote": "Breakfast at Tiffany's is a 1961 American romantic comedy film starring Audrey Hepburn and George Peppard, and featuring Patricia Neal, Buddy Ebsen, Martin Balsam, and Mickey Rooney. The film was directed by Blake Edwards and released by Paramount Pictures. It is loosely based on the novella of the same name by Truman Capote.",
+          "spotify_uri": "spotify:track:2HUAjeHWA7FQNbnWhlboOL",
           "rows": [
             "breakfast",
             "at tiffany"
@@ -939,6 +1276,9 @@
           "id": "star_wars_main",
           "type": "MOVIE",
           "answer": "Star Wars",
+          "wiki_link": "http://en.wikipedia.org/wiki/Star_Wars",
+          "wiki_quote": "Star Wars is an American epic space opera franchise centered on a film series created by George Lucas. The film series, consisting of two trilogies, has spawned an extensive media franchise called the Expanded Universe including books, television series, computer and video games, and comic books.",
+          "spotify_uri": "spotify:track:2WI8May2VSkVJxXMueacfd",
           "rows": [
           ]
         },
@@ -946,6 +1286,9 @@
           "id": "madagascar",
           "type": "MOVIE",
           "answer": "Madagascar",
+          "wiki_link": "http://en.wikipedia.org/wiki/Madagascar_(2005_film)",
+          "wiki_quote": "Madagascar is a 2005 American computer-animated comedy film produced by DreamWorks Animation, and released in movie theaters on May 27, 2005. The film tells the story of four Central Park Zoo animals who have spent their lives in blissful captivity and are unexpectedly shipped back to Africa, getting shipwrecked on the island of Madagascar.",
+          "spotify_uri": "spotify:track:41H2UPEH5i4tLLvUMfjV8l",
           "rows": [
           ]
         },
@@ -953,6 +1296,9 @@
           "id": "mr_bean",
           "type": "TV SERIES",
           "answer": "Mr. Bean",
+          "wiki_link": "http://en.wikipedia.org/wiki/Mr._Bean",
+          "wiki_quote": "Mr. Bean is a British sitcom television programme series of fourteen 25-minute episodes written by and starring Rowan Atkinson as the title character. Different episodes were also written by Robin Driscoll, Richard Curtis and one by Ben Elton. Thirteen of the episodes were broadcast on ITV, from the pilot on 1 January 1990, until \"Goodnight Mr. Bean\" on 31 October 1995.",
+          "spotify_uri": "spotify:track:65ziHGDi04wbGTBoO2zG9C",
           "rows": [
           ]
         },
@@ -960,6 +1306,9 @@
           "id": "thirty_rock",
           "type": "TV SERIES",
           "answer": "30 Rock",
+          "wiki_link": "http://en.wikipedia.org/wiki/Thirty_Rock",
+          "wiki_quote": "30 Rock is an American satirical television sitcom that ran on NBC from October 11, 2006, to January 31, 2013, and was created by Tina Fey. The series, which is loosely based on Fey's experiences as head writer for Saturday Night Live, takes place behind the scenes of a fictional live sketch comedy series depicted as airing on NBC.",
+          "spotify_uri": "spotify:track:2IR5pCM1qILwLgJYmsZLI0",
           "rows": [
           ]
         },
@@ -967,6 +1316,9 @@
           "id": "prison_break",
           "type": "TV SERIES",
           "answer": "Prison Break",
+          "wiki_link": "http://en.wikipedia.org/wiki/Prison_Break",
+          "wiki_quote": "Prison Break is an American television serial drama created by Paul Scheuring, that was broadcast on Fox for four seasons, from 2005 until 2009. The series revolves around two brothers; one has been sentenced to death for a crime he did not commit, and the other devises an elaborate plan to help his brother escape prison.",
+          "spotify_uri": "spotify:track:1T8i9UuZm3Ab1XbbHqhzI5",
           "rows": [
             "prison",
             "break"
@@ -976,6 +1328,9 @@
           "id": "up",
           "type": "MOVIE",
           "answer": "Up",
+          "wiki_link": "http://en.wikipedia.org/wiki/Up_(2009_film)",
+          "wiki_quote": "Up is a 2009 American 3D computer-animated comedy-adventure film produced by Pixar Animation Studios and released by Walt Disney Pictures. Directed by Pete Docter, the film centers on an elderly widower named Carl Fredricksen (voiced by Edward Asner) and an earnest young Wilderness Explorer named Russell (Jordan Nagai). By tying thousands of balloons to his home, 78-year-old Carl sets out to fulfill his lifelong dream to see the wilds of South America and to complete a promise made to his lifelong love.",
+          "spotify_uri": "spotify:track:1S7Izc2QH2pYFIC0uK4et7",
           "rows": [
           ]
         },
@@ -983,6 +1338,9 @@
           "id": "the_chronicles_of_narnia",
           "type": "MOVIE",
           "answer": "The Chronicles of Narnia",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Chronicles_of_Narnia",
+          "wiki_quote": "The Chronicles of Narnia is a series of seven high fantasy novels by author C.S. Lewis. It is considered a classic of children's literature and is the author's best-known work, having sold over 100 million copies in 47 languages. Written by Lewis between 1949 and 1954, illustrated by Pauline Baynes and originally published in London between October 1950 and March 1956, The Chronicles of Narnia has been adapted several times, complete or in part, for radio, television, the stage, and film.",
+          "spotify_uri": "spotify:track:4FKgCkwOeC9cHajkxOsboa",
           "rows": [
             "the chronicles",
             "of narnia"
@@ -992,6 +1350,9 @@
           "id": "braveheart",
           "type": "MOVIE",
           "answer": "Braveheart",
+          "wiki_link": "http://en.wikipedia.org/wiki/Braveheart",
+          "wiki_quote": "Braveheart is a 1995 epic historical drama war film directed by and starring Mel Gibson. Gibson portrays William Wallace, a 13th-century Scottish warrior who led the Scots in the First War of Scottish Independence against King Edward I of England. The story is based on Blind Harry's epic poem The Actes and Deidis of the Illustre and Vallyeant Campioun Schir William Wallace and was adapted for the screen by Randall Wallace.",
+          "spotify_uri": "spotify:track:43xNuPBzyZmtQ2dO4jaGQK",
           "rows": [
           ]
         },
@@ -999,6 +1360,9 @@
           "id": "boardwalk_empire",
           "type": "TV SERIES",
           "answer": "Boardwalk Empire",
+          "wiki_link": "http://en.wikipedia.org/wiki/Boardwalk_Empire",
+          "wiki_quote": "Boardwalk Empire is an American crime and period drama series from premium cable channel HBO, set in Atlantic City, New Jersey, during the Prohibition era. It stars Steve Buscemi as Nucky Thompson. Primetime Emmy Award-winning screenwriter and producer Terence Winter created the show inspired by the book Boardwalk Empire: The Birth, High Times, and Corruption of Atlantic City by Nelson Johnson about historical criminal kingpin Enoch L. Johnson.",
+          "spotify_uri": "spotify:track:3WlRwksl3jfwHv2TlRNHLR",
           "rows": [
             "boardwalk",
             "empire"
@@ -1013,6 +1377,9 @@
           "id": "nine_and_a_half_weeks",
           "type": "MOVIE",
           "answer": "nine and a half weeks",
+          "wiki_link": "http://en.wikipedia.org/wiki/Nine_and_a_Half_Weeks",
+          "wiki_quote": "9½ Weeks is an 1986 erotic romantic drama film directed by Adrian Lyne and starring Kim Basinger and Mickey Rourke. It is based on the memoir of the same name by Elizabeth McNeill, about a New York City art gallery employee who has a brief, yet intense affair with a mysterious Wall Street broker.",
+          "spotify_uri": "spotify:track:6nAaaq5r8rjsBE1DdeTCKs",
           "rows": [
             "nine and a",
             "half weeks"
@@ -1022,6 +1389,9 @@
           "id": "doctor_house",
           "type": "TV SERIES",
           "answer": "House",
+          "wiki_link": "http://en.wikipedia.org/wiki/House_(TV_series)",
+          "wiki_quote": "House (also known as House, M.D.) is an American television medical drama that originally ran on the Fox network for eight seasons, from November 16, 2004 to May 21, 2012. The show's main character is Dr. Gregory House (Hugh Laurie), a pain medication-dependent, unconventional, misanthropic medical genius who leads a team of diagnosticians at the fictional Princeton–Plainsboro Teaching Hospital (PPTH) in New Jersey.",
+          "spotify_uri": "spotify:track:67Hna13dNDkZvBpTXRIaOJ",
           "rows": [
           ]
         },
@@ -1029,6 +1399,9 @@
           "id": "ratatouille",
           "type": "MOVIE",
           "answer": "Ratatouille",
+          "wiki_link": "http://en.wikipedia.org/wiki/Ratatouille_(film)",
+          "wiki_quote": "Ratatouille is a 2007 American computer-animated comedy film produced by Pixar Animation Studios and released by Walt Disney Pictures. It is the eighth film produced by Pixar, and was co-written and directed by Brad Bird, who took over from Jan Pinkava in 2005. The title refers to a French dish, \"ratatouille\", which is served at the end of the film, and is also a play on words about the species of the main character.",
+          "spotify_uri": "spotify:track:12hNVeWLSUXzOySe86H2KI",
           "rows": [
           ]
         },
@@ -1036,6 +1409,9 @@
           "id": "the_da_vinci_code",
           "type": "MOVIE",
           "answer": "The Da Vinci Code",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Da_Vinci_Code_(film)",
+          "wiki_quote": "The Da Vinci Code is a 2006 American mystery-thriller film produced by John Calley and Brian Grazer and directed by Ron Howard. The screenplay was written by Akiva Goldsman and adapted from Dan Brown's 2003 best-selling novel of the same name.",
+          "spotify_uri": "spotify:track:0ZLutJh13VCWfj1iS9OWox",
           "rows": [
             "the da",
             "vinci code"
@@ -1045,6 +1421,9 @@
           "id": "batman",
           "type": "MOVIE",
           "answer": "Batman",
+          "wiki_link": "",
+          "wiki_quote": "Batman is a fictional character, a comic book superhero appearing in comic books published by DC Comics. Batman was created by artist Bob Kane and writer Bill Finger, and first appeared in Detective Comics #27 (May 1939). Originally referred to as \"the Bat-Man\" and still referred to at times as \"the Batman\", the character is additionally known as \"the Caped Crusader\", \"the Dark Knight\", and \"the World's Greatest Detective\", among other titles.",
+          "spotify_uri": "spotify:track:0u8sC0jsLgPNIO4IpcX34v",
           "rows": [
           ]
         },
@@ -1052,6 +1431,9 @@
           "id": "the_lion_king_this_land",
           "type": "MOVIE",
           "answer": "The Lion King",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Lion_King",
+          "wiki_quote": "The Lion King is a 1994 American animated musical adventure film produced by Walt Disney Feature Animation and released by Walt Disney Pictures. It is the 32nd animated feature in the Walt Disney Animated Classics series. The story takes place in a kingdom of lions in Africa, and was influenced by the biblical tales of Joseph and Moses and the Shakespeare play Hamlet.",
+          "spotify_uri": "spotify:track:7BjvaB3uKVoGTo7DX1RGkZ",
           "rows": [
             "the lion",
             "king"
@@ -1061,6 +1443,9 @@
           "id": "seinfield",
           "type": "TV SERIES",
           "answer": "Seinfield",
+          "wiki_link": "http://en.wikipedia.org/wiki/Seinfield",
+          "wiki_quote": "Seinfeld is an American television sitcom that originally aired on NBC from July 5, 1989, to May 14, 1998. It lasted nine seasons, and is now in syndication. It was created by Larry David and Jerry Seinfeld, the latter starring as a fictionalized version of himself. Set predominantly in an apartment block in Manhattan's Upper West Side in New York City, the show features a handful of Jerry's friends and acquaintances",
+          "spotify_uri": "spotify:track:21lCkTQbuVObKt1xqz1pxY",
           "rows": [
           ]
         },
@@ -1068,6 +1453,9 @@
           "id": "forbidden_games",
           "type": "MOVIE",
           "answer": "Forbidden Games",
+          "wiki_link": "http://en.wikipedia.org/wiki/Forbidden_Games",
+          "wiki_quote": "Forbidden Games (French: Jeux interdits), is a 1952 French war drama film directed by René Clément and based on François Boyer's novel, Jeux interdits. While not initially successful in France, the film was a hit elsewhere. It won the Golden Lion at the Venice Film Festival, a Special Award as Best Foreign Language Film in the United States, and a Best Film from any Source at the British Academy Film Awards.",
+          "spotify_uri": "spotify:track:0JcXuENMZMLciFLG5p2ho9",
           "rows": [
             "forbidden",
             "games"
@@ -1077,6 +1465,9 @@
           "id": "er",
           "type": "TV SERIES",
           "answer": "ER",
+          "wiki_link": "http://en.wikipedia.org/wiki/ER_(TV_series)",
+          "wiki_quote": "ER is an American medical drama television series created by novelist Michael Crichton that aired on NBC from September 19, 1994 to April 2, 2009. It was produced by Constant c Productions and Amblin Entertainment, in association with Warner Bros. Television. ER follows the inner life of the emergency room (ER) of fictional County General Hospital in Chicago, Illinois, and various critical issues faced by the room's physicians and staff.",
+          "spotify_uri": "spotify:track:2Sam9N1llumS6Byohy5Vyq",
           "rows": [
           ]
         },
@@ -1084,6 +1475,9 @@
           "id": "veronica_mars",
           "type": "TV SERIES",
           "answer": "Veronica Mars",
+          "wiki_link": "http://en.wikipedia.org/wiki/Veronica_Mars",
+          "wiki_quote": "Veronica Mars is an American television series created by screenwriter Rob Thomas. The series is set in the fictional town of Neptune, California, and stars Kristen Bell as the title character. The series premiered on September 22, 2004, during television network UPN's final two years, and ended on May 22, 2007, after a season on UPN's successor, The CW.",
+          "spotify_uri": "spotify:track:7hpFYWL3cw5m4y70cce7Zb",
           "rows": [
             "veronica",
             "mars"
@@ -1093,6 +1487,9 @@
           "id": "ghost",
           "type": "MOVIE",
           "answer": "Ghost",
+          "wiki_link": "http://en.wikipedia.org/wiki/Ghost_(1990_film)",
+          "wiki_quote": "Ghost is a 1990 American romantic fantasy / crime thriller film starring Patrick Swayze, Demi Moore, Tony Goldwyn, and Whoopi Goldberg. It was written by Bruce Joel Rubin and directed by Jerry Zucker. The plot centers on a young woman in jeopardy (Moore) and the ghost of her murdered lover (Swayze), who tries to save her with the help of a reluctant psychic (Goldberg).",
+          "spotify_uri": "spotify:track:2ACjOtICHXrAlP3ijVMSvb",
           "rows": [
           ]
         },
@@ -1100,6 +1497,9 @@
           "id": "buffy_the_vampire_slayer",
           "type": "TV SERIES",
           "answer": "Buffy the Vampire Slayer",
+          "wiki_link": "http://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer",
+          "wiki_quote": "Buffy the Vampire Slayer is an American television series which aired from March 10, 1997 until May 20, 2003. The series was created in 1997 by writer-director Joss Whedon under his production tag, Mutant Enemy Productions with later co-executive producers being Jane Espenson, David Fury, David Greenwalt, Doug Petrie, Marti Noxon, and David Solomon.",
+          "spotify_uri": "spotify:track:7dsFibmr82sHiuPv0MyKJR",
           "rows": [
             "buffy the",
             "vampire slayer"
@@ -1109,6 +1509,9 @@
           "id": "spirited_away",
           "type": "MOVIE",
           "answer": "Spirited Away",
+          "wiki_link": "http://en.wikipedia.org/wiki/Spirited_Away",
+          "wiki_quote": "Spirited Away (千と千尋の神隠し Sen to Chihiro no Kamikakushi?, \"Sen and Chihiro's Spiriting Away\") is a 2001 Japanese animated fantasy film written and directed by Hayao Miyazaki and produced by Studio Ghibli.[3] The film stars Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito, Yasuko Sawaguchi, Tsunehiko Kamijō, Takehiko Ono and Bunta Sugawara, and tells the story of Chihiro Ogino (Hiiragi), a sullen ten-year-old girl who, while moving to a new neighborhood, enters the spirit world.",
+          "spotify_uri": "spotify:track:17oLsEzzlGFlrBKViCzmGc",
           "rows": [
             "spirited",
             "away"
@@ -1118,6 +1521,9 @@
           "id": "the_lord_of_the_rings_the_two_towers",
           "type": "MOVIE",
           "answer": "The Lord of the Rings",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Lord_of_the_Rings_(film_series)",
+          "wiki_quote": "The Lord of the Rings is a film series consisting of three epic fantasy adventure films directed by Peter Jackson. They are based on the novel The Lord of the Rings by J. R. R. Tolkien. The films are subtitled The Fellowship of the Ring (2001), The Two Towers (2002) and The Return of the King (2003). They were distributed by New Line Cinema.",
+          "spotify_uri": "spotify:track:2O8AQadTJzQ3wdhSNRHdYg",
           "rows": [
             "the lord of",
             "the rings"
@@ -1127,6 +1533,9 @@
           "id": "flashdance",
           "type": "MOVIE",
           "answer": "Flashdance",
+          "wiki_link": "http://en.wikipedia.org/wiki/Flashdance",
+          "wiki_quote": "Flashdance is a 1983 American romantic drama film directed by Adrian Lyne. It was the first collaboration of producers Don Simpson and Jerry Bruckheimer and the presentation of some sequences in the style of music videos was an influence on other 1980s films, including Top Gun (1986), Simpson and Bruckheimer's most famous production.",
+          "spotify_uri": "spotify:track:1xPSDf8z4dH46gkvlLtvDO",
           "rows": [
           ]
         }
@@ -1139,6 +1548,9 @@
           "id": "american_dad",
           "type": "TV SERIES",
           "answer": "American Dad",
+          "wiki_link": "http://en.wikipedia.org/wiki/American_Dad!",
+          "wiki_quote": "American Dad! is an American adult animated sitcom created by Mike Barker, Matt Weitzman, and Seth MacFarlane for the \"Animation Domination\" lineup on Fox. American Dad! is the first television series to have its inception on Animation Domination. Though the series premiere aired on February 6, 2005, following Super Bowl XXXIX-separate from Animation Dominaton and the rest of the show's first season which both commenced on May 1, 2005.",
+          "spotify_uri": "spotify:track:0T8dvTXmdfIIufh0zwUCYd",
           "rows": [
           ]
         },
@@ -1146,6 +1558,9 @@
           "id": "dharma_and_greg",
           "type": "TV SERIES",
           "answer": "Dharma and Greg",
+          "wiki_link": "http://en.wikipedia.org/wiki/Dharma_%26_Greg",
+          "wiki_quote": "Dharma & Greg is an American television sitcom that aired from September 24, 1997, to April 30, 2002. It stars Jenna Elfman and Thomas Gibson as Dharma and Greg Montgomery, a couple who got married on their first date despite being complete opposites. The series is co-produced by Chuck Lorre Productions, More-Medavoy Productions and 4 to 6 Foot Productions in association with 20th Century Fox Television for ABC. ",
+          "spotify_uri": "",
           "rows": [
             "dharma",
             "and greg"
@@ -1155,6 +1570,9 @@
           "id": "midnight_in_paris",
           "type": "MOVIE",
           "answer": "Midnight in Paris",
+          "wiki_link": "http://en.wikipedia.org/wiki/Midnight_in_Paris",
+          "wiki_quote": "Midnight in Paris is an American 2011 romantic comedy fantasy film written and directed by Woody Allen. Set in Paris, the film follows Gil Pender, a screenwriter, who is forced to confront the shortcomings of his relationship with his materialistic fiancée and their divergent goals, which become increasingly exaggerated as he travels back in time each night at midnight.",
+          "spotify_uri": "spotify:track:1jjC4VuQ3vVS8Qw19BMksE",
           "rows": [
             "midnight",
             "in paris"
@@ -1164,6 +1582,9 @@
           "id": "ice_age",
           "type": "MOVIE",
           "answer": "Ice Age",
+          "wiki_link": "http://en.wikipedia.org/wiki/Ice_Age_(franchise)",
+          "wiki_quote": "The Ice Age franchise produced by Blue Sky Studios, a division of 20th Century Fox, and featuring the voices of Ray Romano, John Leguizamo, Denis Leary, and Chris Wedge. Four films have been released in the series thus far, Ice Age in 2002, Ice Age: The Meltdown in 2006, Ice Age: Dawn of the Dinosaurs in 2009 and Ice Age: Continental Drift in 2012. The series follows a group of mammals surviving the Paleolithic ice age.",
+          "spotify_uri": "spotify:track:0U9hIsyHMAkrnRCo0NCVm6",
           "rows": [
           ]
         },
@@ -1171,6 +1592,9 @@
           "id": "the_sting",
           "type": "MOVIE",
           "answer": "The Sting",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Sting",
+          "wiki_quote": "The Sting is a 1973 American caper film set in September 1936, involving a complicated plot by two professional grifters (Paul Newman and Robert Redford) to con a mob boss (Robert Shaw).[2] The film was directed by George Roy Hill, who had directed Newman and Redford in the western Butch Cassidy and the Sundance Kid. Created by screenwriter David S. Ward, the story was inspired by real-life cons perpetrated by brothers Fred and Charley Gondorff and documented by David Maurer in his book The Big Con: The Story of the Confidence Man.",
+          "spotify_uri": "spotify:track:4jsLBEQTsPITf3S6louSLr",
           "rows": [
           ]
         },
@@ -1178,15 +1602,21 @@
           "id": "shawshank_redemption",
           "type": "MOVIE",
           "answer": "Shawshank Redemption",
+          "wiki_link": "http://en.wikipedia.org/wiki/Shawshank_Redemption",
+          "wiki_quote": "The Shawshank Redemption is a 1994 American drama film written and directed by Frank Darabont and starring Tim Robbins and Morgan Freeman. Currently, it's ranked #1 in IMDb's \"Top 250\" list and is known as one of cinema's best movies of all time. Adapted from the Stephen King novella Rita Hayworth and Shawshank Redemption, the film tells the story of Andy Dufresne, a banker who spends 19 years in Shawshank State Prison for the murder of his wife and her lover despite his claims of innocence.",
+          "spotify_uri": "spotify:track:5zMuzsE5kvd54FwraufeeK",
           "rows": [
             "shawshank",
             "redemption"
           ]
         },
         {
-          "id": "twenty_four",
+          "id": "dexter",
           "type": "TV SERIES",
-          "answer": "24",
+          "answer": "Dexter",
+          "wiki_link": "http://en.wikipedia.org/wiki/Dexter_(TV_series)",
+          "wiki_quote": "Dexter is an American television drama series. The series centers on Dexter Morgan (Michael C. Hall), a blood spatter pattern analyst for Miami Metro Police Department who also leads a secret life as a serial killer, hunting down criminals who have slipped through the cracks of the justice system. Set in Miami, the show's first season derived from the novel Darkly Dreaming Dexter (2004), the first of the Dexter series novels by Jeff Lindsay. It was adapted for television by screenwriter James Manos, Jr., who wrote the first episode.",
+          "spotify_uri": "spotify:track:3ZIc2FPrXSZXSF6Bf1GElJ",
           "rows": [
           ]
         },
@@ -1194,6 +1624,9 @@
           "id": "superman",
           "type": "MOVIE",
           "answer": "Superman",
+          "wiki_link": "http://en.wikipedia.org/wiki/Superman",
+          "wiki_quote": "Superman is a fictional character, a superhero that appears in comic books published by DC Comics, and is considered an American cultural icon. Superman was created by writer Jerry Siegel and artist Joe Shuster, high school students living in Cleveland, Ohio, in 1933; the character was sold to Detective Comics, Inc. (later DC Comics) in 1938. Superman first appeared in Action Comics #1 (June 1938) and subsequently appeared in various radio serials, television programs, films, newspaper strips, and video games. With the success of his adventures, Superman helped to create the superhero genre and establish its primacy within the American comic book.",
+          "spotify_uri": "spotify:track:7yFowXcddhAIYm8hJhQgYb",
           "rows": [
           ]
         },
@@ -1201,6 +1634,9 @@
           "id": "fringe",
           "type": "TV SERIES",
           "answer": "Fringe",
+          "wiki_link": "http://en.wikipedia.org/wiki/Fringe_(TV_series)",
+          "wiki_quote": "Fringe is an American science fiction television series created by J. J. Abrams, Alex Kurtzman, and Roberto Orci. It premiered on the Fox Broadcasting network on September 9, 2008, and concluded on January 18, 2013, after five seasons and 100 episodes. The series follows Olivia Dunham (Anna Torv), Peter Bishop (Joshua Jackson), and Walter Bishop (John Noble), members of the fictional Fringe Division of the Federal Bureau of Investigation, based in Boston, Massachusetts, under the supervision of Homeland Security.",
+          "spotify_uri": "spotify:track:1FZWZgg4YmZkEC2C1GYxnI",
           "rows": [
           ]
         },
@@ -1208,6 +1644,9 @@
           "id": "new_girl",
           "type": "TV SERIES",
           "answer": "New Girl",
+          "wiki_link": "http://en.wikipedia.org/wiki/New_Girl",
+          "wiki_quote": "New Girl is an American sitcom television series that premiered on Fox on September 20, 2011. Developed by Elizabeth Meriwether under the working title Chicks & Dicks, the series revolves around offbeat teacher Jess (Zooey Deschanel) after her moving into an L.A. loft with three men, Nick (Jake Johnson), Schmidt (Max Greenfield), and Winston (Lamorne Morris); Jess's best friend Cece (Hannah Simone) and old-turned-new loftmate Coach (Damon Wayans, Jr.) also appear regularly.",
+          "spotify_uri": "",
           "rows": [
           ]
         },
@@ -1215,15 +1654,21 @@
           "id": "the_voice",
           "type": "TV SERIES",
           "answer": "The Voice",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Voice_(U.S._TV_series)",
+          "wiki_quote": "The Voice is an American reality television singing competition broadcast on NBC. Based on the original The Voice of Holland, the concept of the series is to find new singing talent (solo or duets) contested by aspiring singers, age 15 or over,[2] drawn from public auditions. The winner is determined by viewers by voting through telephone, Internet, SMS text, and iTunes Store purchases of artists' performances. They receive US$100,000 and a record deal with Universal Music Group for winning the competition.",
+          "spotify_uri": "",
           "rows": [
           ]
         },
         {
           "id": "the_millionaire",
           "type": "MOVIE",
-          "answer": "The Millionaire",
+          "answer": "Slumdog Millionaire",
+          "wiki_link": "http://en.wikipedia.org/wiki/Slumdog_Millionaire",
+          "wiki_quote": "Slumdog Millionaire is a 2008 British drama film directed by Danny Boyle, written by Simon Beaufoy, and co-directed in India by Loveleen Tandan. It is an adaptation of the novel Q & A (2005) by Indian author and diplomat Vikas Swarup. Set and filmed in India, the film tells the story of Jamal Malik, a young man from the Juhu slums of Mumbai who appears on the Indian version of Who Wants to Be a Millionaire? (Kaun Banega Crorepati in the Hindi version) and exceeds people's expectations, thereby arousing the suspicions of cheating;",
+          "spotify_uri": "spotify:track:59wpu37k02o2UGZIPpcSPd",
           "rows": [
-            "the",
+            "slumdog",
             "millionaire"
           ]
         },
@@ -1231,6 +1676,9 @@
           "id": "how_to_train_your_dragon",
           "type": "MOVIE",
           "answer": "How to train your Dragon",
+          "wiki_link": "http://en.wikipedia.org/wiki/How_to_Train_Your_Dragon_(film)",
+          "wiki_quote": "How to Train Your Dragon is a 2010 American 3D computer-animated fantasy film by DreamWorks Animation loosely based on the British book series of the same name by Cressida Cowell. The film was directed by Chris Sanders and Dean DeBlois, the duo who directed Disney's Lilo & Stitch. It stars the voices of Jay Baruchel, Gerard Butler, Craig Ferguson, America Ferrera, Jonah Hill, T.J. Miller, Kristen Wiig, Christopher Mintz-Plasse, and David Tennant.",
+          "spotify_uri": "spotify:track:1ESq6IldgwqvAtHncjHyMt",
           "rows": [
             "how to train",
             "your dragon"
@@ -1240,18 +1688,22 @@
           "id": "will_and_grace",
           "type": "TV SERIES",
           "answer": "Will and Grace",
+          "wiki_link": "http://en.wikipedia.org/wiki/Will_and_Grace",
+          "wiki_quote": "Will & Grace is an American television sitcom, based on the relationship between William Truman and Grace Adler, and is set in New York City. It was broadcast on NBC from September 21, 1998 to May 18, 2006, for a total of eight seasons. Will & Grace was, during its original run, the most successful television series with gay principal characters. It remains popular in syndication.",
+          "spotify_uri": "spotify:track:4dmTMrI3cjveSUKdsYl21J",
           "rows": [
             "will and",
             "grace"
           ]
         },
         {
-          "id": "columbia_pictures",
-          "type": "STUDIO",
-          "answer": "Columbia Pictures",
+          "id": "spiderman",
+          "type": "MOVIE",
+          "answer": "Spiderman",
+          "wiki_link": "http://en.wikipedia.org/wiki/Spiderman",
+          "wiki_quote": "Spider-Man is a fictional character, a comic book superhero that appears in comic books published by Marvel Comics. Created by writer-editor Stan Lee and writer-artist Steve Ditko, he first appeared in Amazing Fantasy #15 (cover-dated Aug. 1962). Lee and Ditko conceived the character as an orphan being raised by his Aunt May and Uncle Ben, and as a teenager, having to deal with the normal struggles of adolescence in addition to those of a costumed crimefighter.",
+          "spotify_uri": "spotify:track:2v3Ezj7MnwBe3s1VRaUcDt",
           "rows": [
-            "columbia",
-            "pictures"
           ]
         }
       ]

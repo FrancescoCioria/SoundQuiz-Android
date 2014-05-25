@@ -11,11 +11,11 @@ public class QuizData implements Serializable {
     private String answer;
     private String ID;
     private String type;
-    private String wikiID;
+    private String wikiURI;
     private String wikiDescription;
-    private String category;
+    private String spotifyURI;
     private boolean isSolved = false;
-    private boolean isSolvedWithStar = false;
+
     private boolean hasUsedHint = false;
 
     public void setAnswer(String newAnswer) {
@@ -64,6 +64,30 @@ public class QuizData implements Serializable {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public void setWikiURI(String wikiURI) {
+        this.wikiURI = wikiURI;
+    }
+
+    public void setWikiDescription(String wikiDescription) {
+        this.wikiDescription = wikiDescription;
+    }
+
+    public String getWikiURI() {
+        return wikiURI;
+    }
+
+    public String getWikiDescription() {
+        return wikiDescription;
+    }
+
+    public void setSpotifyURI(String spotifyURI) {
+        this.spotifyURI = spotifyURI;
+    }
+
+    public String getSpotifyURI() {
+        return spotifyURI;
     }
 
     public String getType() {

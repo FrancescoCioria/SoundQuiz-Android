@@ -542,6 +542,10 @@ public class QuizActivity extends Activity {
         hints.setVisibility(View.GONE);
         findViewById(R.id.hints).setVisibility(View.GONE);
 
+        ((TextView) findViewById(R.id.textViewWiki)).setText(getQuizData().getWikiDescription());
+        ((TextView) findViewById(R.id.textViewWiki)).setTextSize(17);
+        ((TextView) findViewById(R.id.textViewWiki)).setMaxLines(4);
+
         int res = getResources().getIdentifier(getQuizData().getID(), "drawable", getPackageName());
         try {
             ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(res));
@@ -584,7 +588,7 @@ public class QuizActivity extends Activity {
         findViewById(R.id.buttonSpotify).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String uri = "spotify:track:0534jmQ0dYChW5MSzYXNVr";
+                String uri = getQuizData().getSpotifyURI();
                 Intent launcher = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
                 startActivity(launcher);
             }
@@ -598,6 +602,7 @@ public class QuizActivity extends Activity {
         findViewById(R.id.layoutImageQuiz).setVisibility(View.VISIBLE);
         ((ImageView) findViewById(R.id.imageViewCharacter)).setImageDrawable(getResources().getDrawable(R.drawable.guess_who_frame_empty));
         findViewById(R.id.imageQuiz).setVisibility(View.VISIBLE);
+        findViewById(R.id.imageViewMouth).setVisibility(View.GONE);
         refreshVisualizer = false;
     }
 
@@ -849,6 +854,7 @@ public class QuizActivity extends Activity {
         findViewById(R.id.hints).setVisibility(View.VISIBLE);
         findViewById(R.id.layoutImageQuiz).setVisibility(View.GONE);
 
+
 //        int res = getResources().getIdentifier(getQuizData().getID(), "drawable", getPackageName());
 //        try {
 //            ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(res));
@@ -873,6 +879,7 @@ public class QuizActivity extends Activity {
             case Utility.VIP:
                 setVisualizerVisible(true);
                 ((ImageView) findViewById(R.id.imageViewCharacter)).setImageDrawable(getResources().getDrawable(R.drawable.guess_who_frame));
+                findViewById(R.id.imageViewMouth).setVisibility(View.VISIBLE);
                 break;
         }
     }

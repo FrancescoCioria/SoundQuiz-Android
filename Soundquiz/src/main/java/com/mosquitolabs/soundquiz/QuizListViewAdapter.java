@@ -21,6 +21,7 @@ public class QuizListViewAdapter extends BaseAdapter {
     private LayoutInflater inflater;
     private PackageCollection packageCollection = PackageCollection.getInstance();
 
+
     private final int COLUMNS = 3;
 
     public QuizListViewAdapter(LevelActivity paramContext, int packIndex, int levelIndex) {
@@ -69,7 +70,7 @@ public class QuizListViewAdapter extends BaseAdapter {
                     null);
             quizItemViewHolder = new QuizItemViewHolder();
 
-            quizItemViewHolder.divider = (LinearLayout) paramView.findViewById(R.id.divider);
+            quizItemViewHolder.mainLayout = (LinearLayout) paramView.findViewById(R.id.mainLayout);
 
             for (int i = 0; i < COLUMNS; i++) {
                 final int index = paramInt * COLUMNS + i;
@@ -141,9 +142,9 @@ public class QuizListViewAdapter extends BaseAdapter {
 
 
         if ((paramInt * COLUMNS + (COLUMNS - 1)) == packageCollection.getPackageCollection().get(packageIndex).getLevelList().get(levelIndex).getQuizList().size() - 1) {
-            quizItemViewHolder.divider.setVisibility(View.VISIBLE);
+            Utility.setMargins(quizItemViewHolder.mainLayout, 0, 0, 0, Utility.convertDpToPixels(context, 10));
         } else {
-            quizItemViewHolder.divider.setVisibility(View.GONE);
+            Utility.setMargins(quizItemViewHolder.mainLayout, 0, 0, 0, 0);
         }
 
         return paramView;
@@ -152,7 +153,7 @@ public class QuizListViewAdapter extends BaseAdapter {
     static class QuizItemViewHolder {
         TextView bodies[] = {null, null, null};
         CircularImageView images[] = {null, null, null};
-        LinearLayout divider;
+        LinearLayout mainLayout;
     }
 
 

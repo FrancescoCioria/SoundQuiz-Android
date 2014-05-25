@@ -99,7 +99,6 @@ public class CircularImageView extends ImageView {
         // init shader
         if (image != null) {
 
-
             if (circularShape) {
                 canvasSize = canvas.getWidth();
                 if (canvas.getHeight() < canvasSize)
