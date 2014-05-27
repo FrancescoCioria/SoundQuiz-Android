@@ -13,7 +13,7 @@ public class QuizData implements Serializable {
     private String type;
     private String wikiURI;
     private String wikiDescription;
-    private String spotifyURI;
+    private String spotifyURI = "";
     private boolean isSolved = false;
 
     private boolean hasUsedHint = false;

@@ -182,26 +182,39 @@
             android:layout_alignLeft="@+id/imageViewGuitar" />
 
 
-        <TextView
-            android:layout_width="150dp"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Song"
-            android:id="@+id/textViewSong"
-            android:textSize="50sp"
+            android:id="@+id/labelsLayout"
             android:layout_alignBottom="@+id/imageViewGuitar"
-            android:gravity="center"
-            android:layout_marginBottom="10dp" />
+            >
 
-        <TextView
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:text="Artist"
-            android:id="@+id/textViewArtist"
-            android:gravity="center"
-            android:layout_alignParentRight="true"
-            android:layout_alignBottom="@+id/imageViewGuitar"
-            android:textSize="50sp"
-            android:layout_marginBottom="10dp" />
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:id="@+id/textViewSong"
+                android:textSize="50sp"
+                android:gravity="center"
+                android:textColor="@color/light_music"
+                android:background="@drawable/music_rounded_label_active"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Artist"
+                android:id="@+id/textViewArtist"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:textSize="50sp"
+                android:textColor="@color/light_music"
+                android:background="@drawable/music_rounded_label_active"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp" />
+
+        </RelativeLayout>
 
     </RelativeLayout>
 
@@ -257,7 +270,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageQuiz"
-            android:src="@drawable/columbia_pictures"
+            android:src="@drawable/american_beauty"
             android:scaleType="centerCrop"
             android:layout_alignParentLeft="false"
             android:layout_alignParentTop="false"

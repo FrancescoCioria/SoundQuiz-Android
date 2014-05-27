@@ -240,7 +240,7 @@ public class PackageCollection {
                         quizData.setWikiURI(quizJSON.getString("wiki_link"));
                         quizData.setWikiDescription(quizJSON.getString("wiki_quote"));
 
-                        if (category.equals("music")) {
+                        if (quizJSON.has("spotify_uri")) {
                             quizData.setSpotifyURI(quizJSON.getString("spotify_uri"));
                         }
 

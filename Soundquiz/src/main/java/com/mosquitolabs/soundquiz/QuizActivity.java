@@ -438,21 +438,16 @@ public class QuizActivity extends Activity {
         guitar.getLayoutParams().width = guitarWidth;
 
         int center = (Utility.getWidth(this) - guitarWidth) / 2 + Utility.getHeight(this) * 47 / 1356;
-//        int stringBaseWidth = Utility.getHeight(this) * 191 / 1356;
         int stringTopWidth = Utility.getHeight(this) * 165 / 1356;
-
         float compressionFactor = 130f / 160f;
-
         int imageSize = guitarWidth * 310 / 498;
+
 
         visualizerMusic.getLayoutParams().width = (int) (stringTopWidth / 0.9f);
         visualizerMusic.getLayoutParams().height = guitarHeight * 605 / 678;
         visualizerMusic.setStroke(Utility.getHeight(this) * 6 / 1356);
         visualizerMusic.setCompressionFactor(compressionFactor);
         visualizerMusic.setColor(Color.rgb(248, 246, 236));
-
-//        play.getLayoutParams().width = guitarWidth * 201 / 498;
-//        play.getLayoutParams().height = guitarWidth * 201 / 498;
 
         play.getLayoutParams().width = play.getLayoutParams().height = (int) (stringTopWidth / 0.9f);
         playWon.getLayoutParams().width = playWon.getLayoutParams().height = imageSize / 3;
@@ -463,8 +458,7 @@ public class QuizActivity extends Activity {
         Utility.setMargins(guitar, center, 0, 0, 0);
         Utility.setMargins(play, guitarHeight * (97 + 10) / 678, guitarHeight * (104 + 10) / 678, 0, 0);
 
-        findViewById(R.id.textViewSong).setVisibility(getQuizData().getType().toLowerCase().equals("song") ? View.VISIBLE : View.GONE);
-        findViewById(R.id.textViewArtist).setVisibility(getQuizData().getType().toLowerCase().equals("artist") ? View.VISIBLE : View.GONE);
+        updateMusicLabels();
 
     }
 
@@ -479,13 +473,11 @@ public class QuizActivity extends Activity {
         int mouthHeight = mouthWidth * 261 / 611;
 
         int mouthTopMargin = characterSize * 395 / 512;
-        int mouthLeftMargin = characterSize * 220 / 512;
-        mouthLeftMargin = characterSize * 212 / 512;
+        int mouthLeftMargin = characterSize * 212 / 512;
         int imageQuizTopMargin = characterSize * 125 / 512;
         int imageQuizLeftMargin = characterSize * 89 / 512;
 
         int layoutTopMargin = Utility.getHeight(this) * 110 / 1196;
-
 
         play.getLayoutParams().width = play.getLayoutParams().height = (int) (characterSize * 0.18f);
         playWon.getLayoutParams().width = playWon.getLayoutParams().height = (int) (characterSize * 0.18f);
@@ -546,12 +538,14 @@ public class QuizActivity extends Activity {
         ((TextView) findViewById(R.id.textViewWiki)).setTextSize(17);
         ((TextView) findViewById(R.id.textViewWiki)).setMaxLines(4);
 
-        int res = getResources().getIdentifier(getQuizData().getID(), "drawable", getPackageName());
-        try {
-            ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(res));
-        } catch (Exception e) {
-            ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(R.drawable.twenty_century_fox));
-        }
+        ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(getResources().getIdentifier(getQuizData().getID(), "drawable", getPackageName())));
+
+        findViewById(R.id.buttonWiki).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getQuizData().getWikiURI())));
+            }
+        });
 
 
         switch (packageIndex) {
@@ -568,40 +562,53 @@ public class QuizActivity extends Activity {
                 break;
         }
 
+        findViewById(R.id.layoutImageQuiz).setVisibility(View.VISIBLE);
+        findViewById(R.id.imageQuiz).setVisibility(View.VISIBLE);
+
     }
 
     private void initCinemaWinGraphics() {
         setVisualizerVisible(false);
-        findViewById(R.id.layoutImageQuiz).setVisibility(View.VISIBLE);
-        findViewById(R.id.imageQuiz).setVisibility(View.VISIBLE);
         type.setVisibility(View.GONE);
 
         ((ImageView) findViewById(R.id.imageViewTV)).setImageDrawable(getResources().getDrawable(R.drawable.tv_simpsons_empty_with_shadow));
+
+        if (getQuizData().getSpotifyURI().length() > 0) {
+            findViewById(R.id.buttonSpotify).setVisibility(View.VISIBLE);
+            findViewById(R.id.buttonSpotify).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getQuizData().getSpotifyURI())));
+                }
+            });
+        } else {
+            findViewById(R.id.buttonSpotify).setVisibility(View.GONE);
+        }
     }
 
     private void initMusicWinGraphics() {
         setVisualizerVisible(true);
         stopVisualizerAnimation();
-        findViewById(R.id.layoutImageQuiz).setVisibility(View.VISIBLE);
-        findViewById(R.id.imageQuiz).setVisibility(View.VISIBLE);
 
-        findViewById(R.id.buttonSpotify).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String uri = getQuizData().getSpotifyURI();
-                Intent launcher = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
-                startActivity(launcher);
-            }
-        });
+        if (getQuizData().getSpotifyURI().length() > 0) {
+            findViewById(R.id.buttonSpotify).setVisibility(View.VISIBLE);
+            findViewById(R.id.buttonSpotify).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getQuizData().getSpotifyURI())));
+                }
+            });
+        } else {
+            findViewById(R.id.buttonSpotify).setVisibility(View.GONE);
+        }
 
     }
 
     private void initCharacterWinGraphics() {
         setVisualizerVisible(true);
         stopVisualizerAnimation();
-        findViewById(R.id.layoutImageQuiz).setVisibility(View.VISIBLE);
+
         ((ImageView) findViewById(R.id.imageViewCharacter)).setImageDrawable(getResources().getDrawable(R.drawable.guess_who_frame_empty));
-        findViewById(R.id.imageQuiz).setVisibility(View.VISIBLE);
         findViewById(R.id.imageViewMouth).setVisibility(View.GONE);
         refreshVisualizer = false;
     }
@@ -873,8 +880,7 @@ public class QuizActivity extends Activity {
                 break;
             case Utility.MUSIC:
                 setVisualizerVisible(true);
-                findViewById(R.id.textViewSong).setVisibility(getQuizData().getType().toLowerCase().equals("song") ? View.VISIBLE : View.GONE);
-                findViewById(R.id.textViewArtist).setVisibility(getQuizData().getType().toLowerCase().equals("artist") ? View.VISIBLE : View.GONE);
+                updateMusicLabels();
                 break;
             case Utility.VIP:
                 setVisualizerVisible(true);
@@ -932,6 +938,34 @@ public class QuizActivity extends Activity {
         });
 
         dialog.show();
+    }
+
+    private void updateMusicLabels() {
+        int guitarHeight = Utility.getHeight(this) / 2;
+        int labelLayoutHeight = guitarHeight * 70 / 678;
+
+        TextView song = (TextView) findViewById(R.id.textViewSong);
+        TextView artist = (TextView) findViewById(R.id.textViewArtist);
+
+//        song.setTextSize(getQuizData().getType().toLowerCase().equals("song") ? Utility.pixelsToSp(this, labelLayoutHeight * 7 / 10) : Utility.pixelsToSp(this, labelLayoutHeight / 2));
+//        song.setTextColor(getQuizData().getType().toLowerCase().equals("song") ? Color.parseColor("#ffffff") : Color.parseColor("#80000000"));
+//
+//        artist.setTextSize(getQuizData().getType().toLowerCase().equals("artist") ? Utility.pixelsToSp(this, labelLayoutHeight * 7 / 10) : Utility.pixelsToSp(this, labelLayoutHeight / 2));
+//        artist.setTextColor(getQuizData().getType().toLowerCase().equals("artist") ? Color.parseColor("#ffffff") : Color.parseColor("#80000000"));
+
+        setAlpha(song,getQuizData().getType().toLowerCase().equals("song") ? 1 : 0.4f);
+        setAlpha(artist,getQuizData().getType().toLowerCase().equals("song") ? 1 : 0.4f);
+
+        Utility.setMargins(findViewById(R.id.labelsLayout), 0, 0, 0, guitarHeight * 28 / 678);
+        findViewById(R.id.labelsLayout).getLayoutParams().height = labelLayoutHeight;
+    }
+
+    private void setAlpha(View view, float alpha) {
+        AlphaAnimation alphaAnim = new AlphaAnimation(alpha, alpha);
+        alphaAnim.setDuration(0); // Make animation instant
+        alphaAnim.setFillAfter(true); // Tell it to persist after the animation ends
+        // And then on your layout
+        view.startAnimation(alphaAnim);
     }
 
 

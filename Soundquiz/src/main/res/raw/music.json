@@ -77,7 +77,7 @@
           "type": "artist",
           "answer": "Madonna",
           "wiki_link": "http://en.wikipedia.org/wiki/Madonna_(entertainer)",
-          "wiki_quote": "Madonna Louise Ciccone[2] (/tʃɪˈkoʊneɪ/ chi-koh-nay) (born August 16, 1958) is an American singer-songwriter, actress, and businesswoman.",
+          "wiki_quote": "Madonna Louise Ciccone (/tʃɪˈkoʊneɪ/ chi-koh-nay) (born August 16, 1958) is an American singer-songwriter, actress, and businesswoman.",
           "spotify_uri": "spotify:track:70VjMtwhm3Q2HBQeJnPfmh",
           "rows": [
           ]
@@ -133,7 +133,7 @@
           "type": "artist",
           "answer": "Eminem",
           "wiki_link": "http://en.wikipedia.org/wiki/Eminem",
-          "wiki_quote": "Marshall Bruce Mathers III (born October 17, 1972),[1] better known by his stage name Eminem and by his alter ego Slim Shady, is an American rapper, record producer, songwriter, and actor.",
+          "wiki_quote": "Marshall Bruce Mathers III (born October 17, 1972), better known by his stage name Eminem and by his alter ego Slim Shady, is an American rapper, record producer, songwriter, and actor.",
           "spotify_uri": "spotify:track:1UHBcngfWo8hi3m003wZtX",
           "rows": [
           ]
@@ -182,7 +182,7 @@
           "type": "song",
           "answer": "Wake me up",
           "wiki_link": "http://en.wikipedia.org/wiki/Wake_Me_Up_(Avicii_song)",
-          "wiki_quote": "Wake Me Up is a song by Swedish DJ and music producer Avicii. American soul singer Aloe Blacc provides uncredited vocals for the track[3][4] and Incubus' Mike Einziger provides acoustic guitar.",
+          "wiki_quote": "Wake Me Up is a song by Swedish DJ and music producer Avicii. American soul singer Aloe Blacc provides uncredited vocals for the track and Incubus' Mike Einziger provides acoustic guitar.",
           "spotify_uri": "spotify:track:6g1NlCpW7fgqDnWbCCDrHl",
           "rows": [
             "wake",
@@ -360,8 +360,8 @@
           "id": "fifty_cent_in_da_club",
           "type": "song",
           "answer": "In Da Club",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/In_da_Club",
+          "wiki_quote": "\"In da Club\" is a hip hop song performed by American rapper 50 Cent from his commercial debut album Get Rich or Die Tryin'. The song was produced by Dr. Dre and had co-production from Mike Elizondo. 50 Cent, Dr. Dre, and Elizondo wrote the song. The track was released in January 2003 as the album's lead single and it was positively received by music critics. The song has since sold over 2,000,000 copies.",
           "spotify_uri": "spotify:track:7iL6o9tox1zgHpKUfh9vuC",
           "rows": [
             "in da",
@@ -372,8 +372,8 @@
           "id": "onerepublic_counting_stars",
           "type": "song",
           "answer": "Counting stars",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Counting_Stars",
+          "wiki_quote": "\"Counting Stars\" is a song by American pop rock band OneRepublic from their third studio album, Native (2013). The song was written by lead singer Ryan Tedder, and produced by Tedder and Noel Zancanella. Musically, it is a pop song with strong elements of folk music. It was released as the album's third single on June 14, 2013 in Austria, Germany, and Switzerland.",
           "spotify_uri": "spotify:track:5edBgVtRD0fvWk140Sl21T",
           "rows": [
             "counting",
@@ -384,8 +384,8 @@
           "id": "blur_song_two",
           "type": "song",
           "answer": "Song 2",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Song_2",
+          "wiki_quote": "\"Song 2\" is a song by English alternative rock band Blur, the second track from their 1997 eponymous fifth studio album. The hook features Damon Albarn yelling \"woo-hoo!\" as the distorted bass comes in. Released in April 1997, \"Song 2\" reached number two in the UK Singles Chart, number four on the Australian ARIA Charts, and number six on US Billboard Alternative Songs, (previously called Billboard Modern Rock Tracks).",
           "spotify_uri": "spotify:track:3GfOAdcoc3X5GPiiXmpBjK",
           "rows": [
           ]
@@ -394,8 +394,8 @@
           "id": "keane_somewhere_only_we_know",
           "type": "artist",
           "answer": "Keane",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Somewhere_Only_We_Know",
+          "wiki_quote": "\"Somewhere Only We Know\" is a song performed and composed by English alternative rock band Keane, officially released as their third commercial single, and appearing as the opening track of their debut studio album, Hopes and Fears (2004) as the first single. It is considered also Keane's first major commercial release, becoming one of the greatest hits of 2004 worldwide and peaking on the UK charts at number three during its first week of sale.",
           "spotify_uri": "spotify:track:0VxFKXvKLjYWU7oPPMwzuN",
           "rows": [
           ]
@@ -404,9 +404,9 @@
           "id": "the_black_eyed_peas_i_gotta_feeling",
           "type": "song",
           "answer": "I gotta feeling",
-          "wiki_link": "",
-          "wiki_quote": "",
-          "spotify_uri": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/I_Gotta_Feeling",
+          "wiki_quote": "\"I Gotta Feeling\" is the second single from The Black Eyed Peas' fifth album The E.N.D., produced by the French DJ David Guetta. The song was released on May 21, 2009 and debuted at number two on the Canadian and Billboard Hot 100 on the week of June 27, 2009, behind the group's \"Boom Boom Pow\", making the group one of 11 artists who have occupied the top two positions of the Billboard Hot 100 at the same time.",
+          "spotify_uri": "spotify:track:70cTMpcgWMcR18t9MRJFjB",
           "rows": [
             "i gotta",
             "feeling"
@@ -416,8 +416,8 @@
           "id": "capital_cities_safe_and_sound",
           "type": "song",
           "answer": "Safe and sound",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Safe_and_Sound_(Capital_Cities_song)",
+          "wiki_quote": "\"Safe and Sound\" is a song by American music duo Capital Cities. The song was released as a digital download in the United States in February 2011. The song appears on the duo's debut studio album, In a Tidal Wave of Mystery (2013). The song has achieved certified platinum-level sales in several geographic markets.",
           "spotify_uri": "spotify:track:70cTMpcgWMcR18t9MRJFjB",
           "rows": [
             "safe",
@@ -428,8 +428,8 @@
           "id": "skrillex_bangarang",
           "type": "artist",
           "answer": "Skrillex",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Bangarang_(song)",
+          "wiki_quote": "\"Bangarang\" is a song by American electronic music producer Skrillex. It was released as a single from his EP of the same name. It features guest rap vocals from Sirah. Musically, \"Bangarang\" has multiple influences of electronic rock and drum and bass while prominently using Sirah's \"chopped-up\" rap vocals throughout the song, with the final line of the song saying \"I'm eating Fun Dip right now/Not givin' a fuck.\"",
           "spotify_uri": "spotify:track:6VRhkROS2SZHGlp0pxndbJ",
           "rows": [
           ]
@@ -438,8 +438,8 @@
           "id": "psy_gangnam_style",
           "type": "song",
           "answer": "Gangnam Style",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Gangnam_Style",
+          "wiki_quote": "\"Gangnam Style\" (Korean: 강남스타일, IPA: [kaŋnam sʰɯtʰail]) is the 18th K-pop single by the South Korean musician Psy. The song was released in July 2012 as the lead single of his sixth studio album Psy 6 (Six Rules), Part 1, and debuted at number one on South Korea's Gaon Chart. On December 21, 2012, \"Gangnam Style\" became the first YouTube video to reach a billion views.",
           "spotify_uri": "spotify:track:1R2SZUOGJqqBiLuvwKOT2Y",
           "rows": [
             "gangnam",
@@ -450,8 +450,8 @@
           "id": "muse_time_is_running_out",
           "type": "song",
           "answer": "Time is running out",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Time_Is_Running_Out_(Muse_song)",
+          "wiki_quote": "\"Time Is Running Out\" is a song by the English alternative rock band Muse. It is the third track on their third studio album, Absolution. The song was released as the lead single from the album on 8 September 2003 in the United Kingdom and other countries. It was also the band's first Top 10 hit in the UK, peaking at number eight, besting the number eleven peak of \"Plug In Baby\".",
           "spotify_uri": "spotify:track:2takcwOaAZWiXQijPHIx7B",
           "rows": [
             "time is",
@@ -462,8 +462,8 @@
           "id": "the_beatles_yesterday",
           "type": "song",
           "answer": "Yesterday",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Yesterday",
+          "wiki_quote": "\"Yesterday\" is a song originally recorded by the Beatles for their 1965 album Help!. Although credited to \"Lennon–McCartney\", the song was written solely by Paul McCartney. It remains popular today with more than 2,200 cover versions, and is one of the most covered songs in the history of recorded music. At the time of its first appearance, the song was released by the Beatles' record company as a single in the United States but not in the United Kingdom. ",
           "spotify_uri": "",
           "rows": [
           ]
@@ -472,8 +472,8 @@
           "id": "alicia_keys_girl_on_fire",
           "type": "artist",
           "answer": "Alicia keys",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Girl_on_Fire_(song)",
+          "wiki_quote": "\"Girl on Fire\" is a song recorded by American singer-songwriter Alicia Keys for her 2012 fifth studio album of the same name. It was written and produced by Keys, Jeff Bhasker, and Salaam Remi. The song is an R&B and hip hop ballad. American rock guitarist Billy Squier also earns a writing credit on the song for the inclusion of drums taken from his 1980 song \"The Big Beat\".",
           "spotify_uri": "spotify:track:6qOEjO2IUD7PjtpsXawq0d",
           "rows": [
             "alicia",
@@ -484,8 +484,8 @@
           "id": "abba_dancing_queen",
           "type": "song",
           "answer": "Dancing queen",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Dancing_Queen",
+          "wiki_quote": "\"Dancing Queen\" is a pop song recorded by Swedish pop group ABBA. It was released in August 1976, and is commonly regarded as one of the most successful singles of the 1970s as well as one of the greatest songs of all time. \"Dancing Queen\" was written by Benny Andersson, Björn Ulvaeus and Stig Anderson, and features the shared lead vocal performance of Agnetha Fältskog and Anni-Frid Lyngstad.",
           "spotify_uri": "spotify:track:2rgqPSIRAfaO2MGo9smdSX",
           "rows": [
             "dancing",
@@ -496,8 +496,8 @@
           "id": "aretha_franklin_respect",
           "type": "artist",
           "answer": "Aretha Franklin",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Respect_(song)",
+          "wiki_quote": "\"Respect\" is a song written and originally released by Stax recording artist Otis Redding in 1965. The song became a 1967 hit and signature song for R&B singer Aretha Franklin. The music in the two versions is significantly different, and through a few minor changes in the lyrics, the stories told by the songs have a different flavor.",
           "spotify_uri": "spotify:track:7s25THrKz86DM225dOYwnr",
           "rows": [
             "aretha",
@@ -508,8 +508,8 @@
           "id": "acdc_back_in_black",
           "type": "song",
           "answer": "Back in Black",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Back_in_Black_(song)",
+          "wiki_quote": "\"Back in Black\" is a song by AC/DC, appearing as the first track on side two of their 1980 album of the same name. Known for its opening guitar riff, the song was AC/DC's tribute to their former singer Bon Scott. His replacement Brian Johnson recalled to Mojo magazine in 2009 that when the band asked him to write a lyric for this song, \"they said, 'it can't be morbid – it has to be for Bon and it has to be a celebration.'\" He added: \"I thought, 'Well no pressure there, then' (laughs).\"",
           "spotify_uri": "spotify:track:7mocbWQc7a3Y7AOZNUpRJC",
           "rows": [
             "back in",
@@ -520,8 +520,8 @@
           "id": "shakira_waka_waka",
           "type": "song",
           "answer": "Waka Waka",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Waka_Waka_(This_Time_for_Africa)",
+          "wiki_quote": "\"Waka Waka (This Time for Africa)\" (Spanish: \"Waka Waka (Esto es África)\") is a song by Colombian singer-songwriter Shakira featuring South African band Freshlyground. It was released on May 7, 2010, by Sony Music Entertainment and Epic Records as the official song of the 2010 FIFA World Cup.",
           "spotify_uri": "spotify:track:2Cd9iWfcOpGDHLz6tVA3G4",
           "rows": [
             "waka",
@@ -537,8 +537,8 @@
           "id": "avril_lavigne_girlfriend",
           "type": "song",
           "answer": "Girlfriend",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Girlfriend_(Avril_Lavigne_song)",
+          "wiki_quote": "\"Girlfriend\" is a song by Canadian singer-songwriter Avril Lavigne. The song was written by Lavigne with her producer Dr. Luke for Lavigne's third studio album, The Best Damn Thing (2007). \"Girlfriend\" was released as the lead single from The Best Damn Thing on 27 February 2007 by Columbia and RCA Records. Lyrically, the song revolves around its protagonist having a crush on someone who is in a relationship, proclaiming she should be his girlfriend.",
           "spotify_uri": "spotify:track:5HbCnVLXRyZVxnreOPgJCK",
           "rows": [
           ]
@@ -547,8 +547,8 @@
           "id": "the_ramones_blitzkrieg_bop",
           "type": "song",
           "answer": "Blitzkrieg Bop",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Blitzkrieg_Bop",
+          "wiki_quote": "\"Blitzkrieg Bop\" is a song by the American punk rock band Ramones. It was released as the band's debut single in April 1976 in the United States. It appeared as the opening track on the band's debut album, Ramones, also released that month.",
           "spotify_uri": "spotify:track:68YFOeWusWCFxK4TSYZZBU",
           "rows": [
             "blitzkrieg",
@@ -559,8 +559,8 @@
           "id": "owl_city_fireflies",
           "type": "artist",
           "answer": "Owl City",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Fireflies_(Owl_City_song)",
+          "wiki_quote": "\"Fireflies\" is the debut single from Owl City's album Ocean Eyes. Relient K vocalist Matt Thiessen is featured as a guest vocalist on the song. Adam Young described the song as \"A little song about bugs and not being able to fall asleep at night.\" The song is built around a \"bleepy\" 1980s-influenced synthline and includes lyrics about insomnia, fireflies and summer.",
           "spotify_uri": "spotify:track:1mr3616BzLdhXfJmLmRsO8",
           "rows": [
             "owl",
@@ -571,8 +571,8 @@
           "id": "the_beach_boys_surfin_usa",
           "type": "song",
           "answer": "Surfin' USA",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Surfin%27_U.S.A._(song)",
+          "wiki_quote": "\"Surfin' U.S.A.\" is a song performed by the Beach Boys featuring lyrics by Brian Wilson set to the music of \"Sweet Little Sixteen,\" written by Chuck Berry. \"Surfin' U.S.A.\" was released as a single on March 4, 1963. It also appeared on the 1963 album Surfin' U.S.A. It debuted on network television via The Steve Allen Show broadcast two days before release with the band lip-synching it.",
           "spotify_uri": "spotify:track:6KH5cOzmX7R929vIx88FR9",
           "rows": [
             "surfin",
@@ -583,8 +583,8 @@
           "id": "missy_elliot_work_it",
           "type": "song",
           "answer": "Work It",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Work_It_(Missy_Elliott_song)",
+          "wiki_quote": "\"Work It\" is a hip hop song written by American rapper Missy Elliott and her producer Tim \"Timbaland\" Mosley for Elliott's fourth studio album Under Construction (2002). The song's musical style, and production by Timbaland, were heavily inspired by Old school hip hop from the 1980s, and includes a portion which samples Run-D.M.C.'s \"Peter Piper\".",
           "spotify_uri": "spotify:track:3jagJCUbdqhDSPuxP8cAqF",
           "rows": [
           ]
@@ -593,8 +593,8 @@
           "id": "gotye_somebody_that_i_used_to_know",
           "type": "song",
           "answer": "Somebody that I used to know",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Somebody_That_I_Used_to_Know",
+          "wiki_quote": "\"Somebody That I Used to Know\" is a song written and recorded by Belgian-Australian singer-songwriter Gotye, featuring New Zealand singer/guitarist Kimbra. In 2013, the song won two Grammy Awards for Best Pop Duo/Group Performance and Record of the Year. The song topped Billboard Magazine's Hot 100 chart in 2012 as the biggest selling song of that year in the US. It has sold in excess of 13 million copies.",
           "spotify_uri": "spotify:track:1qDrWA6lyx8cLECdZE7TV7",
           "rows": [
             "somebody that",
@@ -606,8 +606,8 @@
           "id": "nicki_minaj_starships",
           "type": "artist",
           "answer": "Nicki Minaj",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Starships_(song)",
+          "wiki_quote": "\"Starships\" is a song by Trinidadian-American singer-songwriter and rapper Nicki Minaj, taken from her second studio album Pink Friday: Roman Reloaded. It was released on February 14, 2012 by Young Money, Cash Money, Universal Republic as the lead single from the album. The song was written by Minaj, Nadir Khayat, Carl Falk, Rami Yacoub and Wayne Hector, and was produced by RedOne, Yacoub, and Falk.",
           "spotify_uri": "spotify:track:2EBCVPNAG46nbgs6jXPGvv",
           "rows": [
             "nicki",
@@ -618,8 +618,8 @@
           "id": "tracy_chapman_fast_car",
           "type": "song",
           "answer": "Fast Car",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Fast_Car",
+          "wiki_quote": "\"Fast Car\" is a single by American singer-songwriter Tracy Chapman. It was released in April 1988 from her self-titled debut album. Her appearance on the Nelson Mandela 70th Birthday Tribute was the catalyst for the song's becoming a top 10 hit in the United States, peaking at number 6 on the Hot 100, and a top 10 hit the United Kingdom, peaking at number 4 on the charts there.",
           "spotify_uri": "spotify:track:2M9ro2krNb7nr7HSprkEgo",
           "rows": [
             "fast",
@@ -630,8 +630,8 @@
           "id": "michael_jackson_bad",
           "type": "song",
           "answer": "Bad",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Bad_(Michael_Jackson_song)",
+          "wiki_quote": "\"Bad\" is a song by American song writer and recording artist Michael Jackson. \"Bad\" was released by Epic Records in September 1987, as the second single from Jackson's studio album of the same name. The song was written, composed, and co-produced by Jackson, and produced by Quincy Jones. Jackson stated that the song was influenced by a real life story he had read about.",
           "spotify_uri": "spotify:track:4xJjD28UsZlqbX7tBV3Aj5",
           "rows": [
           ]
@@ -640,8 +640,8 @@
           "id": "martin_garrix_animals",
           "type": "song",
           "answer": "Animals",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Animals_(Martin_Garrix_song)",
+          "wiki_quote": "\"Animals\" is a song by Dutch DJ Martin Garrix. It was released on June 17, 2013 through Spinnin' Records. After Garrix was named the youngest DJ ever to reach number one on Beatport, the song has become a commercial success, reaching the top ten in more than ten countries worldwide and topping the charts in the United Kingdom and Belgium.",
           "spotify_uri": "spotify:track:1DXoMuQPYVhtxXQbEv0sOr",
           "rows": [
           ]
@@ -650,8 +650,8 @@
           "id": "rem_losing_my_religion",
           "type": "artist",
           "answer": "REM",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Losing_My_Religion",
+          "wiki_quote": "\"Losing My Religion\" is a song by the American alternative rock band R.E.M. The song was released as the first single from the group's 1991 album Out of Time. Based around a mandolin riff, \"Losing My Religion\" was an unlikely hit for the group, garnering heavy airplay on radio as well as on MTV due to its critically acclaimed music video.",
           "spotify_uri": "spotify:track:74EV0g12ihUoOUXMprFpZB",
           "rows": [
             "R",
@@ -662,8 +662,8 @@
           "id": "mgmt_electric_feel",
           "type": "song",
           "answer": "Electric Feel",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Electric_Feel",
+          "wiki_quote": "\"Electric Feel\" is the second single from MGMT's debut album Oracular Spectacular. It was released on June 23, 2008, available as a 7\" and CD single, and later on 12\" vinyl. The song's second video features The Rock-afire Explosion. The song alternates between bars of 6/4 and bars of 4/4 musical bridges.",
           "spotify_uri": "spotify:track:3FtYbEfBqAlGO46NUDQSAt",
           "rows": [
             "electric",
@@ -674,8 +674,8 @@
           "id": "nirvana_smells_like_teen_spirits",
           "type": "song",
           "answer": "Smells like teen spirits",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Smells_Like_Teen_Spirit",
+          "wiki_quote": "\"Smells Like Teen Spirit\" is a song by the American rock band Nirvana. It is the opening track and lead single from the band's second album, Nevermind (1991), released on DGC Records. Written by Kurt Cobain, Krist Novoselic, and Dave Grohl and produced by Butch Vig, the song uses a verse-chorus form where the main four-chord riff is used during the intro and chorus to create an alternating loud and quiet dynamic.",
           "spotify_uri": "spotify:track:4hy4fb5D1KL50b3sng9cjw",
           "rows": [
             "smells like",
@@ -686,8 +686,8 @@
           "id": "deep_purple_smoke_on_the_water",
           "type": "artist",
           "answer": "Deep Purple",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Smoke_on_the_Water",
+          "wiki_quote": "\"Smoke on the Water\" is a song by the British rock band Deep Purple. It was first released on their 1972 album Machine Head. In 2004, the song was ranked number 434 on Rolling Stone magazine's list of the 500 greatest songs of all time, ranked number 4 in Total Guitar magazine's Greatest Guitar Riffs Ever, and in March 2005, Q magazine placed \"Smoke on the Water\" at number 12 in its list of the 100 greatest guitar tracks.",
           "spotify_uri": "spotify:track:5MMnwYs0hIxkENRsbkWJ2G",
           "rows": [
             "deep",
@@ -698,8 +698,8 @@
           "id": "bon_jovi_livin_on_a_prayer",
           "type": "song",
           "answer": "Livin on a prayer",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Livin%27_on_a_Prayer",
+          "wiki_quote": "\"Livin' on a Prayer\" is Bon Jovi's second chart-topping 45 from their 12x platinum Slippery When Wet album. Written by Jon Bon Jovi, Richie Sambora, and Desmond Child, the single, released in late 1986, was well received at both rock and pop radio and its music video was given heavy rotation at MTV, giving the band their first No. 1 on the Hot Mainstream Rock Tracks chart.",
           "spotify_uri": "spotify:track:3X7abqSXC4xrxuC1ykpWcY",
           "rows": [
             "livin on",
@@ -715,8 +715,8 @@
           "id": "spice_girls_wannabe",
           "type": "song",
           "answer": "Wannabe",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Wannabe_(song)",
+          "wiki_quote": "\"Wannabe\" is the debut hit song by British pop group Spice Girls. Written by the group members with Matt Rowe and Richard Stannard during the group's first professional songwriting session, it was produced by Rowe and Stannard for the group's debut album Spice, released in November 1996. The song was written and recorded very quickly; the result was considered lackluster by their label, and was sent to be mixed by Dave Way.",
           "spotify_uri": "spotify:track:1Je1IMUlBXcx1Fz0WE7oPT",
           "rows": [
           ]
@@ -725,8 +725,8 @@
           "id": "pink_just_give_me_a_reason",
           "type": "artist",
           "answer": "Pink",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Just_Give_Me_a_Reason",
+          "wiki_quote": "\"Just Give Me a Reason\" is a song written and recorded by American recording artist and songwriter Pink featuring fun.'s lead singer Nate Ruess. The song was chosen as the third single from Pink's sixth studio album, The Truth About Love (2012).\"Just Give Me a Reason\" is a pop ballad written by both artists and produced by Jeff Bhasker.",
           "spotify_uri": "spotify:track:1mKXFLRA179hdOWQBwUk9e",
           "rows": [
           ]
@@ -735,8 +735,8 @@
           "id": "red_hot_chili_peppers_californication",
           "type": "song",
           "answer": "Californication",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Californication_(song)",
+          "wiki_quote": "\"Californication\" is the Red Hot Chili Peppers' fourth single and sixth track from their 1999 seventh studio album, Californication. Released in 2000, the song reached #69 on the Billboard Hot 100 in the USA, and #16 on the UK charts, and hit #1 on both US Mainstream Rock Tracks for 2 weeks and US Modern Rock Tracks for 1 week.",
           "spotify_uri": "spotify:track:34KTEhpPjq6IAgQg2yzJAL",
           "rows": [
           ]
@@ -745,8 +745,8 @@
           "id": "naughty_boy_la_la_la",
           "type": "song",
           "answer": "La La La",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/La_La_La_(Naughty_Boy_song)",
+          "wiki_quote": "\"La La La\" is a single released by British producer Naughty Boy, featuring vocals from Sam Smith. It was released on 18 May 2013 as the second single from Naughty Boy's debut album, Hotel Cabana (2013). The track reached number one on the UK Singles Chart and also number one on the Czech Republic and Italian Charts and, at its time of release, was confirmed by the Official Charts Company as the fastest selling single of 2013 in the UK.",
           "spotify_uri": "spotify:track:52gvlDnre9craz9dKGObp8",
           "rows": [
             "la",
@@ -757,8 +757,8 @@
           "id": "lana_del_rey_summertime_sadness",
           "type": "song",
           "answer": "Summertime Sadness",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Summertime_Sadness",
+          "wiki_quote": "\"Summertime Sadness\" is a song by American singer-songwriter Lana Del Rey from her second studio album, Born to Die. It was released on June 22, 2012 by Interscope Records as the fourth single of the album. Charting across Europe, the single reached the top ten in Austria, Bulgaria, Germany, Greece, Luxembourg, and Switzerland. In the spring of 2013, \"Summertime Sadness\" became a number-one hit in Poland and Ukraine.",
           "spotify_uri": "spotify:track:33CeM8NI7tfrNgciVOFMoo",
           "rows": [
             "summertime",
@@ -769,8 +769,8 @@
           "id": "tokio_hotel_monsoon",
           "type": "artist",
           "answer": "Tokio Hotel",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Monsoon_(song)",
+          "wiki_quote": "\"Durch den Monsun\" (English: Through the Monsoon) and \"Monsoon\" are songs by German rock band Tokio Hotel. The German version of the song \"Durch den Monsun\" was released as their debut single in 2005 from their debut album Schrei. A remix of this song was made with Japanese lyrics, and an English version named \"Monsoon\" was later recorded, and included in their first English album Scream and released as their first English single in 2007.",
           "spotify_uri": "spotify:track:1Bc9ktRpchBN04kCHFT3Lz",
           "rows": [
             "tokio",
@@ -781,8 +781,8 @@
           "id": "eminem_without_me",
           "type": "song",
           "answer": "Without Me",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Without_Me_(song)",
+          "wiki_quote": "\"Without Me\" is a song by American hip-hop artist Eminem that was released as the lead single from his fourth studio album, The Eminem Show in 2002, and re-released on his greatest-hits compilation album Curtain Call: The Hits in 2005. \"Without Me\" is one of Eminem's most successful singles, reaching No. 2 in the U.S. and No. 1 in many countries worldwide.",
           "spotify_uri": "spotify:track:5pBvNeOAJ54zgd5lEOmM3b",
           "rows": [
             "without",
@@ -793,8 +793,8 @@
           "id": "empire_of_the_sun_walking_on_a_dream",
           "type": "song",
           "answer": "Walking on a dream",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Walking_on_a_Dream_(song)",
+          "wiki_quote": "\"Walking on a Dream\" is a song by the Australian electronic duo Empire of the Sun, released as the lead single from their debut album, Walking on a Dream. The full Sam La More remix was made available as a free download on the band's official website. The single was successful on the Australian ARIA Charts, reaching as far as number ten and being certified double platinum.",
           "spotify_uri": "spotify:track:6A6qBFJHid4WutQu6HHEZt",
           "rows": [
             "walking on",
@@ -805,8 +805,8 @@
           "id": "outkast_hey_ya",
           "type": "artist",
           "answer": "Outkast",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Hey_Ya!",
+          "wiki_quote": "\"Hey Ya!\" is a song written and produced by André 3000 for his 2003 album The Love Below, part of the hip hop duo OutKast's double album Speakerboxxx/The Love Below. \"Hey Ya!\" takes influence from funk and rock music. Its music video features a live performance by a band, all eight of whose members are played by André 3000, that mimicks the Beatles' 1964 performance on The Ed Sullivan Show. ",
           "spotify_uri": "spotify:track:3AszgPDZd9q0DpDFt4HFBy",
           "rows": [
           ]
@@ -815,8 +815,8 @@
           "id": "kanye_west_heartless",
           "type": "song",
           "answer": "Heartless",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Heartless_(Kanye_West_song)",
+          "wiki_quote": "\"Heartless\" is a song by American hip hop artist Kanye West, released on November 4, 2008 digitally as the second single for his fourth studio album, 808s & Heartbreak. It debuted at the number four spot on the Billboard Hot 100 where it eventually peaked at number two and reached number-one on the Billboard Hot Rap Tracks and U.S. Hot 100 Airplay chart.",
           "spotify_uri": "spotify:track:53gcDgFyqqpvCzXWrnFZpH",
           "rows": [
           ]
@@ -825,8 +825,8 @@
           "id": "pitbull_timber",
           "type": "song",
           "answer": "Timber",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Timber_(song)",
+          "wiki_quote": "\"Timber\" is a song by American rapper Pitbull featuring American recording artist Kesha. The song was released on October 7, 2013, as the lead single from Pitbull's extended play (EP) Meltdown. The song was produced by Dr. Luke, Cirkut, and Sermstyle, with additional production by Nick Seeley.",
           "spotify_uri": "spotify:track:1zHlj4dQ8ZAtrayhuDDmkY",
           "rows": [
           ]
@@ -835,8 +835,8 @@
           "id": "maroon_five_she_will_be_loved",
           "type": "artist",
           "answer": "Maroon 5",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/She_Will_Be_Loved",
+          "wiki_quote": "\"She Will Be Loved\" is the third single on the American band Maroon 5's 2002 debut album, Songs About Jane. Released in 2004, the single peaked at #5 in the United States, and by December 2012 had sold more than 2,722,000 digital downloads. It peaked at #4 in the United Kingdom. In Australia, it reached #1, a position it held for 5 non-consecutive weeks.",
           "spotify_uri": "spotify:track:5s5t0OFg9lIlBFaCI14K1i",
           "rows": [
           ]
@@ -845,8 +845,8 @@
           "id": "the_strokes_you_only_live_once",
           "type": "song",
           "answer": "You only live once",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/You_Only_Live_Once_(The_Strokes_song)",
+          "wiki_quote": "\"You Only Live Once\" is the opening track and third single from First Impressions of Earth, the third album from American rock band The Strokes. They have performed this song on several programs, including The Tonight Show with Jay Leno and Late Night with Conan O'Brien.",
           "spotify_uri": "spotify:track:46Y1VsEbWAQ7dIZe1gpnve",
           "rows": [
           ]
@@ -855,8 +855,8 @@
           "id": "mia_paper_planes",
           "type": "song",
           "answer": "Paper Planes",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Paper_Planes",
+          "wiki_quote": "\"Paper Planes\" is a song by British musician M.I.A. from her second studio album, Kala (2007). The song was written by M.I.A. and Diplo. The song's backing track is a sample of the 1982 song \"Straight to Hell\" by The Clash, and the members of The Clash are credited as co-writers of the song.",
           "spotify_uri": "spotify:track:3ZlFUr0RBrUYYsmlcFvD0e",
           "rows": [
             "paper",
@@ -867,8 +867,8 @@
           "id": "cypress_hill_insane_in_the_brain",
           "type": "artist",
           "answer": "Cypress Hill",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Insane_in_the_Brain",
+          "wiki_quote": "\"Insane in the Brain\" is a hit single by the American hip hop group Cypress Hill. It was released in 1993 and in addition to hitting number 1 on the US rap chart, the song also was a surprise crossover hit, reaching #19 on the Billboard Hot 100 in 1993. It was highly successful in other countries. The song was released on the group's Black Sunday album.",
           "spotify_uri": "spotify:track:4dTMU4O2DdyIlRlss7v9UP",
           "rows": [
             "cypress",
@@ -884,9 +884,9 @@
           "id": "bob_marley_one_love",
           "type": "song",
           "answer": "One Love",
-          "wiki_link": "",
-          "wiki_quote": "",
-          "spotify_uri": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/One_Love/People_Get_Ready",
+          "wiki_quote": "\"One Love/People Get Ready\" is a reggae/rhythm and blues song by Bob Marley & The Wailers from their 1977 album Exodus. It was first recorded in a ska style by Marley's original group, The Wailers in 1965 and was released as a single. This version was later included on their first singles compilation The Wailing Wailers in 1966.",
+          "spotify_uri": "spotify:track:6Vy8uPRN1rRj3JY6Kulzb3",
           "rows": [
             "one",
             "love"
@@ -896,8 +896,8 @@
           "id": "the_calling_wherever_you_will_go",
           "type": "song",
           "answer": "Wherever you will go",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Wherever_You_Will_Go",
+          "wiki_quote": "\"Wherever You Will Go\" is the debut single by American alternative rock band The Calling. The song was released in June 2001 as the first single from their debut album Camino Palmero. It remains their most renowned and their most successful hit, peaking at number 5 on the Billboard Hot 100 and topping the Adult Top 40 for 23 weeks, the second longest running number one in the chart's history.",
           "spotify_uri": "spotify:track:37qI0mchgzUSeUhPiwUWPY",
           "rows": [
             "weherever you",
@@ -908,8 +908,8 @@
           "id": "ylvis_the_fox",
           "type": "artist",
           "answer": "Ylvis",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Fox_(What_Does_the_Fox_Say%3F)",
+          "wiki_quote": "\"The Fox (What Does the Fox Say?)\", is an electronic dance song and viral video by Norwegian comedy duo Ylvis. The top trending video of 2013 on YouTube, \"The Fox\" was posted on the video-sharing website on 3 September 2013, and had over 410 million views as of May 23, 2014.",
           "spotify_uri": "spotify:track:5HOpkTTVcmZHnthgyxrIL8",
           "rows": [
           ]
@@ -918,8 +918,8 @@
           "id": "jessie_j_price_tag",
           "type": "song",
           "answer": "Price Tag",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Price_Tag_(song)",
+          "wiki_quote": "\"Price Tag\" is a song by British singer-songwriter Jessie J, featuring American rapper B.o.B. It was released on 31 January 2011 in the United Kingdom as the second single from Jessie J's debut studio album, Who You Are. \"Price Tag\" was written by Jessie J, Dr. Luke, Claude Kelly and B.o.B, and it was produced by Dr. Luke.",
           "spotify_uri": "spotify:track:7nqlRkgNyEpb9nvb03GMp7",
           "rows": [
             "price",
@@ -930,8 +930,8 @@
           "id": "limp_bizkit_rollin",
           "type": "song",
           "answer": "Rollin",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Rollin%27_(Limp_Bizkit_song)",
+          "wiki_quote": "\"Rollin' (Air Raid Vehicle)\" is a song by the American rap metal band Limp Bizkit from their album Chocolate Starfish and the Hot Dog Flavored Water. It was released as the second single along with \"My Generation\". The song peaked at number sixty five on the Billboard Hot 100, but was more successful in the United Kingdom and Republic of Ireland, topping the charts in both countries.",
           "spotify_uri": "spotify:track:2NtHnycqrON34GGxETv0C9",
           "rows": [
           ]
@@ -940,8 +940,8 @@
           "id": "azealia_banks_two_one_two",
           "type": "artist",
           "answer": "Azealia Banks",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/212_(song)",
+          "wiki_quote": "\"212\" is the debut single by American rapper Azealia Banks. The song samples the track \"Float My Boat\" by Lazy Jay, who is credited on the track. The song was first released on December 6, 2011 in the United Kingdom as the lead single from her 2012 EP 1991, and will also be included on her upcoming debut studio album Broke with Expensive Taste (2014).",
           "spotify_uri": "spotify:track:61S6wtjY80a6vHxP3JHSgE",
           "rows": [
             "azealia",
@@ -952,8 +952,8 @@
           "id": "blink_one_eight_two_all_the_small_things",
           "type": "song",
           "answer": "All the small things",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/All_the_Small_Things",
+          "wiki_quote": "\"All the Small Things\" is a song by American rock band Blink-182. It was the second single released from the band's third album Enema of the State. The track was composed primarily by guitarist Tom DeLonge as both an ode to his girlfriend (later wife) Jennifer Jenkins and one of his favorite punk groups, the Ramones. ",
           "spotify_uri": "spotify:track:12qZHAeOyTf93YAWvGDTat",
           "rows": [
             "all the",
@@ -964,8 +964,8 @@
           "id": "fatboy_slim_the_rockafeller_skank",
           "type": "song",
           "answer": "The rockafeller skank",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Rockafeller_Skank",
+          "wiki_quote": "\"The Rockafeller Skank\" is a song by English big beat musician and DJ Fatboy Slim. It was a hit single released from the 1998 album You've Come a Long Way, Baby. The single peaked at number six in the UK Singles Chart in June 1998. The song was the second Fatboy Slim single (after \"Praise You\") to chart on the US Billboard Hot 100, peaking at number 76.",
           "spotify_uri": "spotify:track:7eWYXAP87TFfF7fn2LEL1b",
           "rows": [
             "the rockafeller",
@@ -976,8 +976,8 @@
           "id": "miley_cyrus_we_cant_stop",
           "type": "artist",
           "answer": "Miley Cyrus",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/We_Can%27t_Stop",
+          "wiki_quote": "\"We Can't Stop\" is a song by American recording artist Miley Cyrus, taken from her fourth studio album Bangerz (2013). It was released on June 3, 2013 by RCA Records as the lead single from the album. The song was written and produced by Mike Will Made It, P-Nasty, and Rock City, with additional songwriting provided by Cyrus, Doug E. Fresh, and Slick Rick.",
           "spotify_uri": "spotify:track:2y4lAQpi5VTNLu2ldeTdUH",
           "rows": [
             "miley",
@@ -988,8 +988,8 @@
           "id": "u_two_one",
           "type": "song",
           "answer": "One",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/One_(U2_song)",
+          "wiki_quote": "\"One\" is a song by Irish rock band U2. It is the third track from their 1991 album Achtung Baby, and it was released as the record's third single in March 1992. During the album's recording sessions at Hansa Studios in Berlin, conflict arose between the band members over the direction of U2's sound and the quality of their material.",
           "spotify_uri": "spotify:track:7fGwROu7fgPGy0Ru8Q5nBJ",
           "rows": [
           ]
@@ -998,8 +998,8 @@
           "id": "macklemore_thrift_shop",
           "type": "song",
           "answer": "Thrift shop",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Thrift_Shop",
+          "wiki_quote": "\"Thrift Shop\" is a song by American hip hop duo Macklemore & Ryan Lewis. It was released on August 27, 2012 as Macklemore's eighth career single and the fifth single from their debut studio album The Heist (2012). It features vocals from Wanz. The song was composed to show Macklemore's esteem for thrift shops and saving money, opposing the flaunting many rappers display.",
           "spotify_uri": "spotify:track:1CmUZGtH29Kx36C1Hleqlz",
           "rows": [
             "thrift",
@@ -1010,8 +1010,8 @@
           "id": "the_killers_mr_brightside",
           "type": "song",
           "answer": "Mr Brightside",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Mr._Brightside",
+          "wiki_quote": "\"Mr. Brightside\" is the debut single by Las Vegas-based rock band The Killers. The song is featured on the group's debut album Hot Fuss and was written by Brandon Flowers and Dave Keuning. It was named \"Song of the Decade\" by UK radio stations Absolute Radio and XFM, and in April 2010 Last.fm revealed that it was the most listened to track since the launch of the online music service, with over 12.2 million plays \"scrobbled\".",
           "spotify_uri": "spotify:track:0eGsygTp906u18L0Oimnem",
           "rows": [
           ]
@@ -1020,8 +1020,8 @@
           "id": "snoop_dogg_drop_it_like_its_hot",
           "type": "artist",
           "answer": "Snoop Dogg",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Drop_It_Like_It%27s_Hot",
+          "wiki_quote": "\"Drop It Like It's Hot\" is a single by American rapper Snoop Dogg featuring American singer and producer Pharrell. Snoop Dogg performs the chorus and the second and third verses (of three), while Pharrell performs the first verse. Pharrell's verse includes a line from \"Raspy Shit\" (a song from his debut album In My Mind), which was produced by The Neptunes and contains vocal samples from Laid Back's \"White Horse\".",
           "spotify_uri": "spotify:track:6HHytHLXLX8QfWTtGfFSvH",
           "rows": [
             "snoop",
@@ -1032,8 +1032,8 @@
           "id": "eminem_love_the_way_you_lie",
           "type": "song",
           "answer": "Love the way you lie",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Love_the_Way_You_Lie",
+          "wiki_quote": "\"Love the Way You Lie\" is a song by the American hip hop recording artist Eminem from his seventh studio album Recovery (2010). Skylar Grey, a singer-songwriter, wrote and recorded the demo alongside the producer Alex da Kid when she felt she was in an abusive romantic relationship with the music industry. ",
           "spotify_uri": "spotify:track:6UaRii9AH6Zss9xNMEQ2M9",
           "rows": [
             "love the",
@@ -1044,8 +1044,8 @@
           "id": "guns_n_roses_paradise_city",
           "type": "song",
           "answer": "Paradise City",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Paradise_City",
+          "wiki_quote": "\"Paradise City\" is a song written by American hard rock band Guns N' Roses. It was released in 1987 on their debut studio album Appetite for Destruction and was released as a single in 1988. It is also the only song on the album to feature a synthesizer.",
           "spotify_uri": "spotify:track:3YBZIN3rekqsKxbJc9FZko",
           "rows": [
             "paradise",
@@ -1061,8 +1061,8 @@
           "id": "four_non_blondes_whats_up",
           "type": "song",
           "answer": "What's Up",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/What%27s_Up%3F_(song)",
+          "wiki_quote": "\"What's Up?\" is a rock song written by Linda Perry for 4 Non Blondes' 1992 debut album, Bigger, Better, Faster, More!. It was released as the album's second single in 1993. It was very successful in Brazil and in several European countries, peaking at number one in Poland, Austria, Switzerland, Sweden, Germany, Ireland, Norway and the Netherlands.",
           "spotify_uri": "spotify:track:7f0jXNMu2xjQUtmKMuWhGA",
           "rows": [
             "whats",
@@ -1073,8 +1073,8 @@
           "id": "the_lonely_island_i_just_had_sex",
           "type": "artist",
           "answer": "The Lonely Island",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/I_Just_Had_Sex",
+          "wiki_quote": "\"I Just Had Sex\" is a song by comedy hip hop group The Lonely Island featuring R&B singer Akon and producer DJ Frank E. It was released as the first single from The Lonely Island's second album, Turtleneck & Chain, released in May 2011. The video, featured as a Saturday Night Live digital short, stars Akon and The Lonely Island members Andy Samberg, Jorma Taccone and briefly, Akiva Schaffer, with guest appearances by Jessica Alba, Blake Lively and John McEnroe.",
           "spotify_uri": "spotify:track:1OmxpKVSvn0LGcM3SQS4OV",
           "rows": [
             "the lonely",
@@ -1085,8 +1085,8 @@
           "id": "pharrell_williams_happy",
           "type": "song",
           "answer": "Happy",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Happy_(Pharrell_Williams_song)",
+          "wiki_quote": "\"Happy\" is a song performed by American singer and producer Pharrell Williams from the Despicable Me 2 soundtrack album. It also serves as the lead single from Williams' second studio album, G I R L (2014). The song was written and produced by Williams. It came out on November 21, 2013, alongside a long-form music video. ",
           "spotify_uri": "spotify:track:6NPVjNh8Jhru9xOmyQigds",
           "rows": [
           ]
@@ -1095,8 +1095,8 @@
           "id": "lynyrd_skynyrd_sweet_home_alabama",
           "type": "song",
           "answer": "Sweet Home Alabama",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Sweet_Home_Alabama",
+          "wiki_quote": "\"Sweet Home Alabama\" is a song by Southern rock band Lynyrd Skynyrd that first appeared in 1974 on their second album, Second Helping. It reached #8 on the US charts in 1974 and was the band's second hit single.",
           "spotify_uri": "spotify:track:6RgGppm2SSX5p246UqfdEi",
           "rows": [
             "sweet home",
@@ -1107,8 +1107,8 @@
           "id": "dire_straits_sultans_of_swing",
           "type": "song",
           "answer": "Sultans of Swing",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Sultans_of_Swing",
+          "wiki_quote": "\"Sultans of Swing\" is a song by the British rock band Dire Straits from their self-titled debut album. It was written by band frontman Mark Knopfler. Although it was first released in 1978, it was its 1979 re-release that caused it to become a hit in both the UK and USA.",
           "spotify_uri": "spotify:track:3FtZBq64Ju8ZcYHWMqrVWv",
           "rows": [
             "sultans",
@@ -1119,8 +1119,8 @@
           "id": "jennifer_lopez_dont_cost_a_thing",
           "type": "artist",
           "answer": "Jennifer Lopez",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Love_Don%27t_Cost_a_Thing_(song)",
+          "wiki_quote": "\"Love Don't Cost a Thing\" is a song recorded by American singer Jennifer Lopez for her second studio album, J.Lo (2001). It was released on January 8, 2001 by Epic Records as the lead single from the album. \"Love Don't Cost a Thing\" was written by Damon Sharpe, Georgette Franklin, Jeremy Monroe, Amille D.",
           "spotify_uri": "spotify:track:7an3wvwzGIaYyMh203yITt",
           "rows": [
             "jennifer",
@@ -1131,8 +1131,8 @@
           "id": "coldplay_fix_you",
           "type": "song",
           "answer": "Fix You",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Fix_You",
+          "wiki_quote": "\"Fix You\" is a song by British alternative rock band Coldplay. It was written by all four members of the band for their third album, X&Y. The track is built around an organ accompanied by slow tempo drums and vocals. It was released on 5 September 2005 as the second single from X&Y and has reached number four on the UK Singles Chart.",
           "spotify_uri": "spotify:track:7LVHVU3tWfcxj5aiPFEW4Q",
           "rows": [
           ]
@@ -1141,8 +1141,8 @@
           "id": "adele_rolling_in_the_deep",
           "type": "song",
           "answer": "Rolling in the Deep",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Rolling_in_the_Deep",
+          "wiki_quote": "\"Rolling in the Deep\" is a song recorded by British singer-songwriter Adele for her second studio album, 21. The song was written by Adele and Paul Epworth. The singer herself describes it as a \"dark blues-y gospel disco tune\". The largest crossover hit in the United States from the past 25 years, \"Rolling in the Deep\" gained radio airplay from many different radio formats.",
           "spotify_uri": "spotify:track:7h8Ud480Fm4ReUVxgFF9ZX",
           "rows": [
             "rolling in",
@@ -1153,8 +1153,8 @@
           "id": "muse_supermassive_black_hole",
           "type": "song",
           "answer": "Supermassive Black Hole",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Supermassive_Black_Hole_(song)",
+          "wiki_quote": "\"Supermassive Black Hole\" is a song by English alternative rock band Muse, featured on their fourth studio album Black Holes and Revelations. It was written by Muse lead singer and principal songwriter Matthew Bellamy. When released as the lead single from the album in June 2006, backed with \"Crying Shame\", the song charted at number four on the UK Singles Chart, the highest singles chart position the band has achieved to date in the United Kingdom.",
           "spotify_uri": "spotify:track:2zrIyIdqafYozfsgiMY0Ae",
           "rows": [
             "supermassive",
@@ -1165,8 +1165,8 @@
           "id": "led_zeppelin_stairway_to_heaven",
           "type": "artist",
           "answer": "Led Zeppelin",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Stairway_to_Heaven",
+          "wiki_quote": "\"Stairway to Heaven\" is a song by the English rock band Led Zeppelin, released in late 1971. It was composed by guitarist Jimmy Page and vocalist Robert Plant for the band's untitled fourth studio album (often referred to as Led Zeppelin IV). It is often referred to as one of the greatest rock songs of all time.",
           "spotify_uri": "spotify:track:51pQ7vY7WXzxskwloaeqyj",
           "rows": [
             "led",
@@ -1177,8 +1177,8 @@
           "id": "nicki_minaj_super_bass",
           "type": "song",
           "answer": "Super Bass",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Super_Bass",
+          "wiki_quote": "\"Super Bass\" is a song by Trinidadian-American recording artist Nicki Minaj from the deluxe edition of her debut studio album, Pink Friday (2010). It was sent to US rhythmic radio stations as the album's fifth single on April 5, 2011, while \"Girls Fall like Dominoes\" was released in the British Isles, Australia, and New Zealand.",
           "spotify_uri": "spotify:track:7gKIt3rDGIMJDFVSPBnGmj",
           "rows": [
             "super",
@@ -1189,8 +1189,8 @@
           "id": "kasabian_club_foot",
           "type": "song",
           "answer": "Club Foot",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Club_Foot_(song)",
+          "wiki_quote": "\"Club Foot\" is a song by English indie rock band Kasabian, featured on their 2004 debut album Kasabian. It was released on 17 May 2004 in the UK. The video of this song is dedicated to Czech student Jan Palach, who committed suicide in political protest by self-immolation.",
           "spotify_uri": "spotify:track:19OUs1NzU15Fe3oSIeTuyG",
           "rows": [
             "club",
@@ -1201,8 +1201,8 @@
           "id": "bob_dylan_like_a_rolling_stone",
           "type": "song",
           "answer": "Like a rolling stone",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Like_a_Rolling_Stone",
+          "wiki_quote": "\"Like a Rolling Stone\" is a 1965 song by the American singer-songwriter Bob Dylan. Its confrontational lyrics originate in an extended piece of verse Dylan wrote in June 1965, when he returned exhausted from a grueling tour of England. Dylan distilled this draft into four verses and a chorus.",
           "spotify_uri": "spotify:track:3AhXZa8sUQht0UEdBJgpGc",
           "rows": [
             "like a",
@@ -1213,8 +1213,8 @@
           "id": "justin_timberlake_senorita",
           "type": "song",
           "answer": "Senorita",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Se%C3%B1orita_(Justin_Timberlake_song)",
+          "wiki_quote": "\"Señorita\" is a song recorded by American singer-songwriter Justin Timberlake for his debut studio album, Justified (2002). It was released on July 8, 2003 by Jive Records as the fourth single from the album. The song was co-written by Timberlake, and The Neptunes' Pharell Williams and Chad Hugo. It was also produced by the Neptunes.",
           "spotify_uri": "spotify:track:0aj2QKJvz6CePykmlTApiD",
           "rows": [
           ]
@@ -1223,8 +1223,8 @@
           "id": "imagine_dragons_demons",
           "type": "song",
           "answer": "Demons",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Demons_(Imagine_Dragons_song)",
+          "wiki_quote": "\"Demons\" is a song recorded by American rock band Imagine Dragons. It was produced by record producer Alex da Kid, written by Imagine Dragons and Alex da Kid, and recorded by the band. The song appears on their major-label debut extended play Continued Silence and also makes an appearance on their debut studio album Night Visions as the fourth track.",
           "spotify_uri": "spotify:track:2Oehrcv4Kov0SuIgWyQY9e",
           "rows": [
           ]
@@ -1238,8 +1238,8 @@
           "id": "the_chemical_brothers_galvanize",
           "type": "song",
           "answer": "Galvanize",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Galvanize_(song)",
+          "wiki_quote": "\"Galvanize\" is a song by British electronic duo The Chemical Brothers and the first single released from their 2005 album Push the Button. It was released a week before the album's release and peaked at No. 3 on the UK Singles Chart (see 2005 in music).",
           "spotify_uri": "spotify:track:4bz7uB4edifWKJXSDxwHcs",
           "rows": [
           ]
@@ -1248,8 +1248,8 @@
           "id": "gwen_stefani_hollaback_girl",
           "type": "artist",
           "answer": "Hollaback girl",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Hollaback_Girl",
+          "wiki_quote": "\"Hollaback Girl\" is a song by American recording artist Gwen Stefani from her debut solo album, Love. Angel. Music. Baby. (2004). As part of Stefani's vision of creating \"a silly dance record\", the song is influenced by 1980s dance and pop music. The song was written by Stefani, Pharrell Williams, and Chad Hugo as a response to Courtney Love's statement that Stefani was a \"cheerleader\" in an interview with Seventeen magazine.",
           "spotify_uri": "spotify:track:0eqH0ALoDQevq59YcQ53KE",
           "rows": [
             "hollaback",
@@ -1260,8 +1260,8 @@
           "id": "michel_telo_ai_se_eu_te_pego",
           "type": "song",
           "answer": "Ai Se Eu Te Pego",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Ai_Se_Eu_Te_Pego",
+          "wiki_quote": "Ai, se eu te pego! (Brazilian Portuguese: [ˈaj ˈsj‿ew tʃi ˈpɛɡu], Oh, If I Get You!) is a 2008 Brazilian song by Sharon Acioly and Antônio Dyggs, with co-authorship of Aline da Fonseca, Amanda Teixeira, Karine Assis Vinagre and first interpreted by Os Meninos de Seu Zeh directed by Dyggs himself.",
           "spotify_uri": "spotify:track:55ocDwF4tEcgTuJnHWqiue",
           "rows": [
             "ai se eu",
@@ -1272,8 +1272,8 @@
           "id": "eiffel_sixty_five_blue",
           "type": "artist",
           "answer": "Eiffel 65",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Blue_(Da_Ba_Dee)",
+          "wiki_quote": "\"Blue (Da Ba Dee)\" is a song released in 1999 by Italian group Eiffel 65, as a single from their debut album Europop (1999). The song is the group's most popular single, reaching number one in many countries such as Ireland, the United Kingdom, the Netherlands, France, Sweden, Switzerland, New Zealand, Norway, Australia, and Germany, as well as reaching No. 6 on the Billboard Hot 100 in the United States.",
           "spotify_uri": "spotify:track:5FgtdSf7I5lClThz2ptWvl",
           "rows": [
           ]
@@ -1282,8 +1282,8 @@
           "id": "fifty_cent_ayo_technology",
           "type": "song",
           "answer": "Ayo Technology",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Ayo_Technology",
+          "wiki_quote": "\"Ayo Technology\" is the fourth single from 50 Cent's third album, Curtis. The song, featuring Justin Timberlake and uncredited vocals from Timbaland, who also produced the song, peaked at #5 on the Billboard Hot 100, number two in the United Kingdom and within the top ten of other national charts across the world.",
           "spotify_uri": "spotify:track:6A6am7JK6SNzIKOGlU53sw",
           "rows": [
             "ayo",
@@ -1294,8 +1294,8 @@
           "id": "green_day_basket_case",
           "type": "song",
           "answer": "Basket Case",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Basket_Case_(song)",
+          "wiki_quote": "\"Basket Case\" is a song by American punk rock band Green Day. It is the seventh track and third single from their third album, Dookie (1994). The song spent five weeks at the top of the Modern Rock Tracks chart.",
           "spotify_uri": "spotify:track:6L89mwZXSOwYl76YXfX13s",
           "rows": [
             "basket",
@@ -1306,8 +1306,8 @@
           "id": "nelly_furtado_im_like_a_bird",
           "type": "song",
           "answer": "I'm like a bird",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/I%27m_Like_a_Bird",
+          "wiki_quote": "\"I'm Like a Bird\" is a song written by Canadian singer-songwriter Nelly Furtado, and produced by Gerald Eaton and Brian West, as the first single from her first album, Whoa, Nelly!. It was one of the most successful singles of 2001, peaking at number one on the Canadian Singles Chart, as well as number two in Australia and New Zealand, number five in the United Kingdom, and number nine in the United States.",
           "spotify_uri": "spotify:track:11eg9aN1TQjFpaVhHFDnO0",
           "rows": [
             "im like",
@@ -1317,9 +1317,9 @@
         {
           "id": "pixies_where_is_my_mind",
           "type": "song",
-          "answer": "Where is my mind",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "answer": "Where is my mind?",
+          "wiki_link": "http://en.wikipedia.org/wiki/Where_Is_My_Mind%3F",
+          "wiki_quote": "\"Where Is My Mind?\" is a song by the American alternative rock band Pixies. It is the seventh track on their 1988 debut album Surfer Rosa. The song was written by frontman Black Francis while he attended the University of Massachusetts Amherst, inspired by his experiences while scuba diving in the Caribbean.",
           "spotify_uri": "spotify:track:5BP0oaQ1VhuaznT77CBXQp",
           "rows": [
             "where is",
@@ -1330,8 +1330,8 @@
           "id": "daft_punk_around_the_world",
           "type": "artist",
           "answer": "Daft Punk",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Around_the_World_(Daft_Punk_song)",
+          "wiki_quote": "\"Around the World\" is a song by the French electronic music duo Daft Punk. It appeared on the duo's debut album, Homework in 1997 and was released as a single the same year. It became a major club hit around the world and arrived at #1 in dance charts.",
           "spotify_uri": "spotify:track:1pKYYY0dkg23sQQXi0Q5zN",
           "rows": [
             "daft",
@@ -1342,8 +1342,8 @@
           "id": "the_temper_trap_sweet_disposition",
           "type": "song",
           "answer": "Sweet Disposition",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Sweet_Disposition",
+          "wiki_quote": "\"Sweet Disposition\" is a song by Australian indie rock band The Temper Trap. Despite The Temper Trap originating from Australia, \"Sweet Disposition\", the lead single from the debut album Conditions has proved to be more popular in the UK and Ireland, reaching No. 6 (in the week beginning 11 October 2009) and No. 8 respectively, while it only reached a peak of No. 14 in Australia.",
           "spotify_uri": "spotify:track:4MrwJDlbxpRCdbZWznfbyx",
           "rows": [
             "sweet",
@@ -1354,8 +1354,8 @@
           "id": "elvis_presley_jailhouse_rock",
           "type": "artist",
           "answer": "Elvis Presley",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Jailhouse_Rock_(song)",
+          "wiki_quote": "\"Jailhouse Rock\" is a song written by Jerry Leiber and Mike Stoller that first became a hit for Elvis Presley. The song was released as a 45rpm single on September 24, 1957, to coincide with the release of Presley's motion picture, Jailhouse Rock.",
           "spotify_uri": "spotify:track:6pyex9B1kBoRIuabBAc4m8",
           "rows": [
             "elvis",
@@ -1366,8 +1366,8 @@
           "id": "lmfao_party_rock_anthem",
           "type": "song",
           "answer": "Party Rock Anthem",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Party_Rock_Anthem",
+          "wiki_quote": "\"Party Rock Anthem\" is a song performed by the American dance-pop recording duo, LMFAO, featuring British singer Lauren Bennett and GoonRock. It was released as the first single from their second album Sorry for Party Rocking in 2011. It interpolates lyrics from Rick Ross's song \"Hustlin\".",
           "spotify_uri": "spotify:track:1CNJyTUh56oj3OCZOZ5way",
           "rows": [
             "party rock",
@@ -1378,8 +1378,8 @@
           "id": "one_direction_what_makes_you_beautiful",
           "type": "song",
           "answer": "What makes you beautiful",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/What_Makes_You_Beautiful",
+          "wiki_quote": "\"What Makes You Beautiful\" is a song by the English-Irish boy band One Direction. It served as their debut single and lead single from their debut studio album, Up All Night (2011). Written by Savan Kotecha and its producers, Rami Yacoub and Carl Falk, the song was released by Syco Records on 11 September 2011.",
           "spotify_uri": "spotify:track:4cluDES4hQEUhmXj6TXkSo",
           "rows": [
             "what makes",
@@ -1390,8 +1390,8 @@
           "id": "oasis_wonderwall",
           "type": "song",
           "answer": "Wonderwall",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Wonderwall_(song)",
+          "wiki_quote": "\"Wonderwall\" is a song by English rock band Oasis, written by the band's guitarist and main songwriter Noel Gallagher. The song was produced by Owen Morris and Gallagher for their second album, (What's the Story) Morning Glory?. According to Gallagher, \"Wonderwall\" describes \"an imaginary friend who's gonna come and save you from yourself\".",
           "spotify_uri": "spotify:track:3lQHHqVMXtnOGxN2BKWXBs",
           "rows": [
           ]
@@ -1400,8 +1400,8 @@
           "id": "katy_perry_i_kissed_a_girl",
           "type": "artist",
           "answer": "Katy Perry",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/I_Kissed_a_Girl ",
+          "wiki_quote": "\"I Kissed a Girl\" is a song by American singer-songwriter Katy Perry for her second studio album, One of the Boys (2008). It was released on April 28, 2008, by Capitol Records as the lead single from the record. The song was written and produced by Dr. Luke, with additional songwriting provided by Perry, Dr. Luke, Max Martin, and Cathy Dennis.",
           "spotify_uri": "spotify:track:14iN3o8ptQ8cFVZTEmyQRV",
           "rows": [
             "katy",
@@ -1417,8 +1417,8 @@
           "id": "biz_markie_just_a_friend",
           "type": "song",
           "answer": "Just a friend",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Just_a_Friend",
+          "wiki_quote": "\"Just a Friend\" is a 1989 comedic hip hop song by rapper Biz Markie, in which he alternates between rap and singing. It is Markie's most successful Pop single, reaching the #9 position on the Billboard charts. The song interpolates the 1968 song \"You Got What I Need\" by singer/songwriter Freddie Scott, whose basic chord and melody provided the base for the song's chorus and made it famous.",
           "spotify_uri": "spotify:track:3yNVfRQlUPViUh8O2V9SQn",
           "rows": [
             "just a",
@@ -1429,8 +1429,8 @@
           "id": "christina_aguilera_candyman",
           "type": "song",
           "answer": "Candyman",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Candyman_(Christina_Aguilera_song)",
+          "wiki_quote": "\"Candyman\" is a song recorded by American recording artist Christina Aguilera, on her fifth studio album, Back to Basics (2006). The song was written by Aguilera and Linda Perry and produced by Perry. \"Candyman\" was planned to be released as the second single from the album, but RCA Records decided to release \"Hurt\" instead. ",
           "spotify_uri": "spotify:track:5lUTzPuiloBHm1qEaJcJfF",
           "rows": [
           ]
@@ -1439,8 +1439,8 @@
           "id": "pink_floyd_another_brick_in_the_wall",
           "type": "song",
           "answer": "Another brick in the wall",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Another_Brick_in_the_Wall",
+          "wiki_quote": "\"Another Brick in the Wall\" is the title of three songs set to variations of the same basic theme, on Pink Floyd's 1979 rock opera, The Wall, subtitled Part 1 (working title \"Reminiscing\"), Part 2 (working title \"Education\"), and Part 3 (working title \"Drugs\"). All parts were written by Pink Floyd's bassist, Roger Waters. Part II is a protest song against rigid schooling in general and boarding schools in the UK in particular.",
           "spotify_uri": "spotify:track:5Yt80fWRB8JG73XlPjrrKP",
           "rows": [
             "another brick",
@@ -1451,8 +1451,8 @@
           "id": "metallica_nothing_else_matters",
           "type": "artist",
           "answer": "Metallica",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Nothing_Else_Matters",
+          "wiki_quote": "\"Nothing Else Matters\" is a power ballad by the American heavy metal band Metallica. It was released in 1992 as the third single from their self-titled fifth studio album, Metallica. The song peaked at number 11 on the Billboard Mainstream Rock Tracks chart as well as top-ten positions on many European charts. \"Nothing Else Matters\" was featured as a playable track in the music video game Guitar Hero: Metallica.",
           "spotify_uri": "spotify:track:3ZFwuJwUpIl0GeXsvF1ELf",
           "rows": [
           ]
@@ -1461,8 +1461,8 @@
           "id": "kings_of_convenience_id_rather_dance_with_you",
           "type": "song",
           "answer": "I'd rather dance with you",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/I%27d_Rather_Dance_with_You",
+          "wiki_quote": "Riot on an Empty Street is the second album from Norwegian duo Kings of Convenience. It features two song collaborations with Canadian musician Feist. It peaked at #2 in Norway, #3 in Italy (staying in the chart for a year) and #49 in the UK.",
           "spotify_uri": "spotify:track:4hGOhC87bn7JBdYykOJJvJ",
           "rows": [
             "id rather",
@@ -1473,8 +1473,8 @@
           "id": "the_cranberries_zombie",
           "type": "song",
           "answer": "Zombie",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Zombie_(song)",
+          "wiki_quote": "\"Zombie\" is a protest song by the Irish rock band The Cranberries. It was released in September 1994 as the lead single from the album No Need to Argue. The song was written by Dolores O'Riordan, the singer of the band, and reached No. 1 on the charts in Australia, Belgium, Denmark, and Germany.",
           "spotify_uri": "spotify:track:6xy6jNeNTYwjnKTDzMyHw2",
           "rows": [
           ]
@@ -1483,8 +1483,8 @@
           "id": "clean_bandit_rather_be",
           "type": "song",
           "answer": "Rather be",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Rather_Be_(Clean_Bandit_song)",
+          "wiki_quote": "\"Rather Be\" is a song by British electronic group Clean Bandit, featuring vocals from Jess Glynne. The track was released on 17 January 2014 as the fourth single from the group's upcoming debut studio album, New Eyes (2014). The song debuted at number one on the UK Singles Chart, and is the fastest-selling single of 2014 so far, and the highest selling January single since \"Spaceman\" by Babylon Zoo, which reached number one in 1996.",
           "spotify_uri": "spotify:track:3s4U7OHV7gnj42VV72eSZ6",
           "rows": [
           ]
@@ -1493,8 +1493,8 @@
           "id": "don_omar_danza_kuduro",
           "type": "song",
           "answer": "Danza Kuduro",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Danza_Kuduro",
+          "wiki_quote": "\"Danza Kuduro\" is a Spanish/Portuguese-language hit song from Don Omar's collaborative album Meet the Orphans released as the lead single from the album on August 15, 2010 through Machete Music and VI Music. It features singer Lucenzo, a French artist of Portuguese descent.",
           "spotify_uri": "spotify:track:2MleiSEPjFSQ9fmKpNSo0n",
           "rows": [
             "danza",
@@ -1505,8 +1505,8 @@
           "id": "robbie_williams_feel",
           "type": "artist",
           "answer": "Robbie Williams",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Feel_(Robbie_Williams_song)",
+          "wiki_quote": "\"Feel\" is a song by British singer-songwriter Robbie Williams. It was released on December 2, 2002 as the lead single from his fifth studio album, Escapology. The song became an international hit, reaching the top of the charts in Austria, Germany, Hungary, Italy, the Netherlands, and top five positions in countries such as Denmark, Ireland and the United Kingdom.",
           "spotify_uri": "spotify:track:3fT9nfnv5uLyPsx6ymre7z",
           "rows": [
             "robbie",
@@ -1517,8 +1517,8 @@
           "id": "radiohead_creep",
           "type": "song",
           "answer": "Creep",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Creep_(Radiohead_song)",
+          "wiki_quote": "\"Creep\" is a song by the English alternative rock band Radiohead. Radiohead released \"Creep\" as their debut single in 1992, and it later appeared on their first album, Pablo Honey (1993). During its initial release, \"Creep\" was not a chart success. However, upon re-release in 1993, it became a worldwide hit.",
           "spotify_uri": "spotify:track:3HfB5hBU0dmBt8T0iCmH42",
           "rows": [
           ]
@@ -1527,8 +1527,8 @@
           "id": "lil_wayne_mirror",
           "type": "song",
           "answer": "Mirror",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Mirror_(Lil_Wayne_song)",
+          "wiki_quote": "\"Mirror\" (also known as Mirror on the Wall) is a song by American rapper Lil Wayne from the deluxe edition of his ninth studio album, Tha Carter IV. Produced by Ramon REO Owen of The Soundkillers, the song features American pop singer Bruno Mars. The song was released to urban radio on November 1, 2011 as the sixth single from Tha Carter IV.",
           "spotify_uri": "",
           "rows": [
           ]
@@ -1537,8 +1537,8 @@
           "id": "the_rolling_stones_satisfaction",
           "type": "artist",
           "answer": "The Rolling Stones",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/(I_Can%27t_Get_No)_Satisfaction",
+          "wiki_quote": "\"(I Can't Get No) Satisfaction\" is a song by the English rock band the Rolling Stones, released in 1965. It was written by Mick Jagger and Keith Richards and produced by Andrew Loog Oldham. Richards' three-note guitar riff – intended to be replaced by horns – opens and drives the song. The lyrics refer to sexual frustration and commercialism.",
           "spotify_uri": "spotify:track:57J2znxukXsXzS3XPuZ1TG",
           "rows": [
             "the rolling",
@@ -1549,8 +1549,8 @@
           "id": "the_rasmus_in_the_shadows",
           "type": "song",
           "answer": "In the shadows",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/In_the_Shadows_(song)",
+          "wiki_quote": "\"In the Shadows\" is a song by Finnish alternative rock band The Rasmus. The single achieved considerable chart success throughout Europe and worldwide, including the United Kingdom, where it reached No.3, and New Zealand, where it topped the charts. It is featured on the group's fifth studio album Dead Letters. ",
           "spotify_uri": "spotify:track:7xoGmovpC3kmH6gcdc4pv3",
           "rows": [
             "in the",
@@ -1561,8 +1561,8 @@
           "id": "the_doors_light_my_fire",
           "type": "song",
           "answer": "Light my fire",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Light_My_Fire",
+          "wiki_quote": "\"Light My Fire\" is a song by The Doors, which was recorded in August 1966 and released the first week of January 1967 on the Doors' debut album. Released as an edited single in April, it spent three weeks at number one on the Billboard Hot 100 chart in late July, and one week on the Cash Box Top 100, nearly a year after its recording.",
           "spotify_uri": "spotify:track:5uvosCdMlFdTXhoazkTI5R",
           "rows": [
             "light",
@@ -1573,8 +1573,8 @@
           "id": "usher_dj_got_us_fallin_in_love",
           "type": "artist",
           "answer": "Usher",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/DJ_Got_Us_Fallin%27_in_Love",
+          "wiki_quote": "\"DJ Got Us Fallin' in Love\" is a song by American R&B recording artist Usher. It features guest vocals from American rapper Pitbull, who co-wrote the song with Savan Kotecha and the producers Shellback and Max Martin.",
           "spotify_uri": "spotify:track:5tXyNhNcsnn7HbcABntOSf",
           "rows": [
           ]
@@ -1588,8 +1588,8 @@
           "id": "madonna_like_a_virgin",
           "type": "song",
           "answer": "Like a virgin",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Like_a_Virgin_(song)",
+          "wiki_quote": "\"Like a Virgin\" is a song by American singer Madonna from her second album of the same name. It was released on November 6, 1984 by Sire Records, as the first single from the album. The song appears on the greatest hits compilation albums The Immaculate Collection (1990) and Celebration (2009). It was written by Billy Steinberg and Tom Kelly and produced by Nile Rodgers",
           "spotify_uri": "spotify:track:1ZPlNanZsJSPK5h9YZZFbZ",
           "rows": [
             "like a",
@@ -1600,8 +1600,8 @@
           "id": "eagle_eye_cherry_save_tonight",
           "type": "song",
           "answer": "Save Tonight",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Save_Tonight",
+          "wiki_quote": "\"Save Tonight\" is a song by Swedish rock musician Eagle-Eye Cherry and the lead single from his 1997 debut album, Desireless. It is the album's opening track and gained substantial radio success, reaching number 3 in Ireland, number 5 in the US, number 6 in the UK, and number 2 in Cherry's native Sweden.",
           "spotify_uri": "spotify:track:51a0aYE5c9JjbYyJHNA7Vh",
           "rows": [
             "save",
@@ -1612,8 +1612,8 @@
           "id": "arctic_monkeys_fluorescent_adolescent",
           "type": "song",
           "answer": "Fluorescent Adolescent",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Fluorescent_Adolescent",
+          "wiki_quote": "\"Fluorescent Adolescent\" is a song by the English indie rock band Arctic Monkeys, released as the second single from their second album Favourite Worst Nightmare. It was released on 4 July 2007 in Japan and 9 July 2007 in the United Kingdom.",
           "spotify_uri": "spotify:track:7wVqvMJsad67kvg4V1nXHm",
           "rows": [
             "fluorescent",
@@ -1624,8 +1624,8 @@
           "id": "calvin_harris_under_control",
           "type": "artist",
           "answer": "Calvin Harris",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Under_Control_(Calvin_Harris_and_Alesso_song)",
+          "wiki_quote": "\"Under Control\" is a song recorded by Scottish DJ Calvin Harris and Swedish DJ Alesso, featuring vocals from English duo Hurts. It was released on 7 October 2013 and will be included on Alesso's upcoming debut studio album.",
           "spotify_uri": "spotify:track:352zfYbDFG8sxkmOAhVeuj",
           "rows": [
             "calvin",
@@ -1636,8 +1636,8 @@
           "id": "queen_another_one_bites_the_dust",
           "type": "song",
           "answer": "Another one bites the dust",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Another_One_Bites_the_Dust",
+          "wiki_quote": "\"Another One Bites the Dust\" is a song by the English rock band Queen. Written by bass guitarist John Deacon, the song featured on the group's eighth studio album The Game (1980). The song was a worldwide hit, charting number one on the US Billboard Hot 100, number two on the R&B charts and the Disco Top 100, and number seven on the UK Singles Chart.",
           "spotify_uri": "spotify:track:5vdp5UmvTsnMEMESIF2Ym7",
           "rows": [
             "another one",
@@ -1648,8 +1648,8 @@
           "id": "sean_paul_get_busy",
           "type": "song",
           "answer": "Get Busy",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Get_Busy",
+          "wiki_quote": "\"Get Busy\" is a 2003 dancehall song by Jamaican dancehall reggae toaster Sean Paul, from his album Dutty Rock. The song was one of the many hits from the jumpy handclap riddim known as the Diwali Riddim, produced by then-newcomer Steven \"Lenky\" Marsden, and was the only song that never made the \"Diwali\" rhythm album on Greensleeves Records as it was more than likely a late entry.",
           "spotify_uri": "spotify:track:5qTvkDrSfvwDv6RBjjcfQr",
           "rows": [
             "get",
@@ -1660,8 +1660,8 @@
           "id": "james_blunt_youre_beautiful",
           "type": "artist",
           "answer": "James Blunt",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/You%27re_Beautiful",
+          "wiki_quote": "\"You're Beautiful\" is a song co-written by British singer James Blunt, Sacha Skarbek, and Amanda Ghost for Blunt's debut album, Back to Bedlam (2004). It was released as the third single from the album in 2005. In the United Kingdom and Australia the song reached number one and number two respectively.",
           "spotify_uri": "spotify:track:0vg4WnUWvze6pBOJDTq99k",
           "rows": [
             "james",
@@ -1672,8 +1672,8 @@
           "id": "incubus_drive",
           "type": "song",
           "answer": "Drive",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Drive_(Incubus_song)",
+          "wiki_quote": "\"Drive\" is a song recorded by American rock band Incubus. It was released in November 2000 as a single from their third album Make Yourself. It is considered the band's biggest hit and breakthrough single, eventually reaching the top of Billboard's modern rock charts on March 3, 2001 and #9 on the Billboard Hot 100 on July 28. In 2001, \"Drive\" won Billboard's award for Modern Rock Single of the Year.",
           "spotify_uri": "spotify:track:7nnWIPM5hwE3DaUBkvOIpy",
           "rows": [
           ]
@@ -1682,8 +1682,8 @@
           "id": "fun_we_are_young",
           "type": "song",
           "answer": "We are young",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/We_Are_Young",
+          "wiki_quote": "\"We Are Young\" is a song recorded by American band Fun featuring Janelle Monáe, for their second studio album, Some Nights (2012). It was released on September 20, 2011 as the lead single from Some Nights. Musically, \"We Are Young\" is an anthem that incorporates the genres of indie pop, alternative rock, and power pop.",
           "spotify_uri": "spotify:track:3ehrxAhYms24KLPG8FZe0W",
           "rows": [
             "we are",
@@ -1694,8 +1694,8 @@
           "id": "mc_hammer_u_cant_touch_this",
           "type": "artist",
           "answer": "MC Hammer",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/U_Can%27t_Touch_This",
+          "wiki_quote": "\"U Can't Touch This\" is a hit single written, produced and performed by MC Hammer from his 1990 album, Please Hammer, Don't Hurt 'Em. The track became Hammer's signature song and is perhaps one of his most recognizable records. In addition, it's considered to be one of his most popular/successful singles to date.",
           "spotify_uri": "spotify:track:1B75hgRqe7A4fwee3g3Wmu",
           "rows": [
             "mc hammer"
@@ -1705,8 +1705,8 @@
           "id": "the_kooks_naive",
           "type": "song",
           "answer": "Naive",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Na%C3%AFve_(song)",
+          "wiki_quote": "\"Naïve\" is a song by British indie rock band The Kooks and is featured on their debut album, Inside In/Inside Out. It was released 27 March 2006 as the fourth single from that album, charting at number five on the UK Singles Chart. The best-selling single of their careers, \"Naïve\" was also the UK's nineteenth best selling single of 2006.",
           "spotify_uri": "spotify:track:7BHPGtpuuWWsvE7cCaMuEU",
           "rows": [
           ]
@@ -1715,8 +1715,8 @@
           "id": "bruno_mars_locked_out_of_heaven",
           "type": "song",
           "answer": "Locked out of Heaven",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Locked_Out_of_Heaven",
+          "wiki_quote": "\"Locked Out of Heaven\" is a song by American singer-songwriter Bruno Mars from his second studio album, Unorthodox Jukebox (2012). It was released as the lead single from the album on October 1, 2012 and serviced to mainstream radio in the United States by Atlantic Records on the same date.",
           "spotify_uri": "spotify:track:3w3y8KPTfNeOKPiqUTakBh",
           "rows": [
             "locked out",
@@ -1727,8 +1727,8 @@
           "id": "the_offspring_the_kids_arent_alright",
           "type": "song",
           "answer": "The kids aren't alright",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/The_Kids_Aren%27t_Alright",
+          "wiki_quote": "\"The Kids Aren't Alright\" is a punk rock song by The Offspring. It is the fifth track from the band's fifth studio album Americana (1998) and was released as the third single from this album. It became another top 10 hit on the US Modern Rock Tracks chart.",
           "spotify_uri": "spotify:track:4sQJXbtxwoKHG7PwMRJ0Ig",
           "rows": [
             "the kids arent",
@@ -1739,8 +1739,8 @@
           "id": "vampire_weekend_a_punk",
           "type": "artist",
           "answer": "Vampire Weekend",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/A-Punk",
+          "wiki_quote": "\"A-Punk\" is a single by indie rock band Vampire Weekend, released on February 28, 2008 as the second single from their 2008 self-titled debut album. The band made their network television debut by performing \"A-Punk\" on the Late Show with David Letterman.",
           "spotify_uri": "spotify:track:5dKBaysNJtfpyNTRa5lqDb",
           "rows": [
             "vampire",
@@ -1751,8 +1751,8 @@
           "id": "the_police_every_breath_you_take",
           "type": "song",
           "answer": "Every breath you take",
-          "wiki_link": "",
-          "wiki_quote": "",
+          "wiki_link": "http://en.wikipedia.org/wiki/Every_Breath_You_Take",
+          "wiki_quote": "\"Every Breath You Take\" is a song by The Police on the band's 1983 album Synchronicity, written by Sting. The single entered the charts at position 36 on 4 June 1983. The single was the biggest hit of 1983, topping the Billboard Hot 100 singles chart for eight weeks and the UK Singles Chart for four weeks. It also topped the Billboard Top Tracks chart for nine weeks.",
           "spotify_uri": "spotify:track:16fzReMJmcLlBccnZCTZNS",
           "rows": [
             "every breath",

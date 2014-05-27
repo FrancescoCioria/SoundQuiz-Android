@@ -2,173 +2,133 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    >
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
-            android:id="@+id/relativeLayout1">
-
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView1"
-                android:adjustViewBounds="true"
-                android:src="@drawable/image"
-                android:background="@android:color/background_dark"
-                android:padding="0.5dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/body1"
-                android:text="Rocky"
-                android:gravity="center_vertical|left"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:textStyle="bold"
-                android:textIsSelectable="false"
-                android:textColor="#FFFFFF"
-                android:layout_below="@+id/imageView1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:textSize="17sp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:gravity="center_horizontal"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_weight="1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/relativeLayout2">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView2"
-                android:adjustViewBounds="true"
-
-                android:src="@drawable/image"
-                android:padding="0.5dp"
-                android:background="@android:color/background_dark" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/body2"
-                android:text="Rocky"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:textStyle="bold"
-                android:textIsSelectable="false"
-                android:textColor="#FFFFFF"
-                android:textSize="17sp"
-                android:layout_alignBottom="@+id/imageView2"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:gravity="center"
-                android:background="#BB000000" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:gravity="center_horizontal"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_weight="1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/relativeLayout3">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView3"
-                android:adjustViewBounds="true"
-                android:src="@drawable/image"
-                android:padding="0.5dp"
-                android:background="@android:color/background_dark" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/body3"
-                android:text="Rocky"
-                android:gravity="center_vertical|left"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:textStyle="bold"
-                android:textIsSelectable="false"
-                android:textColor="#FFFFFF"
-                android:layout_below="@+id/imageView3"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:textSize="17sp"
-                android:layout_alignParentStart="true" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:gravity="center_horizontal"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_weight="1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/relativeLayout4">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView4"
-                android:adjustViewBounds="true"
-                android:src="@drawable/image"
-                android:padding="0.5dp"
-                android:background="@android:color/background_dark" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/body4"
-                android:text="Rocky"
-                android:gravity="center_vertical|left"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:textStyle="bold"
-                android:textIsSelectable="false"
-                android:textColor="#FFFFFF"
-                android:layout_below="@+id/imageView4"
-                android:layout_alignParentRight="true"
-                android:textSize="17sp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-        </RelativeLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
+    <RelativeLayout
         android:layout_width="fill_parent"
-        android:id="@+id/divider"
-        android:layout_height="10dp" />
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/relativeLayout1">
+
+
+        <view
+            class="com.mosquitolabs.soundquiz.CircularImageView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView1"
+            android:adjustViewBounds="true"
+            android:src="@drawable/american_beauty"
+            android:baselineAlignBottom="false" />
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/body1"-->
+            <!--android:text="Rocky"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textIsSelectable="false"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:textSize="17sp"-->
+            <!--android:layout_alignBottom="@+id/imageView1"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:background="#BB000000"-->
+            <!--android:gravity="center"-->
+            <!--android:padding="2dp" />-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:gravity="center_horizontal"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout2">
+
+
+        <view
+            class="com.mosquitolabs.soundquiz.CircularImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:adjustViewBounds="true"
+            android:src="@drawable/american_beauty" />
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/body2"-->
+            <!--android:text="Rocky"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textIsSelectable="false"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:textSize="17sp"-->
+            <!--android:layout_alignBottom="@+id/imageView2"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:gravity="center"-->
+            <!--android:background="#BB000000"-->
+            <!--android:padding="2dp" />-->
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:gravity="center_horizontal"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout3">
+
+
+        <view
+            class="com.mosquitolabs.soundquiz.CircularImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView3"
+            android:adjustViewBounds="true"
+            android:src="@drawable/american_beauty" />
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/body3"-->
+            <!--android:text="Rocky"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textIsSelectable="false"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:textSize="17sp"-->
+            <!--android:layout_alignBottom="@+id/imageView3"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:background="#BB000000"-->
+            <!--android:gravity="center"-->
+            <!--android:padding="2dp" />-->
+
+    </RelativeLayout>
+
+
+</LinearLayout>
 
 </LinearLayout>

@@ -169,9 +169,10 @@
           "type": "character",
           "answer": "Mary Poppins",
           "wiki_link": "http://en.wikipedia.org/wiki/Mary_Poppins",
-          "wiki_quote": "Mary Poppins is the lead character in a series of eight children's books written by Australian P. L. Travers. Throughout the Mary Poppins series, which was published over the period 1934 to 1988, Mary Shepard was the illustrator.[1] The books centre on a magical English nanny, Mary Poppins. She is blown by the East wind to Number Seventeen Cherry Tree Lane, London, and into the Banks' household to care for their children.",
+          "wiki_quote": "Mary Poppins is the lead character in a series of eight children's books written by Australian P. L. Travers. Throughout the Mary Poppins series, which was published over the period 1934 to 1988, Mary Shepard was the illustrator. The books centre on a magical English nanny, Mary Poppins. She is blown by the East wind to Number Seventeen Cherry Tree Lane, London, and into the Banks' household to care for their children.",
           "rows": [
-            "mary","poppins"
+            "mary",
+            "poppins"
           ]
         },
         {
@@ -981,7 +982,9 @@
           "answer": "Ron Weasley",
           "wiki_link": "http://en.wikipedia.org/wiki/Ron_Weasley",
           "wiki_quote": "Ronald Bilius \"Ron\" Weasley is a fictional character in J. K. Rowling's Harry Potter series. His first appearance was in the first book of the series, Harry Potter and the Philosopher's Stone as the best friend of Harry Potter and Hermione Granger. He is a member of the Weasley family, a pure blood family, who reside in \"The Burrow\" outside Ottery St. Catchpole. Along with Harry and Hermione, he is a member of the Gryffindor house. Ron is present in most of the action throughout the series.",
-          "rows": ["ron","weasley"
+          "rows": [
+            "ron",
+            "weasley"
           ]
         },
         {
@@ -1030,7 +1033,7 @@
           "type": "real",
           "answer": "Will Smith",
           "wiki_link": "http://en.wikipedia.org/wiki/Will_Smith",
-          "wiki_quote": "Willard Carroll \"Will\" Smith, Jr. (born September 25, 1968) is an American actor, producer, and rapper. He has enjoyed success in television, film, and music. In April 2007, Newsweek called him the most powerful actor in Hollywood.[4] Smith has been nominated for 4 Golden Globe Awards, 2 Academy Awards, and has won 4 Grammy Awards.",
+          "wiki_quote": "Willard Carroll \"Will\" Smith, Jr. (born September 25, 1968) is an American actor, producer, and rapper. He has enjoyed success in television, film, and music. In April 2007, Newsweek called him the most powerful actor in Hollywood. Smith has been nominated for 4 Golden Globe Awards, 2 Academy Awards, and has won 4 Grammy Awards.",
           "rows": [
             "will",
             "smith"

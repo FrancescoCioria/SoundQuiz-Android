@@ -74,7 +74,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="wrap_content"
                 android:text="Columbia Pictures Industries, Inc. (CPII) is an American film production and distribution studio, that is part of the Columbia TriStar Motion Picture Group, owned by Sony Pictures Entertainment, a subsidiary of Sony Entertainment, a subsidiary of the Japanese conglomerate Sony."
                 android:id="@+id/textViewWiki"
                 android:layout_centerHorizontal="true"
@@ -82,6 +82,22 @@
                 android:textSize="15sp"
                 android:padding="5dp"
                 android:textColor="@color/tile_cinema" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewWiki"
+                android:text="See more about on Wikipedia"
+                android:id="@+id/buttonWiki"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Listen on Spotify"
+                android:id="@+id/buttonSpotify"
+                android:layout_below="@+id/buttonWiki"
+                android:layout_centerHorizontal="true" />
 
         </RelativeLayout>
 
@@ -154,7 +170,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:id="@+id/imageQuiz"
-                android:src="@drawable/columbia_pictures"
+                android:src="@drawable/american_beauty"
                 android:scaleType="fitCenter"
                 android:layout_alignParentLeft="false"
                 android:layout_alignParentTop="false"
