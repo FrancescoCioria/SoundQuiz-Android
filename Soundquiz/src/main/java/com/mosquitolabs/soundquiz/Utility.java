@@ -18,6 +18,8 @@ import android.os.Build;
 import android.preference.PreferenceManager;
 import android.util.TypedValue;
 import android.view.Display;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -27,6 +29,7 @@ import com.amazonaws.Protocol;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.s3.AmazonS3Client;
+import com.mosquitolabs.soundquiz.visualizer.AudioPlayer;
 
 
 public class Utility {
@@ -34,6 +37,11 @@ public class Utility {
     public final static int CINEMA = 0;
     public final static int MUSIC = 1;
     public final static int VIP = 2;
+
+    public final static int START_HINT_COINS = 100;
+    public final static int REMOVE_WRONG_LETTERS_COINS_COST = 60;
+    public final static int REVEAL_FIRST_LETTERS_COINS_COST = 40;
+    public final static int REVEAL_ONE_LETTER_COINS_COST = 20;
 
     private final static String accessKey = "AKIAITISRDB2BZLF5UMA";
     private final static String secretKey = "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";
@@ -44,7 +52,6 @@ public class Utility {
     private static AmazonS3Client s3Client;
 
     private static Drawable[] images = {null, null, null};
-
 
     public static void initUtility(Context context) {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
@@ -59,10 +66,8 @@ public class Utility {
         ConnectivityManager CManager =
                 (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo NInfo = CManager.getActiveNetworkInfo();
-        if (NInfo != null && NInfo.isConnectedOrConnecting()) {
-            return true;
-        }
-        return false;
+
+        return NInfo != null && NInfo.isConnectedOrConnecting();
     }
 
     public static int getFPS() {
@@ -134,7 +139,7 @@ public class Utility {
 
     public static synchronized void saveImageToDisk(Context context, String ID, Bitmap image) {
         try {
-            String path = new String("IMG" + ID);
+            String path = "IMG" + ID;
             java.io.FileOutputStream out = context.openFileOutput(path,
                     Context.MODE_PRIVATE);
             image.compress(Bitmap.CompressFormat.PNG, 90, out);
@@ -147,8 +152,7 @@ public class Utility {
         try {
             String path = blurred ? "IMG_" + ID + "_blur" : "IMG_" + ID;
             java.io.FileInputStream in = context.openFileInput(path);
-            Bitmap image = BitmapFactory.decodeStream(in);
-            return image;
+            return BitmapFactory.decodeStream(in);
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -159,7 +163,7 @@ public class Utility {
         int targetWidth = 200;
         int targetHeight = 200;
         Bitmap targetBitmap = Bitmap.createBitmap(targetWidth,
-                targetHeight,Bitmap.Config.ARGB_8888);
+                targetHeight, Bitmap.Config.ARGB_8888);
 
         Canvas canvas = new Canvas(targetBitmap);
         Path path = new Path();
@@ -167,15 +171,42 @@ public class Utility {
                 ((float) targetHeight - 1) / 2,
                 (Math.min(((float) targetWidth),
                         ((float) targetHeight)) / 2),
-                Path.Direction.CCW);
+                Path.Direction.CCW
+        );
 
         canvas.clipPath(path);
         Bitmap sourceBitmap = scaleBitmapImage;
         canvas.drawBitmap(sourceBitmap,
                 new Rect(0, 0, sourceBitmap.getWidth(),
                         sourceBitmap.getHeight()),
-                new Rect(0, 0, targetWidth, targetHeight), null);
+                new Rect(0, 0, targetWidth, targetHeight), null
+        );
         return targetBitmap;
+    }
+
+    public static void decreaseHintPointsBy(int points) {
+        final int hintPoints = Utility.getSharedPreferences().getInt("hint_coins", START_HINT_COINS);
+        SharedPreferences.Editor editor = Utility.getSharedPreferences().edit();
+        editor.putInt("hint_coins", hintPoints - points);
+        editor.commit();
+        AudioPlayer.getIstance().playCoinDrop();
+    }
+
+    public static void increaseHintPointsForWin() {
+        final int hintPoints = Utility.getSharedPreferences().getInt("hint_coins", START_HINT_COINS);
+        SharedPreferences.Editor editor = Utility.getSharedPreferences().edit();
+        editor.putInt("hint_coins", hintPoints + 5);
+        editor.commit();
+    }
+
+    public static void increaseCoinsToast(Activity context) {
+        LayoutInflater inflater = context.getLayoutInflater();
+        View layout = inflater.inflate(R.layout.toast_coins_increase, null);
+        Toast toast = new Toast(context);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(layout);
+        toast.show();
     }
 
     public static Drawable[] getImages() {
@@ -199,8 +230,6 @@ public class Utility {
             view.setBackgroundDrawable(background);
         }
     }
-
-
 
 
 }

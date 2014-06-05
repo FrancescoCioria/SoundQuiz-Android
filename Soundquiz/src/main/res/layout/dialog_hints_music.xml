@@ -19,66 +19,249 @@
             android:id="@+id/body"
             android:background="@drawable/dialog_layout_music"
             android:padding="16dp"
-            android:layout_margin="15dp"
+            android:layout_margin="20dp"
             android:gravity="center_horizontal">
 
-            <Button
+            <LinearLayout
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/removeWrongLetters"
+                android:gravity="center_vertical"
+                android:layout_marginRight="7dp"
+                android:id="@+id/header">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You have:"
+                    android:textSize="18sp"
+                    android:textColor="@color/dark_music" />
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/coins_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="60"
+                    android:layout_marginLeft="3dp"
+                    android:textSize="18sp"
+                    android:id="@+id/coinsLeft"
+                    android:textColor="@color/dark_music"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="230dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/removeWrongLetters"
-                android:text="Remove wrong letters\n(up to 6)"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/button_music"
-                android:layout_alignParentTop="true"
-                android:layout_alignRight="@+id/askForHelp"
-                android:layout_alignLeft="@+id/askForHelp"
-                android:textColor="#f8d4a0" />
+                android:padding="7dp"
+                android:layout_below="@+id/header"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_music">
 
-            <Button
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remove wrong letters\n(up to 6)"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/coins"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    android:textColor="#f8d4a0" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:id="@+id/coins"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/coins_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="60"
+                        android:layout_marginLeft="3dp"
+                        android:textSize="16sp"
+                        android:textColor="#f8d4a0"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="230dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/revealFirstLetters"
-                android:text="Reveal first letters"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/button_music"
+                android:padding="7dp"
                 android:layout_below="@+id/removeWrongLetters"
-                android:layout_alignRight="@+id/askForHelp"
-                android:textColor="#f8d4a0"
-                android:layout_alignLeft="@+id/askForHelp"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
 
-            <Button
-                android:layout_width="wrap_content"
+                android:background="@drawable/button_music">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reveal first letters"
+                    android:gravity="center_horizontal"
+                    android:layout_centerVertical="true"
+                    android:textColor="#f8d4a0"
+                    android:layout_toLeftOf="@+id/coins"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="16sp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:id="@+id/coins"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/coins_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="40"
+                        android:layout_marginLeft="3dp"
+                        android:textSize="16sp"
+                        android:textColor="#f8d4a0"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="230dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/revealOneLetter"
-                android:text="Reveal one letter"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/button_music"
+                android:padding="7dp"
                 android:layout_below="@+id/revealFirstLetters"
-                android:layout_alignRight="@+id/askForHelp"
-                android:layout_alignLeft="@+id/askForHelp"
-                android:textColor="#f8d4a0"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_music">
 
-            <Button
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reveal one letter"
+                    android:gravity="center_horizontal"
+                    android:layout_centerVertical="true"
+                    android:textColor="#f8d4a0"
+                    android:layout_toLeftOf="@+id/coins"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="16sp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/coins">
+
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/coins_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="20"
+                        android:layout_marginLeft="3dp"
+                        android:textSize="16sp"
+                        android:textColor="#f8d4a0"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="230dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/askForHelp"
-                android:text="Ask your friends for help"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/button_music"
+                android:padding="7dp"
                 android:layout_below="@+id/revealOneLetter"
-                android:layout_alignParentRight="false"
-                android:layout_alignParentEnd="false"
-                android:textColor="#f8d4a0"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_music">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ask your friends for help"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/coins"
+                    android:textColor="#f8d4a0"
+                    android:textSize="16sp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/coins">
+
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/coins_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="0  "
+                        android:layout_marginLeft="3dp"
+                        android:textSize="16sp"
+                        android:textColor="#f8d4a0"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
 
 
         </RelativeLayout>
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:id="@+id/buttonCancel"
             android:layout_alignParentRight="true"
             android:src="@drawable/button_cancel"

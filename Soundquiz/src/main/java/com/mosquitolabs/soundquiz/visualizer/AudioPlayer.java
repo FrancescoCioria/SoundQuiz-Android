@@ -19,9 +19,12 @@ public class AudioPlayer {
     private int SELECT;
     private int REMOVE;
     private int FIREWORKS;
+    private int COINS;
 
     private int res;
     private MediaPlayer.OnCompletionListener listener;
+
+    private Context context;
 
 
     //    private Equalizer equalizer;
@@ -35,18 +38,13 @@ public class AudioPlayer {
     }
 
     public void initSounds(Context context) {
-        AudioManager mgr = (AudioManager) context.getSystemService(
-                Context.AUDIO_SERVICE);
-        float streamVolumeCurrent = mgr
-                .getStreamVolume(AudioManager.STREAM_MUSIC);
-        final float streamVolumeMax = mgr
-                .getStreamMaxVolume(AudioManager.STREAM_MUSIC);
-        VOLUME = streamVolumeCurrent / streamVolumeMax;
+        this.context = context;
         WIN = sounds.load(context, R.raw.tada, 1);
         SELECT = sounds.load(context, R.raw.select, 1);
         WRONG = sounds.load(context, R.raw.wrong_answer, 1);
         REMOVE = sounds.load(context, R.raw.remove, 1);
         FIREWORKS = sounds.load(context, R.raw.fireworks, 1);
+        COINS = sounds.load(context, R.raw.coins_table, 1);
     }
 
     public void createPlayer(Context context, int res) {
@@ -106,25 +104,44 @@ public class AudioPlayer {
     }
 
     public void playWin() {
+        updateVolume();
         sounds.play(WIN, VOLUME, VOLUME, 1, 0, 1.5f);
     }
 
     public void playRemove() {
+        updateVolume();
         sounds.play(REMOVE, VOLUME, VOLUME, 1, 0, 1.5f);
     }
 
     public void playWrong() {
+        updateVolume();
         sounds.play(WRONG, VOLUME, VOLUME, 1, 0, 1.5f);
     }
 
     public void playSelect() {
+        updateVolume();
         sounds.play(SELECT, VOLUME, VOLUME, 1, 0, 1.5f);
     }
 
     public void playFireworks() {
+        updateVolume();
         sounds.play(FIREWORKS, VOLUME, VOLUME, 1, 0, 1.5f);
     }
 
+    public void playCoinDrop() {
+        updateVolume();
+        sounds.play(COINS, VOLUME, VOLUME, 1, 0, 1.5f);
+    }
+
+    private void updateVolume() {
+        AudioManager mgr = (AudioManager) context.getSystemService(
+                Context.AUDIO_SERVICE);
+        float streamVolumeCurrent = mgr
+                .getStreamVolume(AudioManager.STREAM_MUSIC);
+        final float streamVolumeMax = mgr
+                .getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+        VOLUME = streamVolumeCurrent / streamVolumeMax;
+    }
 
 //    public void setData(byte[] bytes) {
 //        this.bytes = bytes;

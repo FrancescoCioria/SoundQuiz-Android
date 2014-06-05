@@ -14,7 +14,6 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
-import android.view.animation.AnimationUtils;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
@@ -22,32 +21,24 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.facebook.UiLifecycleHelper;
+import com.facebook.widget.FacebookDialog;
 import com.mosquitolabs.soundquiz.visualizer.AudioPlayer;
 import com.mosquitolabs.soundquiz.visualizer.CharacterVisualizerHandler;
 import com.mosquitolabs.soundquiz.visualizer.GuitarStringsVisualizerView;
 import com.mosquitolabs.soundquiz.visualizer.StringVisualizerView;
 
 public class QuizActivity extends Activity {
-    private final static int ANIMATION_TIME = 300; // (millis)
-
-
-    // FFB55A18
 
     private int quizIndex;
     private int levelIndex;
     private int packageIndex;
     private int fireworkCounter = 0;
     private boolean isFirstTime = true;
-    private boolean stopShaking = false;
     private boolean fireworkAnimation = false;
-
-    private long lastExecutedTime;
 
     private View hints;
     private View back;
-
-    private boolean stopAnimation = false;
-    private Runnable handlerAnimationTask;
 
     private AudioPlayer audioPlayer = AudioPlayer.getIstance();
     private StringVisualizerView visualizerCinema;
@@ -58,7 +49,6 @@ public class QuizActivity extends Activity {
     private ImageView previous;
     private ImageView play;
     private ImageView playWon;
-    //    private ImageView play;
     private TextView type;
 
     private RelativeLayout revealOneLetterLayout;
@@ -66,10 +56,10 @@ public class QuizActivity extends Activity {
 
     private boolean refreshVisualizer = true;
     private boolean refreshGameView = true;
-    private boolean shakeHints = true;
-    private boolean refreshViews = true;
 
     private View[] fireworkViews = {null, null, null, null};
+
+    private UiLifecycleHelper uiHelper;
 
 
     @Override
@@ -77,6 +67,9 @@ public class QuizActivity extends Activity {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         Utility.hideActionbar(this);
+
+        uiHelper = new UiLifecycleHelper(this, null);
+        uiHelper.onCreate(savedInstanceState);
 
         quizIndex = getIntent().getExtras().getInt("quizIndex");
         levelIndex = getIntent().getExtras().getInt("levelIndex");
@@ -120,12 +113,6 @@ public class QuizActivity extends Activity {
                     type.setVisibility(View.GONE);
                 }
                 type.setText(getQuizData().getType());
-//                findViewById(R.id.imageQuiz).setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        startFireworkAnimation();
-//                    }
-//                });
                 break;
             case Utility.MUSIC:
                 setContentView(R.layout.activity_quiz_music);
@@ -182,19 +169,17 @@ public class QuizActivity extends Activity {
             }
         });
 
-        findViewById(R.id.backToMenuButton).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
-
+//        findViewById(R.id.backToMenuButton).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                onBackPressed();
+//            }
+//        });
 
         fireworkViews[0] = findViewById(R.id.fireworkLeftTop);
         fireworkViews[1] = findViewById(R.id.fireworkRightTop);
         fireworkViews[2] = findViewById(R.id.fireworkLeftBottom);
         fireworkViews[3] = findViewById(R.id.fireworkRightBottom);
-
 
         play.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -207,7 +192,6 @@ public class QuizActivity extends Activity {
             @Override
             public void onClick(View v) {
                 togglePlay();
-//                Utility.shortToast("toggleplay", QuizActivity.this);
             }
         });
 
@@ -218,6 +202,12 @@ public class QuizActivity extends Activity {
             }
         });
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        uiHelper.onSaveInstanceState(outState);
     }
 
     @Override
@@ -239,18 +229,22 @@ public class QuizActivity extends Activity {
         playWon.setVisibility(getQuizData().isSolved() ? View.VISIBLE : View.GONE);
         refreshGameView = true;
         isFirstTime = false;
+
+        uiHelper.onResume();
     }
 
     @Override
     protected void onPause() {
         cleanUp();
         super.onPause();
+        uiHelper.onPause();
     }
 
     @Override
     protected void onDestroy() {
         cleanUp();
         super.onDestroy();
+        uiHelper.onDestroy();
     }
 
     @Override
@@ -278,7 +272,6 @@ public class QuizActivity extends Activity {
     }
 
     private void startLoop() {
-        lastExecutedTime = System.currentTimeMillis();
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
@@ -319,9 +312,9 @@ public class QuizActivity extends Activity {
 
     }
 
-    public void resetPlayer() {
-        audioPlayer.resetPlayer(this);
-
+    private void initGameView() {
+        gameView.init(getQuizData());
+        refreshGameView = true;
     }
 
     private void initViews() {
@@ -458,6 +451,18 @@ public class QuizActivity extends Activity {
         Utility.setMargins(guitar, center, 0, 0, 0);
         Utility.setMargins(play, guitarHeight * (97 + 10) / 678, guitarHeight * (104 + 10) / 678, 0, 0);
 
+        TextView title = (TextView) findViewById(R.id.textViewSong);
+        TextView artist = (TextView) findViewById(R.id.textViewArtist);
+
+        title.getLayoutParams().height = artist.getLayoutParams().height = guitarHeight * 98 / 678;
+        title.getLayoutParams().width = artist.getLayoutParams().width = center * 9 / 10;
+
+        title.setTextSize(Utility.pixelsToSp(this, guitarHeight * 98 / 678 * 5 / 10));
+        artist.setTextSize(Utility.pixelsToSp(this, guitarHeight * 98 / 678 * 5 / 10));
+
+        Utility.setMargins(findViewById(R.id.textViewSong), center / 20, 0, 0, 0);
+        Utility.setMargins(findViewById(R.id.textViewArtist), 0, 0, center / 20, 0);
+
         updateMusicLabels();
 
     }
@@ -497,10 +502,6 @@ public class QuizActivity extends Activity {
         Utility.setMargins(findViewById(R.id.body), 0, layoutTopMargin, 0, 0);
     }
 
-    private void initGameView() {
-        gameView.init(getQuizData());
-        refreshGameView = true;
-    }
 
     private void initButtons() {
         if (quizIndex == 14) {
@@ -578,7 +579,11 @@ public class QuizActivity extends Activity {
             findViewById(R.id.buttonSpotify).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getQuizData().getSpotifyURI())));
+                    try {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getQuizData().getSpotifyURI())));
+                    }catch (Exception e){
+                        Utility.longToast("Failed to open a Spotify.\nDo you have Spotify installed?", QuizActivity.this);
+                    }
                 }
             });
         } else {
@@ -601,6 +606,8 @@ public class QuizActivity extends Activity {
         } else {
             findViewById(R.id.buttonSpotify).setVisibility(View.GONE);
         }
+
+        findViewById(R.id.labelsLayout).setVisibility(View.GONE);
 
     }
 
@@ -677,7 +684,6 @@ public class QuizActivity extends Activity {
         scaleAnimation.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-
             }
 
             @Override
@@ -738,19 +744,15 @@ public class QuizActivity extends Activity {
                 visualizerCharacter.stopAnimation();
                 break;
         }
-//        play.setVisibility(quizData.isSolved() ? View.GONE : View.VISIBLE);
         setButtonPlayVisibile(true);
     }
 
     private void setButtonPlayVisibile(boolean visible) {
         if (getQuizData().isSolved()) {
-//            playWon.setVisibility(visible ? View.VISIBLE : View.GONE);
             playWon.setVisibility(View.VISIBLE);
             playWon.setImageDrawable(getResources().getDrawable(visible ? R.drawable.button_play_won : R.drawable.button_pause));
-            Log.d("BUTTON_PLAY_WON", " " + visible);
         } else {
             play.setVisibility(visible ? View.VISIBLE : View.GONE);
-            Log.d("BUTTON_PLAY", " " + visible);
         }
     }
 
@@ -778,12 +780,10 @@ public class QuizActivity extends Activity {
         stopVisualizerAnimation();
         refreshVisualizer = false;
         refreshGameView = false;
-        shakeHints = false;
 
         audioPlayer.invalidatePlayer();
 
     }
-
 
     private void changeToRevealOneLetterMode() {
         gameView.changeToRevealOneLetterMode();
@@ -798,12 +798,6 @@ public class QuizActivity extends Activity {
         findViewById(R.id.followingLayout).setVisibility(View.VISIBLE);
         findViewById(R.id.previousLayout).setVisibility(View.VISIBLE);
         gameView.changeToGameMode();
-    }
-
-
-    private void startShakeAnimation() {
-        Animation shake = AnimationUtils.loadAnimation(this, R.anim.anim_shake);
-        hints.startAnimation(shake);
     }
 
 
@@ -861,14 +855,6 @@ public class QuizActivity extends Activity {
         findViewById(R.id.hints).setVisibility(View.VISIBLE);
         findViewById(R.id.layoutImageQuiz).setVisibility(View.GONE);
 
-
-//        int res = getResources().getIdentifier(getQuizData().getID(), "drawable", getPackageName());
-//        try {
-//            ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(res));
-//        } catch (Exception e) {
-//            ((ImageView) findViewById(R.id.imageQuiz)).setImageDrawable(getResources().getDrawable(R.drawable.twenty_century_fox));
-//        }
-
         refreshVisualizer = true;
 
         switch (packageIndex) {
@@ -880,6 +866,7 @@ public class QuizActivity extends Activity {
                 break;
             case Utility.MUSIC:
                 setVisualizerVisible(true);
+                findViewById(R.id.labelsLayout).setVisibility(View.VISIBLE);
                 updateMusicLabels();
                 break;
             case Utility.VIP:
@@ -891,6 +878,9 @@ public class QuizActivity extends Activity {
     }
 
     private void openHintDialog() {
+
+        final int hintCoins = Utility.getSharedPreferences().getInt("hint_coins", Utility.START_HINT_COINS);
+
         final Dialog dialog = new Dialog(this, R.style.Theme_Dialog);
         switch (getPackageIndex()) {
             case Utility.CINEMA:
@@ -904,6 +894,9 @@ public class QuizActivity extends Activity {
                 break;
         }
 
+        TextView coinsLeft = (TextView) dialog.findViewById(R.id.coinsLeft);
+        coinsLeft.setText("" + hintCoins);
+
         dialog.findViewById(R.id.main).getLayoutParams().width = Utility.getWidth(this) * 80 / 100;
 
         dialog.findViewById(R.id.buttonCancel).setOnClickListener(new View.OnClickListener() {
@@ -913,27 +906,65 @@ public class QuizActivity extends Activity {
             }
         });
 
+
+        dialog.findViewById(R.id.removeWrongLetters).setActivated(hintCoins >= Utility.REMOVE_WRONG_LETTERS_COINS_COST && !getQuizData().hasRemovedWrongLetters());
+        dialog.findViewById(R.id.revealFirstLetters).setActivated(hintCoins >= Utility.REVEAL_FIRST_LETTERS_COINS_COST && !getQuizData().hasRevealedFirstLetters());
+        dialog.findViewById(R.id.revealOneLetter).setActivated(hintCoins >= Utility.REVEAL_ONE_LETTER_COINS_COST);
+        dialog.findViewById(R.id.askForHelp).setActivated(true);
+
         dialog.findViewById(R.id.removeWrongLetters).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialog.cancel();
-                gameView.removeWrongLetters();
+                if (hintCoins >= Utility.REMOVE_WRONG_LETTERS_COINS_COST && !getQuizData().hasRemovedWrongLetters()) {
+                    dialog.cancel();
+                    gameView.removeWrongLetters();
+                    getQuizData().setRemovedWrongLetters();
+                    PackageCollection.getInstance().modifyQuizInSavedData(getQuizData());
+                    Utility.decreaseHintPointsBy(Utility.REMOVE_WRONG_LETTERS_COINS_COST);
+
+                } else if (getQuizData().hasRemovedWrongLetters()) {
+                    Utility.shortToast("You've already used this hint!", QuizActivity.this);
+                } else if (hintCoins >= Utility.REMOVE_WRONG_LETTERS_COINS_COST) {
+                    Utility.shortToast("You don't have enough coins", QuizActivity.this);
+                }
             }
         });
 
         dialog.findViewById(R.id.revealFirstLetters).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialog.cancel();
-                gameView.revealFirstLetters();
+                if (hintCoins >= Utility.REVEAL_FIRST_LETTERS_COINS_COST && !getQuizData().hasRevealedFirstLetters()) {
+                    dialog.cancel();
+                    gameView.revealFirstLetters();
+                    getQuizData().setRevealedFirstLetters();
+                    PackageCollection.getInstance().modifyQuizInSavedData(getQuizData());
+                    Utility.decreaseHintPointsBy(Utility.REVEAL_FIRST_LETTERS_COINS_COST);
+                } else if (getQuizData().hasRevealedFirstLetters()) {
+                    Utility.shortToast("You've already used this hint!", QuizActivity.this);
+                } else if (hintCoins >= Utility.REVEAL_FIRST_LETTERS_COINS_COST) {
+                    Utility.shortToast("You don't have enough coins", QuizActivity.this);
+                }
             }
         });
 
         dialog.findViewById(R.id.revealOneLetter).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialog.cancel();
-                changeToRevealOneLetterMode();
+                if (hintCoins >= Utility.REVEAL_ONE_LETTER_COINS_COST) {
+                    dialog.cancel();
+                    changeToRevealOneLetterMode();
+                } else {
+                    Utility.shortToast("You don't have enough coins", QuizActivity.this);
+                }
+            }
+        });
+
+        dialog.findViewById(R.id.askForHelp).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                createShareDialog();
+
             }
         });
 
@@ -947,14 +978,8 @@ public class QuizActivity extends Activity {
         TextView song = (TextView) findViewById(R.id.textViewSong);
         TextView artist = (TextView) findViewById(R.id.textViewArtist);
 
-//        song.setTextSize(getQuizData().getType().toLowerCase().equals("song") ? Utility.pixelsToSp(this, labelLayoutHeight * 7 / 10) : Utility.pixelsToSp(this, labelLayoutHeight / 2));
-//        song.setTextColor(getQuizData().getType().toLowerCase().equals("song") ? Color.parseColor("#ffffff") : Color.parseColor("#80000000"));
-//
-//        artist.setTextSize(getQuizData().getType().toLowerCase().equals("artist") ? Utility.pixelsToSp(this, labelLayoutHeight * 7 / 10) : Utility.pixelsToSp(this, labelLayoutHeight / 2));
-//        artist.setTextColor(getQuizData().getType().toLowerCase().equals("artist") ? Color.parseColor("#ffffff") : Color.parseColor("#80000000"));
-
-        setAlpha(song,getQuizData().getType().toLowerCase().equals("song") ? 1 : 0.4f);
-        setAlpha(artist,getQuizData().getType().toLowerCase().equals("song") ? 1 : 0.4f);
+        setAlpha(song, getQuizData().getType().toLowerCase().equals("song") ? 1 : 0.25f);
+        setAlpha(artist, getQuizData().getType().toLowerCase().equals("artist") ? 1 : 0.25f);
 
         Utility.setMargins(findViewById(R.id.labelsLayout), 0, 0, 0, guitarHeight * 28 / 678);
         findViewById(R.id.labelsLayout).getLayoutParams().height = labelLayoutHeight;
@@ -975,6 +1000,67 @@ public class QuizActivity extends Activity {
 
     public int getPackageIndex() {
         return packageIndex;
+    }
+
+
+    private void createShareDialog() {
+        if (FacebookDialog.canPresentShareDialog(getApplicationContext(),
+                FacebookDialog.ShareDialogFeature.SHARE_DIALOG)) {
+            String categoryName = "";
+            String name = "Do you recognize this ";
+
+            switch (packageIndex) {
+                case Utility.CINEMA:
+                    categoryName = "themes";
+                    name += "theme?";
+                    break;
+
+                case Utility.MUSIC:
+                    categoryName = "music";
+                    name += "song?";
+                    break;
+
+                case Utility.VIP:
+                    categoryName = "voices";
+                    name += "voice?";
+                    break;
+            }
+
+            String path = "http://soundquiz.s3.amazonaws.com/sounds/" + categoryName + "_" + levelIndex + "_" + quizIndex + ".mp3";
+
+            // Publish the post using the Share Dialog
+            FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(this)
+                    .setLink(path)
+                    .setApplicationName("SoundQuiz")
+                    .setCaption("SoundQuiz")
+                    .setName(name)
+                    .setDescription("SoundQuiz is the funniest quiz for movie themes, songs and character voices! Search it on Google Play")
+                    .setPicture("http://soundquiz.s3.amazonaws.com/sharedialog/play.png")
+                    .build();
+            uiHelper.trackPendingDialogCall(shareDialog.present());
+
+        } else {
+            Utility.longToast("Failed to create a Share Dialog.\nDo you have Facebook installed?", this);
+        }
+
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        uiHelper.onActivityResult(requestCode, resultCode, data, new FacebookDialog.Callback() {
+            @Override
+            public void onError(FacebookDialog.PendingCall pendingCall, Exception error, Bundle data) {
+                Log.e("Activity", String.format("Error: %s", error.toString()));
+            }
+
+            @Override
+            public void onComplete(FacebookDialog.PendingCall pendingCall, Bundle data) {
+                Log.i("Activity", "Success!");
+            }
+        });
     }
 
 

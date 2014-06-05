@@ -3,6 +3,7 @@ package com.mosquitolabs.soundquiz;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,10 @@ import android.widget.TextView;
 
 public class PackageFragment extends Fragment {
 
+    private TextView unlockedTextView;
+    private TextView solvedTextView;
+    private ProgressBar progressBar;
+
 
     public static PackageFragment newInstance(int packageIndex) {
 
@@ -21,6 +26,8 @@ public class PackageFragment extends Fragment {
         Bundle bundle = new Bundle();
         bundle.putInt("packageIndex", packageIndex);
         fragment.setArguments(bundle);
+
+        Log.d("PACKAGE_FRAGMENT", " newInstance");
 
         return fragment;
     }
@@ -33,30 +40,18 @@ public class PackageFragment extends Fragment {
                 R.layout.fragment_package_complete, container, false);
         final int packageIndex = getArguments().getInt("packageIndex", 0);
 
+        Log.d("PACKAGE_FRAGMENT", " onCreateView");
 
         TextView nameTextView = (TextView) rootView.findViewById(R.id.nameTextView);
-        TextView unlockedTextView = (TextView) rootView.findViewById(R.id.unlockedTextView);
-        TextView solvedTextView = (TextView) rootView.findViewById(R.id.solvedTextView);
-        ProgressBar progressBar = (ProgressBar) rootView.findViewById(R.id.progressBar);
+        unlockedTextView = (TextView) rootView.findViewById(R.id.unlockedTextView);
+        solvedTextView = (TextView) rootView.findViewById(R.id.solvedTextView);
+        progressBar = (ProgressBar) rootView.findViewById(R.id.progressBar);
         Button play = (Button) rootView.findViewById(R.id.playButton);
         View layout = rootView.findViewById(R.id.fragmentRelativeLayout);
         RelativeLayout header = (RelativeLayout) rootView.findViewById(R.id.header);
         RelativeLayout body = (RelativeLayout) rootView.findViewById(R.id.body);
 
         rootView.findViewById(R.id.parentRelativeLayout).setTag(packageIndex);
-
-//        switch (packageIndex) {
-//            case Utility.CINEMA:
-//                header.setBackgroundResource(R.drawable.fragment_round_header_cinema);
-//                body.setBackgroundResource(R.drawable.fragment_round_body_cinema);
-//                break;
-//            case Utility.MUSIC:
-//                header.setBackgroundResource(R.drawable.fragment_round_header_music);
-//                body.setBackgroundResource(R.drawable.fragment_round_body_music);
-//                break;
-//            case Utility.VIP:
-//                break;
-//        }
 
         final PackageListActivity activity = (PackageListActivity) getActivity();
 
@@ -89,21 +84,20 @@ public class PackageFragment extends Fragment {
         unlockedTextView.setTextSize(Utility.pixelsToSp(activity, bodyHeight * 0.07f));
         solvedTextView.setTextSize(Utility.pixelsToSp(activity, bodyHeight * 0.07f));
 
-//        progressBar.getLayoutParams().height = (int) (bodyHeight * 0.1f);
 
-        int solvedQuizzes = 0;
-        for (LevelData levelData : PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList()) {
-            for (QuizData quizData : levelData.getQuizList()) {
-                solvedQuizzes += quizData.isSolved() ? 1 : 0;
-            }
-        }
-        int numberOfLevels = PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList().size();
-        unlockedTextView.setText("unlocked: " + (solvedQuizzes / 10 + 1) + " / " + numberOfLevels);
-        solvedTextView.setText("solved: " + solvedQuizzes + " / " + (numberOfLevels * 15));
-        progressBar.setProgress(solvedQuizzes * 100 / (numberOfLevels * 15));
+//        int solvedQuizzes = 0;
+//        for (LevelData levelData : PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList()) {
+//            for (QuizData quizData : levelData.getQuizList()) {
+//                solvedQuizzes += quizData.isSolved() ? 1 : 0;
+//            }
+//        }
+//        int numberOfLevels = PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList().size();
+//        unlockedTextView.setText("unlocked: " + (solvedQuizzes / 10 + 1) + " / " + numberOfLevels);
+//        solvedTextView.setText("solved: " + solvedQuizzes + " / " + (numberOfLevels * 15));
+//        progressBar.setProgress(solvedQuizzes * 100 / (numberOfLevels * 15));
 
-//        Typeface tf = Typeface.createFromAsset(getActivity().getAssets(), "fonts/gothic.ttf");
-//        unlockedTextView.setTypeface(tf);
+        updateProgress();
+
 
         play.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,5 +117,20 @@ public class PackageFragment extends Fragment {
         mIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         getActivity().startActivity(mIntent);
     }
+
+    public void updateProgress() {
+        final int packageIndex = getArguments().getInt("packageIndex", 0);
+        int solvedQuizzes = 0;
+        for (LevelData levelData : PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList()) {
+            for (QuizData quizData : levelData.getQuizList()) {
+                solvedQuizzes += quizData.isSolved() ? 1 : 0;
+            }
+        }
+        int numberOfLevels = PackageCollection.getInstance().getPackageCollection().get(packageIndex).getLevelList().size();
+        unlockedTextView.setText("unlocked: " + (solvedQuizzes / 10 + 1) + " / " + numberOfLevels);
+        solvedTextView.setText("solved: " + solvedQuizzes + " / " + (numberOfLevels * 15));
+        progressBar.setProgress(solvedQuizzes * 100 / (numberOfLevels * 15));
+    }
+
 
 }

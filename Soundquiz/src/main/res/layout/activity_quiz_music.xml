@@ -66,12 +66,12 @@
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/buttons"
             android:id="@+id/wiki"
             android:layout_marginBottom="10dp"
             android:gravity="center_horizontal"
             android:background="@drawable/gameview_rounded_layout_music"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:layout_centerVertical="true">
 
             <TextView
                 android:layout_width="match_parent"
@@ -84,41 +84,37 @@
                 android:textSize="20sp"
                 android:textColor="@color/light_music" />
 
-            <Button
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textViewWiki"
-                android:text="See more about on Wikipedia"
-                android:id="@+id/buttonWiki"
-                android:layout_centerHorizontal="true" />
+                android:layout_below="@+id/textViewWiki">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Listen on Spotify"
-                android:id="@+id/buttonSpotify"
-                android:layout_below="@+id/buttonWiki"
-                android:layout_centerHorizontal="true" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Read more"
+                    android:id="@+id/buttonWiki"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true" />
+
+                <!--android:layout_below="@+id/textViewWiki"-->
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Listen on Spotify"
+                    android:id="@+id/buttonSpotify"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true" />
+
+                <!--android:layout_below="@+id/buttonWiki"-->
+
+
+            </RelativeLayout>
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:id="@+id/buttons">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Back to menu"
-                android:id="@+id/backToMenuButton"
-                android:layout_centerHorizontal="true" />
-
-        </RelativeLayout>
     </RelativeLayout>
 
     <RelativeLayout

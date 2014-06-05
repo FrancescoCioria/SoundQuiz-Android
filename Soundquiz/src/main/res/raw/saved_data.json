@@ -1,0 +1,3362 @@
+[
+  {
+    "is_solved": false,
+    "id": "the_lion_king_azbeigna",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_oc",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "star_wars_imperial_march",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "psycho",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "beverly_hills_cop",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_blues_brothers",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "breaking_bad",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "ghostbusters",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "jurassic_park",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "juno",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "scrubs",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_godfather",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "looney_tunes",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_lord_of_the_rings",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "toy_story",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "chariots_of_fire",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "gilmore_girls",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "life_is_beautiful",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "despicable_me",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "into_the_wild",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "happy_days",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "avatar",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "indiana_jones",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_flinstones",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "requiem_for_a_dream",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "james_bond",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "south_park",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_big_bang_theory",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "tom_and_jerry",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "saw",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "titanic",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "hatari",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "mary_poppins",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "csi",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "friends",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "inception",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "jaws",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "jersey_shore",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "popeye",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "pulp_fiction",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "rocky",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "shrek",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_simpsons",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_sopranos",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "top_gear",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "family_guy",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "fantasia",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "forrest_gump",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "game_of_thrones",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "halloween",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "how_i_met_your_mother",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_addams_family",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "kill_bill",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "pirates_of_the_caribbean",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "skins",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_good_the_bad_and_the_ugly",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_mission",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "top_gun",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "two_and_a_half_men",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_kings_speech",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "a_space_odyssey",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "american_beauty",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "californication",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "conquest_of_paradise",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "dawsons_creek",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "et",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "grease",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "greys_anatomy",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "harry_potter",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "spongebob",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_matrix",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_nightmare_before_christmas",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_walking_dead",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_x_files",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "gladiator",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "futurama",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "x_factor",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_a_team",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "modern_family",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "fresh_prince_of_bel_air",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "amelie",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_bridge_on_the_river_kwai",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "monsters_inc",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "saturday_night_live",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "schindlers_list",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "teletubbies",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_last_of_the_mohicans",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_office",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_pink_panther",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "true_blood",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_magnificent_seven",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "desperate_housewives",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "for_a_few_dollars_more",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "kung_fu_panda",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "rain_man",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "glee",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "malcolm_in_the_middle",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "mission_impossible",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "reservoir_dogs",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "sex_and_the_city",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "star_trek",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "back_to_the_future",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "dragonball",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "doctor_who",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "love_story",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "smallville",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "hugo",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "beverly_hills",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "adventure_time",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "frozen",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "breakfast_at_tiffany",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "star_wars_main",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "madagascar",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "mr_bean",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "thirty_rock",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "prison_break",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "up",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_chronicles_of_narnia",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "braveheart",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "boardwalk_empire",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "nine_and_a_half_weeks",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "doctor_house",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "ratatouille",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_da_vinci_code",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "batman",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_lion_king_this_land",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "seinfield",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "forbidden_games",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "er",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "veronica_mars",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "ghost",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "buffy_the_vampire_slayer",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "spirited_away",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_lord_of_the_rings_the_two_towers",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "flashdance",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "american_dad",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "dharma_and_greg",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "midnight_in_paris",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "ice_age",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_sting",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "shawshank_redemption",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "dexter",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "superman",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "fringe",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "new_girl",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_voice",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_millionaire",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "how_to_train_your_dragon",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "will_and_grace",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "spiderman",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_beatles_hey_jude",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "miley_cyrus_wrecking_ball",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "lorde_royals",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "daft_punk_get_lucky",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "bastille_pompeii",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "justin_timberlake_mirrors",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "madonna_hung_up",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "rihanna_diamonds",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "adele_someone_like_you",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "robin_thick_blurred_lines",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "beyonce_single_ladies",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "eminem_not_afraid",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "katy_perry_firework",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "macklemore_cant_hold_us",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "imagine_dragons_radioactive",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "avicii_wake_me_up",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "frank_sinatra_come_fly_with_me",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "bruno_mars_the_lazy_song",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "nsync_bye_bye_bye",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "linkin_park_numb",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "demi_lovato_heart_attack",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "duck_sauce_barbra_streisand",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "queen_bohemian_rhapsody",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "passenger_let_her_go",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "lmfao_sexy_and_i_know_it",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "maroon_five_payphone",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "coldplay_paradise",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "kesha_die_young",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "nelly_furtado_say_it_right",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_black_keys_lonely_boy",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "fifty_cent_in_da_club",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "onerepublic_counting_stars",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "blur_song_two",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "keane_somewhere_only_we_know",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_black_eyed_peas_i_gotta_feeling",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "capital_cities_safe_and_sound",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "skrillex_bangarang",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "psy_gangnam_style",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "muse_time_is_running_out",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_beatles_yesterday",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "alicia_keys_girl_on_fire",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "abba_dancing_queen",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "aretha_franklin_respect",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "acdc_back_in_black",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "shakira_waka_waka",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "avril_lavigne_girlfriend",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_ramones_blitzkrieg_bop",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "owl_city_fireflies",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_beach_boys_surfin_usa",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "missy_elliot_work_it",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "gotye_somebody_that_i_used_to_know",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "nicki_minaj_starships",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "tracy_chapman_fast_car",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "michael_jackson_bad",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "martin_garrix_animals",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "rem_losing_my_religion",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "mgmt_electric_feel",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "nirvana_smells_like_teen_spirits",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "deep_purple_smoke_on_the_water",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "bon_jovi_livin_on_a_prayer",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "spice_girls_wannabe",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "pink_just_give_me_a_reason",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "red_hot_chili_peppers_californication",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "naughty_boy_la_la_la",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "lana_del_rey_summertime_sadness",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "tokio_hotel_monsoon",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "eminem_without_me",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "empire_of_the_sun_walking_on_a_dream",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "outkast_hey_ya",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "kanye_west_heartless",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "pitbull_timber",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "maroon_five_she_will_be_loved",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_strokes_you_only_live_once",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "mia_paper_planes",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "cypress_hill_insane_in_the_brain",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "bob_marley_one_love",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_calling_wherever_you_will_go",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "ylvis_the_fox",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "jessie_j_price_tag",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "limp_bizkit_rollin",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "azealia_banks_two_one_two",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "blink_one_eight_two_all_the_small_things",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "fatboy_slim_the_rockafeller_skank",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "miley_cyrus_we_cant_stop",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "u_two_one",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "macklemore_thrift_shop",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_killers_mr_brightside",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "snoop_dogg_drop_it_like_its_hot",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "eminem_love_the_way_you_lie",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "guns_n_roses_paradise_city",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "four_non_blondes_whats_up",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_lonely_island_i_just_had_sex",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "pharrell_williams_happy",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "lynyrd_skynyrd_sweet_home_alabama",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "dire_straits_sultans_of_swing",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "jennifer_lopez_dont_cost_a_thing",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "coldplay_fix_you",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "adele_rolling_in_the_deep",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "muse_supermassive_black_hole",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "led_zeppelin_stairway_to_heaven",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "nicki_minaj_super_bass",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "kasabian_club_foot",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "bob_dylan_like_a_rolling_stone",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "justin_timberlake_senorita",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "imagine_dragons_demons",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_chemical_brothers_galvanize",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "gwen_stefani_hollaback_girl",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "michel_telo_ai_se_eu_te_pego",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "eiffel_sixty_five_blue",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "fifty_cent_ayo_technology",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "green_day_basket_case",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "nelly_furtado_im_like_a_bird",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "pixies_where_is_my_mind",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "daft_punk_around_the_world",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_temper_trap_sweet_disposition",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "elvis_presley_jailhouse_rock",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "lmfao_party_rock_anthem",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "one_direction_what_makes_you_beautiful",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "oasis_wonderwall",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "katy_perry_i_kissed_a_girl",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "biz_markie_just_a_friend",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "christina_aguilera_candyman",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "pink_floyd_another_brick_in_the_wall",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "metallica_nothing_else_matters",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "kings_of_convenience_id_rather_dance_with_you",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_cranberries_zombie",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "clean_bandit_rather_be",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "don_omar_danza_kuduro",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "robbie_williams_feel",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "radiohead_creep",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "lil_wayne_mirror",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_rolling_stones_satisfaction",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_rasmus_in_the_shadows",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_doors_light_my_fire",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "usher_dj_got_us_fallin_in_love",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "madonna_like_a_virgin",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "eagle_eye_cherry_save_tonight",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "arctic_monkeys_fluorescent_adolescent",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "calvin_harris_under_control",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "queen_another_one_bites_the_dust",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "sean_paul_get_busy",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "james_blunt_youre_beautiful",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "incubus_drive",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "fun_we_are_young",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "mc_hammer_u_cant_touch_this",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_kooks_naive",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "bruno_mars_locked_out_of_heaven",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_offspring_the_kids_arent_alright",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "vampire_weekend_a_punk",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_police_every_breath_you_take",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "mario",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "gandalf",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "obama",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "barney_gumble",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "snape",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "jack_sparrow",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "bender",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "neil_armstrong",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "bugs_bunny",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "marge_simpson",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "darth_vader",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "john_kennedy",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "buzz_lightyear",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "peter_griffin",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "miley_cyrus",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "mary_poppins_character",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "quagmire",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "donald_duck",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "morgan_freeman",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "george_w_bush",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "bart_simpson",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "spongebob_character",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "cartman",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "yoda",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "martin_luther_king",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "apu",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "dobby",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "tweety",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "lois",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "forrest_gump_character",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "katniss",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "morpheus",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "kenny",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "jack_nicholson",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "cleveland",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "lady_gaga",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "dumbledore",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "chief_wiggum",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "marilyn_monroe",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "et_character",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "mufasa",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "pope_francesco",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "voldemort",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "homer_simpson",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_joker",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "barney_stinson",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "krusty",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "duffy_duck",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "chris_griffin",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "leonidas",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "rocky_balboa",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "chewbacca",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "ralph_wiggum",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "gollum",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "james_bond_character",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "brian_griffin",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "vito_corleone",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "hermione",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "mickey_mouse",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "batman_character",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "eddie_murphy",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "wall_e_character",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "consuela",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "walter_lebowski",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "rihanna",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "kent_brockman",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "fred_flintstone",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "kyle",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "ace_ventura",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "harry_potter_character",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "milhouse",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "goofy",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "steve_jobs",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "herbert",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "ray_william_johnson",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "maximus_decimus_meridius",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "ned_flanders",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "mr_hanky",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "malfoy",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "dr_hannibal_lecter",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "fairy_godmother",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "tom_hanks",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "abe_simpson",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "pewdiepie",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "robert_de_niro",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "tyler_durden",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "butters",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "george_clooney",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "moe",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "samuel_l_jackson",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "peter_pan",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "sherlock_holmes",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "nelson",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "ron_weasley",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "joe",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "sergeant_hartman",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "mr_mackey",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "professor_frink",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "will_smith",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "evil_queen",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "dr_zoidberg",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "mayor_quimby",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "stewie",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "jd",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "kermit_the_frog",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "dory",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "queen_of_hearts",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "hagrid",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "willie",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "fonzie",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "dr_house_character",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "woody_allen",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "stitch",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "goku",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "the_brain",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "r_two_d_two",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "tyrion_lannister",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "bruce",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "jack_skellington",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  },
+  {
+    "is_solved": false,
+    "id": "mr_burns",
+    "has_removed_wrong_letters": false,
+    "has_revealed_first_letters": false,
+    "has_revealed_letters_at_index": [
+    ]
+  }
+]

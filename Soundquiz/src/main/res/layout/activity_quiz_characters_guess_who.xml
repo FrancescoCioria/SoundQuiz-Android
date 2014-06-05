@@ -72,7 +72,6 @@
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/buttons"
             android:id="@+id/wiki"
             android:layout_marginBottom="10dp"
             android:gravity="center_horizontal"
@@ -93,30 +92,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textViewWiki"
-                android:text="See more about on Wikipedia"
+                android:text="Reaf more"
                 android:id="@+id/buttonWiki"
-                android:layout_centerHorizontal="true" />
+                android:layout_alignParentLeft="true" />
 
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:id="@+id/buttons">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Back to menu"
-                android:id="@+id/backToMenuButton"
-                android:layout_centerHorizontal="true" />
-
-        </RelativeLayout>
     </RelativeLayout>
 
     <RelativeLayout

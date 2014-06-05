@@ -36,7 +36,7 @@ public class LevelListViewAdapter extends BaseAdapter {
     }
 
     public Object getItem(int paramInt) {
-        return Integer.valueOf(paramInt);
+        return paramInt;
     }
 
     public long getItemId(int paramInt) {
@@ -73,7 +73,7 @@ public class LevelListViewAdapter extends BaseAdapter {
 
 
 //        check if level is unlocked
-        if (totalSolvedQuizzes >= paramInt * 10 || true) {
+        if (totalSolvedQuizzes >= paramInt * 10) {
             UnlockedLevelItemViewHolder unlockedlevelItemViewHolder;
 
             try {
@@ -122,9 +122,9 @@ public class LevelListViewAdapter extends BaseAdapter {
                     break;
             }
 
-            if(paramInt==getCount()-1){
+            if (paramInt == getCount() - 1) {
                 Utility.setMargins(unlockedlevelItemViewHolder.layout, 0, 0, 0, Utility.convertDpToPixels(context, 10));
-            }else{
+            } else {
                 Utility.setMargins(unlockedlevelItemViewHolder.layout, 0, 0, 0, 0);
             }
 
@@ -134,7 +134,9 @@ public class LevelListViewAdapter extends BaseAdapter {
 
         LockedLevelItemViewHolder lockedlevelItemViewHolder;
 
-        if (paramView == null) {
+        try {
+            lockedlevelItemViewHolder = (LockedLevelItemViewHolder) paramView.getTag();
+        }catch (Exception e){
             paramView = inflater.inflate(R.layout.level_list_item_locked, null);
             lockedlevelItemViewHolder = new LockedLevelItemViewHolder();
 
@@ -145,8 +147,6 @@ public class LevelListViewAdapter extends BaseAdapter {
             lockedlevelItemViewHolder.layout.getLayoutParams().width = Utility.getWidth(context) * 93 / 100;
 
             paramView.setTag(lockedlevelItemViewHolder);
-        } else {
-            lockedlevelItemViewHolder = (LockedLevelItemViewHolder) paramView.getTag();
         }
 
         lockedlevelItemViewHolder.titleTextView.setText("Level " + (paramInt + 1));
@@ -164,9 +164,9 @@ public class LevelListViewAdapter extends BaseAdapter {
                 break;
         }
 
-        if(paramInt==getCount()-1){
+        if (paramInt == getCount() - 1) {
             Utility.setMargins(lockedlevelItemViewHolder.layout, 0, 0, 0, Utility.convertDpToPixels(context, 10));
-        }else{
+        } else {
             Utility.setMargins(lockedlevelItemViewHolder.layout, 0, 0, 0, 0);
         }
 

@@ -18,8 +18,7 @@ import java.util.Collections;
 import java.util.Random;
 
 public class GameView extends View {
-    private final static int ANIMATION_TIME = 300; // (millis)
-    private final static int MAX_DEGREE = 5; // (millis)
+    private final static int NO_LETTER_SPRITE_CONTAINED = -1;
 
     private int spaceFullSize;
     private int spriteFullSize;
@@ -28,6 +27,7 @@ public class GameView extends View {
     private int spriteSpaceOccupied;
     private int maxY;
     private final String[] alphabet = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "y", "x", "z"};
+    private final String[] alphabetWithNumbers = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "y", "x", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
 
     private Paint rectPaint = new Paint();
     private Paint correctLine = new Paint();
@@ -40,9 +40,6 @@ public class GameView extends View {
     private boolean gameMode = true;
     private boolean revealOneLetterMode = false;
     private boolean isRevealing = false;
-
-    private float degree = 0;
-    private float deltaDegree = 1.5f;
 
     private String answer;
 
@@ -66,7 +63,8 @@ public class GameView extends View {
 
         if (gameMode) {
             for (LetterSpace letterSpace : letterSpaces) {
-                canvas.drawRoundRect(new RectF(new Rect(letterSpace.position.x, letterSpace.position.y, letterSpace.position.x + letterSpace.size, letterSpace.position.y + letterSpace.size)), letterSpace.size / 15, letterSpace.size / 15, rectPaint);
+                letterSpace.draw(canvas, rectPaint);
+//                canvas.drawRoundRect(new RectF(new Rect(letterSpace.position.x, letterSpace.position.y, letterSpace.position.x + letterSpace.size, letterSpace.position.y + letterSpace.size)), letterSpace.size / 15, letterSpace.size / 15, rectPaint);
             }
 
             for (int i = letterSprites.size() - 1; i >= 0; i--) {
@@ -85,11 +83,11 @@ public class GameView extends View {
             }
 
             for (LetterSpace letterSpace : letterSpaces) {
-                if (letterSpace.letterSpriteContained == -1) {
-                    canvas.drawRoundRect(new RectF(new Rect(letterSpace.position.x, letterSpace.position.y, letterSpace.position.x + letterSpace.size, letterSpace.position.y + letterSpace.size)), letterSpace.size / 15, letterSpace.size / 15, rectPaint);
+                if (letterSpace.letterSpriteContained == NO_LETTER_SPRITE_CONTAINED) {
+                    letterSpace.draw(canvas, rectPaint);
+//                    canvas.drawRoundRect(new RectF(new Rect(letterSpace.position.x, letterSpace.position.y, letterSpace.position.x + letterSpace.size, letterSpace.position.y + letterSpace.size)), letterSpace.size / 15, letterSpace.size / 15, rectPaint);
                 }
             }
-
         }
 
 
@@ -104,33 +102,19 @@ public class GameView extends View {
             }
         } else if (revealOneLetterMode && !isRevealing) {
             isRevealing = true;
-            int counter = 0;
+            int index = 0;
             for (LetterSpace letterSpace : letterSpaces) {
-                if (letterSpace.letterSpriteContained == -1 && letterSpace.isCollision(event.getX(), event.getY())) {
-                    String letter = String.valueOf(answer.charAt(counter));
-                    for (LetterSprite letterSprite : letterSprites) {
-                        if (letterSprite.isHome() && letterSprite.getLetter().equals(letter)) {
-                            letterSprite.setPosition(letterSpace.position.x, letterSpace.position.y);
-                            letterSpace.letterSpriteContained = letterSprite.getIndex();
-                            letterSprite.setFix();
-                            context.changeToGameMode();
-                            isRevealing = false;
-                            return super.onTouchEvent(event);
-                        }
-                    }
+                if (letterSpace.letterSpriteContained == NO_LETTER_SPRITE_CONTAINED && letterSpace.isCollision(event.getX(), event.getY())) {
+                    revealLetterAtIndex(index, true);
+                    break;
                 }
-                counter++;
+                index++;
             }
+            isRevealing = false;
         }
         return super.onTouchEvent(event);
     }
 
-    private void updateRotation() {
-        degree += deltaDegree;
-        if (degree >= MAX_DEGREE || degree <= -MAX_DEGREE) {
-            deltaDegree *= -1;
-        }
-    }
 
     public void refresh() {
         invalidate();
@@ -151,6 +135,8 @@ public class GameView extends View {
         if (context.getQuizData().isSolved()) {
             winTheGame();
             context.initWinGraphics();
+        } else {
+            populateGameWithUsedHints();
         }
     }
 
@@ -258,6 +244,7 @@ public class GameView extends View {
 
                     letterSpace.position.y = currentRow * (spaceSize + ROW_GAP) + marginY;
                     letterSpace.size = spaceSize;
+                    letterSpace.resetRectF();
                     letterSpaces.add(letterSpace);
 
                 }
@@ -271,6 +258,7 @@ public class GameView extends View {
         }
 
         maxY += spaceSize;
+
     }
 
     private void initLetterSprites() {
@@ -321,6 +309,20 @@ public class GameView extends View {
         }
     }
 
+    private void populateGameWithUsedHints() {
+        if (context.getQuizData().hasRemovedWrongLetters()) {
+            removeWrongLetters();
+        }
+
+        if (context.getQuizData().hasRevealedFirstLetters()) {
+            revealFirstLetters();
+        }
+
+        for (int index : context.getQuizData().getRevealedLettersAtIndex()) {
+            revealLetterAtIndex(index, false);
+        }
+    }
+
 
     private void drawCorrectLines(Canvas canvas) {
         if (context.getQuizData().isSolved()) {
@@ -338,7 +340,7 @@ public class GameView extends View {
                 boolean isCorrect = true;
                 for (int i = 0; i < word.length(); i++) {
                     String letter = String.valueOf(word.charAt(i));
-                    if (letterSpaces.get(counter).letterSpriteContained == -1 || !letterSprites.get(letterSpaces.get(counter).letterSpriteContained).getLetter().equals(letter)) {
+                    if (letterSpaces.get(counter).letterSpriteContained == NO_LETTER_SPRITE_CONTAINED || !letterSprites.get(letterSpaces.get(counter).letterSpriteContained).getLetter().equals(letter)) {
                         isCorrect = false;
                     }
                     indexes.add(counter);
@@ -346,9 +348,10 @@ public class GameView extends View {
                 }
 
                 if (isCorrect) {
-                    int rowGap = spriteFullSize * 90 / 500;
-                    int height = 3;
-                    int marginY = (rowGap - height) / 3;
+//                    int rowGap = spriteFullSize * 90 / 500;
+                    int height = Utility.convertDpToPixels(context, 1.5f);
+//                    int marginY = (rowGap - height) / 3;
+                    int marginY = Utility.convertDpToPixels(context, 1.5f);
 
                     LetterSpace firstLetterSpace = letterSpaces.get(indexes.get(0));
                     LetterSpace lastLetterSpace = letterSpaces.get(indexes.get(indexes.size() - 1));
@@ -368,7 +371,6 @@ public class GameView extends View {
         }
         gameMode = false;
         revealOneLetterMode = true;
-        degree = 0;
     }
 
     public void changeToGameMode() {
@@ -400,7 +402,7 @@ public class GameView extends View {
     public void checkAnswer() {
         String userAnswer = "";
         for (int i = 0; i < getLetterSpaces().size(); i++) {
-            if (getLetterSpaces().get(i).letterSpriteContained < 0) {
+            if (getLetterSpaces().get(i).letterSpriteContained == NO_LETTER_SPRITE_CONTAINED) {
                 return;
             } else {
                 userAnswer += getLetterSprites().get(getLetterSpaces().get(i).letterSpriteContained).getLetter();
@@ -412,6 +414,8 @@ public class GameView extends View {
             AudioPlayer.getIstance().playWin();
             resetSpritesColor();
             getActivityContext().initWinPage();
+            Utility.increaseHintPointsForWin();
+            Utility.increaseCoinsToast(getActivityContext());
         } else {
             AudioPlayer.getIstance().playWrong();
         }
@@ -419,7 +423,7 @@ public class GameView extends View {
 
     public void winTheGame() {
         for (int i = 0; i < letterSpaces.size(); i++) {
-            letterSpaces.get(i).letterSpriteContained = -1;
+            letterSpaces.get(i).letterSpriteContained = NO_LETTER_SPRITE_CONTAINED;
             String letter = String.valueOf(answer.charAt(i));
             for (LetterSprite letterSprite : letterSprites) {
                 if (letterSprite.isHome() && letterSprite.getLetter().equals(letter)) {
@@ -497,6 +501,25 @@ public class GameView extends View {
         }
     }
 
+    private void revealLetterAtIndex(int index, boolean payCoins) {
+        String letter = String.valueOf(answer.charAt(index));
+        LetterSpace letterSpace = letterSpaces.get(index);
+        for (LetterSprite letterSprite : letterSprites) {
+            if (letterSprite.isHome() && letterSprite.getLetter().equals(letter)) {
+                letterSprite.setPosition(letterSpace.position.x, letterSpace.position.y);
+                letterSpace.letterSpriteContained = letterSprite.getIndex();
+                letterSprite.setFix();
+                context.changeToGameMode();
+                context.getQuizData().addIndexToRevealedLetters(index);
+                PackageCollection.getInstance().modifyQuizInSavedData(context.getQuizData());
+                if (payCoins) {
+                    Utility.decreaseHintPointsBy(Utility.REVEAL_ONE_LETTER_COINS_COST);
+                }
+                break;
+            }
+        }
+    }
+
     public void resetSprites() {
         for (LetterSprite letterSprite : letterSprites)
             letterSprite.reset();
@@ -514,8 +537,18 @@ public class GameView extends View {
 
     static class LetterSpace {
         int size;
-        int letterSpriteContained = -1;
+        int letterSpriteContained = NO_LETTER_SPRITE_CONTAINED;
         Point position = new Point();
+        RectF rectF;
+
+        public void draw(Canvas canvas, Paint rectPaint) {
+            canvas.drawRoundRect(rectF, size / 15, size / 15, rectPaint);
+        }
+
+        public void resetRectF() {
+            rectF = new RectF(new Rect(position.x, position.y, position.x + size, position.y + size));
+
+        }
 
         public boolean isCollision(float x2, float y2) {
             return x2 > position.x && x2 < position.x + size && y2 > position.y && y2 < position.y + size;

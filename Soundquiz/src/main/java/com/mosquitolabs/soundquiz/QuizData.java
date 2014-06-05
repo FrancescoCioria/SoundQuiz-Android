@@ -8,15 +8,19 @@ import java.util.ArrayList;
  */
 public class QuizData implements Serializable {
     private ArrayList<String> rows = new ArrayList<String>();
+
     private String answer;
     private String ID;
     private String type;
     private String wikiURI;
     private String wikiDescription;
     private String spotifyURI = "";
-    private boolean isSolved = false;
 
-    private boolean hasUsedHint = false;
+    private boolean isSolved = false;
+    private boolean hasRemovedWrongLetters = false;
+    private boolean hasRevealedFirstLetters = false;
+
+    private ArrayList<Integer> revealedLettersAtIndex = new ArrayList<Integer>();
 
     public void setAnswer(String newAnswer) {
         answer = newAnswer;
@@ -42,12 +46,20 @@ public class QuizData implements Serializable {
         return ID;
     }
 
-    public void setUsedHint() {
-        hasUsedHint = true;
+    public void setRemovedWrongLetters() {
+        hasRemovedWrongLetters = true;
     }
 
-    public boolean hasUsedHint() {
-        return hasUsedHint;
+    public boolean hasRemovedWrongLetters() {
+        return hasRemovedWrongLetters;
+    }
+
+    public void setRevealedFirstLetters() {
+        hasRevealedFirstLetters = true;
+    }
+
+    public boolean hasRevealedFirstLetters() {
+        return hasRevealedFirstLetters;
     }
 
     public boolean isSolved() {
@@ -55,8 +67,23 @@ public class QuizData implements Serializable {
     }
 
     public boolean isSolvedWithStar() {
-        return (isSolved() && !hasUsedHint());
+        return false;
+//        return (isSolved() && !hasUsedHint());
     }
+
+    public void addIndexToRevealedLetters(int index) {
+        for (int i : revealedLettersAtIndex) {
+            if (index == i) {
+                return;
+            }
+        }
+        revealedLettersAtIndex.add(index);
+    }
+
+    public ArrayList<Integer> getRevealedLettersAtIndex(){
+        return revealedLettersAtIndex;
+    }
+
 
     public void setSolved() {
         isSolved = true;

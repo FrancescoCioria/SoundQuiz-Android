@@ -244,9 +244,9 @@ public class PackageCollection {
                             quizData.setSpotifyURI(quizJSON.getString("spotify_uri"));
                         }
 
-                        if (!addQuizToSavedData(quizData)) {
-                            populateQuizWithSavedData(quizData);
-                        }
+
+                        populateQuizWithSavedData(quizData);
+
 
                         levelData.getQuizList().add(quizData);
                     }
@@ -268,40 +268,39 @@ public class PackageCollection {
         }
     }
 
-
-    public boolean addQuizToSavedData(QuizData quizData) {
+    private void initSavedData() {
         try {
-            if (savedData == null) {
-                savedData = new JSONArray(Utility.getSharedPreferences().getString("saved_data", "[]"));
+            String saved_data = Utility.getSharedPreferences().getString("saved_data", "null");
+
+            if (saved_data.equals("null")) {
+                savedData = new JSONArray(getJsonFromRaw("saved_data"));
+            } else {
+                savedData = new JSONArray(saved_data);
             }
-            for (int i = 0; i < savedData.length(); i++) {
-                if (savedData.getJSONObject(i).getString("id").equals(quizData.getID())) {
-                    return false;
-                }
-            }
 
-            Log.d("PACKAGE_COLLECTION", "adding quiz to savedData");
-
-            savedData.put(new JSONObject().put("id", quizData.getID()).put("has_used_hint", false).put("is_solved", false));
-            SharedPreferences.Editor editor = Utility.getSharedPreferences().edit();
-            editor.putString("saved_data", savedData.toString());
-            editor.commit();
-            return true;
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-            return false;
+        } catch (JSONException je) {
         }
     }
+
 
     public void modifyQuizInSavedData(QuizData quizData) {
         try {
             if (savedData == null) {
-                savedData = new JSONArray(Utility.getSharedPreferences().getString("saved_data", "[]"));
+                initSavedData();
             }
             for (int i = 0; i < savedData.length(); i++) {
                 if (savedData.getJSONObject(i).getString("id").equals(quizData.getID())) {
-                    savedData.put(i, new JSONObject().put("id", quizData.getID()).put("has_used_hint", quizData.hasUsedHint()).put("is_solved", quizData.isSolved()));
+                    JSONArray revealedLetters = new JSONArray();
+
+                    for (int index : quizData.getRevealedLettersAtIndex()) {
+                        revealedLetters.put(new JSONObject().put("index", index));
+                    }
+
+                    Log.d("MODIFY_SAVED_DATA", " " + new JSONObject().put("id", quizData.getID()).put("is_solved", quizData.isSolved()).put("has_removed_wrong_letters", quizData.hasRemovedWrongLetters()).put("has_revealed_first_letters", quizData.hasRevealedFirstLetters()).put("has_revealed_letters_at_index", revealedLetters));
+
+                    savedData.put(i, new JSONObject().put("id", quizData.getID()).put("is_solved", quizData.isSolved()).put("has_removed_wrong_letters", quizData.hasRemovedWrongLetters()).put("has_revealed_first_letters", quizData.hasRevealedFirstLetters()).put("has_revealed_letters_at_index", revealedLetters));
+
+
                     SharedPreferences.Editor editor = Utility.getSharedPreferences().edit();
                     editor.putString("saved_data", savedData.toString());
                     editor.commit();
@@ -317,13 +316,26 @@ public class PackageCollection {
     public void populateQuizWithSavedData(QuizData quizData) {
         try {
             if (savedData == null) {
-                savedData = new JSONArray(Utility.getSharedPreferences().getString("saved_data", "[]"));
+                initSavedData();
             }
             for (int i = 0; i < savedData.length(); i++) {
                 if (savedData.getJSONObject(i).getString("id").equals(quizData.getID())) {
-                    if (savedData.getJSONObject(i).getBoolean("has_used_hint")) {
-                        quizData.setUsedHint();
+                    JSONObject savedQuiz = savedData.getJSONObject(i);
+
+                    if (savedQuiz.getBoolean("has_removed_wrong_letters")) {
+                        quizData.setRemovedWrongLetters();
                     }
+
+                    if (savedQuiz.getBoolean("has_revealed_first_letters")) {
+                        quizData.setRevealedFirstLetters();
+                    }
+
+                    JSONArray indexes = savedQuiz.getJSONArray("has_revealed_letters_at_index");
+                    for (int j = 0; j < indexes.length(); j++) {
+                        int index = indexes.getJSONObject(j).getInt("index");
+                        quizData.addIndexToRevealedLetters(index);
+                    }
+
                     if (savedData.getJSONObject(i).getBoolean("is_solved")) {
                         quizData.setSolved();
                     }

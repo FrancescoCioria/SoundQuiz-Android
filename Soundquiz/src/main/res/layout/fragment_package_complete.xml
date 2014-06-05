@@ -63,7 +63,8 @@
                         android:id="@+id/unlockedTextView"
                         android:textColor="@color/text_fragment"
                         android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true" />
+                        android:layout_alignParentRight="true"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -74,7 +75,8 @@
                         android:layout_alignParentRight="false"
                         android:layout_alignParentEnd="true"
                         android:textColor="@color/text_fragment"
-                        android:layout_alignParentLeft="true" />
+                        android:layout_alignParentLeft="true"
+                        android:textSize="15sp" />
                 </RelativeLayout>
 
                 <ProgressBar

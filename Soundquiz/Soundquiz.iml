@@ -75,6 +75,8 @@
     <orderEntry type="library" exported="" name="aws-android-sdk-1.7.1.1-core" level="project" />
     <orderEntry type="library" exported="" name="aws-android-sdk-1.7.1.1-s3" level="project" />
     <orderEntry type="library" exported="" name="renderscript-v8" level="project" />
+    <orderEntry type="library" exported="" name="bolts" level="project" />
+    <orderEntry type="module" module-name="facebook" exported="" />
   </component>
 </module>
 

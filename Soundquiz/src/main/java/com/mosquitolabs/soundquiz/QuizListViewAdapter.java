@@ -15,6 +15,7 @@ import java.util.ArrayList;
 /**
  * Created by francesco on 3/10/14.
  */
+
 public class QuizListViewAdapter extends BaseAdapter {
 
     private LevelActivity context;
@@ -23,7 +24,8 @@ public class QuizListViewAdapter extends BaseAdapter {
     private LayoutInflater inflater;
     private PackageCollection packageCollection = PackageCollection.getInstance();
 
-    private ArrayList<Drawable> drawables = new ArrayList<Drawable>();
+
+    private ArrayList<QuizImage> drawables = new ArrayList<QuizImage>();
 
 
     private final int COLUMNS = 3;
@@ -44,7 +46,7 @@ public class QuizListViewAdapter extends BaseAdapter {
     }
 
     public Object getItem(int paramInt) {
-        return Integer.valueOf(paramInt);
+        return paramInt;
     }
 
     public long getItemId(int paramInt) {
@@ -78,18 +80,26 @@ public class QuizListViewAdapter extends BaseAdapter {
 
             for (int i = 0; i < COLUMNS; i++) {
                 String imageId = "imageView" + (i + 1);
-//                String bodyId = "body" + (i + 1);
                 int resImage = context.getResources().getIdentifier(imageId, "id", context.getPackageName());
-//                int resBody = context.getResources().getIdentifier(bodyId, "id", context.getPackageName());
                 quizItemViewHolder.images[i] = (CircularImageView) paramView.findViewById(resImage);
-//                quizItemViewHolder.bodies[i] = (TextView) paramView.findViewById(resBody);
 
+                quizItemViewHolder.images[i].setBorderColor(Color.parseColor("#80ffffff"));
+                int imageWidth = (Utility.getWidth(context) - Utility.convertDpToPixels(context, 30)) / 3;
+                int imageHeight = packageIndex == Utility.CINEMA ? imageWidth * 3 / 2 : imageWidth;
+
+                quizItemViewHolder.images[i].getLayoutParams().height = imageHeight;
+                quizItemViewHolder.images[i].setBorderWidth(1);
+
+                if (packageIndex == Utility.VIP) {
+                    quizItemViewHolder.images[i].setCircularShape();
+                } else {
+                    quizItemViewHolder.images[i].setRectangularShape();
+                }
             }
             paramView.setTag(quizItemViewHolder);
         } else {
             quizItemViewHolder = (QuizItemViewHolder) paramView.getTag();
         }
-
 
         for (int i = 0; i < COLUMNS; i++) {
             final int index = paramInt * COLUMNS + i;
@@ -101,41 +111,27 @@ public class QuizListViewAdapter extends BaseAdapter {
                 }
             });
             String path = quizData.getID();
-            int imageWidth = (Utility.getWidth(context) - Utility.convertDpToPixels(context, 30)) / 3;
-            int imageHeight = packageIndex == Utility.CINEMA ? imageWidth * 3 / 2 : imageWidth;
-
-            quizItemViewHolder.images[i].getLayoutParams().height = imageHeight;
-            quizItemViewHolder.images[i].setBorderWidth(1);
-
-            if (packageIndex == Utility.VIP) {
-                quizItemViewHolder.images[i].setCircularShape();
-            } else {
-                quizItemViewHolder.images[i].setRectangularShape();
-            }
 
             int res;
             if (quizData.isSolved()) {
                 res = context.getResources().getIdentifier(path, "drawable", context.getPackageName());
-//                quizItemViewHolder.bodies[i].setText(quizData.getAnswer());
-//                quizItemViewHolder.bodies[i].setVisibility(View.VISIBLE);
             } else {
                 res = context.getResources().getIdentifier(path + "_blur", "drawable", context.getPackageName());
-//                quizItemViewHolder.bodies[i].setVisibility(View.GONE);
             }
 
             Drawable image;
-            if (drawables.size() > index) {
-                image = drawables.get(index);
+            if (drawables.size() > index && quizData.isSolved() == drawables.get(index).isSolved) {
+                image = drawables.get(index).image;
             } else {
                 image = context.getResources().getDrawable(res);
-                drawables.add(image);
+                if (drawables.size() > index) {
+                    drawables.get(index).image = image;
+                    drawables.get(index).isSolved = quizData.isSolved();
+                } else {
+                    drawables.add(index, initQuizImage(image, quizData.isSolved()));
+                }
             }
-//            quizItemViewHolder.images[i].setImageDrawable(context.getResources().getDrawable(res));
             quizItemViewHolder.images[i].setImageDrawable(image);
-
-//            quizItemViewHolder.bodies[i].setVisibility(View.GONE);
-            quizItemViewHolder.images[i].setBorderColor(Color.parseColor("#b5b5b5"));
-            quizItemViewHolder.images[i].setBorderColor(Color.parseColor("#80ffffff"));
 
         }
 
@@ -149,8 +145,21 @@ public class QuizListViewAdapter extends BaseAdapter {
         return paramView;
     }
 
+
+    private QuizImage initQuizImage(Drawable image, boolean isSolved) {
+        QuizImage quizImage = new QuizImage();
+        quizImage.image = image;
+        quizImage.isSolved = isSolved;
+
+        return quizImage;
+    }
+
+    class QuizImage {
+        Drawable image;
+        boolean isSolved = false;
+    }
+
     static class QuizItemViewHolder {
-        //        TextView bodies[] = {null, null, null};
         CircularImageView images[] = {null, null, null};
         LinearLayout mainLayout;
     }

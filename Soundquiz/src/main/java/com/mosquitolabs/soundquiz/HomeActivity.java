@@ -32,7 +32,7 @@ public class HomeActivity extends Activity {
         Utility.hideActionbar(this);
         initViews();
         AudioPlayer.getIstance().initSounds(this);
-        populate();
+        PackageCollection.getInstance().populateCollection(this);
     }
 
     private void initViews() {
@@ -43,7 +43,6 @@ public class HomeActivity extends Activity {
     }
 
     public void initHomePage() {
-//        setContentView(R.layout.activity_home);
 
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,12 +55,6 @@ public class HomeActivity extends Activity {
 
 //        debugShortCut();
 //        startPackageListActivity();
-    }
-
-
-    private void populate() {
-
-        PackageCollection.getInstance().populateCollection(this);
     }
 
 
